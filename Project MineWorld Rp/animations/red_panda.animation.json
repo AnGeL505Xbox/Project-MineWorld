@@ -1,0 +1,63 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.red_panda.sit": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [-30, 0, 0],
+					"position": [0, -3, -1.5]
+				},
+				"tail1": {
+					"rotation": [45, 0, 0],
+					"position": [0, -7, -2]
+				},
+				"backLegL": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -6, -4.5]
+				},
+				"backLegR": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -6, -4.5]
+				},
+				"frontLegL": { "position": [0, 0, -3] },
+				"frontLegR": { "position": [0, 0, -3] },
+				"tamed": { "position": [0, 0, -1] }
+			}
+		},
+		"animation.red_panda.sleep": {
+			"loop": true,
+			"bones": {
+				"body": { "position": [0, -4, 0] },
+				"backLegL": {
+					"rotation": [-90, -10, 0],
+					"position": [-1, -6, 0]
+				},
+				"frontLegL": {
+					"rotation": [90, 0, 0],
+					"position": [-1, -10, -5]
+				},
+				"frontLegR": {
+					"rotation": [90, 0, 0],
+					"position": [1, -10, -5]
+				},
+				"head": {
+					"rotation": [0, -125, 0],
+					"position": [3, -6, 3]
+				},
+				"tail1": {
+					"rotation": [45, -220, 0],
+					"position": [2, -5, 1]
+				},
+				"backLegR": {
+					"rotation": [-90, 10, 0],
+					"position": [1, -6, 0]
+				},
+				"tamed": {
+					"rotation": [-90, 0, 0],
+					"position": [0, 1, 0]
+				}
+			}
+		}
+	}
+}

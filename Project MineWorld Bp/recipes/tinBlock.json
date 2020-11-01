@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:tinBlock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ttt",
+			"ttt",
+			"ttt"
+		],
+		"key": {
+			"t": {
+				"item": "mineworld:tinIngot"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:tin_block",
+				"count": 1
+			}
+		]
+	}
+}

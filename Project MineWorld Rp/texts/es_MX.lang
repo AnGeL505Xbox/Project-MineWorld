@@ -1,0 +1,270 @@
+/*Mineworld 1.5*/
+	/*Acciones*/
+		mineworld.bag=Bolsa
+      	mineworld.convert=Convertir
+      	mineworld.trade=Intercambiar
+	/*Grupos de Items*/
+		itemGroup.name.special=Especial
+		itemGroup.name.silver=Plata
+		itemGroup.name.bronze=Bronce
+		itemGroup.name.gems=Gemas
+		itemGroup.name.metal=Metales
+		itemGroup.name.crystal=Cristales
+		itemGroup.name.knife=Cuchillo
+		itemGroup.name.doubleSword=Espada doble
+		itemGroup.name.dust=Polvos
+		itemGroup.name.elixir=Elixires
+		itemGroup.name.luck=Suerte
+	/*Items*/
+	  /*Minerales*/
+		item.mineworld:bronzeIngot.name=Lingote de bronce
+		item.mineworld:silverIngot.name=Lingote de plata
+		item.mineworld:sombriteIngot.name=Lingote de sombrita
+		item.mineworld:tinIngot.name=Lingote de estaño
+		item.mineworld:iridiumIngot.name=Lingote de iridio
+		item.mineworld:aquamarine.name=Aguamarina
+		item.mineworld:onyx.name=Onyx
+		item.mineworld:opalNormal.name=Opalo
+		item.mineworld:opalFire.name=Opalo del fuego
+		item.mineworld:opalWater.name=Opalo del mar
+		item.mineworld:peridot.name=Peridoto
+		item.mineworld:sapphire.name=Zafiro
+		item.mineworld:ruby.name=Rubi
+		item.mineworld:copper.name=Cobre
+	  /*Polvos*/
+		item.mineworld:bronzeDust.name=Polvo de bronce
+		item.mineworld:silverDust.name=Polvo de plata
+		item.mineworld:sombriteDust.name=Polvo de sombrita
+		item.mineworld:iridiumDust.name=Polvo de iridio
+		item.mineworld:aquamarineDust.name=Polvo de aguamarina
+		item.mineworld:onyxDust.name=Polvo de onyx
+		item.mineworld:peridotDust.name=Polvo de peridoto
+		item.mineworld:sapphireDust.name=Polvo de zafiro
+		item.mineworld:rubyDust.name=Polvo de rubi
+	  /*Cristales*/
+		item.mineworld:argentite.name=Cristal de argentita
+		item.mineworld:cassiterite.name=Cristal de casiterita
+		item.mineworld:calaverite.name=Cristal de calaverita
+		item.mineworld:limonite.name=Cristal de limonite
+		item.mineworld:magnetite.name=Cristal de magnetita
+		item.mineworld:malachite.name=Cristal de malaquita
+		item.mineworld:siderite.name=Cristal de siderita
+		item.mineworld:sylvaniteAG.name=Cristal de silvanita plateada
+		item.mineworld:sylvaniteAU.name=Cristal de silvanita dorada
+		item.mineworld:shungite.name=Cristal de shungita
+	  /*Elixires*/
+		item.mineworld:elixirBase.name=Elixir
+		item.mineworld:elixirDrowner.name=Elixir de ahogado
+		item.mineworld:elixirHunter.name=Elixir de Cazador
+		item.mineworld:elixirBetelgeuse.name=Elixir de betelgeuse
+		item.mineworld:elixirPhoenix.name=Elixir de fenix
+		item.mineworld:elixirUndead.name=Elixir de no-muertos
+	  /*Herramientas de iridio*/
+		item.mineworld:iridiumAxe.name=Hacha de iridio
+		item.mineworld:iridiumHoe.name=Azada de iridio
+		item.mineworld:iridiumShovel.name=Pala de iridio
+		item.mineworld:iridiumSword.name=Espada de iridio
+		item.mineworld:iridiumPickaxe.name=Pico de iridio
+		item.mineworld:iridiumKnife.name=Cuchillo de iridio
+		item.mineworld:iridiumDoubleSword.name=Espada doble de iridio
+	  /*Herramientas de bronce*/
+	  	item.mineworld:bronzeAxe.name=Hacha de bonce
+		item.mineworld:bronzeHoe.name=Azada de bronce
+		item.mineworld:bronzeShovel.name=Pala de bronce
+		item.mineworld:bronzeSword.name=Espada de bronce
+		item.mineworld:bronzePickaxe.name=Pico de bronce
+		item.mineworld:bronzeKnife.name=Cuchillo de bronce
+		item.mineworld:bronzeDoubleSword.name=Espada doble de bronce
+	  /*Herramientas de plata*/
+	  	item.mineworld:silverAxe.name=Hacha de plata
+		item.mineworld:silverHoe.name=Azada de plata
+		item.mineworld:silverShovel.name=Pala de plata
+		item.mineworld:silverSword.name=Espada de plata
+		item.mineworld:silverPickaxe.name=Pico de plata
+		item.mineworld:silverKnife.name=Cuchillo de plata
+		item.mineworld:silverDoubleSword.name=Espada doble de plata
+	  /*Herramientas de sombrita*/
+	  	item.mineworld:sombriteAxe.name=Hacha de iridio
+		item.mineworld:sombriteHoe.name=Azada de iridio
+		item.mineworld:sombriteShovel.name=Pala de iridio
+		item.mineworld:sombriteSword.name=Espada de iridio
+		item.mineworld:sombritePickaxe.name=Pico de iridio
+		item.mineworld:sombriteKnife.name=Cuchillo de iridio
+		item.mineworld:sombriteDoubleSword.name=Espada doble de iridio
+	  /*Espadas dobles*/
+	  	item.mineworld:netheriteDoubleSword.name=Espada doble de netherita
+		item.mineworld:diamondDoubleSword.name=Espada doble de diamante
+		item.mineworld:goldDoubleSword.name=Espada doble de oro
+		item.mineworld:ironDoubleSword.name=Espada doble de hierro
+	  /*Otros*/
+	  item.mineworld:strangeMeat.name=Carne extraña
+    item.mineworld:blubber.name=Grasa de ballena
+    item.mineworld:berryWine.name=Vino de baya
+    item.mineworld:bag.name=Bolsa
+    item.mineworld:bagPlus.name=Bolsa mejorada
+		item.mineworld:bagSuperPlus.name=Bolsa Mejorada II
+    item.mineworld:bacon.name=Tocino
+    item.mineworld:beefJerky.name=Carne seca
+    item.mineworld:betelgeuseFlake.name=Escama de Betelgeuse
+    item.mineworld:betelgeuseHeart.name=Corazon de Betelgeuse
+    item.mineworld:betelgeuseSplinter.name=Esquirlia de betelgeuse
+		item.mineworld:bleach.name=Blanqueador
+    item.mineworld:featherPhoenix.name=Pluma de fenix
+    item.mineworld:jellyfishPoison.name=Veneno de medusa
+		item.mineworld:mysticalStoneFragment.name=Fragmento de piedra mistica
+    item.mineworld:mysticalStone.name=Piedra mistica
+    item.mineworld:shadowPotion.name=Pocion sombria
+    item.mineworld:darkrystal.name=Darkrystal
+    item.mineworld:shadowCookie.name=Galleta sombria
+    item.mineworld:machineCore.name=Nucleo de maquina
+    item.mineworld:circuit.name=Circuito
+    item.mineworld:quantumShard.name=Fragmento cuantico
+    item.mineworld:mandrake.name=Mandragora
+    item.mineworld:onydotStick.name=Vara de Onyx-Peridot
+    item.mineworld:xeroFruit.name=Fruta Xero
+    item.mineworld:xeroSeeds.name=Semillas Xero
+	/*Bloques*/
+	  /*Minerales*/
+		    tile.mineworld:onyx_ore.name=Mineral de onyx
+        tile.mineworld:onyx_block.name=Bloque de onyx
+        tile.mineworld:peridot_ore.name=Mineral de peridoto
+        tile.mineworld:peridot_block.name=Bloque de peridoto
+        tile.mineworld:silver_ore.name=Mineral de plata
+        tile.mineworld:silver_block.name=Bloque de plata
+        tile.mineworld:sapphire_ore.name=Mineral de zafiro
+        tile.mineworld:sapphire_block.name=Bloque de zafiro
+        tile.mineworld:argentite_ore.name=Mineral de argentita
+        tile.mineworld:calaverite_ore.name=Mineral de calaverita
+        tile.mineworld:magnetite_ore.name=Mineral de magnetita
+        tile.mineworld:limonite_ore.name=Mineral de limonita
+        tile.mineworld:siderite_ore.name=Mineral de siderita
+        tile.mineworld:sylvanite_ore.name=Mineral de silvanita
+        tile.mineworld:opal_ore.name=Mineral de opalo
+		tile.mineworld:aquamarine_ore.name=Mineral de aguamarina
+        tile.mineworld:aquamarine_block.name=Bloque de aquamarina
+        tile.mineworld:copper_block.name=Bloque de cobre
+        tile.mineworld:bronze_block.name=Bloque de bronce
+        tile.mineworld:tin_block.name=Bloque de estaño
+        tile.mineworld:shadow_block.name=Bloque de sombrita
+        tile.mineworld:cassiterite_ore.name=Mineral de casiterita
+        tile.mineworld:malachite_ore.name=Mineral de malaquita
+        tile.mineworld:ruby_ore.name=Mineral de rubi
+        tile.mineworld:ruby_block.name=Bloque de rubi
+	  /*Bloques de piedra*/
+		tile.mineworld:slate.name=Pizarra
+        tile.mineworld:slate_bricks.name=Ladrillos de pizarra
+        tile.mineworld:slate_pebbles.name=Guijarros de pizarra
+		tile.mineworld:peridotite.name=Peridotita
+        tile.mineworld:peridotite_smooth.name=Peridotita pulida
+        tile.mineworld:peridotite_paver.name=Adoquin de peridotita
+        tile.mineworld:marble.name=Marmol
+		tile.mineworld:quarzite.name=Quarzita
+        tile.mineworld:quarzite_tin.name=Quarzita con estaño
+        tile.mineworld:quarzite_smooth.name=Quarzita pulida
+        tile.mineworld:quarzite_paver.name=Guijarros de quarzita
+	  /*Bloques sombiros*/
+		tile.mineworld:shadow_dirt.name=Tierra sombria
+        tile.mineworld:shadow_grass.name=Pasto sombrio
+        tile.mineworld:shadow_log.name=Tronco sombrio
+        tile.mineworld:shadow_leaves.name=Hojas sombrias
+        tile.mineworld:shadow_plank.name=Tablones sombrios
+        tile.mineworld:shady_ore.name=Mineral sombrio
+	  /*Bloques cuanticos*/
+		tile.mineworld:quantum_log.name=Tronco cuantico
+        tile.mineworld:quantum_leaves.name=Hojas cuanticas
+        tile.mineworld:quantum_planks.name=Tablones cuanticos
+      /*Otros bloques*/
+        tile.mineworld:red_dirt.name=Tierra roja
+        tile.mineworld:asphalt.name=Bloque de asfalto
+        tile.mineworld:stellar_block.name=Bloque estelar
+	/*Mobs*/
+		entity.mineworld:pleyone.name=Pleione
+        entity.mineworld:red_panda.name=Panda rojo
+        entity.mineworld:husky.name=Husky
+        entity.mineworld:jellyfish.name=Medusa
+        entity.mineworld:hunter.name=Hunter
+        entity.mineworld:whale.name=Ballena azul
+        entity.mineworld:blacky.name=Black Mouth Cur
+        entity.mineworld:betelgeuse.name=Betelgeuse
+        entity.mineworld:chihuahua.name=Chihuahua
+        entity.mineworld:wolfdog.name=Perro lobo
+        entity.mineworld:nautilus.name=Nautilo
+        entity.mineworld:nectocaris.name=Nectocaris
+        entity.mineworld:fenix.name=Fenix
+        entity.mineworld:cocker_spaniel.name=Cocker Ingles
+        entity.mineworld:kitsune.name=Kitsune
+        entity.mineworld:shadow_bird.name=Pajaro sombrio
+        entity.mineworld:aligator.name=Cocodrilo
+        entity.mineworld:coyote.name=Coyote
+        entity.mineworld:machine_small.name=Maquina pequeña
+        entity.mineworld:machine.name=Maquina
+        entity.mineworld:machine_big.name=Maquina grande
+        entity.mineworld:machine_merchant.name=Maquina mercante
+        entity.mineworld:machine_mimic_ghast.name=Maquina mimetica tipo-Gh4st
+        entity.mineworld:machine_mimic_enderman.name=Maquina mimetica tipo-3nd3rm4n
+        entity.mineworld:baboon.name=Babuino
+	/*Bestiario*/
+	  /*Titulos*/
+        howtoplay.category.bestiary=Bestiario
+        bestiary.header.loot=Recompensa por matar
+
+        howtoplay.betelgeuse=Betelgeuse
+        howtoplay.betelgeuse.title=Betelgeuse - El rey §4ignifugo
+        howtoplay.hunter=Cazador
+        howtoplay.hunter.title=Cazador - Illano volador
+        howtoplay.fenix=Fenix
+        howtoplay.fenix.title=Fenix - El ave de §4fuego
+        howtoplay.nectocaris=Nectocaris
+        howtoplay.nectocaris.title=Nectocaris - El calamar de pasado
+        howtoplay.nautilus=Nautilo
+        howtoplay.nautilus.title=Nautilo - Los cefalopodos mas antiguos de la tierra
+        howtoplay.kitsune=Kitsune
+        howtoplay.kitsune.title=Kitsune - El gran zorro
+        howtoplay.machine=Maquinas
+        howtoplay.machine.title=Maquinas - Los creados del subsuelo
+
+	  /*Descripcion*/
+         //Betelgeuse
+            bestiary.betel.header=Betelgeuse
+            bestiary.betel.info=El betelgese es una criatura carnivora grande, caracterizada por la inmunidad contra el fuego y ser la criatura mas sanguinaria del mundo.
+            bestiary.betel.bh=El betelgeuse se caracteriza por ser inmune al fuego, ademas él cazara de noche, cazando todo ser vivo. Tambien tiene un rugido que puede dañar todo lo que este cercas de él.
+            bestiary.betel.var=Tiene dos variantes, la variante normal, la cual es muy comun de encontrar, y la primigenia, la cual es mas grande que la variante normal y tiene cambios en los dientes, las patas y encima de la cabeza.
+            bestiary.betel.loot=Ellos pueden dejar algunas escamas de Betelgeuse y rara vez pueden dejar un corazon de Betelgeuse.
+         //Hunter
+            bestiary.hunter.header=Cazador
+            bestiary.hunter.info=El cazador es un miembro de los illanos, es capaz de volar y atacar bajando muy rapido a su obetivo. Ellos son los unicos illanos que no pueden vivir de dia.
+            bestiary.hunter.bh=Ellos atacan desde el aire, llendo en picada a su objetivo y dando fuertes ataques.
+            bestiary.hunter.loot=Ellos pueden dejar caer polvo de plata o carne extraña.
+         //Fenix
+            bestiary.fenix.header=Fenix
+            bestiary.fenix.info=Es un ave de la mitologia griega, el cual se dice que nace de las cenizas del fenix que murio antes.
+            bestiary.fenix.bh=El fenix se puede encontrar en las montañas, atacara sin piedad a los cerdos y probablemente a los jugadores que esten cercas.
+            bestiary.fenix.loot=Puede dejar caer plumas de Fenix.
+         //Nectocaris
+            bestiary.nectocaris.header=Nectocaris
+            bestiary.nectocaris.info=Es un cefalópodo muy primitivo, que data del Cámbrico Medio, hace unos 500 millones de años.
+            bestiary.nectocaris.bh=Es un animal pacifico que solo estara rondando en los mares.
+            bestiary.nectocaris.loot=Ellos pueden soltar sacos de tinta.
+         //Nautilo
+            bestiary.nautilus.header=Nautilo
+            bestiary.nautilus.info=Es un cefalópodo considerado un fosil viviente por tener muy pocos cambios a lo largo de su existencia.
+            bestiary.nautilus.bh=Es un animal pacifico que solo nadara en el mar junto con otros cefalópodos.
+            bestiary.nautilus.loot=Ellos pueden soltar un caparazon de nautilo.
+         //Kitsune
+            bestiary.kitsune.header=Kitsune
+            bestiary.kitsune.info=Es un zorro del folclore japones, el cual se dice que es un ser magico que se puede encontrar en los bosques.
+            bestiary.kitsune.bh=El kitsune es un animal pacifico que se puede invocar dandole una piedra mistica a un zorro. Puedes domesticarlo con los distintos opalos y tambien puedes intercambiar con el dandole polvo estelar.
+            bestiary.kitsune.var=Tiene dos variantes, una de fuego y una de hielo. Cada variante depende de la variante del zorro al que se le dio la piedra mistica.
+            bestiary.kitsune.loot=Ellos no sueltan nada, solo sueltan experiencia.
+         //Machine
+            bestiary.machine.header=Maquina
+            bestiary.machine.info=Las maquinas son seres que fueron construidos en las profundidades y ahora han salido para convivir con los de la superficie.
+            bestiary.machine.bh=Todas las maquinas son hostiles con los jugadores a excepcion de la maquina mercante.
+            bestiary.machine.var=Existen 6 tipos de maquina, pequeñas, medianas, grandes, las maquinas mercantes y las maquinas mimetizadoras.
+            bestiary.machine.header.normal=Maquina normal
+            bestiary.machine.normal=Las maquinas del tipo normal son maquinas que no han cambiado su carcasa y son las mas faciles de encontrar. Existen 3 tipos de maquinas, la pequeña, la normal y la grande, cada variante tiene otras 3 variantes las cuales son: la maquina con escudo, la maquina con torreta y la maqquina de fuerza especial.
+            bestiary.machine.header.mimetic=Maquina Mimetica
+            bestiary.machine.mimetic=Las maquinas mimetizadoras son maquinas especiales capaces de camuflarze casi por completo en los lugares donde esta. Existen 2 maquinas mimeticas, el tipo-3nd3rm4n, que es la maquina que tiene caracteristicas similares al enderman, y el tipo-gh4st, que es la maquina que tiene caracteristicas similares al ghast.
+            bestiary.machine.header.merchant=Maquina mercante
+            bestiary.machine.merchant=La maquina mercante es una maquina pacifica con la cual podras comerciar utilizando el rubi, el zafiro, el diamante, la esmeralda y  el lingote de estaño
+            bestiary.machine.loot=Ellos pueden soltar un nucleo de maquina y/o lingotes de estaño.

@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:peridotite_smooth"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/peridotiteSmooth.json",
+            "minecraft:destroy_time": 2,
+            "minecraft:explosion_resistance": 50,
+            "minecraft:map_color": "#3a4c43",
+            "minecraft:display_name": "block.mineworld:peridotiteSmooth"
+        }
+    }
+}

@@ -1,0 +1,74 @@
+//Mineworld_entity_v1
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:fenix_ash",
+         "is_spawnable": false,
+         "is_summonable": true,
+         "is_experimental": false,
+         "scripts": {
+            "animate": [
+               "fenix"
+            ]
+         },
+         "animations": {
+            "fenix": "controller.animation.fenix"
+         }
+      },
+      "component_groups": {
+         "fenix_alive": {
+            "minecraft:is_baby": {}
+         }
+      },
+      "components": {
+         "minecraft:scale": {
+            "value": 1.5
+         },
+         "minecraft:collision_box": {
+            "width": 0.31,
+            "height": 0.31
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:timer": {
+            "looping": false,
+            "randomInterval": true,
+            "time": [
+               10,
+               30
+            ],
+            "time_down_event": {
+               "event": "fenix"
+            }
+         },
+         "minecraft:health": {
+            "value": 1,
+            "max": 1
+         },
+         "minecraft:damage_sensor": {
+            "triggers": {
+               "cause": "fall",
+               "deals_damage": false
+            }
+         },
+         "minecraft:type_family": {
+            "family": [
+               "ash"
+            ]
+         }
+      },
+      "events": {
+         "fenix": {
+            "add": {
+               "component_groups": [
+                  "fenix_alive"
+               ]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:silverKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"z",
+			"s"
+		],
+		"key": {
+			"z": {
+				"item": "mineworld:silverIngot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:silverKnife",
+				"count": 1
+			}
+		]
+	}
+}

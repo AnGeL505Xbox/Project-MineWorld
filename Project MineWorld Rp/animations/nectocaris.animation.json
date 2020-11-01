@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nectocaris.swim": {
+			"loop": true,
+			"bones": {
+				"r1": {
+					"rotation": [0, "Math.cos(query.life_time * 15)", 0]
+				},
+				"r2": {
+					"rotation": [0, "2*Math.cos(query.life_time * 15)", 0]
+				},
+				"l1": {
+					"rotation": [0, "-Math.cos(query.life_time * 15)", 0]
+				},
+				"l2": {
+					"rotation": [0, "-2*Math.cos(query.life_time * 15)", 0]
+				}
+			}
+		}
+	}
+}

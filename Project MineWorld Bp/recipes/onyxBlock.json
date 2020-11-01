@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:onyxBlock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ooo",
+			"ooo",
+			"ooo"
+		],
+		"key": {
+			"o": {
+				"item": "mineworld:onyx"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:onyx_block",
+				"count": 1
+			}
+		]
+	}
+}

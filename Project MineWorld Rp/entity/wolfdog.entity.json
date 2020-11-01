@@ -1,0 +1,39 @@
+{
+   "format_version": "1.8.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:wolfdog",
+         "materials": {
+            "color": "cat",
+            "uncolor": "skeleton"
+         },
+         "textures": {
+            "base": "textures/entity/canis/hybrid/base",
+            "blue": "textures/entity/canis/hybrid/eyes/blue",
+            "blue_light": "textures/entity/canis/hybrid/eyes/blue_light",
+            "black": "textures/entity/canis/hybrid/eyes/black"
+         },
+         "geometry": {
+            "default": "geometry.wolfdog"
+         },
+         "animations": {
+            "walk": "animation.mineworld.walk",
+            "sit": "animation.wolfdog.sit",
+            "look_at_target": "animation.common.look_at_target"
+         },
+         "animation_controllers": [
+            {
+               "general": "controller.animation.wolfdog.move"
+            }
+         ],
+         "render_controllers": [
+            "controller.render.wolfdog",
+            "controller.render.wolfdog_eyes"
+         ],
+         "spawn_egg": {
+            "base_color": "#c0c0c0",
+            "overlay_color": "#909090"
+         }
+      }
+   }
+}

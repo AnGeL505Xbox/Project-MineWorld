@@ -1,0 +1,40 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:bronzeHoe",
+            "category": "equipment"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:hand_equipped": true,
+            "minecraft:damageable": { "max_damage": 174 },
+            "minecraft:mining_speed": 8,
+            "minecraft:damage": 0,
+            "minecraft:enchantable": {
+                "value": 10,
+                "slot": "hoe"
+            },
+            "minecraft:use_on": { "blocks": [ "grass", "dirt", "grass_path" ] },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": "mineworld:bronzeIngot",
+                        "repair_amount": "q.max_durability*0.25"
+                    }
+                ]
+            },
+            "minecraft:icon": {
+                "texture": "bronzeTools",
+                "frame": 2
+            },
+            "tag:minecraft:is_hoe": {},
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.hoe"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:bronzeHoe.name"
+            }
+        }
+    }
+}

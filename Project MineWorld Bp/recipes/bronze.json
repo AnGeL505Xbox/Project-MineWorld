@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:bronze"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:bronze_block"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:bronzeIngot",
+				"count": 9
+			}
+		]
+	}
+}

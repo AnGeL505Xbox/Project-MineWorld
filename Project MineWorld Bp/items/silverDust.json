@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:silverDust",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "silverDust"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.silver"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:silverDust.name"
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:peridotBlock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ppp",
+			"ppp",
+			"ppp"
+		],
+		"key": {
+			"p": {
+				"item": "mineworld:peridot"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:peridot_block",
+				"count": 1
+			}
+		]
+	}
+}

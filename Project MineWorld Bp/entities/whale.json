@@ -1,0 +1,131 @@
+//Mineworld_entity_v2
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:whale",
+         "is_experimental": false,
+         "is_spawnable": true,
+         "is_summonable": true
+      },
+      "component_groups": {
+         "adult": {
+            "minecraft:loot": {
+               "table": "loot_tables/entities/whale.json"
+            },
+            "minecraft:scale": {
+               "value": 3
+            }
+         },
+         "baby": {
+            "minecraft:scale": {
+               "value": 1.5
+            },
+            "minecraft:behavior.follow_parent": {}
+         }
+      },
+      "components": {
+         "minecraft:behavior.random_swim": {
+            "interval": 0,
+            "priority": 4,
+            "speed_multiplier": 1,
+            "xz_dist": 16,
+            "y_dist": 4
+         },
+         "minecraft:behavior.swim_idle": {
+            "priority": 5
+         },
+         "minecraft:breathable": {
+            "breathesAir": true,
+            "breathesWater": false,
+            "generatesBubbles": false,
+            "suffocateTime": 0,
+            "totalSupply": 240
+         },
+         "minecraft:collision_box": {
+            "height": 0.8,
+            "width": 1
+         },
+         "minecraft:health": {
+            "max": 40,
+            "value": 40
+         },
+         "minecraft:hurt_on_condition": {
+            "damage_conditions": [
+               {
+                  "cause": "lava",
+                  "damage_per_tick": 4,
+                  "filters": {
+                     "operator": "==",
+                     "subject": "self",
+                     "test": "in_lava",
+                     "value": true
+                  }
+               }
+            ]
+         },
+         "minecraft:movement": {
+            "value": 0.1
+         },
+         "minecraft:movement.sway": {
+            "sway_amplitude": 0
+         },
+         "minecraft:nameable": {},
+         "minecraft:navigation.generic": {
+            "can_breach": true,
+            "can_path_over_water": true,
+            "can_sink": false,
+            "can_swim": true,
+            "can_walk": false,
+            "is_amphibious": true
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:type_family": {
+            "family": [
+               "whale"
+            ]
+         },
+         "minecraft:underwater_movement": {
+            "value": 0.15
+         }
+      },
+      "events": {
+         "minecraft:entity_spawned": {
+            "randomize": [
+               {
+                  "add": {
+                     "component_groups": [
+                        "adult"
+                     ]
+                  },
+                  "weight": 90
+               },
+               {
+                  "add": {
+                     "component_groups": [
+                        "baby"
+                     ]
+                  },
+                  "weight": 10
+               }
+            ]
+         },
+         "minecraft:ageable_grow_up": {
+            "add": {
+               "component_groups": [
+                  "adult"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "baby"
+               ]
+            }
+         }
+      }
+   }
+}

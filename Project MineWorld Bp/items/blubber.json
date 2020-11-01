@@ -1,0 +1,27 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:blubber",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 3,
+                "saturation_modifier": "normal",
+                "can_always_eat": true                
+            },
+            "minecraft:icon": {
+                "texture": "blubber"
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.blubber"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:blubber.name"
+            }
+        }
+    }
+}

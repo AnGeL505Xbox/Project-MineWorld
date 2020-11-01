@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:sapphireBlock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"sss",
+			"sss",
+			"sss"
+		],
+		"key": {
+			"s": {
+				"item": "mineworld:sapphire"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:sapphire_block",
+				"count": 1
+			}
+		]
+	}
+}

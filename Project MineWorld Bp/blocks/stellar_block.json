@@ -1,0 +1,16 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:stellar_block"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/stellarBlock.json",
+            "minecraft:destroy_time": 0.45,
+            "minecraft:explosion_resistance": 1.5,
+            "minecraft:block_light_emission": 0.8125,
+            "minecraft:map_color": "#ffff93",
+            "minecraft:display_name": "block.mineworld:stellarBlock"
+        }
+    }
+}

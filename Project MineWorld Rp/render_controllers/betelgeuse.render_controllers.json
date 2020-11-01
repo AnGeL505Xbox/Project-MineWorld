@@ -1,0 +1,18 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.betelgeuse": {
+            "arrays": {
+                "textures": {
+                    "Array.texture_variant": [ "Texture.primal_betelgeuse", "Texture.betelgeuse" ]
+                },
+                "geometries": {
+                    "Array.geo_variant": [ "Geometry.primal_betelgeuse", "Geometry.betelgeuse" ]
+                }
+            },
+            "geometry": "Array.geo_variant[query.variant]",
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Array.texture_variant[query.variant]" ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Expand your horizons!!!",
+        "name": "Project MineWorld Rp",
+        "uuid": "2b49d83a-3ade-4832-9286-efa6e1300ea3",
+        "version": [ 1, 5, 0 ],
+        "min_engine_version": [ 1, 16, 0 ]
+    },
+    "modules": [
+        {
+        "description": "Expand your horizons!!!",
+        "type": "resources",
+        "uuid": "e85c974a-e71a-48cd-a680-d619f3e82688",
+        "version": [ 1, 5, 0 ]
+        }
+    ]
+}

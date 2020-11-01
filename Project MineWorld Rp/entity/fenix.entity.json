@@ -1,0 +1,33 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:fenix",
+         "min_engine_version": "1.8.0",
+         "materials": {
+            "default": "skeleton"
+         },
+         "textures": {
+            "default": "textures/entity/legend/fenix/fenix"
+         },
+         "geometry": {
+            "default": "geometry.fenix"
+         },
+         "animations": {
+            "fly": "animation.fenix.fly"
+         },
+         "scripts": {
+            "animate": [
+               "fly"
+            ]
+         },
+         "render_controllers": [
+            "controller.render.fenix"
+         ],
+         "spawn_egg": {
+            "base_color": "#eb1805",
+            "overlay_color": "#f27d41"
+         }
+      }
+   }
+}

@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.jellyfish.swim": {
+			"loop": true,
+			"bones": {
+				"d1": {
+					"rotation": ["-Math.abs(25*Math.cos(query.life_time * 250))", 0, 0]
+				},
+				"d2": {
+					"position": [0, "-Math.abs(0.9*Math.cos(query.life_time * 250))", 0]
+				},
+				"d3": {
+					"rotation": ["Math.abs(25*Math.cos(query.life_time * 250))", 0, 0]
+				},
+				"l1": {
+					"rotation": [0, "-Math.abs(25*Math.cos(query.life_time * 250))", 0]
+				},
+				"l2": {
+					"position": ["-Math.abs(0.9*Math.cos(query.life_time * 250))", 0, 0]
+				},
+				"l3": {
+					"rotation": [0, "Math.abs(25*Math.cos(query.life_time * 250))", 0]
+				},
+				"r1": {
+					"rotation": [0, "Math.abs(25*Math.cos(query.life_time * 250))", 0]
+				},
+				"r2": {
+					"position": ["Math.abs(0.9*Math.cos(query.life_time * 250))", 0, 0]
+				},
+				"r3": {
+					"rotation": [0, "-Math.abs(25*Math.cos(query.life_time * 250))", 0]
+				},
+				"u1": {
+					"rotation": ["Math.abs(25*Math.cos(query.life_time * 250))", 0, 0]
+				},
+				"u2": {
+					"position": [0, "Math.abs(0.9*Math.cos(query.life_time * 250))", 0]
+				},
+				"u3": {
+					"rotation": ["-Math.abs(25*Math.cos(query.life_time * 250))", 0, 0]
+				}
+			}
+		}
+	}
+}

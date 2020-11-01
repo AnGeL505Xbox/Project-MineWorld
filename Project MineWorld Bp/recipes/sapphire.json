@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:sapphire"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:sapphire_block"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:sapphire",
+				"count": 9
+			}
+		]
+	}
+}

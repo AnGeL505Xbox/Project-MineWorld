@@ -1,0 +1,19 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": { "identifier": "mineworld:carbonNanotube" },
+		"tags": [ "techno_table" ],
+		"pattern": [
+		   "**",
+		   "**",
+		   "**"
+		],
+		"key": {
+		   "*": { "item": "minecraft:coal" }
+		},
+		"result": {
+		   "item": "mineworld:carbonNanotube",
+		   "count": 1
+		}
+	 }
+}

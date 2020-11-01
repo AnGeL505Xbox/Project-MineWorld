@@ -1,0 +1,232 @@
+//Mineworld_entity v2
+{
+    "format_version": "1.14.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mineworld:machine_small",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "machine:allie": {
+                "minecraft:mark_variant": {
+                    "value": 0
+                },
+                "minecraft:tameable": {
+                    "probability": 0.02,
+                    "tame_items": [
+                        "mineworld:circuit"
+                    ],
+                    "tame_event": {
+                        "event": "tameable"
+                    }
+                }
+            },
+            "machine:enemy": {
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "machine:tamed": {
+                "minecraft:is_tamed": {},
+                "minecraft:behavior.follow_owner": {
+                    "priority": 3,
+                    "stop_distance": 3,
+                    "start_distance": 10
+                },
+                "minecraft:behavior.owner_hurt_by_target": {
+                    "priority": 2
+                },
+                "minecraft:behavior.owner_hurt_target": {
+                    "priority": 1
+                }
+            },
+            "machine:pacific": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:health": {
+                    "value": 5,
+                    "max": 5
+                }
+            },
+            "machine:shield": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:attack": {
+                    "damage": 2
+                },
+                "minecraft:health": {
+                    "value": 7,
+                    "max": 7
+                }
+            },
+            "machine:shield_enemy": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:health": {
+                    "value": 8,
+                    "max": 8
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 2,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "irongolem"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "snowgolem"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "villager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "must_reach": false,
+                    "must_see": true,
+                    "scan_interval": 10,
+                    "reselect_targets": true,
+                    "within_radius": 16
+                },
+                "minecraft:behavior.hurt_by_target": {
+                    "priority": 1
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "machine"
+                ]
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {
+                "avoid_portals": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 4,
+                "look_time": [
+                    2,
+                    6
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.5,
+                "height": 0.5
+            },
+            "minecraft:jump.static": {},
+            "minecraft:behavior.melee_attack": {
+                "priority": 2,
+                "track_target": true
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/machine.json"
+            },
+            "minecraft:experience_reward": {
+                "on_death": "query.last_hit_by_player ? Math.Random(1,3) : Math.Random(0,0.5)"
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 5
+            },
+            "minecraft:can_climb": {},
+            "minecraft:behavior.mount_pathing": {
+                "priority": 1,
+                "target_dist": 0,
+                "track_target": true
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "cause": "lava",
+                        "damage_per_tick": 4,
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "value": true
+                        }
+                    }
+                ]
+            },
+            "minecraft:movement": {
+                "value": 0.35
+            },
+            "minecraft:nameable": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "machine:allie",
+                                "machine:pacific"
+                            ]
+                        },
+                        "weight": 2
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "add": {
+                                    "component_groups": [
+                                        "machine:enemy",
+                                        "machine:pacific"
+                                    ]
+                                },
+                                "weight": 6
+                            },
+                            {
+                                "add": {
+                                    "component_groups": [
+                                        "machine:enemy",
+                                        "machine:shield_enemy"
+                                    ]
+                                },
+                                "weight": 4
+                            }
+                        ],
+                        "weight": 7
+                    }
+                ]
+            },
+            "tameable": {
+                "add": {
+                    "component_groups": [
+                        "machine:tamed"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "machine:allie"
+                    ]
+                }
+            }
+        }
+    }
+}

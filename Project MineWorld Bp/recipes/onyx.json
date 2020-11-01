@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:onyx"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:onyx_block"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:onyx",
+				"count": 9
+			}
+		]
+	}
+}

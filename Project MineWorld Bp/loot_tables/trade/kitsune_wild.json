@@ -1,0 +1,39 @@
+{
+   "pools": [
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "mineworld:strangeMeat",
+               "weight": 10
+            },
+            {
+               "type": "item",
+               "name": "minecraft:iron_ingot",
+               "weight": 9
+            },
+            {
+               "type": "item",
+               "name": "minecraft:gold_nugget",
+               "weight": 9
+            },
+            {
+               "type": "item",
+               "name": "mineworld:bacon",
+               "weight": 7
+            },
+            {
+               "type": "item",
+               "name": "mineworld:silverDust",
+               "weight": 5
+            },
+            {
+               "type": "item",
+               "name": "mineworld:stellarDust",
+               "weight": 1
+            }
+         ]
+      }
+   ]
+}

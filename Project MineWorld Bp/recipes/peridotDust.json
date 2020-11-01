@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:peridotDust"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:peridot"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:peridot_dust",
+				"count": 3
+			}
+		]
+	}
+}

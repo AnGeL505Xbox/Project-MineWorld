@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:quarzite_tin"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/quarziteTin.json",
+            "minecraft:destroy_time": 1.25,
+            "minecraft:explosion_resistance": 30,
+            "minecraft:map_color": "#fbf7f5",
+            "minecraft:display_name": "block.mineworld:quarziteTin"
+        }
+    }
+}

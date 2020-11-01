@@ -1,0 +1,109 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:elixirPhoenix",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 1,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "elixirPhoenix"
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.elixir"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:elixirPhoenix.name"
+            }
+        },
+        "events": { 
+            "effects": {
+                "randomize": [
+                    {
+                        "weight": 9,
+                        "sequence" : [
+                            {
+                                "add_mob_effect": {
+                                    "effect": "slow_falling",
+                                    "target": "holder",
+                                    "duration": 15,
+                                    "amplifier": 0
+                                }
+                            },
+                            {
+                                "add_mob_effect": {
+                                    "effect": "slowness",
+                                    "target": "holder",
+                                    "duration": 20,
+                                    "amplifier": 0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "weight": 5,
+                        "sequence" : [
+                            {
+                                "add_mob_effect": {
+                                    "effect": "fire_resistance",
+                                    "target": "holder",
+                                    "duration": 15,
+                                    "amplifier": 0
+                                }
+                            },
+                            {
+                                "add_mob_effect": {
+                                    "effect": "slow_falling",
+                                    "target": "holder",
+                                    "duration": 20,
+                                    "amplifier": 1
+                                }
+                            },
+                            
+                            {
+                                "add_mob_effect": {
+                                    "effect": "weakness",
+                                    "target": "holder",
+                                    "duration": 20,
+                                    "amplifier": 0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "weight": 1,
+                        "sequence" : [
+                            {
+                                "add_mob_effect": {
+                                    "effect": "fire_resistance",
+                                    "target": "holder",
+                                    "duration": 30,
+                                    "amplifier": 1
+                                }
+                            },
+                            {
+                                "add_mob_effect": {
+                                    "effect": "slow_falling",
+                                    "target": "holder",
+                                    "duration": 40,
+                                    "amplifier": 2
+                                }
+                            }
+                        ]
+                    }
+                ]
+            } 
+        }
+    }
+}

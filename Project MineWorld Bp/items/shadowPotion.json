@@ -1,0 +1,41 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:shadowPotion",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 1,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "shadowPotion"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.shadowPotion"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:shadowPotion.name"
+            }
+        },
+        "events": {
+            "effects": {
+                "add_mob_effect": {
+                    "effect": "invisibility",
+                    "target": "holder",
+                    "duration": 10,
+                    "amplifier": 0
+                }
+            }
+        }
+    }
+}

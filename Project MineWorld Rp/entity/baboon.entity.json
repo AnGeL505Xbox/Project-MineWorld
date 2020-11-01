@@ -1,0 +1,40 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:baboon",
+         "materials": {
+            "default": "skeleton"
+         },
+         "textures": {
+            "default": "textures/entity/cercopithecidae/baboon"
+         },
+         "geometry": {
+            "default": "geometry.baboon"
+         },
+         "scripts": {
+            "animate": [
+               "look_at_target",
+               {
+                  "walk" : "!query.is_sitting"
+               },
+               {
+                  "sit" : "query.is_sitting"
+               }
+            ]
+         },
+         "animations": {
+            "look_at_target": "animation.common.look_at_target",
+            "walk": "animation.baboon.walk",
+            "sit": "animation.baboon.sit"
+         },
+         "render_controllers": [
+            "controller.render.baboon"
+         ],
+         "spawn_egg": {
+            "base_color": "#f8f8ff",
+            "overlay_color": "#f7c6c3"
+         }
+      }
+   }
+}

@@ -1,0 +1,41 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:shadowCookie",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 10,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "shadowCookie"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.shadowCookie"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:shadowCookie.name"
+            }
+        },
+        "events": {
+            "effects": {
+                "add_mob_effect": {
+                    "effect": "invisibility",
+                    "target": "holder",
+                    "duration": 30,
+                    "amplifier": 0
+                }
+            }
+        }
+    }
+}

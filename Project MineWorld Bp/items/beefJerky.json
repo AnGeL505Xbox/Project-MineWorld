@@ -1,0 +1,27 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:beefJerky",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 7,
+                "saturation_modifier": "normal",
+                "can_always_eat": true
+            },
+            "minecraft:icon": {
+                "texture": "beefJerky"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.beefJerky"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:beefJerky.name"
+            }
+        }
+    }
+}

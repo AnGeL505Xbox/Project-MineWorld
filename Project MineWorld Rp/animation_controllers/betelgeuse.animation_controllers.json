@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.betelgeuse.general": {
+            "initial_state": "walking",
+            "states": {
+                "walking": {
+                    "animations": [ "walk", "tail_move", "look_at_target" ],
+                    "transitions": [ { "roaring": "query.is_roaring" } ],
+                    "blend_transition": 0.2
+                },
+                "roaring": {
+                    "animations": [ "roar" ],
+                    "transitions": [ { "walking": "!query.is_roaring" } ],
+                    "blend_transition": 0.2
+                }
+            }
+        }
+    }
+}

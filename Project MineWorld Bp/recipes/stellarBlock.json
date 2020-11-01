@@ -1,0 +1,15 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": { "description": { "identifier": "mineworld:stellar_block" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "##",
+         "##"
+      ],
+      "key": { "#": { "item": "mineworld:stellarDust" } },
+      "result": {
+         "item": "mineworld:stellar_block",
+         "count": 1
+      }
+   }
+}

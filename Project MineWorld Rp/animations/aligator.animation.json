@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.aligator.swim": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": [0, "Math.cos(query.life_time * 150)*10", 0]
+				}
+			}
+		},
+		"animation.aligator.walk": {
+			"loop": true,
+			"bones": {
+				"leg3": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0] },
+				"leg4": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180.0) * 57.3 * query.modified_move_speed", 0, 0] },
+				"leg1": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180.0) * 57.3 * query.modified_move_speed", 0, 0] },
+				"leg2": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0] }
+			}
+		}
+	}
+}

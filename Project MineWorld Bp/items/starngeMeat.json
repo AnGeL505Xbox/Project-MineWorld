@@ -1,0 +1,64 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:strangeMeat",
+            "category": "nature"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 2,
+                "saturation_modifier": "low",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }                
+            },
+            "minecraft:icon": {
+                "texture": "sMeat"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.sMeat"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:strangeMeat.name"
+            }
+        },
+        "events": { 
+            "effects": {
+                "randomize": [
+                    {
+                        "weight": 9, 
+                        "add_mob_effect": {
+                            "effect": "nausea",
+                            "target": "holder",
+                            "duration": 20,
+                            "amplifier": 0 
+                        }
+                    },
+                    {
+                        "weight": 3, 
+                        "add_mob_effect": {
+                            "effect": "poison",
+                            "target": "holder",
+                            "duration": 5,
+                            "amplifier": 0 
+                        }
+                    },
+                    {
+                        "weight": 2, 
+                        "add_mob_effect": {
+                            "effect": "blindness",
+                            "target": "holder",
+                            "duration": 30,
+                            "amplifier": 0 
+                        }
+                    }
+                ]
+            } 
+        }
+    }
+}

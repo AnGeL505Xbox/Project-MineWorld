@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:shadow_potion_shungite"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"s",
+			"p"
+		],
+		"key": {
+			"s": {
+				"item": "mineworld:shungite"
+			},
+			"p": {
+				"item": "minecraft:potion",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:shadowPotion",
+				"count": 1
+			}
+		]
+	}
+}

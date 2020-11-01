@@ -1,0 +1,95 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.baboon",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 1,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 9, -6],
+					"cubes": [
+						{"origin": [-3, 7, -12], "size": [6, 6, 6], "uv": [0, 17]},
+						{"origin": [-5, 7, -9], "size": [10, 6, 0], "uv": [34, 0]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 9, -0.5],
+					"cubes": [
+						{"origin": [-3, 6, -6], "size": [6, 6, 11], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "legs",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "legL",
+					"parent": "legs",
+					"pivot": [-2, 6, 4],
+					"cubes": [
+						{"origin": [-3, 0, 3], "size": [2, 6, 2], "uv": [8, 29]}
+					]
+				},
+				{
+					"name": "legR",
+					"parent": "legs",
+					"pivot": [2, 6, 4],
+					"cubes": [
+						{"origin": [1, 0, 3], "size": [2, 6, 2], "uv": [0, 29]}
+					]
+				},
+				{
+					"name": "arms",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "armL",
+					"parent": "arms",
+					"pivot": [2, 6, -5],
+					"cubes": [
+						{"origin": [1, 0, -6], "size": [2, 6, 2], "uv": [28, 17]}
+					]
+				},
+				{
+					"name": "armR",
+					"parent": "arms",
+					"pivot": [-2, 6, -5],
+					"cubes": [
+						{"origin": [-3, 0, -6], "size": [2, 6, 2], "uv": [0, 0]}
+					],
+					"locators": {
+						"held_item": [-2, 0, -5]
+					}
+				},
+				{
+					"name": "tail",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "tail1",
+					"parent": "tail",
+					"pivot": [0, 11, 5],
+					"cubes": [
+						{"origin": [-1, 10, 5], "size": [2, 2, 7], "uv": [23, 0]}
+					]
+				},
+				{
+					"name": "tail2",
+					"parent": "tail",
+					"pivot": [0, 11, 5],
+					"cubes": [
+						{"origin": [-1, 10, 12], "size": [2, 2, 7], "uv": [17, 22]}
+					]
+				}
+			]
+		}
+	]
+}

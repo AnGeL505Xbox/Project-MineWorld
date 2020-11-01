@@ -1,0 +1,87 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.kitsune.baby": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, 4, 2],
+					"scale": 2
+				}
+			}
+		},
+		"animation.kitsune.walk": {
+			"loop": true,
+			"bones": {
+				"leg1": {
+					"rotation": ["variable.moveL", 0, 0]
+				},
+				"leg0": {
+					"rotation": ["variable.moveR", 0, 0]
+				},
+				"leg3": {
+					"rotation": ["variable.moveR", 0, 0]
+				},
+				"leg2": {
+					"rotation": ["variable.moveL", 0, 0]
+				},
+				"tail": {
+					"rotation": ["variable.moveTail-1", "(query.modified_move_speed*20) + 0.5", 0]
+				},
+				"tail2": {
+					"rotation": ["variable.moveTail -2", "query.modified_move_speed*15", 0]
+				},
+				"tail3": {
+					"rotation": ["variable.moveTail-3", "query.modified_move_speed", 0]
+				},
+				"tail4": {
+					"rotation": ["variable.moveTail - 2", "-query.modified_move_speed*15", 0]
+				},
+				"tail5": {
+					"rotation": ["variable.moveTail-1", "-query.modified_move_speed*20", 0]
+				}
+			}
+		},
+		"animation.kitsune.sit": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [-30, 0, 0],
+					"position": [0, -2, 0]
+				},
+				"head": {
+					"position": [0, 1, 0]
+				},
+				"leg0": {
+					"rotation": [-90, 5, 0],
+					"position": [-1, -6, 0]
+				},
+				"leg1": {
+					"rotation": [-90, 0, 0],
+					"position": [1, -6, 0]
+				},
+				"leg2": {
+					"position": [0, 0, -2]
+				},
+				"leg3": {
+					"position": [0, 0, -1]
+				},
+				"tail": {
+					"position": [0, -6, 0]
+				},
+				"tail2": {
+					"position": [0, -6, 0]
+				},
+				"tail3": {
+					"position": [0, -6, 0]
+				},
+				"tail4": {
+					"position": [0, -6, 0]
+				},
+				"tail5": {
+					"position": [0, -6, 0]
+				}
+			}
+		}
+	}
+}

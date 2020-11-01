@@ -1,0 +1,47 @@
+{
+   "format_version": "1.8.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:husky",
+         "materials": {
+            "default": "skeleton"
+         },
+         "textures": {
+            "default": "textures/entity/canis/lupus_familiaris/husky/default",
+            "black": "textures/entity/canis/lupus_familiaris/husky/eyes/black",
+            "black_r": "textures/entity/canis/lupus_familiaris/husky/eyes/black_right",
+            "black_l": "textures/entity/canis/lupus_familiaris/husky/eyes/black_left",
+            "brown": "textures/entity/canis/lupus_familiaris/husky/eyes/brown",
+            "brown_r": "textures/entity/canis/lupus_familiaris/husky/eyes/brown_right",
+            "brown_l": "textures/entity/canis/lupus_familiaris/husky/eyes/brown_left",
+            "blue": "textures/entity/canis/lupus_familiaris/husky/eyes/blue",
+            "blue_r": "textures/entity/canis/lupus_familiaris/husky/eyes/blue_right",
+            "blue_l": "textures/entity/canis/lupus_familiaris/husky/eyes/blue_left"
+         },
+         "geometry": {
+            "default": "geometry.husky"
+         },
+         "animations": {
+            "walk": "animation.mineworld.walk",
+            "sit": "animation.mineworld.sit",
+            "look_at_target": "animation.common.look_at_target"
+         },
+         "animation_controllers": [
+            {
+               "general": "controller.animation.husky.move"
+            }
+         ],
+         "render_controllers": [
+            "controller.render.husky",
+            "controller.render.husky_eyes"
+         ],
+         "spawn_egg": {
+            "base_color": "#f9f9f9",
+            "overlay_color": "#787878"
+         }
+      }
+   }
+}  }
+        }
+    }
+}

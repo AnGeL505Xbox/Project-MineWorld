@@ -1,0 +1,15 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.whale.swim": {
+            "loop": true,
+            "bones": {
+                "body": { "rotation": [ "-2.865 * Math.cos(query.life_time * 200)", 0, 0 ] },
+                "tail": { "rotation": [ "-5.73 * Math.cos(query.life_time * 200)", 0, 0 ] },
+                "tail_fin": { "rotation": [ "-11.46 * Math.cos(query.life_time * 200)", 0, 0 ] },
+                "left_fin": { "rotation": [ 0, 0, "17.19 * Math.cos(query.life_time * 200) + 22.92" ] },
+                "right_fin": { "rotation": [ 0, 0, "-17.19 * Math.cos(query.life_time * 200) - 22.92" ] }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:featherPhoenix",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "featherPhoenix"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.phoenix"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:featherPhoenix.name"
+            }
+        }
+    }
+}

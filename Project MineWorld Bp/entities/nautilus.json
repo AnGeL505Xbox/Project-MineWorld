@@ -1,0 +1,93 @@
+//Mineworld_entity_v2
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:nautilus",
+         "is_experimental": false,
+         "is_spawnable": true,
+         "is_summonable": true
+      },
+      "components": {
+         "minecraft:behavior.random_swim": {
+            "interval": 0,
+            "priority": 3,
+            "speed_multiplier": 1,
+            "xz_dist": 16,
+            "y_dist": 4
+         },
+         "minecraft:behavior.swim_idle": {
+            "priority": 5
+         },
+         "minecraft:behavior.swim_wander": {
+            "interval": 10,
+            "look_ahead": 2,
+            "priority": 4,
+            "speed_multiplier": 1
+         },
+         "minecraft:breathable": {
+            "breathes_air": false,
+            "breathes_water": true,
+            "suffocate_time": 0,
+            "total_supply": 15
+         },
+         "minecraft:collision_box": {
+            "height": 0.3,
+            "width": 0.3
+         },
+         "minecraft:health": {
+            "max": 8,
+            "value": 8
+         },
+         "minecraft:hurt_on_condition": {
+            "damage_conditions": [
+               {
+                  "cause": "lava",
+                  "damage_per_tick": 4,
+                  "filters": {
+                     "operator": "==",
+                     "subject": "self",
+                     "test": "in_lava",
+                     "value": true
+                  }
+               }
+            ]
+         },
+         "minecraft:loot": {
+            "table": "loot_tables/entities/nautilus.json"
+         },
+         "minecraft:movement": {
+            "value": 0.1
+         },
+         "minecraft:movement.sway": {
+            "sway_amplitude": 0
+         },
+         "minecraft:nameable": {},
+         "minecraft:navigation.generic": {
+            "can_breach": true,
+            "can_path_over_water": true,
+            "can_sink": false,
+            "can_swim": true,
+            "can_walk": false,
+            "is_amphibious": false
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:scale": {
+            "value": 1.5
+         },
+         "minecraft:type_family": {
+            "family": [
+               "nautilus",
+               "cephalopoda"
+            ]
+         },
+         "minecraft:underwater_movement": {
+            "value": 0.1
+         }
+      }
+   }
+}

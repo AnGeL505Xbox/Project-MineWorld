@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:rubyBlock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"rrr",
+			"rrr",
+			"rrr"
+		],
+		"key": {
+			"r": {
+				"item": "mineworld:ruby"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:ruby_block",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+    "format_version": "1.8.0",
+    "animation_controllers": {
+        "controller.animation.fenix": {
+            "states": {
+                "default": {
+                    "transitions": [ { "activate": "query.is_baby" } ] },
+                "activate": {
+                    "on_entry": [
+                        "/summon mineworld:fenix",
+                        "/kill @s"
+                    ]
+                }
+            }
+        }
+    }
+}

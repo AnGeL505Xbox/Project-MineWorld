@@ -1,0 +1,16 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:shadow_log"
+        },
+        "components": {
+            "minecraft:map_color": "#434a47",
+            "minecraft:loot": "loot_tables/blocks/shadowLog.json",
+            "minecraft:destroy_time": 1.5,
+            "minecraft:explosion_resistance": 0,
+            "minecraft:block_light_absorption": 1,
+            "minecraft:display_name": "block.mineworld:shadowLog"
+        }
+    }
+}

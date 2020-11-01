@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:bronze_block"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/bronzeBlock.json",
+            "minecraft:destroy_time": 1.7,
+            "minecraft:explosion_resistance": 25,
+            "minecraft:map_color": "#d38233",
+            "minecraft:display_name": "block.mineworld:bronzeBlock"
+        }
+    }
+}

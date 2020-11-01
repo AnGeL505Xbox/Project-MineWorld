@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:bronzeIngot"
+		},
+		"tags": [
+			"techno_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:copper"
+			},
+			{
+				"item": "mineworld:tinIngot"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:bronzeIngot",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,141 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "mineworld:blacky": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": 1.45,
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 1.45,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.15
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": 1.19,
+                "volume": 1
+            },
+            "mineworld:chihuahua": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": 2,
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 2,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.15
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": 2,
+                "volume": 1
+            },
+            "mineworld:cocker_spaniel": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": 1.45,
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 1.45,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.15
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": 1.3,
+                "volume": 1
+            },
+            "mineworld:husky": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": 1,
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 1,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.15
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": 0.8,
+                "volume": 1
+            },
+            "mineworld:jellyfish": {
+                "events": {
+                    "ambient": "mob.squid.ambient",
+                    "death": "mob.squid.death",
+                    "hurt": "mob.squid.hurt"
+                },
+                "pitch": [ 1, 1.5 ],
+                "volume": 0.4
+            },
+            "mineworld:wolfdog": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": 1,
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 1,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.15
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": 1,
+                "volume": 1
+            },
+            "mineworld:coyote": {
+                "events": {
+                    "ambient": "mob.wolf.bark",
+                    "death": "mob.wolf.death",
+                    "growl": "mob.wolf.growl",
+                    "hurt": "mob.wolf.hurt",
+                    "pant": "mob.wolf.panting",
+                    "shake": {
+                        "pitch": 1,
+                        "sound": "mob.wolf.shake"
+                    },
+                    "step": {
+                        "pitch": 1,
+                        "sound": "mob.wolf.step",
+                        "volume": 0.15
+                    },
+                    "whine": "mob.wolf.whine"
+                },
+                "pitch": 0.95,
+                "volume": 1
+            }
+        }
+    }
+}

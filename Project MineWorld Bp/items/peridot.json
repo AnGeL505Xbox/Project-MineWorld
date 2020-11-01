@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:peridot",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "peridot"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.gems"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:peridot.name"
+            }
+        }
+    }
+}

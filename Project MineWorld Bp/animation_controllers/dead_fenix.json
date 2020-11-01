@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.dead_fenix": {
+			"states": {
+				"default": { "transitions": [ { "activate": "!query.is_alive" } ] },
+				"activate": {
+					"on_entry": [
+						"/summon mineworld:fenix_ash",
+						"/kill @s"
+					]
+				}
+			}
+		}
+	}
+}

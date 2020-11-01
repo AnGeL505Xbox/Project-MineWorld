@@ -1,0 +1,35 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:machine_mimic_enderman",
+         "min_engine_version": "1.8.0",
+         "materials": {
+            "default": "spider"
+         },
+         "textures": {
+            "default": "textures/entity/machine/enderman.tga"
+         },
+         "geometry": {
+            "default": "geometry.enderman_mimic"
+         },
+         "scripts": {
+            "animate": [
+               "look_at_target",
+               "walk"
+            ]
+         },
+         "animations": {
+            "look_at_target": "animation.common.look_at_target",
+            "walk": "animation.machine_mimic.walk"
+         },
+         "render_controllers": [
+            "controller.render.machine_mimic"
+         ],
+         "spawn_egg": {
+            "texture": "mineworld_spawn",
+            "texture_index": 5
+         }
+      }
+   }
+}

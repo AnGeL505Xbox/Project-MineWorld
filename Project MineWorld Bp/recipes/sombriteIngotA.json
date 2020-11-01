@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:sombrite"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:sombrite_block"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:sombriteIngot",
+				"count": 9
+			}
+		]
+	}
+}

@@ -1,0 +1,56 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.chihuahua_skin": {
+   "arrays": {
+    "textures": {
+     "Array.skin": [
+      "Texture.black",
+      "Texture.white",
+      "Texture.canel"
+     ]
+    },
+    "geometries": {
+     "Array.head": [
+      "Geometry.apple_head",
+      "Geometry.normal_head"
+     ]
+    }
+   },
+   "geometry": "Array.head[query.variant]",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "Array.skin[query.variant]"
+   ]
+  },
+  "controller.render.chihuahua_eye": {
+   "arrays": {
+    "textures": {
+     "Array.eye": [
+      "Texture.brown",
+      "Texture.green"
+     ]
+    },
+    "geometries": {
+     "Array.head": [
+      "Geometry.apple_head",
+      "Geometry.normal_head"
+     ]
+    }
+   },
+   "geometry": "Array.head[query.variant]",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "Array.eye[query.mark_variant]"
+   ]
+  }
+ }
+}

@@ -1,0 +1,13 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "mineworld:silver_nugget" },
+        "tags": [ "crafting_table" ],
+        "pattern": [ "#" ],
+        "key": { "#": { "item": "mineworld:silverIngot" } },
+        "result": {
+            "item": "mineworld:silverNugget",
+            "count": 9
+        }
+    }
+}

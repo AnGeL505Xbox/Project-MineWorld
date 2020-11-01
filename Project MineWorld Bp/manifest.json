@@ -1,0 +1,21 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Expand your horizons!!!",
+        "name": "Project MineWorld Bh",
+        "uuid": "760c983f-b9f9-4fa9-88e0-d6a982bcab90",
+        "min_engine_version": [ 1, 16, 0 ],
+        "version": [ 1, 5, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Expand your horizons!!!",
+            "type": "data",
+            "uuid": "ff15774b-54d3-4fbf-8ef4-156866c5ba21",
+            "version": [ 1, 5, 0 ]
+        }
+    ],
+    "dependencies": [
+        { "uuid": "2b49d83a-3ade-4832-9286-efa6e1300ea3", "version": [ 1, 5, 0 ] }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.machine_big",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 25, -2], "size": [8, 5, 6], "uv": [0, 0]},
+						{"origin": [-4.5, 25, -2.5], "size": [9, 2, 5], "uv": [28, 17]},
+						{"origin": [-1, 24, 0], "size": [2, 1, 2], "uv": [22, 11]}
+					]
+				},
+				{
+					"name": "shieldH",
+					"parent": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4.5, 28, -2.5], "size": [9, 3, 7], "uv": [0, 28]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 13, -2], "size": [8, 11, 6], "uv": [0, 11]}
+					]
+				},
+				{
+					"name": "turretBase",
+					"parent": "body",
+					"pivot": [0, 24, 4.5],
+					"cubes": [
+						{"origin": [-4, 17, 4], "size": [8, 7, 1], "uv": [44, 0]}
+					]
+				},
+				{
+					"name": "shieldB",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 13, -2.01], "size": [8, 11, 0], "uv": [0, 38]},
+						{"origin": [-4, 24, -2.01], "size": [8, 0, 6], "uv": [26, 32]}
+					]
+				},
+				{
+					"name": "turret",
+					"parent": "body",
+					"pivot": [4, 23.5, 4.5],
+					"cubes": [
+						{"origin": [4, 23, -1], "size": [1, 1, 6], "uv": [28, 10]}
+					]
+				},
+				{
+					"name": "legs",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "legL",
+					"parent": "legs",
+					"pivot": [3, 13, 1],
+					"cubes": [
+						{"origin": [2, 0, 0], "size": [2, 13, 2], "uv": [8, 38]}
+					]
+				},
+				{
+					"name": "legR",
+					"parent": "legs",
+					"pivot": [-3, 13, 1],
+					"cubes": [
+						{"origin": [-4, 0, 0], "size": [2, 13, 2], "uv": [8, 38]}
+					]
+				},
+				{
+					"name": "arms",
+					"pivot": [0, 5, 0]
+				},
+				{
+					"name": "armR",
+					"parent": "arms",
+					"pivot": [-5, 23, 1],
+					"cubes": [
+						{"origin": [-6, 12, 0], "size": [2, 11, 2], "uv": [36, 0]}
+					]
+				},
+				{
+					"name": "armL",
+					"parent": "arms",
+					"pivot": [5, 23, 1],
+					"cubes": [
+						{"origin": [4, 12, 0], "size": [2, 11, 2], "uv": [36, 0]}
+					]
+				}
+			]
+		}
+	]
+}

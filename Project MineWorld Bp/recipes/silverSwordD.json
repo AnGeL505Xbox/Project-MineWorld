@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:silverSwordD"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"  a",
+			" o ",
+			"a  "
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:silverIngot"
+			},
+			"o": {
+				"item": "mineworld:onydotStick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:silverDoubleSword",
+				"count": 1
+			}
+		]
+	}
+}

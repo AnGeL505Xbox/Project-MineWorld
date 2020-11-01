@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:xeroSeeds",
+            "category": "nature"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:block_placer": {
+                "block": "mineworld:xero_crop",
+                "use_block_description": true
+            },
+            "minecraft:icon": {
+                "texture": "xeroSeeds"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.xero"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:xeroSeeds.name"
+            }
+        }
+    }
+}

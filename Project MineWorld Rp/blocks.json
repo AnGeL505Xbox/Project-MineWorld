@@ -1,0 +1,228 @@
+{
+    "format_version": [ 1, 1, 0 ],
+    "mineworld:recombination_table": {
+        "textures": {
+            "up": "reconUp",
+            "down": "reconUp",
+            "north": "reconSideNorth",
+            "south": "reconSide",
+            "west": "reconSide",
+            "east": "reconSide"
+        }
+    },
+    "mineworld:iridium_ore": {
+        "textures":"iridiumOre",
+        "sound": "stone"
+    },
+
+    "mineworld:onyx_block": {
+        "sound": "stone",
+        "textures": "onyx_block"
+    },
+    "mineworld:onyx_ore": {
+        "sound": "stone",
+        "textures": "onyx_ore"
+    },
+    "mineworld:peridot_block": {
+        "sound": "stone",
+        "textures": "peridot_block"
+    },
+    "mineworld:peridot_ore": {
+        "sound": "stone",
+        "textures": "peridot_ore"
+    },
+    "mineworld:red_dirt": {
+        "sound": "gravel",
+        "textures": "red_dirt"
+    },
+    "mineworld:silver_block": {
+        "sound": "stone",
+        "textures": "silver_block"
+    },
+    "mineworld:silver_ore": {
+        "sound": "stone",
+        "textures": "silver_ore"
+    },
+    "mineworld:slate": {
+        "sound": "stone",
+        "textures": "slate"
+    },
+    "mineworld:slate_bricks": {
+        "sound": "stone",
+        "textures": "slate_bricks"
+    },
+    "mineworld:slate_pebbles": {
+        "sound": "stone",
+        "textures": "slate_pebbles"
+    },
+    "mineworld:argentite_ore": {
+        "sound": "stone",
+        "textures": "argentite_ore"
+    },
+    "mineworld:asphalt": {
+        "sound": "stone",
+        "textures": "asphalt"
+    },
+    "mineworld:calaverite_ore": {
+        "sound": "stone",
+        "textures": "calaverite_ore"
+    },
+    "mineworld:limonite_ore": {
+        "sound": "stone",
+        "textures": "limonite_ore"
+    },
+    "mineworld:magnetite_ore": {
+        "sound": "stone",
+        "textures": "magnetite_ore"
+    },
+    "mineworld:siderite_ore": {
+        "sound": "stone",
+        "textures": "siderite_ore"
+    },
+    "mineworld:sylvanite_ore": {
+        "sound": "stone",
+        "textures": "sylvanite_ore"
+    },
+    "mineworld:sapphire_block": {
+        "sound": "stone",
+        "textures": "sapphire_block"
+    },
+    "mineworld:sapphire_ore": {
+        "sound": "stone",
+        "textures": "sapphire_ore"
+    },
+    "mineworld:bassalt_paver": {
+        "sound": "stone",
+        "textures": "bassalt_paver"
+    },
+    "mineworld:peridotite": {
+        "sound": "stone",
+        "textures": "peridotite"
+    },
+    "mineworld:peridotite_paver": {
+        "sound": "stone",
+        "textures": "peridotite_paver"
+    },
+    "mineworld:peridotite_smooth": {
+        "sound": "stone",
+        "textures": "peridotite_smooth"
+    },
+    "mineworld:stellar_block": {
+        "sound": "glass",
+        "textures": "stellar_block"
+    },
+    "mineworld:aquamarine_ore": {
+        "sound": "stone",
+        "textures": "aquamarine_ore"
+    },
+    "mineworld:marble": {
+        "sound": "stone",
+        "textures": "marble"
+    },
+    "mineworld:opal_ore": {
+        "sound": "stone",
+        "textures": "opal_ore"
+    },
+    "mineworld:shadow_dirt": {
+        "sound": "dirt",
+        "textures": "shadow_dirt"
+    },
+    "mineworld:shadow_grass": {
+        "sound": "grass",
+        "textures": {
+            "down": "shadow_dirt",
+            "side": "shadow_grass_side",
+            "up": "shadow_grass_top"
+        }
+    },
+    "mineworld:shadow_leaves": {
+        "isotropic": true,
+        "sound": "grass",
+        "textures": "shadow_leaves"
+    },
+    "mineworld:shadow_log": {
+        "sound": "wood",
+        "textures": {
+            "down": "shadow_log_up",
+            "side": "shadow_log_side",
+            "up": "shadow_log_up"
+        }
+    },
+    "mineworld:shadow_plank": {
+        "sound": "wood",
+        "textures": "shadow_plank"
+    },
+    "mineworld:shady_ore": {
+        "sound": "stone",
+        "textures": "shady_ore"
+    },
+    "mineworld:cassiterite_ore": {
+        "sound": "stone",
+        "textures": "cassiterite_ore"
+    },
+    "mineworld:malachite_ore": {
+        "sound": "stone",
+        "textures": "malachite_ore"
+    },
+    "mineworld:aquamarine_block": {
+        "sound": "stone",
+        "textures": "aquamarine_block"
+    },
+    "mineworld:copper_block": {
+        "sound": "stone",
+        "textures": "copper_block"
+    },
+    "mineworld:bronze_block": {
+        "sound": "stone",
+        "textures": "bronze_block"
+    },
+    "mineworld:tin_block": {
+        "sound": "stone",
+        "textures": "tin_block"
+    },
+    "mineworld:sombrite_block": {
+        "sound": "stone",
+        "textures": "sombrite_block"
+    },
+    "mineworld:ruby_ore": {
+        "sound": "stone",
+        "textures": "ruby_ore"
+    },
+    "mineworld:ruby_block": {
+        "sound": "stone",
+        "textures": "ruby_block"
+    },
+    "mineworld:quarzite": {
+        "sound": "stone",
+        "textures": "quarzite"
+    },
+    "mineworld:quarzite_tin": {
+        "sound": "stone",
+        "textures": "quarzite_tin"
+    },
+    "mineworld:quarzite_smooth": {
+        "sound": "stone",
+        "textures": "quarzite_smooth"
+    },
+    "mineworld:quarzite_paver": {
+        "sound": "stone",
+        "textures": "quarzite_paver"
+    },
+    "mineworld:quantum_leaves": {
+        "isotropic": true,
+        "sound": "grass",
+        "textures": "quantum_leaves"
+    },
+    "mineworld:quantum_log": {
+        "sound": "wood",
+        "textures": {
+            "down": "quantum_log_up",
+            "side": "quantum_log_side",
+            "up": "quantum_log_up"
+        }
+    },
+    "mineworld:quantum_planks": {
+        "sound": "wood",
+        "textures": "quantum_planks"
+    }
+}

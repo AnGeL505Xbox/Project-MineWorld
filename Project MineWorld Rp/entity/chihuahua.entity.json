@@ -1,0 +1,42 @@
+{
+   "format_version": "1.8.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:chihuahua",
+         "materials": {
+            "default": "skeleton"
+         },
+         "textures": {
+            "brown": "textures/entity/canis/lupus_familiaris/chihuahua/eyes/brown",
+            "green": "textures/entity/canis/lupus_familiaris/chihuahua/eyes/green",
+            "black": "textures/entity/canis/lupus_familiaris/chihuahua/skin/black",
+            "white": "textures/entity/canis/lupus_familiaris/chihuahua/skin/white",
+            "canel": "textures/entity/canis/lupus_familiaris/chihuahua/skin/canel"
+         },
+         "geometry": {
+            "apple_head": "geometry.chihuahua_apple",
+            "normal_head": "geometry.chihuahua_normal"
+         },
+         "animations": {
+            "walk": "animation.mineworld.walk",
+            "sit": "animation.mineworld.smallSit",
+            "look_at_target": "animation.common.look_at_target"
+         },
+         "animation_controllers": [
+            {
+               "general": "controller.animation.chihuahua.move"
+            }
+         ],
+         "render_controllers": [
+            "controller.render.chihuahua_skin",
+            "controller.render.chihuahua_eye"
+         ],
+         "spawn_egg": {
+            "base_color": "#b9c2cb",
+            "overlay_color": "#744424"
+         }
+      }
+   }
+} 
+
+}

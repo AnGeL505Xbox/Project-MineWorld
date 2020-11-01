@@ -1,0 +1,173 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "mineworld",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+
+      "xeroStage0": { "textures": "textures/blocks/xeroStage0" },
+      "xeroStage1": { "textures": "textures/blocks/xeroStage1" },
+      "xeroStage2": { "textures": "textures/blocks/xeroStage2" },
+      "xeroStage3": { "textures": "textures/blocks/xeroStage3" },
+      "xeroStageFinal": { "textures": "textures/blocks/xeroStageFinal" },
+      "technologyTable": { "textures": "textures/blocks/technologyTable" },
+        "iridiumOre": { "textures": "textures/blocks/iridiumOre" },
+        "runeTable": { "textures": "textures/blocks/runeTable" },
+        "onyx_block": {
+          "textures": "textures/blocks/onyxBlock"
+       },
+       "onyx_ore": {
+          "textures": "textures/blocks/onyxOre"
+       },
+       "peridot_block": {
+          "textures": "textures/blocks/peridotBlock"
+       },
+       "peridot_ore": {
+          "textures": "textures/blocks/peridotOre"
+       },
+       "red_dirt": {
+          "textures": "textures/blocks/redDirt"
+       },
+       "silver_block": {
+          "textures": "textures/blocks/silverBlock"
+       },
+       "silver_ore": {
+          "textures": "textures/blocks/silverOre"
+       },
+       "slate": {
+          "textures": "textures/blocks/stoneSlate"
+       },
+       "slate_bricks": {
+          "textures": "textures/blocks/stoneSlateBricks"
+       },
+       "slate_pebbles": {
+          "textures": "textures/blocks/stoneSlatePebbles"
+       },
+       "argentite_ore": {
+          "textures": "textures/blocks/argentiteOre"
+       },
+       "asphalt": {
+          "textures": "textures/blocks/asphalt"
+       },
+       "calaverite_ore": {
+          "textures": "textures/blocks/calaveriteOre"
+       },
+       "limonite_ore": {
+          "textures": "textures/blocks/limoniteOre"
+       },
+       "magnetite_ore": {
+          "textures": "textures/blocks/magnetiteOre"
+       },
+       "sapphire_block": {
+          "textures": "textures/blocks/sapphireBlock"
+       },
+       "sapphire_ore": {
+          "textures": "textures/blocks/sapphireOre"
+       },
+       "siderite_ore": {
+          "textures": "textures/blocks/sideriteOre"
+       },
+       "sylvanite_ore": {
+          "textures": "textures/blocks/sylvaniteOre"
+       },
+       "peridotite": {
+          "textures": "textures/blocks/stonePeridotite"
+       },
+       "peridotite_paver": {
+          "textures": "textures/blocks/stonePeridotitePaver"
+       },
+       "peridotite_smooth": {
+          "textures": "textures/blocks/stonePeridotiteSmooth"
+       },
+       "stellar_block": {
+          "textures": "textures/blocks/stellarBlock"
+       },
+       "aquamarine_ore": {
+          "textures": "textures/blocks/aquamarineOre"
+       },
+       "marble": {
+          "textures": "textures/blocks/stone_marble"
+       },
+       "opal_ore": {
+          "textures": "textures/blocks/opalOre"
+       },
+       "shadow_dirt": {
+          "textures": "textures/blocks/shadowDirt"
+       },
+       "shadow_grass_side": {
+          "textures": "textures/blocks/shadowGrassSide"
+       },
+       "shadow_grass_top": {
+          "textures": "textures/blocks/shadowGrassTop"
+       },
+       "shadow_leaves": {
+          "textures": "textures/blocks/shadowLeaves"
+       },
+       "shadow_log_side": {
+          "textures": "textures/blocks/shadowLogside"
+       },
+       "shadow_log_up": {
+          "textures": "textures/blocks/shadowLogUp"
+       },
+       "shadow_plank": {
+          "textures": "textures/blocks/shadowPlanks"
+       },
+       "shady_ore": {
+          "textures": "textures/blocks/shadowOre"
+       },
+       "cassiterite_ore": {
+          "textures": "textures/blocks/cassiteriteOre"
+       },
+       "malachite_ore": {
+          "textures": "textures/blocks/malachiteOre"
+       },
+       "copper_block": {
+          "textures": "textures/blocks/copperBlock"
+       },
+       "tin_block": {
+          "textures": "textures/blocks/tinBlock"
+       },
+       "bronze_block": {
+          "textures": "textures/blocks/bronzeBlock"
+       },
+       "shadow_block": {
+          "textures": "textures/blocks/shadowBlock"
+       },
+       "ruby_ore": {
+          "textures": "textures/blocks/rubyOre"
+       },
+       "quarzite": {
+          "textures": "textures/blocks/stoneQuarzite"
+       },
+       "aquamarine_block": {
+          "textures": "textures/blocks/aquamarineBlock"
+       },
+       "ruby_block": {
+          "textures": "textures/blocks/rubyBlock"
+       },
+       "amber_block": {
+          "textures": "textures/blocks/amberBlock"
+       },
+       "quarzite_tin": {
+          "textures": "textures/blocks/stoneQuarziteTin"
+       },
+       "quarzite_smooth": {
+          "textures": "textures/blocks/stoneQuarziteSmooth"
+       },
+       "quarzite_paver": {
+          "textures": "textures/blocks/stoneQuarzitePaver"
+       },
+       "quantum_log_up": {
+          "textures": "textures/blocks/quantumLogUp"
+       },
+       "quantum_log_side": {
+          "textures": "textures/blocks/quantumLogSide"
+       },
+       "quantum_leaves": {
+          "textures": "textures/blocks/quantumLeaves"
+       },
+       "quantum_planks": {
+          "textures": "textures/blocks/quantumPlanks"
+       }
+    }
+}

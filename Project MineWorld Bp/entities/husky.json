@@ -1,0 +1,1022 @@
+//Mineworld_entity_v2
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:husky",
+         "is_spawnable": true,
+         "is_summonable": true,
+         "is_experimental": false
+      },
+      "component_groups": {
+         "husky:baby": {
+            "minecraft:is_baby": {},
+            "minecraft:attack": {
+               "damage": 1
+            },
+            "minecraft:scale": {
+               "value": 0.7
+            },
+            "minecraft:ageable": {
+               "duration": 1200,
+               "feed_items": [
+                  "chicken",
+                  "cooked_chicken",
+                  "beef",
+                  "cooked_beef",
+                  "muttonRaw",
+                  "muttonCooked",
+                  "porkchop",
+                  "cooked_porkchop",
+                  "rabbit",
+                  "cooked_rabbit",
+                  "rotten_flesh"
+               ],
+               "grow_up": {
+                  "event": "husky:age",
+                  "target": "self"
+               }
+            },
+            "minecraft:health": {
+               "value": 11
+            }
+         },
+         "husky:adult": {
+            "minecraft:breedable": {
+               "require_tame": true,
+               "inherit_tamed": true,
+               "breeds_with": [
+                  {
+                     "mate_type": "mineworld:husky",
+                     "baby_type": "mineworld:husky",
+                     "breed_event": {
+                        "event": "minecraft:entity_born",
+                        "target": "baby"
+                     }
+                  },
+                  {
+                     "mate_type": "minecraft:wolf",
+                     "baby_type": "mineworld:wolfdog",
+                     "breed_event": {
+                        "event": "minecraft:entity_born",
+                        "target": "baby"
+                     }
+                  }
+               ],
+               "breed_items": [
+                  "chicken",
+                  "cooked_chicken",
+                  "beef",
+                  "cooked_beef",
+                  "muttonRaw",
+                  "muttonCooked",
+                  "porkchop",
+                  "cooked_porkchop",
+                  "rabbit",
+                  "cooked_rabbit",
+                  "rotten_flesh"
+               ],
+               "extra_baby_chance": 0.55,
+               "mutation_factor": {
+                  "variant": 0.05,
+                  "extra_variant": 0.2
+               }
+            },
+            "minecraft:experience_reward": {
+               "on_bred": "Math.Random(1,4)",
+               "on_death": "query.last_hit_by_player ? 2 + (query.equipment_count * Math.Random(1,2)) : 0"
+            },
+            "minecraft:scale": {
+               "value": 1.4
+            }
+         },
+         "husky:wild": {
+            "minecraft:tameable": {
+               "probability": 0.3,
+               "tame_items": "bone",
+               "tame_event": {
+                  "event": "husky:tame",
+                  "target": "self"
+               }
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+               "priority": 4,
+               "attack_interval": 10,
+               "reselect_targets": true,
+               "entity_types": [
+                  {
+                     "filters": {
+                        "any_of": [
+                           {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "skeleton"
+                           },
+                           {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "sheep"
+                           },
+                           {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "rabbit"
+                           },
+                           {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "fox"
+                           }
+                        ]
+                     },
+                     "max_dist": 16
+                  }
+               ],
+               "must_see": true
+            },
+            "minecraft:health": {
+               "value": 16
+            }
+         },
+         "husky:tame": {
+            "minecraft:is_tamed": {},
+            "minecraft:behavior.follow_owner": {
+               "priority": 6,
+               "speed_multiplier": 1,
+               "start_distance": 10,
+               "stop_distance": 2
+            },
+            "minecraft:attack": {
+               "damage": 4
+            },
+            "minecraft:behavior.breed": {
+               "priority": 2
+            },
+            "minecraft:behavior.owner_hurt_by_target": {
+               "priority": 1
+            },
+            "minecraft:behavior.owner_hurt_target": {
+               "priority": 2
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+               "priority": 5,
+               "attack_interval": 10,
+               "entity_types": [
+                  {
+                     "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "skeleton"
+                     },
+                     "max_dist": 16
+                  }
+               ],
+               "must_see": true
+            },
+            "minecraft:health": {
+               "value": 16
+            },
+            "minecraft:sittable": {},
+            "minecraft:leashable": {
+               "soft_distance": 4,
+               "hard_distance": 6,
+               "max_distance": 10,
+               "on_leash": {
+                  "event": "minecraft:on_leash",
+                  "target": "self"
+               },
+               "on_unleash": {
+                  "event": "minecraft:on_unleash",
+                  "target": "self"
+               }
+            }
+         },
+         "husky:behavior.aggresive": {
+            "minecraft:behavior.nearest_attackable_target": {
+               "attack_interval": 15,
+               "scan_interval": 40,
+               "entity_types": {
+                  "filters": {
+                     "test": "is_family",
+                     "subject": "other",
+                     "value": "dog"
+                  }
+               },
+               "within_radius": 5
+            }
+         },
+         "husky:behavior.happy": {
+            "minecraft:behavior.drop_item_for": {
+               "drop_item_chance": 0.07,
+               "loot_table": "loot_tables/entities/dog_gift.json",
+               "entity_types": {
+                  "filters": {
+                     "all_of": [
+                        {
+                           "test": "is_family",
+                           "subject": "other",
+                           "value": "player"
+                        },
+                        {
+                           "test": "has_component",
+                           "value": "minecraft:is_tamed"
+                        }
+                     ]
+                  }
+               },
+               "time_of_day_range": [
+                  0.8,
+                  0.805
+               ]
+            }
+         },
+         "husky:behavior.weak": {
+            "minecraft:health": {
+               "value": 8
+            },
+            "minecraft:movement": {
+               "value": 0.22
+            }
+         },
+         "husky:eye.black": {
+            "minecraft:mark_variant": {
+               "value": 0
+            }
+         },
+         "husky:eye.black_r": {
+            "minecraft:mark_variant": {
+               "value": 1
+            }
+         },
+         "husky:eye.black_l": {
+            "minecraft:mark_variant": {
+               "value": 2
+            }
+         },
+         "husky:eye.blue": {
+            "minecraft:mark_variant": {
+               "value": 3
+            }
+         },
+         "husky:eye.blue_r": {
+            "minecraft:mark_variant": {
+               "value": 4
+            }
+         },
+         "husky:eye.blue_l": {
+            "minecraft:mark_variant": {
+               "value": 5
+            }
+         },
+         "husky:eye.brown": {
+            "minecraft:mark_variant": {
+               "value": 6
+            }
+         },
+         "husky:eye.brown_r": {
+            "minecraft:mark_variant": {
+               "value": 7
+            }
+         },
+         "husky:eye.brown_l": {
+            "minecraft:mark_variant": {
+               "value": 8
+            }
+         }
+      },
+      "components": {
+         "minecraft:nameable": {},
+         "minecraft:type_family": {
+            "family": [
+               "dog",
+               "husky"
+            ]
+         },
+         "minecraft:movement": {
+            "value": 0.3
+         },
+         "minecraft:breathable": {
+            "total_supply": 15,
+            "suffocate_time": 0
+         },
+         "minecraft:collision_box": {
+            "width": 0.6,
+            "height": 0.8
+         },
+         "minecraft:hurt_on_condition": {
+            "damage_conditions": [
+               {
+                  "filters": {
+                     "test": "in_lava",
+                     "subject": "self",
+                     "operator": "==",
+                     "value": true
+                  },
+                  "cause": "lava",
+                  "damage_per_tick": 4
+               }
+            ]
+         },
+         "minecraft:navigation.walk": {
+            "can_path_over_water": true,
+            "avoid_damage_blocks": true
+         },
+         "minecraft:movement.basic": {},
+         "minecraft:jump.static": {},
+         "minecraft:can_climb": {},
+         "minecraft:healable": {
+            "items": [
+               {
+                  "item": "porkchop",
+                  "heal_amount": 3
+               },
+               {
+                  "item": "cooked_porkchop",
+                  "heal_amount": 8
+               },
+               {
+                  "item": "fish",
+                  "heal_amount": 2
+               },
+               {
+                  "item": "salmon",
+                  "heal_amount": 2
+               },
+               {
+                  "item": "clownfish",
+                  "heal_amount": 1
+               },
+               {
+                  "item": "pufferfish",
+                  "heal_amount": 1
+               },
+               {
+                  "item": "cooked_fish",
+                  "heal_amount": 5
+               },
+               {
+                  "item": "cooked_salmon",
+                  "heal_amount": 6
+               },
+               {
+                  "item": "beef",
+                  "heal_amount": 3
+               },
+               {
+                  "item": "cooked_beef",
+                  "heal_amount": 8
+               },
+               {
+                  "item": "chicken",
+                  "heal_amount": 2
+               },
+               {
+                  "item": "cooked_chicken",
+                  "heal_amount": 6
+               },
+               {
+                  "item": "muttonRaw",
+                  "heal_amount": 2
+               },
+               {
+                  "item": "muttonCooked",
+                  "heal_amount": 6
+               },
+               {
+                  "item": "rotten_flesh",
+                  "heal_amount": 4
+               },
+               {
+                  "item": "rabbit",
+                  "heal_amount": 3
+               },
+               {
+                  "item": "cooked_rabbit",
+                  "heal_amount": 5
+               },
+               {
+                  "item": "rabbit_stew",
+                  "heal_amount": 10
+               }
+            ]
+         },
+         "minecraft:behavior.float": {
+            "priority": 0
+         },
+         "minecraft:behavior.mount_pathing": {
+            "priority": 1,
+            "speed_multiplier": 1.25,
+            "target_dist": 0,
+            "track_target": true
+         },
+         "minecraft:behavior.stay_while_sitting": {
+            "priority": 3
+         },
+         "minecraft:behavior.leap_at_target": {
+            "priority": 4,
+            "target_dist": 0.4
+         },
+         "minecraft:behavior.melee_attack": {
+            "priority": 5,
+            "target_dist": 1.2,
+            "track_target": true,
+            "reach_multiplier": 1
+         },
+         "minecraft:behavior.follow_caravan": {
+            "priority": 3,
+            "entity_count": 8,
+            "entity_types": [
+               {
+                  "filters": {
+                     "test": "is_family",
+                     "subject": "other",
+                     "value": "dog"
+                  },
+                  "max_dist": 16
+               }
+            ],
+            "speed_multiplier": 2
+         },
+         "minecraft:behavior.random_stroll": {
+            "priority": 8,
+            "speed_multiplier": 1
+         },
+         "minecraft:behavior.look_at_player": {
+            "priority": 6,
+            "target_distance": 6,
+            "probability": 0.02
+         },
+         "minecraft:behavior.beg": {
+            "priority": 9,
+            "look_distance": 8,
+            "look_time": [
+               2,
+               4
+            ],
+            "items": [
+               "bone",
+               "porkchop",
+               "cooked_porkchop",
+               "chicken",
+               "cooked_chicken",
+               "beef",
+               "cooked_beef",
+               "rotten_flesh",
+               "muttonraw",
+               "muttoncooked",
+               "rabbit",
+               "cooked_rabbit"
+            ]
+         },
+         "minecraft:behavior.hurt_by_target": {
+            "priority": 3
+         },
+         "minecraft:genetics": {
+            "genes": [
+               {
+                  "allele_range": {
+                     "range_min": 0,
+                     "range_max": 15
+                  },
+                  "genetic_variants": [
+                     {
+                        "birth_event": {
+                           "event": "husky:happy",
+                           "target": "self"
+                        },
+                        "main_allele": {
+                           "range_min": 0,
+                           "range_max": 4
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:weak",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 5,
+                           "range_max": 7
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:aggresive",
+                           "target": "self"
+                        },
+                        "main_allele": {
+                           "range_min": 8,
+                           "range_max": 14
+                        }
+                     }
+                  ],
+                  "name": "behavoir"
+               },
+               {
+                  "name": "heterocromie",
+                  "allele_range": {
+                     "range_min": 0,
+                     "range_max": 20
+                  },
+                  "genetic_variants": [
+                     {
+                        "birth_event": {
+                           "event": "husky:black",
+                           "target": "self"
+                        },
+                        "main_allele": 0
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:black_r",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 1,
+                           "range_max": 3
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:black_l",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 4,
+                           "range_max": 6
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:blue",
+                           "target": "self"
+                        },
+                        "main_allele": 7
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:blue_r",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 8,
+                           "range_max": 10
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:blue_l",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 11,
+                           "range_max": 13
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:brown",
+                           "target": "self"
+                        },
+                        "main_allele": 14
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:brown_r",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 15,
+                           "range_max": 18
+                        }
+                     },
+                     {
+                        "birth_event": {
+                           "event": "husky:brown_l",
+                           "target": "self"
+                        },
+                        "hidden_allele": {
+                           "range_min": 19,
+                           "range_max": 20
+                        }
+                     }
+                  ]
+               }
+            ],
+            "mutation_rate": 0.15
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         }
+      },
+      "events": {
+         "minecraft:entity_spawned": {
+            "sequence": [
+               {
+                  "randomize": [
+                     {
+                        "weight": 3,
+                        "add": {
+                           "component_groups": [
+                              "husky:adult",
+                              "husky:wild"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 1,
+                        "add": {
+                           "component_groups": [
+                              "husky:baby",
+                              "husky:wild"
+                           ]
+                        }
+                     }
+                  ]
+               },
+               {
+                  "randomize": [
+                     {
+                        "weight": 5,
+                        "add": {
+                           "component_groups": [
+                              "husky:behavior.happy"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 5,
+                        "add": {
+                           "component_groups": [
+                              "husky:behavior.weak"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 5,
+                        "add": {
+                           "component_groups": [
+                              "husky:behavior.aggresive"
+                           ]
+                        }
+                     }
+                  ]
+               },
+               {
+                  "randomize": [
+                     {
+                        "weight": 12,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.black"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 8,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.black_r"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 8,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.black_l"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 16,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.blue"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 10,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.blue_r"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 10,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.blue_l"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 14,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.brown"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 10,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.brown_r"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 10,
+                        "add": {
+                           "component_groups": [
+                              "husky:eye.brown_l"
+                           ]
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         "minecraft:entity_born": {
+            "add": {
+               "component_groups": [
+                  "husky:baby",
+                  "husky:tame"
+               ]
+            }
+         },
+         "husky:age": {
+            "add": {
+               "component_groups": [
+                  "husky:adult"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "husky:baby"
+               ]
+            }
+         },
+         "husky:tame": {
+            "add": {
+               "component_groups": [
+                  "husky:tame"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "husky:wild"
+               ]
+            }
+         },
+         "husky:happy": {
+            "add": {
+               "component_groups": [
+                  "husky:behavior.happy"
+               ]
+            }
+         },
+         "husky:weak": {
+            "add": {
+               "component_groups": [
+                  "husky:behavior.weak"
+               ]
+            }
+         },
+         "husky:aggresive": {
+            "add": {
+               "component_groups": [
+                  "husky:behavior.aggresive"
+               ]
+            }
+         },
+         "husky:black": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.black"
+               ]
+            }
+         },
+         "husky:black_r": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.black_r"
+               ]
+            }
+         },
+         "husky:black_l": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.black_l"
+               ]
+            }
+         },
+         "husky:blue": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.blue"
+               ]
+            }
+         },
+         "husky:blue_r": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.blue_r"
+               ]
+            }
+         },
+         "husky:blue_l": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.blue_l"
+               ]
+            }
+         },
+         "husky:brown": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.brown"
+               ]
+            }
+         },
+         "husky:brown_r": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.brown_r"
+               ]
+            }
+         },
+         "husky:brown_l": {
+            "add": {
+               "component_groups": [
+                  "husky:eye.brown_l"
+               ]
+            }
+         }
+      }
+   }
+}                         "component_groups": [
+                                        "husky:eye.blue_r"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "husky:eye.blue_l"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 14,
+                                "add": {
+                                    "component_groups": [
+                                        "husky:eye.brown"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "husky:eye.brown_r"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "husky:eye.brown_l"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "minecraft:entity_born": {
+                "add": {
+                    "component_groups": [
+                        "husky:baby",
+                        "husky:tame"
+                    ]
+                }
+            },
+            "husky:age": {
+                "add": {
+                    "component_groups": [
+                        "husky:adult"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "husky:baby"
+                    ]
+                }
+            },
+            "husky:tame": {
+                "add": {
+                    "component_groups": [
+                        "husky:tame"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "husky:wild"
+                    ]
+                }
+            },
+            "husky:happy": {
+                "add": {
+                    "component_groups": [
+                        "husky:behavior.happy"
+                    ]
+                }
+            },
+            "husky:weak": {
+                "add": {
+                    "component_groups": [
+                        "husky:behavior.weak"
+                    ]
+                }
+            },
+            "husky:aggresive": {
+                "add": {
+                    "component_groups": [
+                        "husky:behavior.aggresive"
+                    ]
+                }
+            },
+            "husky:black": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.black"
+                    ]
+                }
+            },
+            "husky:black_r": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.black_r"
+                    ]
+                }
+            },
+            "husky:black_l": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.black_l"
+                    ]
+                }
+            },
+            "husky:blue": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.blue"
+                    ]
+                }
+            },
+            "husky:blue_r": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.blue_r"
+                    ]
+                }
+            },
+            "husky:blue_l": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.blue_l"
+                    ]
+                }
+            },
+            "husky:brown": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.brown"
+                    ]
+                }
+            },
+            "husky:brown_r": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.brown_r"
+                    ]
+                }
+            },
+            "husky:brown_l": {
+                "add": {
+                    "component_groups": [
+                        "husky:eye.brown_l"
+                    ]
+                }
+            }
+        }
+    }
+}

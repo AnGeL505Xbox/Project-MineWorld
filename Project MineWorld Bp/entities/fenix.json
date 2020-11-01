@@ -1,0 +1,108 @@
+//Mineworld_entity_v1
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:fenix",
+         "is_spawnable": true,
+         "is_summonable": true,
+         "is_experimental": true,
+         "scripts": {
+            "animate": [
+               "dead_fenix"
+            ]
+         },
+         "animations": {
+            "dead_fenix": "controller.animation.dead_fenix"
+         }
+      },
+      "components": {
+         "minecraft:experience_reward": {
+            "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+         },
+         "minecraft:breathable": {
+            "total_supply": 15,
+            "suffocate_time": 0
+         },
+         "minecraft:nameable": {},
+         "minecraft:health": {
+            "value": 10,
+            "max": 10
+         },
+         "minecraft:collision_box": {
+            "width": 1,
+            "height": 2
+         },
+         "minecraft:movement": {
+            "value": 0.01
+         },
+         "minecraft:navigation.float": {
+            "can_path_over_water": true
+         },
+         "minecraft:behavior.float_wander": {
+            "priority": 1,
+            "must_reach": true
+         },
+         "minecraft:can_fly": {},
+         "minecraft:loot": {
+            "table": "loot_tables/entities/fenix.json"
+         },
+         "minecraft:shooter": {
+            "type": "mineworld:fenix_fireball",
+            "def": "mineworld:fenix_fireball"
+         },
+         "minecraft:type_family": {
+            "family": [
+               "fenix"
+            ]
+         },
+         "minecraft:damage_sensor": {
+            "triggers": {
+               "cause": "fall",
+               "deals_damage": false
+            }
+         },
+         "minecraft:jump.static": {},
+         "minecraft:behavior.float": {
+            "priority": 0
+         },
+         "minecraft:behavior.ranged_attack": {
+            "priority": 1,
+            "attack_radius": 20,
+            "charge_shoot_trigger": 2,
+            "charge_charged_trigger": 1
+         },
+         "minecraft:follow_range": {
+            "value": 64,
+            "max": 64
+         },
+         "minecraft:behavior.hurt_by_target": {
+            "priority": 1
+         },
+         "minecraft:behavior.nearest_attackable_target": {
+            "priority": 2,
+            "entity_types": [
+               {
+                  "filters": {
+                     "test": "is_family",
+                     "subject": "other",
+                     "value": "pig"
+                  },
+                  "max_dist": 28
+               }
+            ],
+            "must_see": true
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:fire_immune": true,
+         "minecraft:scale": {
+            "value": 3.5
+         }
+      },
+      "events": {}
+   }
+}

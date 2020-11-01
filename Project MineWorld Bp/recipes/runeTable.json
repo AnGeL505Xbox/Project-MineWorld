@@ -1,0 +1,22 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "mineworld:runeTable" },
+        "tags": [ "crafting_table" ],
+        "pattern": [
+            "sss",
+            "sds",
+            "sss"
+        ],
+        "key": {
+            "s": { "item": "minecraft:stone" },
+            "d": { "item": "mineworld:darkrystal" }
+        },
+        "result": [
+            {
+                "item": "mineworld:rune_table",
+                "count": 1
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.skull_bird.fly": {
+			"loop": true,
+			"bones": {
+				"wingL": {
+					"rotation": [0, 0, "-Math.abs(Math.sin(query.life_time * 200) * 105)"]
+				},
+				"wingR": {
+					"rotation": [0, 0, "Math.abs(Math.sin(query.life_time * 200) * 105)"]
+				}
+			}
+		},
+		"animation.skull_bird.walk": {
+			"loop": true,
+			"bones": {
+				"legL": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0]
+				},
+				"legR": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180.0) * 57.3 * query.modified_move_speed", 0, 0]
+				}
+			}
+		},
+		"animation.skull_bird.sit": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, 0, 0]
+				},
+				"body": {
+					"rotation": [-10, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"tail": {
+					"rotation": [-10, 0, 0],
+					"position": [0, -0.5, 0]
+				},
+				"wingL": {
+					"rotation": [-5, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"wingR": {
+					"rotation": [-5, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

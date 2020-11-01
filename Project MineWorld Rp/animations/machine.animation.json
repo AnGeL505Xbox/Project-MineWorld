@@ -1,0 +1,150 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.small_machine.walk": {
+			"loop": true,
+			"bones": {
+				"whR2": {
+					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+				},
+				"whL2": {
+					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+				},
+				"whR1": {
+					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+				},
+				"whL1": {
+					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+				}
+			}
+		},
+		"animation.small_machine.night": {
+			"animation_length": 1,
+			"bones": {
+				"base": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -1.5, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -0.5, 0]
+					}
+				}
+			}
+		},
+		"animation.small_machine.day": {
+			"animation_length": 1,
+			"bones": {
+				"base": {
+					"position": {
+						"0.0": [0, -1.5, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"0.0": [0, -0.5, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.machine.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [0, "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.machine.walk": {
+			"loop": true,
+			"bones": {
+				"legL": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0]
+				},
+				"legR": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180) * 57.3 * query.modified_move_speed", 0, 0]
+				},
+				"armL": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180) * 57.3 * query.modified_move_speed", 0, 0]
+				},
+				"armR": {
+					"rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0]
+				}
+			}
+		},
+		"animation.machine.attack": {
+			"animation_length": 0.04,
+			"bones": {
+				"armL": {
+					"rotation": [-90, 0, 0]
+				},
+				"armR": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.machine.day": {
+			"animation_length": 1,
+			"bones": {
+				"base": {
+					"position": {
+						"0.0": [0, -4, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"0.0": [0, -3, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"armL": {
+					"position": {
+						"0.0": [0, -2, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"armR": {
+					"position": {
+						"0.0": [0, -2, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.machine.night": {
+			"animation_length": 1,
+			"bones": {
+				"base": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -4, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -3, 0]
+					}
+				},
+				"armL": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -2, 0]
+					}
+				},
+				"armR": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -2, 0]
+					}
+				}
+			}
+		}
+	}
+}

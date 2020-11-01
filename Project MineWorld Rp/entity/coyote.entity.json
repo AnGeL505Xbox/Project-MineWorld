@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mineworld:coyote",
+            "materials": { "default": "skeleton" },
+            "textures": {
+               "mexican": "textures/entity/canis/latrans/cagottis",
+               "belize": "textures/entity/canis/latrans/goldmani"
+            },
+            "geometry": { "default": "geometry.coyote" },
+            "animations": {
+               "walk": "animation.mineworld.walk",
+               "look_at_target": "animation.common.look_at_target"
+            },
+            "scripts": {
+               "animate": [ "walk", "look_at_target" ]
+            },
+            "render_controllers": [ "controller.render.coyote" ],
+            "spawn_egg": {
+                "base_color": "#fcb781",
+                "overlay_color": "#d5865b"
+            }
+        }
+    }
+}

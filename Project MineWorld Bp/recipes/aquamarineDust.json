@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:aquamarineDust"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:aquamarine"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:aquamarineDust",
+				"count": 3
+			}
+		]
+	}
+}

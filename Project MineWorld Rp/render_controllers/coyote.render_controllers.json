@@ -1,0 +1,15 @@
+{
+   "format_version": "1.8.0",
+   "render_controllers": {
+      "controller.render.coyote": {
+         "arrays": {
+            "textures": {
+               "Array.skin": [ "Texture.mexican", "Texture.belize" ]
+            }
+         },
+         "geometry": "Geometry.default",
+         "materials": [ { "*": "Material.default" } ],
+         "textures": [ "Array.skin[query.skin_id]" ]
+      }
+   }
+}

@@ -1,0 +1,24 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": {
+         "identifier": "mineworld:iron_nugget"
+      },
+      "tags": [
+         "crafting_table"
+      ],
+      "pattern": [
+         "##",
+         "##"
+      ],
+      "key": {
+         "#": {
+            "item": "mineworld:ironDust"
+         }
+      },
+      "result": {
+         "item": "minecraft:iron_nugget",
+         "count": 1
+      }
+   }
+}

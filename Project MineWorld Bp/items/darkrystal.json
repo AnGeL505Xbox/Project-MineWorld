@@ -1,0 +1,27 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:darkrystal",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 8,
+                "saturation_modifier": "normal",
+                "can_always_eat": true                
+            },
+            "minecraft:icon": {
+                "texture": "darkrystal"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.darkrystal"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:darkrystal.name"
+            }
+        }
+    }
+}

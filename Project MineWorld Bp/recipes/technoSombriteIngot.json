@@ -1,0 +1,19 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:shadow_ingot" },
+      "tags": [ "techno_table" ],
+      "pattern": [
+         "##=",
+         "==="
+      ],
+      "key": {
+         "=": { "item": "minecraft:iron_ingot" },
+         "#": { "item": "mineworld:shungite" }
+      },
+      "result": {
+         "item": "mineworld:sombriteIngot",
+         "count": 1
+      }
+   }
+}

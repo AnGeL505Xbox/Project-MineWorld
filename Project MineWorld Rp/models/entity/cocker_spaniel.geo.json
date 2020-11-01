@@ -1,0 +1,89 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.cocker_spaniel",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [1, 10.5, -7],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-2, 5.5, -9], "size": [6, 6, 4], "uv": [0, 20], "mirror": false},
+						{"origin": [4, 3.5, -9], "size": [1, 8, 4], "uv": [20, 20]},
+						{"origin": [-3, 3.5, -9], "size": [1, 8, 4], "uv": [20, 20], "mirror": false},
+						{"origin": [-0.5, 5.52, -11], "size": [3, 3, 3], "uv": [24, 10], "mirror": false}
+					],
+					"locators": {
+						"lead": [1, 5.5, -5]
+					}
+				},
+				{
+					"name": "tame",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 1.5, -6], "size": [4, 4, 0], "uv": [16, 20]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 10, 2],
+					"rotation": [90, 0, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-2, 3, -3], "size": [6, 14, 6], "uv": [0, 0], "mirror": false}
+					]
+				},
+				{
+					"name": "backLegR",
+					"pivot": [2.5, 8, 7],
+					"mirror": true,
+					"cubes": [
+						{"origin": [1.5, 0, 6], "size": [2, 5, 2], "uv": [26, 16], "mirror": false}
+					]
+				},
+				{
+					"name": "backLegL",
+					"pivot": [-0.5, 8, 7],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-1.5, 0, 6], "size": [2, 5, 2], "uv": [26, 16], "mirror": false}
+					]
+				},
+				{
+					"name": "frontLegR",
+					"pivot": [2.5, 8, -4],
+					"mirror": true,
+					"cubes": [
+						{"origin": [1.5, 0, -5], "size": [2, 5, 2], "uv": [26, 16], "mirror": false}
+					]
+				},
+				{
+					"name": "frontLegL",
+					"pivot": [-0.5, 8, -4],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-1.5, 0, -5], "size": [2, 5, 2], "uv": [26, 16], "mirror": false}
+					]
+				},
+				{
+					"name": "tail1",
+					"pivot": [1, 12, 8],
+					"rotation": [20, 0, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [0, 2, 7], "size": [2, 8, 2], "uv": [24, 0], "mirror": false}
+					]
+				}
+			]
+		}
+	]
+}

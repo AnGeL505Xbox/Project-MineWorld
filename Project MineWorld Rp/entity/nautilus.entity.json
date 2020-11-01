@@ -1,0 +1,25 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:nautilus",
+         "min_engine_version": "1.8.0",
+         "materials": {
+            "default": "skeleton"
+         },
+         "textures": {
+            "default": "textures/entity/cephalopoda/nautilidae/nautilus.png"
+         },
+         "geometry": {
+            "default": "geometry.nautilus"
+         },
+         "render_controllers": [
+            "controller.render.nautilus"
+         ],
+         "spawn_egg": {
+            "base_color": "#9b958d",
+            "overlay_color": "#bf825f"
+         }
+      }
+   }
+}

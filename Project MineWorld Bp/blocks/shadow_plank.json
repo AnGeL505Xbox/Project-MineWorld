@@ -1,0 +1,16 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:shadow_plank"
+        },
+        "components": {
+            "minecraft:map_color": "#444b4d",
+            "minecraft:loot": "loot_tables/blocks/shadowPlanks.json",
+            "minecraft:destroy_time": 2,
+            "minecraft:explosion_resistance": 3,
+            "minecraft:block_light_absorption": 1,
+            "minecraft:display_name": "block.mineworld:shadowPlanks"
+        }
+    }
+}

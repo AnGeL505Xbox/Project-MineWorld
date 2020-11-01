@@ -1,0 +1,18 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:shadowCraft" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "SS",
+         "SS"
+      ],
+      "key": {
+         "S": { "item": "mineworld:shadow_plank" }
+      },
+      "result": {
+         "item": "crafting_table",
+         "count": 1
+      }
+   }
+}

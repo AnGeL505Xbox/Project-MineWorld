@@ -1,0 +1,13 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": { "identifier": "mineworld:slate_bricks" },
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [ { "item": "mineworld:slate" } ],
+    "result": {
+      "item": "mineworld:slate_bricks",
+      "count": 1
+    }
+  }
+}

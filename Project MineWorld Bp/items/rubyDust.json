@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:rubyDust",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "rubyDust"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.dust"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:rubyDust.name"
+            }
+        }
+    }
+}

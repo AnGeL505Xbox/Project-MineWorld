@@ -1,0 +1,41 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:berryWine",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 4,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "berryWine"
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.berryWine"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:berryWine.name"
+            }
+        },
+        "events": {
+            "effects": {
+                "add_mob_effect": {
+                    "effect": "nausea",
+                    "target": "holder",
+                    "duration": 10,
+                    "amplifier": 0
+                }
+            }
+        }
+    }
+}

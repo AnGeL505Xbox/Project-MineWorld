@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:rubyDust"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:ruby"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:rubyDust",
+				"count": 3
+			}
+		]
+	}
+}

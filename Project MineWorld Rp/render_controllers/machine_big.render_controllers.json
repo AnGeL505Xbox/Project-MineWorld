@@ -1,0 +1,16 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.machine_big": {
+            "geometry": "Geometry.default",
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Texture.default" ],
+            "part_visibility": [
+                { "shieldB*": "variable.shield || variable.shield_turret" },
+                { "shieldH*": "variable.shield || variable.shield_turret" },
+                { "turretBase*": "variable.turret || variable.shield_turret" },
+                { "turret*": "variable.turret || variable.shield_turret" }
+            ]
+        }
+    }
+}

@@ -1,0 +1,370 @@
+//Mineworld_entity V1
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:kitsune",
+         "is_spawnable": true,
+         "is_summonable": true,
+         "is_experimental": false
+      },
+      "component_groups": {
+         "mineworld:kitsune_baby": {
+            "minecraft:is_baby": {},
+            "minecraft:health": {
+               "value": 30,
+               "max": 30
+            },
+            "minecraft:scale": {
+               "value": 0.7
+            }
+         },
+         "mineworld:kitsune_adult": {
+            "minecraft:scale": {
+               "value": 1.5
+            },
+            "minecraft:health": {
+               "value": 50,
+               "max": 50
+            },
+            "minecraft:experience_reward": {
+               "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+            },
+            "minecraft:loot": {
+               "table": "loot_tables/entities/kitsune.json"
+            }
+         },
+         "mineworld:kitsune_wild": {
+            "minecraft:interact": {
+               "interactions": [
+                  {
+                     "cooldown": 90,
+                     "interact_text": "mineworld.trade",
+                     "spawn_items": {
+                        "table": "loot_tables/trade/kitsune_wild.json"
+                     },
+                     "on_interact": {
+                        "filters": {
+                           "all_of": [
+                              {
+                                 "test": "is_family",
+                                 "subject": "other",
+                                 "value": "player"
+                              },
+                              {
+                                 "test": "has_equipment",
+                                 "subject": "player",
+                                 "domain": "hand",
+                                 "value": "mineworld:stellarDust"
+                              }
+                           ]
+                        }
+                     }
+                  }
+               ]
+            },
+            "minecraft:tameable": {
+               "probability": 0.3,
+               "tame_items": [
+                  "mineworld:opal_water",
+                  "mineworld:opal",
+                  "packed_ice"
+               ],
+               "tame_event": {
+                  "event": "mineworld:tame",
+                  "target": "self"
+               }
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+               "priority": 3,
+               "must_see": true,
+               "entity_types": [
+                  {
+                     "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "pig"
+                     },
+                     "must_see": true,
+                     "max_dist": 16
+                  }
+               ],
+               "scan_interval": 10
+            }
+         },
+         "mineworld:kitsune_fire_wild": {
+            "minecraft:interact": {
+               "interactions": [
+                  {
+                     "cooldown": 90,
+                     "interact_text": "action.trade",
+                     "spawn_items": {
+                        "table": "loot_tables/trade/kitsune_wild.json"
+                     },
+                     "on_interact": {
+                        "filters": {
+                           "all_of": [
+                              {
+                                 "test": "is_family",
+                                 "subject": "other",
+                                 "value": "player"
+                              },
+                              {
+                                 "test": "has_equipment",
+                                 "subject": "player",
+                                 "domain": "hand",
+                                 "value": "mineworld:stellarDust"
+                              }
+                           ]
+                        }
+                     }
+                  }
+               ]
+            },
+            "minecraft:tameable": {
+               "probability": 0.3,
+               "tame_items": [
+                  "mineworld:opal_fire",
+                  "mineworld:opal",
+                  "blaze_rod"
+               ],
+               "tame_event": {
+                  "event": "mineworld:tame",
+                  "target": "self"
+               }
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+               "priority": 3,
+               "must_see": true,
+               "entity_types": [
+                  {
+                     "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "pig"
+                     },
+                     "must_see": true,
+                     "max_dist": 16
+                  }
+               ],
+               "scan_interval": 10
+            }
+         },
+         "mineworld:kitsune_tame": {
+            "minecraft:is_tamed": {},
+            "minecraft:attack": {
+               "damage": 8
+            },
+            "minecraft:behavior.owner_hurt_by_target": {
+               "priority": 1
+            },
+            "minecraft:behavior.owner_hurt_target": {
+               "priority": 1
+            },
+            "minecraft:behavior.follow_owner": {
+               "priority": 4,
+               "speed_multiplier": 1.5,
+               "start_distance": 25,
+               "stop_distance": 5
+            },
+            "minecraft:interact": {
+               "interactions": [
+                  {
+                     "cooldown": 60,
+                     "interact_text": "action.trade",
+                     "spawn_items": {
+                        "table": "loot_tables/trade/kitsune.json"
+                     },
+                     "on_interact": {
+                        "filters": {
+                           "all_of": [
+                              {
+                                 "test": "is_family",
+                                 "subject": "other",
+                                 "value": "player"
+                              },
+                              {
+                                 "test": "has_equipment",
+                                 "subject": "player",
+                                 "domain": "hand",
+                                 "value": "mineworld:stellarDust"
+                              }
+                           ]
+                        }
+                     }
+                  }
+               ]
+            },
+            "minecraft:sittable": {},
+            "minecraft:leashable": {
+               "soft_distance": 4,
+               "hard_distance": 6,
+               "max_distance": 10,
+               "on_leash": {
+                  "event": "minecraft:on_leash",
+                  "target": "self"
+               },
+               "on_unleash": {
+                  "event": "minecraft:on_unleash",
+                  "target": "self"
+               }
+            }
+         },
+         "mineworld:kitsune_normal": {
+            "minecraft:variant": {
+               "value": 0
+            },
+            "minecraft:hurt_on_condition": {
+               "damage_conditions": [
+                  {
+                     "cause": "lava",
+                     "filters": {
+                        "test": "in_lava",
+                        "subject": "self"
+                     },
+                     "damage_per_tick": 5
+                  }
+               ]
+            }
+         },
+         "mineworld:kitsune_fire": {
+            "minecraft:hurt_on_condition": {
+               "damage_conditions": [
+                  {
+                     "cause": "none",
+                     "filters": {
+                        "test": "in_water_or_rain",
+                        "subject": "self"
+                     },
+                     "damage_per_tick": 5
+                  }
+               ]
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:variant": {
+               "value": 1
+            }
+         }
+      },
+      "components": {
+         "minecraft:nameable": {},
+         "minecraft:type_family": {
+            "family": [
+               "fox",
+               "kitsune"
+            ]
+         },
+         "minecraft:breathable": {
+            "total_supply": 15,
+            "suffocate_time": 0
+         },
+         "minecraft:collision_box": {
+            "width": 0.6,
+            "height": 0.8
+         },
+         "minecraft:movement": {
+            "value": 0.3
+         },
+         "minecraft:navigation.walk": {
+            "can_path_over_water": true,
+            "avoid_damage_blocks": true
+         },
+         "minecraft:movement.basic": {},
+         "minecraft:jump.static": {},
+         "minecraft:can_climb": {},
+         "minecraft:behavior.float": {
+            "priority": 0
+         },
+         "minecraft:behavior.mount_pathing": {
+            "priority": 1,
+            "speed_multiplier": 1.25,
+            "target_dist": 0,
+            "track_target": true
+         },
+         "minecraft:behavior.melee_attack": {
+            "priority": 5,
+            "target_dist": 1.2,
+            "track_target": true,
+            "reach_multiplier": 1
+         },
+         "minecraft:behavior.charge_attack": {
+            "priority": 3
+         },
+         "minecraft:behavior.random_stroll": {
+            "priority": 8,
+            "speed_multiplier": 1
+         },
+         "minecraft:behavior.look_at_player": {
+            "priority": 6,
+            "target_distance": 6,
+            "probability": 0.02
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         }
+      },
+      "events": {
+         "minecraft:entity_spawned": {
+            "sequence": [
+               {
+                  "randomize": [
+                     {
+                        "weight": 9,
+                        "add": {
+                           "component_groups": [
+                              "mineworld:kitsune_adult"
+                           ]
+                        }
+                     },
+                     {
+                        "weight": 1,
+                        "add": {
+                           "component_groups": [
+                              "mineworld:kitsune_baby"
+                           ]
+                        }
+                     }
+                  ]
+               },
+               {
+                  "randomize": [
+                     {
+                        "add": {
+                           "component_groups": [
+                              "mineworld:kitsune_normal",
+                              "mineworld:kitsune_wild"
+                           ]
+                        },
+                        "weight": 5
+                     },
+                     {
+                        "weight": 5,
+                        "add": {
+                           "component_groups": [
+                              "mineworld:kitsune_fire",
+                              "mineworld:kitsune_fire_wild"
+                           ]
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         "mineworld:tame": {
+            "remove": {
+               "component_groups": [
+                  "mineworld:kitsune_wild",
+                  "mineworld:kitsune_fire_wild"
+               ]
+            },
+            "add": {
+               "component_groups": [
+                  "mineworld:kitsune_tame"
+               ]
+            }
+         }
+      }
+   }
+}

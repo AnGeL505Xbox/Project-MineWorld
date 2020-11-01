@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mineworld:silver"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "mineworld:silver_block"
+			}
+		],
+		"result": [
+			{
+				"item": "mineworld:silverIngot",
+				"count": 9
+			}
+		]
+	}
+}

@@ -1,0 +1,54 @@
+{
+   "pools": [
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "minecraft:gold_ingot",
+               "weight": 10
+            },
+            {
+               "type": "item",
+               "name": "minecraft:redstone",
+               "weight": 10
+            },
+            {
+               "type": "item",
+               "name": "minecraft:golden_carrot",
+               "weight": 9
+            },
+            {
+               "type": "item",
+               "name": "mineworld:silverIngot",
+               "weight": 9
+            },
+            {
+               "type": "item",
+               "name": "mineworld:onyx",
+               "weight": 6
+            },
+            {
+               "type": "item",
+               "name": "mineworld:peridot",
+               "weight": 6
+            },
+            {
+               "type": "item",
+               "name": "mineworld:sapphire",
+               "weight": 6
+            },
+            {
+               "type": "item",
+               "name": "mineworld:stellarDust",
+               "weight": 3
+            },
+            {
+               "type": "item",
+               "name": "mineworld:betelgeuseSword",
+               "weight": 1
+            }
+         ]
+      }
+   ]
+}

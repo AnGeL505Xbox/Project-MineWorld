@@ -1,0 +1,716 @@
+//Mineworld_entity_v2
+{
+   "format_version": "1.14.0",
+   "minecraft:entity": {
+      "description": {
+         "identifier": "mineworld:red_panda",
+         "is_experimental": false,
+         "is_spawnable": true,
+         "is_summonable": true
+      },
+      "component_groups": {
+         "red_panda:baby": {
+            "minecraft:ageable": {
+               "duration": 1200,
+               "feedItems": [
+                  "carrot",
+                  "apple",
+                  "beetroot",
+                  "wheat",
+                  "potato",
+                  "bamboo"
+               ],
+               "grow_up": {
+                  "event": "ageable",
+                  "target": "self"
+               }
+            },
+            "minecraft:is_baby": {},
+            "minecraft:behavior.follow_parent": {}
+         },
+         "red_panda:adult": {
+            "minecraft:breedable": {
+               "breedItems": [
+                  "egg",
+                  "apple",
+                  "mushroom",
+                  "sweet_berries",
+                  "bamboo"
+               ],
+               "breedsWith": {
+                  "babyType": "mineworld:red_panda",
+                  "breed_event": {
+                     "event": "breedable",
+                     "target": "baby"
+                  },
+                  "mateType": "mineworld:red_panda"
+               },
+               "extraBabyChance": 0.3,
+               "mutation_factor": {
+                  "variant": 0.15
+               },
+               "requireTame": true
+            },
+            "minecraft:loot": {
+               "table": "loot_tables/entities/red_panda.json"
+            },
+            "minecraft:experience_reward": {
+               "on_death": "query.last_hit_by_player ? Math.Random(1,3) : Math.Random(0,0\n5)"
+            }
+         },
+         "red_panda:wild": {
+            "minecraft:attack": {
+               "damage": 2
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+               "attack_interval": 0,
+               "entity_types": {
+                  "filters": {
+                     "any_of": [
+                        {
+                           "operator": "==",
+                           "subject": "other",
+                           "test": "is_family",
+                           "value": "rabbit"
+                        },
+                        {
+                           "operator": "==",
+                           "subject": "other",
+                           "test": "is_family",
+                           "value": "chicken"
+                        }
+                     ]
+                  }
+               },
+               "must_see": true,
+               "must_see_forget_duration": 5,
+               "priority": 2,
+               "reselect_targets": true,
+               "within_radius": 5
+            },
+            "minecraft:health": {
+               "max": 10,
+               "value": 10
+            },
+            "minecraft:tameable": {
+               "probability": 0.85,
+               "tame_event": {
+                  "event": "tameable",
+                  "target": "self"
+               },
+               "tameItems": [
+                  "apple",
+                  "bamboo",
+                  "egg",
+                  "mushroom",
+                  "sweet_berries"
+               ]
+            }
+         },
+         "red_panda:tamed": {
+            "minecraft:attack": {
+               "damage": 4
+            },
+            "minecraft:behavior.breed": {
+               "speed_multiplier": 1
+            },
+            "minecraft:behavior.follow_owner": {
+               "priority": 6,
+               "speed_multiplier": 1,
+               "start_distance": 10,
+               "stop_distance": 2
+            },
+            "minecraft:behavior.owner_hurt_by_target": {
+               "priority": 1
+            },
+            "minecraft:behavior.owner_hurt_target": {
+               "priority": 2
+            },
+            "minecraft:health": {
+               "max": 15,
+               "value": 15
+            },
+            "minecraft:is_tamed": {},
+            "minecraft:leashable": {
+               "soft_distance": 4,
+               "hard_distance": 6,
+               "max_distance": 10,
+               "on_leash": {
+                  "event": "minecraft:on_leash",
+                  "target": "self"
+               },
+               "on_unleash": {
+                  "event": "minecraft:on_unleash",
+                  "target": "self"
+               }
+            }
+         },
+         "red_panda:bag": {
+            "minecraft:is_chested": {},
+            "minecraft:inventory": {
+               "can_be_siphoned_from": true,
+               "container_type": "minecart_chest",
+               "inventory_size": 5,
+               "additional_slots_per_strength": 2
+            }
+         },
+         "red_panda:bag_plus": {
+            "minecraft:is_chested": {},
+            "minecraft:inventory": {
+               "can_be_siphoned_from": true,
+               "container_type": "minecart_chest",
+               "inventory_size": 10,
+               "additional_slots_per_strength": 4
+            }
+         },
+         "red_panda:bag_superplus": {
+            "minecraft:is_chested": {},
+            "minecraft:inventory": {
+               "can_be_siphoned_from": true,
+               "container_type": "minecart_chest",
+               "inventory_size": 20,
+               "additional_slots_per_strength": 7
+            }
+         },
+         "red_panda:not_bag": {
+            "minecraft:interact": {
+               "interactions": [
+                  {
+                     "interact_text": "mineworld.bag",
+                     "on_interact": {
+                        "event": "bag",
+                        "filters": {
+                           "all_of": [
+                              {
+                                 "domain": "hand",
+                                 "subject": "other",
+                                 "test": "has_equipment",
+                                 "value": "mineworld:bag"
+                              },
+                              {
+                                 "subject": "other",
+                                 "test": "is_family",
+                                 "value": "player"
+                              }
+                           ]
+                        },
+                        "target": "self"
+                     },
+                     "play_sounds": "armor.equip_generic",
+                     "use_item": true
+                  },
+                  {
+                     "interact_text": "mineworld.bag",
+                     "on_interact": {
+                        "event": "bag+",
+                        "filters": {
+                           "all_of": [
+                              {
+                                 "subject": "other",
+                                 "test": "is_family",
+                                 "value": "player"
+                              },
+                              {
+                                 "domain": "hand",
+                                 "subject": "other",
+                                 "test": "has_equipment",
+                                 "value": "mineworld:bagPlus"
+                              }
+                           ]
+                        },
+                        "target": "self"
+                     },
+                     "play_sounds": "armor.equip_generic",
+                     "use_item": true
+                  },
+                  {
+                     "interact_text": "mineworld.bag",
+                     "on_interact": {
+                        "event": "bag_superplus",
+                        "filters": {
+                           "all_of": [
+                              {
+                                 "subject": "other",
+                                 "test": "is_family",
+                                 "value": "player"
+                              },
+                              {
+                                 "domain": "hand",
+                                 "subject": "other",
+                                 "test": "has_equipment",
+                                 "value": "mineworld:bagSuperPlus"
+                              }
+                           ]
+                        },
+                        "target": "self"
+                     },
+                     "play_sounds": "armor.equip_generic",
+                     "use_item": true
+                  }
+               ]
+            }
+         },
+         "red_panda:skin.normal": {
+            "minecraft:skin_id": {
+               "value": 0
+            }
+         },
+         "red_panda:skin.albine": {
+            "minecraft:skin_id": {
+               "value": 1
+            }
+         },
+         "red_panda:behavior.day": {
+            "minecraft:behavior.find_cover": {
+               "cooldown_time": 5,
+               "priority": 6,
+               "speed_multiplier": 1
+            },
+            "minecraft:behavior.nap": {
+               "can_nap_filters": {
+                  "all_of": [
+                     {
+                        "operator": "==",
+                        "subject": "self",
+                        "test": "in_water",
+                        "value": false
+                     },
+                     {
+                        "operator": "==",
+                        "subject": "self",
+                        "test": "on_ground",
+                        "value": true
+                     },
+                     {
+                        "operator": "==",
+                        "subject": "self",
+                        "test": "is_underground",
+                        "value": true
+                     },
+                     {
+                        "operator": "!=",
+                        "subject": "self",
+                        "test": "is_weather",
+                        "value": "thunderstorm"
+                     }
+                  ]
+               },
+               "cooldown_max": 7,
+               "cooldown_min": 2,
+               "mob_detect_dist": 12,
+               "mob_detect_height": 6,
+               "priority": 5
+            }
+         },
+         "red_panda:strength.0": {
+            "minecraft:strength": {
+               "value": 0,
+               "max": 5
+            }
+         },
+         "red_panda:strength.1": {
+            "minecraft:strength": {
+               "value": 1,
+               "max": 5
+            }
+         },
+         "red_panda:strength.2": {
+            "minecraft:strength": {
+               "value": 2,
+               "max": 5
+            }
+         },
+         "red_panda:strength.3": {
+            "minecraft:strength": {
+               "value": 3,
+               "max": 5
+            }
+         },
+         "red_panda:strength.4": {
+            "minecraft:strength": {
+               "value": 4,
+               "max": 5
+            }
+         },
+         "red_panda:strength.5": {
+            "minecraft:strength": {
+               "value": 5,
+               "max": 5
+            }
+         }
+      },
+      "components": {
+         "minecraft:behavior.beg": {
+            "items": [
+               "carrot",
+               "apple",
+               "beetroot",
+               "wheat",
+               "potato",
+               "bamboo"
+            ],
+            "look_distance": 8,
+            "look_time": [
+               2,
+               4
+            ],
+            "priority": 9
+         },
+         "minecraft:behavior.float": {
+            "priority": 0
+         },
+         "minecraft:behavior.leap_at_target": {
+            "priority": 4,
+            "target_dist": 0.4
+         },
+         "minecraft:behavior.look_at_player": {
+            "priority": 6,
+            "probability": 0.02,
+            "target_distance": 6
+         },
+         "minecraft:behavior.melee_attack": {
+            "priority": 5,
+            "reach_multiplier": 1,
+            "target_dist": 1.2,
+            "track_target": true
+         },
+         "minecraft:behavior.mount_pathing": {
+            "priority": 1,
+            "speed_multiplier": 1.25,
+            "target_dist": 0,
+            "track_target": true
+         },
+         "minecraft:behavior.random_stroll": {
+            "priority": 8,
+            "speed_multiplier": 1
+         },
+         "minecraft:breathable": {
+            "suffocateTime": -20,
+            "totalSupply": 15
+         },
+         "minecraft:can_climb": {},
+         "minecraft:collision_box": {
+            "height": 0.8,
+            "width": 0.6
+         },
+         "minecraft:genetics": {
+            "genes": [
+               {
+                  "allele_range": {
+                     "range_max": 2,
+                     "range_min": 0
+                  },
+                  "genetic_variants": [
+                     {
+                        "birth_event": {
+                           "event": "red_panda_white",
+                           "target": "self"
+                        },
+                        "main_allele": 1
+                     },
+                     {
+                        "birth_event": {
+                           "event": "red_panda_normal",
+                           "target": "self"
+                        },
+                        "main_allele": 0
+                     }
+                  ],
+                  "name": "red_panda"
+               }
+            ],
+            "mutation_rate": 0.1
+         },
+         "minecraft:hurt_on_condition": {
+            "damage_conditions": [
+               {
+                  "cause": "lava",
+                  "damage_per_tick": 4,
+                  "filters": {
+                     "operator": "==",
+                     "subject": "self",
+                     "test": "in_lava",
+                     "value": true
+                  }
+               }
+            ]
+         },
+         "minecraft:jump.static": {},
+         "minecraft:movement": {
+            "value": 0.3
+         },
+         "minecraft:movement.basic": {},
+         "minecraft:nameable": {},
+         "minecraft:navigation.walk": {
+            "avoid_damage_blocks": true,
+            "can_path_over_water": true
+         },
+         "minecraft:physics": {},
+         "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+         },
+         "minecraft:scale_by_age": {
+            "end_scale": 1,
+            "start_scale": 0.5
+         },
+         "minecraft:scheduler": {
+            "max_delay_secs": 10,
+            "min_delay_secs": 0,
+            "scheduled_events": [
+               {
+                  "scheduled_event": {
+                     "event": "day",
+                     "filters": {
+                        "all_of": [
+                           {
+                              "operator": ">=",
+                              "test": "hourly_clock_time",
+                              "value": 0
+                           },
+                           {
+                              "operator": "<",
+                              "test": "hourly_clock_time",
+                              "value": 9000
+                           }
+                        ]
+                     },
+                     "target": "self"
+                  }
+               },
+               {
+                  "scheduled_event": {
+                     "event": "night",
+                     "filters": {
+                        "all_of": [
+                           {
+                              "operator": ">=",
+                              "test": "hourly_clock_time",
+                              "value": 9000
+                           },
+                           {
+                              "operator": "<",
+                              "test": "hourly_clock_time",
+                              "value": 24000
+                           }
+                        ]
+                     },
+                     "target": "self"
+                  }
+               }
+            ]
+         },
+         "minecraft:type_family": {
+            "family": [
+               "red_panda"
+            ]
+         }
+      },
+      "events": {
+         "minecraft:entity_spawned": {
+            "sequence": [
+               {
+                  "randomize": [
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:adult",
+                              "red_panda:wild"
+                           ]
+                        },
+                        "weight": 9
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:baby",
+                              "red_panda:wild"
+                           ]
+                        },
+                        "weight": 7
+                     }
+                  ]
+               },
+               {
+                  "randomize": [
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:skin.normal"
+                           ]
+                        },
+                        "weight": 6
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:skin.albine"
+                           ]
+                        },
+                        "weight": 3
+                     }
+                  ]
+               },
+               {
+                  "randomize": [
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:strength.0"
+                           ]
+                        },
+                        "weight": 6
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:strength.1"
+                           ]
+                        },
+                        "weight": 5
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:strength.2"
+                           ]
+                        },
+                        "weight": 4
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:strength.3"
+                           ]
+                        },
+                        "weight": 3
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:strength.4"
+                           ]
+                        },
+                        "weight": 2
+                     },
+                     {
+                        "add": {
+                           "component_groups": [
+                              "red_panda:strength.5"
+                           ]
+                        },
+                        "weight": 1
+                     }
+                  ]
+               }
+            ]
+         },
+         "ageable": {
+            "add": {
+               "component_groups": [
+                  "red_panda:adult"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "red_panda:baby"
+               ]
+            }
+         },
+         "bag": {
+            "add": {
+               "component_groups": [
+                  "red_panda:bag"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "red_panda:not_bag"
+               ]
+            }
+         },
+         "bag+": {
+            "add": {
+               "component_groups": [
+                  "red_panda:bag_plus"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "red_panda:not_bag"
+               ]
+            }
+         },
+         "bag_superplus": {
+            "add": {
+               "component_groups": [
+                  "red_panda:bag_superplus"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "red_panda:not_bag"
+               ]
+            }
+         },
+         "breedable": {
+            "sequence": [
+               {
+                  "add": {
+                     "component_groups": [
+                        "red_panda:baby",
+                        "red_panda:tamed"
+                     ]
+                  },
+                  "filters": {
+                     "operator": "!=",
+                     "test": "has_component",
+                     "value": "is_baby"
+                  }
+               }
+            ]
+         },
+         "day": {
+            "add": {
+               "component_groups": [
+                  "red_panda:behavior.day"
+               ]
+            }
+         },
+         "night": {
+            "remove": {
+               "component_groups": [
+                  "red_panda:behavior.day"
+               ]
+            }
+         },
+         "red_panda_normal": {
+            "add": {
+               "component_groups": [
+                  "red_panda:skin.normal"
+               ]
+            }
+         },
+         "red_panda_white": {
+            "add": {
+               "component_groups": [
+                  "red_panda:skin.albine"
+               ]
+            }
+         },
+         "tameable": {
+            "add": {
+               "component_groups": [
+                  "red_panda:tamed",
+                  "red_panda:not_bag"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "red_panda:wild"
+               ]
+            }
+         }
+      }
+   }
+}

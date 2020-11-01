@@ -1,0 +1,13 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": { "identifier": "mineworld:peridotite_paver" },
+    "tags": [ "stonecutter" ],
+    "priority": 1,
+    "ingredients": [ { "item": "mineworld:peridotite" } ],
+    "result": {
+      "item": "mineworld:peridotite_paver",
+      "count": 1
+    }
+  }
+}

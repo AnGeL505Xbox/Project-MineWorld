@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:shadow_grass"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/shadowGrass.json",
+            "minecraft:destroy_time": 0.4,
+            "minecraft:block_light_absorption": 1,
+            "minecraft:map_color": "#2d352b",
+            "minecraft:display_name": "block.mineworld:shadowGrass"
+        }
+    }
+}

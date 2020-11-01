@@ -1,0 +1,48 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:kitsune",
+         "materials": {
+            "default": "fox"
+         },
+         "textures": {
+            "fire": "textures/entity/legend/kitsune/kitsune_fire",
+            "original": "textures/entity/legend/kitsune/kitsune"
+         },
+         "geometry": {
+            "default": "geometry.kitsune"
+         },
+         "scripts": {
+            "pre_animation": [
+               "variable.moveL = Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed;",
+               "variable.moveR = Math.cos(query.modified_distance_moved * 38.17 + 180.0) * 57.3 * query.modified_move_speed;",
+               "variable.moveTail = -35 * query.modified_move_speed;"
+            ],
+            "animate": [
+               "walk",
+               "look_at_target",
+               {
+                  "baby": "query.is_baby"
+               },
+               {
+                  "sit":"query.is_sitting"
+               }
+            ]
+         },
+         "animations": {
+            "walk": "animation.kitsune.walk",
+            "baby": "animation.kitsune.baby",
+            "look_at_target": "animation.common.look_at_target",
+            "sit": "animation.kitsune.sit"
+         },
+         "render_controllers": [
+            "controller.render.kitsune"
+         ],
+         "spawn_egg": {
+            "base_color": "#f9e3cf",
+            "overlay_color": "#ec4f4d"
+         }
+      }
+   }
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:recipe_shaped": {
+        "description": { "identifier": "mineworld:technoTable" },
+        "tags": [ "crafting_table" ],
+        "pattern": [
+            "ii",
+            "hh"
+        ],
+        "key": {
+            "h": { "item": "minecraft:iron_ingot" },
+            "i": { "item": "mineworld:iridiumIngot" }
+        },
+        "result": [
+            {
+                "item": "mineworld:technology_table",
+                "count": 1
+            }
+        ]
+    }
+}
