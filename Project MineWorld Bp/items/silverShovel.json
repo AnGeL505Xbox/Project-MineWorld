@@ -29,7 +29,7 @@
             "minecraft:repairable": {
                 "repair_items": [
                     {
-                        "items": "mineworld:siverIngot",
+                        "items": "mineworld:silverIngot",
                         "repair_amount": "q.max_durability*0.25"
                     }
                 ]

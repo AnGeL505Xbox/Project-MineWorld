@@ -8,7 +8,7 @@
             "minecraft:destroy_time": 2.5,
             "minecraft:explosion_resistance": 3,
             "minecraft:map_color": "#e6a648",
-            "minecraft:geometry": "geometry.technologyTable",
+            "minecraft:geometry": "geometry.tecTable",
             "minecraft:material_instances": { "*": { "texture": "technologyTable", "render_method": "blend" } },
             "minecraft:loot": "loot_tables/blocks/technoTable.json",
             "minecraft:crafting_table": {

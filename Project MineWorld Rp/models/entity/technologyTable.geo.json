@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.technologyTable",
+				"identifier": "geometry.tecTable",
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
@@ -15,30 +15,8 @@
 					"name": "base",
 					"pivot": [0, 0, 0],
 					"cubes": [
-						{
-							"origin": [-8, 0, -8],
-							"size": [16, 14, 16],
-							"uv": {
-								"north": {"uv": [10, 21], "uv_size": [10, 9]},
-								"east": {"uv": [0, 21], "uv_size": [10, 9]},
-								"south": {"uv": [30, 21], "uv_size": [10, 9]},
-								"west": {"uv": [20, 21], "uv_size": [10, 9]},
-								"up": {"uv": [16, 11], "uv_size": [16, 16]},
-								"down": {"uv": [20, 21], "uv_size": [10, -10]}
-							}
-						},
-						{
-							"origin": [-16, 14, -8],
-							"size": [32, 2, 16],
-							"uv": {
-								"north": {"uv": [10, 10], "uv_size": [16, 1]},
-								"east": {"uv": [41, 10], "uv_size": [11, 1]},
-								"south": {"uv": [26, 10], "uv_size": [16, 1]},
-								"west": {"uv": [0, 10], "uv_size": [10, 1]},
-								"up": {"uv": [10, 0], "uv_size": [16, 10]},
-								"down": {"uv": [26, 10], "uv_size": [16, -10]}
-							}
-						}
+						{"origin": [-8, 0, -8], "size": [16, 12, 16], "uv": [0, 0]},
+						{"origin": [-7.5, 12, -7.5], "size": [15, 4, 15], "uv": [0, 28]}
 					]
 				}
 			]

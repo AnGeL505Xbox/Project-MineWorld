@@ -3,6 +3,9 @@
     "minecraft:recipe_shapeless": {
         "description": {"identifier": "mineworld:diamondDust" },
         "priority": 0,
+        "tags": [
+			"crafting_table"
+		],
         "ingredients": {
             "item": "minecraft:diamond",
             "count": 1
