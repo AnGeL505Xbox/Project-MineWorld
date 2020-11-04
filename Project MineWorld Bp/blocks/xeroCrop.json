@@ -12,6 +12,7 @@
             "minecraft:destroy_time": 1,
             "minecraft:entity_collision": false,
             "minecraft:explosion_resistance": 0,
+            "minecraft:material_instances": { "*": { "texture": "xeroStageBase", "render_method": "blend" } },
             "minecraft:geometry": "geometry.xCrop",
             "minecraft:map_color": "#e6a648",
             "minecraft:placement_filter": { "conditions": [ { "block_filter": [ "farmland" ], "allowed_faces": [ "up" ] } ] },

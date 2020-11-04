@@ -1,20 +1,21 @@
 {
     "format_version": [ 1, 1, 0 ],
-    "mineworld:recombination_table": {
-        "textures": {
-            "up": "reconUp",
-            "down": "reconUp",
-            "north": "reconSideNorth",
-            "south": "reconSide",
-            "west": "reconSide",
-            "east": "reconSide"
-        }
+    "mineworld:xero_crop": {
+        "textures":"xeroStage0",
+        "sound": "grass"
+    },
+    "mineworld:technology_table": {
+        "textures":"technologyTable",
+        "sound": "stone"
+    },
+    "mineworld:rune_table": {
+        "textures":"runeTable",
+        "sound": "stone"
     },
     "mineworld:iridium_ore": {
         "textures":"iridiumOre",
         "sound": "stone"
     },
-
     "mineworld:onyx_block": {
         "sound": "stone",
         "textures": "onyx_block"
