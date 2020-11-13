@@ -12,7 +12,7 @@
             "minecraft:destroy_time": 1,
             "minecraft:entity_collision": false,
             "minecraft:explosion_resistance": 0,
-            "minecraft:material_instances": { "*": { "texture": "xeroStageBase", "render_method": "blend" } },
+            "minecraft:material_instances": { "*": { "texture": "xeroStage0", "render_method": "blend" } },
             "minecraft:geometry": "geometry.xCrop",
             "minecraft:map_color": "#e6a648",
             "minecraft:placement_filter": { "conditions": [ { "block_filter": [ "farmland" ], "allowed_faces": [ "up" ] } ] },
@@ -32,7 +32,7 @@
                 "condition": "q.block_property('mineworld:xeroStage') == 0",
                 "components": {
                     "minecraft:loot": "loot_tables/blocks/xeroSeeds.json",
-                    "minecraft:material_instances": { "*": { "texture": "xeroStageBase", "render_method": "blend" } },
+                    "minecraft:material_instances": { "*": { "texture": "xeroStage0", "render_method": "blend" } },
                     "minecraft:ticking": {
                         "looping": false,
                         "range": [ 30, 50 ],
@@ -96,7 +96,7 @@
                         "target": "self"
                     },
                     "minecraft:loot": "loot_tables/blocks/xeroFruitSeeds.json",
-                    "minecraft:material_instances": { "*": { "texture": "xeroStageFinal", "render_method": "blend" } }
+                    "minecraft:material_instances": { "*": { "texture": "xeroStage4", "render_method": "blend" } }
                 }
             }
         ],

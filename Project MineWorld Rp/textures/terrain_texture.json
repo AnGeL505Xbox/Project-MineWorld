@@ -5,11 +5,11 @@
     "texture_name": "atlas.terrain",
     "texture_data": {
 
-      "xeroStageBase": { "textures": "textures/blocks/xeroStage0" },
+      "xeroStage0": { "textures": "textures/blocks/xeroStage0" },
       "xeroStage1": { "textures": "textures/blocks/xeroStage1" },
       "xeroStage2": { "textures": "textures/blocks/xeroStage2" },
       "xeroStage3": { "textures": "textures/blocks/xeroStage3" },
-      "xeroStageFinal": { "textures": "textures/blocks/xeroStageFinal" },
+      "xeroStage4": { "textures": "textures/blocks/xeroStage4" },
       "technologyTable": { "textures": "textures/blocks/technologyTable" },
       "iridiumOre": { "textures": "textures/blocks/iridiumOre" },
       "runeTable": { "textures": "textures/blocks/runeTable" },

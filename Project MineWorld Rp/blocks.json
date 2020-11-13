@@ -1,15 +1,12 @@
 {
     "format_version": [ 1, 1, 0 ],
     "mineworld:xero_crop": {
-        "textures":"xeroStage0",
         "sound": "grass"
     },
     "mineworld:technology_table": {
-        "textures":"technologyTable",
         "sound": "stone"
     },
     "mineworld:rune_table": {
-        "textures":"runeTable",
         "sound": "stone"
     },
     "mineworld:iridium_ore": {

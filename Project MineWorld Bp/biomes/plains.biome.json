@@ -24,7 +24,7 @@
       "minecraft:overworld_generation_rules": {
         "hills_transformation": [
           [ "forest_hills", 2 ],
-          [ "mountains", 1 ],
+          [ "cMountains", 1 ],
           [ "forest", 3 ]
         ],
         "mutate_transformation": "sunflower_plains",
