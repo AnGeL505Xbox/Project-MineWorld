@@ -219,6 +219,9 @@
         "ironDoubleSword": {
             "textures": "textures/items/ironDoubleSword"
         },
+        "spear": {
+            "textures": "textures/items/ironDoubleSword"
+        },
       /*Food*/
         "bacon": {
             "textures": "textures/items/bacon"

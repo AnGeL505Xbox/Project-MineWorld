@@ -212,15 +212,9 @@
         "textures": "quantum_leaves"
     },
     "mineworld:quantum_log": {
-        "sound": "wood",
-        "textures": {
-            "down": "quantum_log_up",
-            "side": "quantum_log_side",
-            "up": "quantum_log_up"
-        }
+        "sound": "wood"
     },
     "mineworld:quantum_planks": {
-        "sound": "wood",
-        "textures": "quantum_planks"
+        "sound": "wood"
     }
 }

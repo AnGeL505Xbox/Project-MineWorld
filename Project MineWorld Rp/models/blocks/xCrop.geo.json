@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.xCrop",
+				"identifier": "geometry.mineXCrop",
 				"texture_width": 16,
 				"texture_height": 32,
 				"visible_bounds_width": 2,
@@ -12,7 +12,7 @@
 			},
 			"bones": [
 				{
-					"name": "base",
+					"name": "unknown_bone",
 					"pivot": [0, 0, 0],
 					"rotation": [0, -45, 0],
 					"cubes": [

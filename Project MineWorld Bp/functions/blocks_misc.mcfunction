@@ -24,5 +24,4 @@
 
 #Mineworld_1.5
 
-    give @a mineworld:rune_table 1
     give @a mineworld:technology_table 1

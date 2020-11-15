@@ -2,10 +2,7 @@
     "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
-            "identifier": "mineworld:quantum_planks",
-            "properties": {
-                "mineworld:playerStep": [ true, false ]
-            }
+            "identifier": "mineworld:quantum_planks"
         },
         "components": {
             "minecraft:loot": "loot_tables/blocks/quantumPlanks.json",
@@ -13,26 +10,13 @@
             "minecraft:explosion_resistance": 15,
             "minecraft:block_light_emission": 0.5,
             "minecraft:map_color": "#dae2eb",
-            "minecraft:on_step_on": {
-                "condition": "q.get_nearby_entities('minecraft:player') == true",
-                "event": "playerStep",
-				"target": "self"
-	  		},
-            "minecraft:display_name": "block.mineworld:quantumPlanks"
-        },
-        "permutations": [
-            {
-                "condition": "q.get_nearby_entities('minecraft:player') == true",
-                "components": {
-                    "minecraft:breathability": "solid"
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "quantum_planks",
+                    "render_method": "blend"
                 }
             },
-            {
-                "condition": "q.get_nearby_entities('minecraft:player') == false",
-                "components": {
-                    "minecraft:breathability": "air"
-                }
-            }
-        ]
+            "minecraft:display_name": "block.mineworld:quantumPlanks"
+        }
     }
 }

@@ -1,0 +1,145 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:xero_crop",
+            "properties": { "mineworld:xeroStage": [ 0, 1, 2, 3, 4 ] }
+        },
+        "components": {
+            "minecraft:block_light_absorption": 0,
+            "minecraft:destroy_time": 1,
+            "minecraft:entity_collision": false,
+            "minecraft:explosion_resistance": 0,
+            "minecraft:geometry": "geometry.mineXCrop",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [ "farmland" ],
+                        "allowed_faces": [ "up" ]
+                    }
+                ]
+            },
+            "minecraft:on_player_placing": {
+                "event": "mineworld:stage0",
+                "target": "self"
+            }
+        },
+        "premutations": [
+            {
+                "condition": "q.block_property('mineworld:xeroStage') == '0",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "xeroSeeds0",
+                            "render_method": "blend"
+                        }
+                    },
+                    "minecraft:ticking": {
+                        "looping": false,
+                        "range": [ 20, 30 ],
+                        "on_tick": {
+                            "event": "mineworld:stage1", "target": "self",
+                            "condition": "q.block_property('mineworld:xeroStage') == 0"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('mineworld:xeroStage') == '1",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "xeroSeeds1",
+                            "render_method": "blend"
+                        }
+                    },
+                    "minecraft:ticking": {
+                        "looping": false,
+                        "range": [ 30, 50 ],
+                        "on_tick": {
+                            "event": "mineworld:stage2", "target": "self",
+                            "condition": "q.block_property('mineworld:xeroStage') == 1"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('mineworld:xeroStage') == '2",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "xeroSeeds2",
+                            "render_method": "blend"
+                        }
+                    },
+                    "minecraft:ticking": {
+                        "looping": false,
+                        "range": [ 50, 70 ],
+                        "on_tick": {
+                            "event": "mineworld:stage3", "target": "self",
+                            "condition": "q.block_property('mineworld:xeroStage') == 2"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('mineworld:xeroStage') == '3",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "xeroSeeds3",
+                            "render_method": "blend"
+                        }
+                    },
+                    "minecraft:ticking": {
+                        "looping": false,
+                        "range": [ 70, 90 ],
+                        "on_tick": {
+                            "event": "mineworld:stage4", "target": "self",
+                            "condition": "q.block_property('mineworld:xeroStage') == 3"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_property('mineworld:xeroStage') == '4",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/xeroSeedsF.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "xeroSeedsF",
+                            "render_method": "blend"
+                        }
+                    }
+                }
+            }
+        ],
+        "events": {
+            "mineworld:stage0": {
+                "set_block_property": { "mineworld:xeroStage": 0 }
+            },
+            "mineworld:stage1": {
+                "set_block_property": { "mineworld:xeroStage": 1 }
+            },
+            "mineworld:stage2": {
+                "set_block_property": { "mineworld:xeroStage": 2 }
+            },
+            "mineworld:stage3": {
+                "set_block_property": { "mineworld:xeroStage": 3 }
+            },
+            "mineworld:stage4": {
+                "set_block_property": { "mineworld:xeroStage": 4 }
+            },
+            "mineworld:interact": {
+                "sequence": [
+                    { "spawn_loot": { "table": "loot_tables/blocks/xeroFruit.json" } },
+                    {"set_block_property": { "mineworld:xeroStage": 3 } }
+                ]
+            }
+        }
+    }
+}
