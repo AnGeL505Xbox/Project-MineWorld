@@ -186,8 +186,14 @@
                 "textures/items/sombriteSword"
             ]
         },
-        "antimatterSword": {
-            "textures": "textures/items/antimatterSword"
+        "twilightSword": {
+            "textures": "textures/items/twilightSword"
+        },
+        "glacierSword": {
+            "textures": "textures/items/glacierSword"
+        },
+        "tecnoSword": {
+            "textures": "textures/items/tecnoSword"
         },
         "betelgeuseSword": {
             "textures": "textures/items/betelgeuseSword"
@@ -217,9 +223,6 @@
             "textures": "textures/items/goldDoubleSword"
         },
         "ironDoubleSword": {
-            "textures": "textures/items/ironDoubleSword"
-        },
-        "spear": {
             "textures": "textures/items/ironDoubleSword"
         },
       /*Food*/

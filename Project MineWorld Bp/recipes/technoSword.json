@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": { "identifier": "mineworld:tecnoSword" },
+		"tags": [ "techno_table" ],
+		"pattern": [
+		   "ttt",
+		   " *t",
+		   "s  "
+		],
+		"key": {
+		   "*": { "item": "mineworld:machineCore" },
+		   "s": { "item": "minecraft:stick" },
+		   "t": { "item": "mineworld:tinIngot" }
+		},
+		"result": {
+		   "item": "mineworld:tecnoSword",
+		   "count": 1
+		}
+	 }
+}

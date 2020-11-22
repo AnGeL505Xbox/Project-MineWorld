@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:iridiumKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"z",
+			"s"
+		],
+		"key": {
+			"z": {
+				"item": "mineworld:iridiumIngot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:iridiumKnife",
+				"count": 1
+			}
+		]
+	}
+}

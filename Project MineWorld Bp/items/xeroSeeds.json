@@ -8,8 +8,7 @@
         "components": {
             "minecraft:hand_equipped": true,
             "minecraft:block_placer": {
-                "block": "mineworld:xero_crop",
-                "use_block_description": true
+                "block": "mineworld:xero_crop"
             },
             "minecraft:icon": {
                 "texture": "xeroSeeds"

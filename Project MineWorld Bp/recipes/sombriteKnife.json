@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:sombriteKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"z",
+			"s"
+		],
+		"key": {
+			"z": {
+				"item": "mineworld:sombriteIngot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:sombriteKnife",
+				"count": 1
+			}
+		]
+	}
+}

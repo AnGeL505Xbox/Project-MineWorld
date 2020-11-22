@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:sombriteHoe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"aa",
+			" s",
+			" s"
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:sombriteIngot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:sombriteHoe",
+				"count": 1
+			}
+		]
+	}
+}

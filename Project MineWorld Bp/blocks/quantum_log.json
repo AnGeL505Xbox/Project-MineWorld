@@ -21,7 +21,7 @@
                 },
                 "*": {
                     "texture": "quantum_log_side",
-                    "render_method": "opaque"
+                    "render_method": "blend"
                 }
             },
             "minecraft:display_name": "block.mineworld:quantumLog"

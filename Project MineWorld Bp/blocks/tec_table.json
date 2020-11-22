@@ -1,0 +1,28 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:tec_table"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/tecTable.json",
+            "minecraft:destroy_time": 1.7,
+            "minecraft:explosion_resistance": 25,
+            "minecraft:map_color": "#515861",
+            "minecraft:geometry": "geometry.mwtec",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "tecTable",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:crafting_table": {
+                "grid_size": 3,
+                "crafting_tags": [
+                    "technology_table"
+                ]
+            },
+            "minecraft:display_name": "block.mineworld:tinBlock"
+        }
+    }
+}

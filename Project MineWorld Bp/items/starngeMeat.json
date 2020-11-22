@@ -3,7 +3,7 @@
     "minecraft:item": {
         "description": {
             "identifier": "mineworld:strangeMeat",
-            "category": "nature"
+            "category": "items"
         },
         "components": {
             "minecraft:use_duration": 3.2,

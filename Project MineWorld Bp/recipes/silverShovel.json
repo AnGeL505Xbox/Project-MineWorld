@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:silverShovel"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"a",
+			"s",
+			"s"
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:silverIngot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:silverShovel",
+				"count": 1
+			}
+		]
+	}
+}

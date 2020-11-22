@@ -1,57 +1,57 @@
 /*Mineworld 1.5*/
 	/*Acciones*/
-		mineworld.bag=Bolsa
-    mineworld.convert=Convertir
-  	mineworld.trade=Intercambiar
+		mineworld.bag=Bag
+    mineworld.convert=Convert
+  	mineworld.trade=Trade
 	/*Grupos de Items*/
-		itemGroup.name.special=Especial
-		itemGroup.name.silver=Plata
-		itemGroup.name.bronze=Bronce
-		itemGroup.name.gems=Gemas
-		itemGroup.name.metal=Metales
-		itemGroup.name.crystal=Cristales
-		itemGroup.name.knife=Cuchillo
-		itemGroup.name.doubleSword=Espada doble
-		itemGroup.name.dust=Polvos
-		itemGroup.name.elixir=Elixires
-		itemGroup.name.luck=Suerte
+		itemGroup.name.special=Special
+		itemGroup.name.silver=Silver
+		itemGroup.name.bronze=Bronze
+		itemGroup.name.gems=Gems
+		itemGroup.name.metal=Metals
+		itemGroup.name.crystal=Crystals
+		itemGroup.name.knife=Knifes
+		itemGroup.name.doubleSword=Double Swords
+		itemGroup.name.dust=Dusts
+		itemGroup.name.elixir=Elixirs
+		itemGroup.name.luck=Luck
 	/*Items*/
 	  /*Minerales*/
-		item.mineworld:bronzeIngot.name=Lingote de bronce
-		item.mineworld:silverIngot.name=Lingote de plata
-		item.mineworld:sombriteIngot.name=Lingote de sombrita
-		item.mineworld:tinIngot.name=Lingote de estaño
-		item.mineworld:iridiumIngot.name=Lingote de iridio
-		item.mineworld:aquamarine.name=Aguamarina
+		item.mineworld:bronzeIngot.name=Bronze ingot
+		item.mineworld:silverIngot.name=Silver ingot
+		item.mineworld:sombriteIngot.name=Sombrite ingot
+		item.mineworld:tinIngot.name=Tin ingot
+		item.mineworld:iridiumIngot.name=Iridium ingot
+		item.mineworld:aquamarine.name=Aquamarine
 		item.mineworld:onyx.name=Onyx
-		item.mineworld:opalNormal.name=Opalo
-		item.mineworld:opalFire.name=Opalo del fuego
-		item.mineworld:opalWater.name=Opalo del mar
-		item.mineworld:peridot.name=Peridoto
-		item.mineworld:sapphire.name=Zafiro
-		item.mineworld:ruby.name=Rubi
-		item.mineworld:copper.name=Cobre
+		item.mineworld:opalNormal.name=Opal
+		item.mineworld:opalFire.name=Fire opal
+		item.mineworld:opalWater.name=Water opal
+		item.mineworld:peridot.name=Peridot
+		item.mineworld:sapphire.name=Sapphire
+		item.mineworld:ruby.name=Ruby
+		item.mineworld:copper.name=Copper
 	  /*Polvos*/
-		item.mineworld:bronzeDust.name=Polvo de bronce
-		item.mineworld:silverDust.name=Polvo de plata
-		item.mineworld:sombriteDust.name=Polvo de sombrita
-		item.mineworld:iridiumDust.name=Polvo de iridio
-		item.mineworld:aquamarineDust.name=Polvo de aguamarina
-		item.mineworld:onyxDust.name=Polvo de onyx
-		item.mineworld:peridotDust.name=Polvo de peridoto
-		item.mineworld:sapphireDust.name=Polvo de zafiro
-		item.mineworld:rubyDust.name=Polvo de rubi
+		item.mineworld:bronzeDust.name=Bronze dust
+		item.mineworld:silverDust.name=Silver dust
+		item.mineworld:sombriteDust.name=Sombrite dust
+		item.mineworld:iridiumDust.name=Iridium dust
+		item.mineworld:aquamarineDust.name=Aquamarine dust
+		item.mineworld:onyxDust.name=Onyx dust
+		item.mineworld:peridotDust.name=Peridot dust
+		item.mineworld:sapphireDust.name=Sapphire dust
+		item.mineworld:rubyDust.name=Ruby dust
 	  /*Cristales*/
-		item.mineworld:argentite.name=Cristal de argentita
-		item.mineworld:cassiterite.name=Cristal de casiterita
-		item.mineworld:calaverite.name=Cristal de calaverita
-		item.mineworld:limonite.name=Cristal de limonite
-		item.mineworld:magnetite.name=Cristal de magnetita
-		item.mineworld:malachite.name=Cristal de malaquita
-		item.mineworld:siderite.name=Cristal de siderita
-		item.mineworld:sylvaniteAG.name=Cristal de silvanita plateada
-		item.mineworld:sylvaniteAU.name=Cristal de silvanita dorada
-		item.mineworld:shungite.name=Cristal de shungita
+		item.mineworld:argentite.name=Argentite
+		item.mineworld:cassiterite.name=Casiterite
+		item.mineworld:calaverite.name=Calaverite
+		item.mineworld:limonite.name=Limonite
+		item.mineworld:magnetite.name=Magnetite
+		item.mineworld:malachite.name=Malachite
+		item.mineworld:siderite.name=Siderite
+		item.mineworld:sylvaniteAG.name=Sylvanite silvered
+		item.mineworld:sylvaniteAU.name=Sylvanite goldened
+		item.mineworld:shungite.name=Shungite
 	  /*Elixires*/
 		item.mineworld:elixirBase.name=Elixir
 		item.mineworld:elixirDrowner.name=Elixir de ahogado
@@ -60,13 +60,13 @@
 		item.mineworld:elixirPhoenix.name=Elixir de fenix
 		item.mineworld:elixirUndead.name=Elixir de no-muertos
 	  /*Herramientas de iridio*/
-		item.mineworld:iridiumAxe.name=Hacha de iridio
-		item.mineworld:iridiumHoe.name=Azada de iridio
-		item.mineworld:iridiumShovel.name=Pala de iridio
-		item.mineworld:iridiumSword.name=Espada de iridio
-		item.mineworld:iridiumPickaxe.name=Pico de iridio
-		item.mineworld:iridiumKnife.name=Cuchillo de iridio
-		item.mineworld:iridiumDoubleSword.name=Espada doble de iridio
+		item.mineworld:iridiumAxe.name=Iridium axe
+		item.mineworld:iridiumHoe.name=Iridium hoe
+		item.mineworld:iridiumShovel.name=Iridium shovel
+		item.mineworld:iridiumSword.name=Iridium sword
+		item.mineworld:iridiumPickaxe.name=Iridium pickaxe
+		item.mineworld:iridiumKnife.name=Iridium knife
+		item.mineworld:iridiumDoubleSword.name=Iridium double sword
 	  /*Herramientas de bronce*/
 	  	item.mineworld:bronzeAxe.name=Hacha de bonce
 		item.mineworld:bronzeHoe.name=Azada de bronce
