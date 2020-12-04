@@ -225,6 +225,39 @@
         "ironDoubleSword": {
             "textures": "textures/items/ironDoubleSword"
         },
+      /*Armor*/
+        "bronzeArmor": {
+            "textures": [
+                "textures/items/bronzeHelmet",
+                "textures/items/bronzeChestplate",
+                "textures/items/bronzeLeggins",
+                "textures/items/bronzeBoots"
+            ]
+        },
+        "iridiumArmor": {
+            "textures": [
+                "textures/items/iridiumHelmet",
+                "textures/items/iridiumChestplate",
+                "textures/items/iridiumLeggins",
+                "textures/items/iridiumBoots"
+            ]
+        },
+        "silverArmor": {
+            "textures": [
+                "textures/items/silverHelmet",
+                "textures/items/silverChestplate",
+                "textures/items/silverLeggins",
+                "textures/items/silverBoots"
+            ]
+        },
+        "sombriteArmor": {
+            "textures": [
+                "textures/items/sombriteHelmet",
+                "textures/items/sombriteChestplate",
+                "textures/items/sombriteLeggins",
+                "textures/items/sombriteBoots"
+            ]
+        },
       /*Food*/
         "bacon": {
             "textures": "textures/items/bacon"
@@ -255,6 +288,12 @@
         },
         "sMeat": {
             "textures": "textures/items/strangeMeat"
+        },
+        "jellyfishPoison": {
+            "textures": "textures/items/jellyfishPoison"
+        },
+        "stellarPotion": {
+            "textures": "textures/items/stellarPotion"
         },
       /*Others*/
         "xeroSeeds": {

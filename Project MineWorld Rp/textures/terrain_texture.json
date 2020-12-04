@@ -4,9 +4,6 @@
     "resource_pack_name": "mineworld",
     "texture_name": "atlas.terrain",
     "texture_data": {
-        "amber_block": {
-            "textures": "textures/blocks/amberBlock"
-        },
         "aquamarine_block": {
             "textures": "textures/blocks/aquamarineBlock"
         },
@@ -103,9 +100,6 @@
         "ruby_ore": {
             "textures": "textures/blocks/rubyOre"
         },
-        "runeTable": {
-            "textures": "textures/blocks/runeTable"
-        },
         "sapphire_block": {
             "textures": "textures/blocks/sapphireBlock"
         },
@@ -169,19 +163,19 @@
         "tecTable": {
             "textures": "textures/blocks/technologyTable"
         },
-        "xCropI": {
+        "xCrop0": {
             "textures": "textures/blocks/xCrop0"
         },
-        "xCropSm": {
+        "xCrop1": {
             "textures": "textures/blocks/xCrop1"
         },
-        "xCropM": {
+        "xCrop2": {
             "textures": "textures/blocks/xCrop2"
         },
-        "xCropB": {
+        "xCrop3": {
             "textures": "textures/blocks/xCrop3"
         },
-        "xCropF": {
+        "xCrop4": {
             "textures": "textures/blocks/xCrop4"
         }
     }

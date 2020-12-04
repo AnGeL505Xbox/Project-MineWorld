@@ -3,183 +3,123 @@
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:xero_crop",
-            "properties": {
-                "mineworld:stage": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4
+            "properties": { "mineworld:stage": [ 0, 1, 2, 3, 4 ] }
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture":"xCrop0",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:geometry": "geometry.xero_crop",
+            "minecraft:entity_collision": false,
+            "minecraft:pick_collision": {
+                "origin": [ -6, 0, -6 ],
+                "size": [ 8, 16, 8 ]
+            },
+            "minecraft:destroy_time": 0,
+            "minecraft:friction": 0.6,
+            "minecraft:map_color": "#000000",
+            "minecraft:block_light_absorption": 0,
+            "minecraft:random_ticking": { "on_tick": { "event": "mineworld:grow" } },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [ "up" ],
+                        "block_filter": [ "farmland" ]
+                    }
                 ]
             }
         },
-        "components": {
-            "minecraft:block_light_absorption": 0,
-            "minecraft:destroy_time": 0.1,
-            "minecraft:explosion_resistance": 0,
-            "minecraft:map_color": "#515861",
-            "minecraft:geometry": "geometry.mwcrop",
-            "minecraft:material_instances": {
-                "*": {
-                    "texture": "xCropI",
-                    "render_method": "blend"
-                }
+        "events":{
+            "mineworld:grow": {
+                "randomize": [
+                    {
+                        "weight": 1
+                    },
+                    {
+                        "set_block_property":{ "mineworld:stage": "(q.block_property('mineworld:stage')<4) ? q.block_property('mineworld:stage') +1 : 4" },
+                        "weight": 1
+                    }
+                ]
             },
-            "minecraft:on_placed": {
-                "event": "mineworld:stage0",
-                "target": "self"
-            },
-            "minecraft:display_name": "block.mineworld:xCrop"
+            "mineworld:int": {
+                "sequence": [
+                    {
+                        "spawn_loot": { "table": "loot_tables/blocks/xeroFruit" }
+                    },
+                    {
+                        "set_block_property":{ "mineworld:stage": 3 }
+                    }
+                ]
+            }
         },
         "permutations": [
             {
                 "condition": "q.block_property('mineworld:stage') == 0",
-                "components": {
-                    "minecraft:loot": "loot_tables/blocks/xSeeds.json",
-                    "minecraft:ticking": {
-                        "on_tick": {
-                            "event": "mineworld:stage1",
-                            "condition": "q.block_property('mineworld:stage') == 0",
-                            "target": "self"
-                        },
-                        "looping": false,
-                        "range": [
-                            10,
-                            15
-                        ]
-                    },
+                "components":{
                     "minecraft:material_instances": {
                         "*": {
-                            "texture": "xCropI",
-                            "render_method": "blend"
+                            "texture":"xCrop0",
+                            "render_method": "alpha_test"
                         }
-                    }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json"
                 }
             },
             {
                 "condition": "q.block_property('mineworld:stage') == 1",
-                "components": {
-                    "minecraft:loot": "loot_tables/blocks/xSeeds.json",
-                    "minecraft:ticking": {
-                        "on_tick": {
-                            "event": "mineworld:stage2",
-                            "condition": "q.block_property('mineworld:stage') == 1",
-                            "target": "self"
-                        },
-                        "looping": false,
-                        "range": [
-                            15,
-                            30
-                        ]
-                    },
+                "components":{
                     "minecraft:material_instances": {
                         "*": {
-                            "texture": "xCropSm",
-                            "render_method": "blend"
+                            "texture":"xCrop1",
+                            "render_method": "alpha_test"
                         }
-                    }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json"
                 }
             },
             {
                 "condition": "q.block_property('mineworld:stage') == 2",
-                "components": {
-                    "minecraft:loot": "loot_tables/blocks/xSeeds.json",
-                    "minecraft:ticking": {
-                        "on_tick": {
-                            "event": "mineworld:stage3",
-                            "condition": "q.block_property('mineworld:stage') == 2",
-                            "target": "self"
-                        },
-                        "looping": false,
-                        "range": [
-                            25,
-                            45
-                        ]
-                    },
+                "components":{
                     "minecraft:material_instances": {
                         "*": {
-                            "texture": "xCropM",
-                            "render_method": "blend"
+                            "texture":"xCrop2",
+                            "render_method": "alpha_test"
                         }
-                    }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json"
                 }
             },
             {
                 "condition": "q.block_property('mineworld:stage') == 3",
-                "components": {
-                    "minecraft:loot": "loot_tables/blocks/xSeeds.json",
-                    "minecraft:ticking": {
-                        "on_tick": {
-                            "event": "mineworld:stage4",
-                            "condition": "q.block_property('mineworld:stage') == 3",
-                            "target": "self"
-                        },
-                        "looping": false,
-                        "range": [
-                            25,
-                            65
-                        ]
-                    },
+                "components":{
                     "minecraft:material_instances": {
                         "*": {
-                            "texture": "xCropB",
-                            "render_method": "blend"
+                            "texture":"xCrop3",
+                            "render_method": "alpha_test"
                         }
-                    }
+                    },
+                    "minecraft:loot": "loot_tables/blocks/xeroSeeds.json"
                 }
             },
             {
                 "condition": "q.block_property('mineworld:stage') == 4",
-                "components": {
-                    "minecraft:loot": "loot_tables/blocks/xFruit.json",
+                "components":{
                     "minecraft:material_instances": {
                         "*": {
-                            "texture": "xCropF",
-                            "render_method": "blend"
+                            "texture":"xCrop4",
+                            "render_method": "alpha_test"
                         }
                     },
                     "minecraft:on_interact": {
-                        "event": "mineworld:fruitStage",
+                        "event": "mineworld:int",
                         "target": "self"
-                    }
-                }
-            }
-        ],
-        "events": {
-            "mineworld:stage0": {
-                "set_block_property": {
-                    "mineworld:stage": 1
-                }
-            },
-            "mineworld:stage1": {
-                "set_block_property": {
-                    "mineworld:stage": 2
-                }
-            },
-            "mineworld:stage2": {
-                "set_block_property": {
-                    "mineworld:stage": 3
-                }
-            },
-            "mineworld:stage3": {
-                "set_block_property": {
-                    "mineworld:stage": 4
-                }
-            },
-            "mineworld:fruitStage": {
-                "sequence": [
-                    {
-                        "spawn_loot": {
-                            "table": "loot_tables/blocks/xFruit.json"
-                        }
                     },
-                    {
-                        "set_block_property": {
-                            "mineworld:stage": 3
-                        }
-                    }
-                ]
+                    "minecraft:loot": "loot_tables/blocks/xeroFruitSeeds.json"
+                }
             }
-        }
+        ]
     }
 }

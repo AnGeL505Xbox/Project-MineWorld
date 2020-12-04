@@ -30,6 +30,12 @@
                     }
                 ]
             },
+            "minecraft:weapon": {
+                "on_hurt_entity": {
+                    "event": "mineworld:freeze",
+                    "target": "target"
+                }
+            },
             "minecraft:icon": {
                 "texture": "glacierSword"
             },
@@ -38,6 +44,24 @@
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:glacierSword.name"
+            }
+        },
+        "events": {
+            "mineworld:freeze": {
+                "randomize":[
+                    {
+                        "weight": 90
+                    },
+                    {
+                        "weight": 10,
+                        "add_mob_effect": {
+                            "effect": "slowness",
+                            "target": "holder",
+                            "duration": 20,
+                            "amplifier": 3
+                        }
+                    }
+                ]
             }
         }
     }

@@ -22,7 +22,7 @@
                     "technology_table"
                 ]
             },
-            "minecraft:display_name": "block.mineworld:tinBlock"
+            "minecraft:display_name": "block.mineworld:tecTable"
         }
     }
 }

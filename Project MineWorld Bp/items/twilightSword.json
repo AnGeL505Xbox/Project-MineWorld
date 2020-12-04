@@ -30,6 +30,12 @@
                     }
                 ]
             },
+            "minecraft:weapon": {
+                "on_hurt_entity": {
+                    "event": "mineworld:shadow",
+                    "target": "self"
+                }
+            },
             "minecraft:icon": {
                 "texture": "twilightSword"
             },
@@ -38,6 +44,24 @@
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:twilightSword.name"
+            }
+        },
+        "events": {
+            "mineworld:shadow": {
+                "randomize": [
+                    {
+                        "weight": 90
+                    },
+                    {
+                        "weight": 10,
+                        "add_mob_effect": {
+                            "effect": "invisibility",
+                            "target": "holder",
+                            "duration": 15,
+                            "amplifier": 0
+                        }
+                    }
+                ]
             }
         }
     }

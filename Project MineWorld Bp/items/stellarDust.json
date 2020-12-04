@@ -11,7 +11,7 @@
                 "texture": "stellarDust"
             },
             "minecraft:creative_category": {
-                "parent": "itemGroup.name.dust"
+                "parent": "itemGroup.name.stellar"
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:stellarDust.name"

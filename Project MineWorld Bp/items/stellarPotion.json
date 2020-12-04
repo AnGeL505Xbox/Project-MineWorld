@@ -1,0 +1,53 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:stellarPotion",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 1,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "stellarPotion"
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.stellar"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:stellarPotion.name"
+            }
+        },
+        "events": { 
+            "effects": {
+                "sequence": [
+                    {
+                        "add_mob_effect": {
+                            "effect": "health_boost",
+                            "target": "holder",
+                            "duration": 20,
+                            "amplifier": 0
+                        }
+                    },
+                    {
+                        "add_mob_effect": {
+                            "effect": "regeneration",
+                            "target": "holder",
+                            "duration": 15,
+                            "amplifier": 0
+                        }
+                    }
+                ]
+            } 
+        }
+    }
+}

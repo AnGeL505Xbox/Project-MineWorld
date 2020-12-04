@@ -1,0 +1,41 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:jellyfishPoison",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 1,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "jellyfishPoison"
+            },
+            "minecraft:use_animation": "drink",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.jellyfish"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:jellyfishPotion.name"
+            }
+        },
+        "events": { 
+            "effects": {
+                "add_mob_effect": {
+                    "effect": "poison",
+                    "target": "holder",
+                    "duration": 25,
+                    "amplifier": 0
+                }
+            } 
+        }
+    }
+}
