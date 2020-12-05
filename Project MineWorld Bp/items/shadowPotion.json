@@ -19,6 +19,9 @@
             "minecraft:icon": {
                 "texture": "shadowPotion"
             },
+            "minecraft:potion": {
+                "type": "regular"
+            },
             "minecraft:use_animation": "eat",
             "minecraft:creative_category": {
                 "parent": "itemGroup.name.shadowPotion"

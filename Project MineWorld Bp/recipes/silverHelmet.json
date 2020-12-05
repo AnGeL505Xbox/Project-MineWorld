@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:silverHelmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"aaa",
+			"a a"
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:silverIngot"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:silverHelmet",
+				"count": 1
+			}
+		]
+	}
+}

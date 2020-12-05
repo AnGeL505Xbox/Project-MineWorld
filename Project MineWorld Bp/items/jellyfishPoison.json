@@ -24,7 +24,7 @@
                 "parent": "itemGroup.name.jellyfish"
             },
             "minecraft:display_name": {
-                "value": "item.mineworld:jellyfishPotion.name"
+                "value": "item.mineworld:jellyfishPoison.name"
             }
         },
         "events": { 

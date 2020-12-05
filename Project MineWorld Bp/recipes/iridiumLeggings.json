@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:iridiumLeggings"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"aaa",
+			"a a",
+			"a a"
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:iridiumIngot"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:iridiumLeggings",
+				"count": 1
+			}
+		]
+	}
+}

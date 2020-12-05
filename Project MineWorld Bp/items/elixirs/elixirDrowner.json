@@ -19,6 +19,9 @@
             "minecraft:icon": {
                 "texture": "elixirDrowner"
             },
+            "minecraft:potion": {
+                "type": "rergular"
+            },
             "minecraft:use_animation": "drink",
             "minecraft:creative_category": {
                 "parent": "itemGroup.name.elixir"

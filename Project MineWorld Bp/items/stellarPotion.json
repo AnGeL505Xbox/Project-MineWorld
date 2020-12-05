@@ -19,6 +19,9 @@
             "minecraft:icon": {
                 "texture": "stellarPotion"
             },
+            "minecraft:potion": {
+                "type": "regular"
+            },
             "minecraft:use_animation": "drink",
             "minecraft:creative_category": {
                 "parent": "itemGroup.name.stellar"

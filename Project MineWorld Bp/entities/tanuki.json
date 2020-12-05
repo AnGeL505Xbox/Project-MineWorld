@@ -4,9 +4,9 @@
     "minecraft:entity": {
         "description": {
             "identifier": "mineworld:tanuki",
-            "is_spawnable": true,
-            "is_summonable": true,
-            "is_experimental": false
+            "is_spawnable": false,
+            "is_summonable": false,
+            "is_experimental": true
         },
         "component_groups": {
             "mineworld:tanuki_baby": {

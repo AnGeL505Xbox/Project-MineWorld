@@ -10,20 +10,6 @@
             "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 15,
             "minecraft:block_light_emission": 0.125,
-            "minecraft:material_instances": {
-                "*up": {
-                    "texture": "quantum_log_up",
-                    "render_method": "blend"
-                },
-                "*down": {
-                    "texture": "quantum_log_up",
-                    "render_method": "blend"
-                },
-                "*": {
-                    "texture": "quantum_log_side",
-                    "render_method": "blend"
-                }
-            },
             "minecraft:display_name": "block.mineworld:quantumLog"
         }
     }

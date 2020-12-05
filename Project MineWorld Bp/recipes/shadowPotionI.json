@@ -1,0 +1,11 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_brewing_mix": {
+		"description": { "identifier": "mineworld:shadowPotionI" },
+		"tags": [ "brewing_stand" ],
+
+		"input": "minecraft:potion_type:thick",
+		"reagent": "mineworld:shungite",
+		"output": "mineworld:shadowPotion"	 
+	}
+}

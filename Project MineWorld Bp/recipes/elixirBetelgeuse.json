@@ -1,0 +1,11 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_brewing_mix": {
+		"description": { "identifier": "mineworld:elixirBetelgeuse" },
+		"tags": [ "brewing_stand" ],
+
+		"input": "mineword:elixirBase",
+		"reagent": "mineworld:betelgeuseFlake",
+		"output": "mineworld:elixirBetelgeuse"
+	}
+}

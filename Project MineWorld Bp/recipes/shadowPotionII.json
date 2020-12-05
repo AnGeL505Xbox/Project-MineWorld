@@ -1,0 +1,11 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_brewing_mix": {
+		"description": { "identifier": "mineworld:shadowPotionII" },
+		"tags": [ "brewing_stand" ],
+
+		"input": "minecraft:potion_type:thick",
+		"reagent": "mineworld:onyx",
+		"output": "mineworld:shadowPotion"	 
+	}
+}

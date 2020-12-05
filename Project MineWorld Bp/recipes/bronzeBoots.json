@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:bronzeBoots"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"a a",
+			"a a"
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:bronzeIngot"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:bronzeBoots",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:sombriteHelmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"aaa",
+			"a a"
+		],
+		"key": {
+			"a": {
+				"item": "mineworld:sombriteIngot"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:sombriteHelmet",
+				"count": 1
+			}
+		]
+	}
+}
