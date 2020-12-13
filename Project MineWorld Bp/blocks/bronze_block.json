@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.7,
             "minecraft:explosion_resistance": 25,
             "minecraft:map_color": "#d38233",
-            "minecraft:display_name": "block.mineworld:bronzeBlock"
+            "minecraft:display_name": "block.mineworld:bronzeBlock.name"
         }
     }
 }

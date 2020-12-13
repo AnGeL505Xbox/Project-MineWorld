@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.8,
             "minecraft:explosion_resistance": 30,
             "minecraft:map_color": "#3a4c43",
-            "minecraft:display_name": "block.mineworld:peridotitePaver"
+            "minecraft:display_name": "block.mineworld:peridotitePaver.name"
         }
     }
 }

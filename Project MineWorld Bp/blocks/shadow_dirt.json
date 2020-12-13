@@ -10,7 +10,7 @@
             "minecraft:destroy_time": 0.75,
             "minecraft:explosion_resistance": 2.5,
             "minecraft:block_light_absorption": 1,
-            "minecraft:display_name": "block.mineworld:shadowDirt"
+            "minecraft:display_name": "block.mineworld:shadowDirt.name"
         }
     }
 }

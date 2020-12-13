@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 2,
             "minecraft:explosion_resistance": 50,
             "minecraft:map_color": "#3a4c43",
-            "minecraft:display_name": "block.mineworld:peridotiteSmooth"
+            "minecraft:display_name": "block.mineworld:peridotiteSmooth.name"
         }
     }
 }

@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 15,
             "minecraft:map_color": "#b6cfdf",
-            "minecraft:display_name": "block.mineworld:aquamarineBlock"
+            "minecraft:display_name": "block.mineworld:aquamarineBlock.name"
         }
     }
 }

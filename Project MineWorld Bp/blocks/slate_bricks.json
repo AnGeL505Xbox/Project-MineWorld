@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.75,
             "minecraft:explosion_resistance": 25,
             "minecraft:map_color": "#7c7a7a",
-            "minecraft:display_name": "block.mineworld:slateBricks"
+            "minecraft:display_name": "block.mineworld:slateBricks.name"
         }
     }
 }
