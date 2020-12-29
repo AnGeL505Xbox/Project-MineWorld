@@ -1,0 +1,67 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:xeroPotion",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:use_duration": 3.2,
+            "minecraft:food": {
+                "nutrition": 1,
+                "saturation_modifier": "supernatural",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "effects",
+                    "target": "holder"
+                }
+            },
+            "minecraft:icon": {
+                "texture": "xeroPotion"
+            },
+            "minecraft:potion": {
+                "type": "regular"
+            },
+            "minecraft:use_animation": "eat",
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.xero"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:xeroPotion.name"
+            }
+        },
+        "events": {
+            "effects": {
+                "randomize": [
+                    {
+                        "weight": 45,
+                        "add_mob_effect": {
+                            "effect": "strength",
+                            "target": "holder",
+                            "duration": 20,
+                            "amplifier": 0
+                        }
+                    },
+                    {
+                        "weight": 50,
+                        "add_mob_effect": {
+                            "effect": "haste",
+                            "target": "holder",
+                            "duration": 50,
+                            "amplifier": 0
+                        }
+                    },
+                    {
+                        "weight": 35,
+                        "add_mob_effect": {
+                            "effect": "regeneration",
+                            "target": "holder",
+                            "duration": 20,
+                            "amplifier": 0
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

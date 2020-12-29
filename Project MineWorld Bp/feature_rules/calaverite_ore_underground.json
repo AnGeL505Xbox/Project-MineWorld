@@ -1,9 +1,10 @@
+//Betelgen 1.1
 {
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
       "description": {
          "identifier": "calaverite_ore_underground",
-         "places_feature": "mineworld:calaverite_cave"
+         "places_feature": "mineworld:calaveriteUnder"
       },
       "conditions": {
          "placement_pass": "underground_pass",
@@ -25,28 +26,19 @@
          ]
       },
       "distribution": {
-         "iterations": 5,
+         "iterations": 8,
          "coordinate_eval_order": "zyx",
          "x": {
             "distribution": "uniform",
-            "extent": [
-               0,
-               16
-            ]
+            "extent": [ 0, 16 ]
          },
          "y": {
-            "distribution": "gaussian",
-            "extent": [
-               0,
-               50
-            ]
+            "distribution": "uniform",
+            "extent": [ 0, 40 ]
          },
          "z": {
             "distribution": "uniform",
-            "extent": [
-               0,
-               16
-            ]
+            "extent": [ 0, 16 ]
          }
       }
    }

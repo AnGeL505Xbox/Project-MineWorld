@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:betelKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"b",
+			"s"
+		],
+		"key": {
+			"b": {
+				"item": "mineworld:betelgeuseSplinter"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:betelgeuseKnife",
+				"count": 1
+			}
+		]
+	}
+}

@@ -19,10 +19,10 @@
             "minecraft:crafting_table": {
                 "grid_size": 3,
                 "crafting_tags": [
-                    "technology_table"
+                    "techno_table"
                 ]
             },
-            "minecraft:display_name": "block.mineworld:tecTable.name"
+            "minecraft:display_name": "mineworld:tecTable"
         }
     }
 }

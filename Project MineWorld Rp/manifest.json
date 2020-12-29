@@ -5,7 +5,7 @@
         "name": "Project MineWorld Rp",
         "uuid": "2b49d83a-3ade-4832-9286-efa6e1300ea3",
         "version": [ 1, 5, 0 ],
-        "min_engine_version": [ 1, 0, 0 ]
+        "min_engine_version": [ 1, 14, 0 ]
     },
     "modules": [
         {

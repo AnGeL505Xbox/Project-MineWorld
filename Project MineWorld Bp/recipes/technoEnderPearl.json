@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:PearlEnder"
+		},
+		"tags": [
+			"techno_table"
+		],
+		"pattern": [
+			"ppp",
+			"pqp",
+			"ppp"
+		],
+		"key": {
+			"q": {
+				"item": "mineworld:quantumShard"
+			},
+			"p": {
+				"item": "mineworld:peridot"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:ender_pearl",
+				"count": 1
+			}
+		]
+	}
+}

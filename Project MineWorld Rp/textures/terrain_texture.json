@@ -106,7 +106,7 @@
         "sapphire_ore": {
             "textures": "textures/blocks/sapphireOre"
         },
-        "shadow_block": {
+        "sombrite_block": {
             "textures": "textures/blocks/sombriteBlock"
         },
         "shadow_dirt": {
@@ -122,7 +122,7 @@
             "textures": "textures/blocks/shadowLeaves"
         },
         "shadow_log_side": {
-            "textures": "textures/blocks/shadowLogside"
+            "textures": "textures/blocks/shadowLogSide"
         },
         "shadow_log_up": {
             "textures": "textures/blocks/shadowLogUp"
@@ -163,20 +163,8 @@
         "tecTable": {
             "textures": "textures/blocks/technologyTable"
         },
-        "xCrop0": {
-            "textures": "textures/blocks/xCrop0"
-        },
-        "xCrop1": {
-            "textures": "textures/blocks/xCrop1"
-        },
-        "xCrop2": {
-            "textures": "textures/blocks/xCrop2"
-        },
-        "xCrop3": {
-            "textures": "textures/blocks/xCrop3"
-        },
-        "xCrop4": {
-            "textures": "textures/blocks/xCrop4"
+        "xeroFlower": {
+            "textures": "textures/blocks/xeroFlower"
         }
     }
 }

@@ -1,12 +1,9 @@
 {
     "format_version": [ 1, 1, 0 ],
-    "mineworld:xero_crop": {
+    "mineworld:xero_flower": {
         "sound": "grass"
     },
     "mineworld:technology_table": {
-        "sound": "stone"
-    },
-    "mineworld:rune_table": {
         "sound": "stone"
     },
     "mineworld:iridium_ore": {
@@ -212,9 +209,15 @@
         "textures": "quantum_leaves"
     },
     "mineworld:quantum_log": {
-        "sound": "wood"
+        "sound": "wood",
+        "textures": {
+            "down": "quantum_log_up",
+            "side": "quantum_log_side",
+            "up": "quantum_log_up"
+        }
     },
     "mineworld:quantum_planks": {
-        "sound": "wood"
+        "sound": "wood",
+        "textures": "quantum_planks"
     }
 }

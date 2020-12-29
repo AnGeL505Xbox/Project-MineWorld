@@ -21,14 +21,8 @@
         }
       },
       "geometry": "Array.variants[query.skin_id]",
-      "materials": [
-        {
-          "*": "Material.default"
-        }
-      ],
-      "textures": [
-        "Array.variants[query.skin_id]"
-      ]
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.variants[query.skin_id]" ]
     }
   }
 }

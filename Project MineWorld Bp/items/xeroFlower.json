@@ -1,0 +1,24 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:xeroFlower",
+            "category": "nature"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:block_placer": {
+                "block": "mineworld:xero_flower"
+            },
+            "minecraft:icon": {
+                "texture": "xeroFlower"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.xero"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:xeroFlower.name"
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:xero_flower"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/xeroFlower.json",
+            "minecraft:entity_collision": false,
+            "minecraft:block_light_emission": 0.0,
+            "minecraft:block_light_absorption": 0,
+            "minecraft:destroy_time": 0.0,
+            "minecraft:explosion_resistance": 0,
+            "minecraft:map_color": "#515861",
+            "minecraft:geometry": "geometry.xero_flower",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "xeroFlower",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:display_name": "mineworld:xeroFlower"
+        }
+    }
+}

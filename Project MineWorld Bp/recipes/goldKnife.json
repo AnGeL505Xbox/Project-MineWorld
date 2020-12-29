@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:goldKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"b",
+			"s"
+		],
+		"key": {
+			"b": {
+				"item": "minecraft:gold_ingot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:goldKnife",
+				"count": 1
+			}
+		]
+	}
+}

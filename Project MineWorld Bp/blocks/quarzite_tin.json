@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.25,
             "minecraft:explosion_resistance": 30,
             "minecraft:map_color": "#fbf7f5",
-            "minecraft:display_name": "block.mineworld:quarziteTin.name"
+            "minecraft:display_name": "mineworld:quarziteTin"
         }
     }
 }

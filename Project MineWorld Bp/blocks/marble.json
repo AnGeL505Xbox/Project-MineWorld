@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.25,
             "minecraft:explosion_resistance": 30,
             "minecraft:map_color": "#eeeff0",
-            "minecraft:display_name": "block.mineworld:marble.name"
+            "minecraft:display_name": "mineworld:marble"
         }
     }
 }

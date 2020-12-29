@@ -4,7 +4,7 @@
 		"description": { "identifier": "mineworld:elixirBetelgeuse" },
 		"tags": [ "brewing_stand" ],
 
-		"input": "mineword:elixirBase",
+		"input": "mineworld:elixirBase",
 		"reagent": "mineworld:betelgeuseFlake",
 		"output": "mineworld:elixirBetelgeuse"
 	}

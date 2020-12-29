@@ -1,0 +1,18 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:quantumCraft" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "SS",
+         "SS"
+      ],
+      "key": {
+         "S": { "item": "mineworld:quantum_planks" }
+      },
+      "result": {
+         "item": "crafting_table",
+         "count": 1
+      }
+   }
+}

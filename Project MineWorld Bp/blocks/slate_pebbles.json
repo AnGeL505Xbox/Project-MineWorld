@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.8,
             "minecraft:explosion_resistance": 30,
             "minecraft:map_color": "#7c7a7a",
-            "minecraft:display_name": "block.mineworld:slatePebbles.name"
+            "minecraft:display_name": "mineworld:slatePebbles"
         }
     }
 }

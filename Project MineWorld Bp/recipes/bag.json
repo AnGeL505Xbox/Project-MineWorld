@@ -1,0 +1,33 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:bag"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"lll",
+			"scs",
+			"lll"
+		],
+		"key": {
+			"l": {
+				"item": "minecraft:leather"
+			},
+        "s": {
+				"item": "minecraft:lead"
+			},
+			"c": {
+				"item": "minecraft:chest"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:bag",
+				"count": 1
+			}
+		]
+	}
+}

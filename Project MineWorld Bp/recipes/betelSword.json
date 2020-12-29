@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:betelSword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"b",
+			"b",
+			"s"
+		],
+		"key": {
+			"b": {
+				"item": "mineworld:betelgeuseFlake"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:betelgeuseSword",
+				"count": 1
+			}
+		]
+	}
+}

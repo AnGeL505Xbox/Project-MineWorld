@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 0.75,
             "minecraft:explosion_resistance": 2.5,
             "minecraft:map_color": "#86302e",
-            "minecraft:display_name": "block.mineworld:redDirt.name"
+            "minecraft:display_name": "mineworld:redDirt"
         }
     }
 }

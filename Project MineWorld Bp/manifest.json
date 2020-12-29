@@ -4,7 +4,7 @@
         "description": "Expand your horizons!!!",
         "name": "Project MineWorld Bh",
         "uuid": "760c983f-b9f9-4fa9-88e0-d6a982bcab90",
-        "min_engine_version": [ 1, 16, 0 ],
+        "min_engine_version": [ 1, 14, 0 ],
         "version": [ 1, 5, 0 ]
     },
     "modules": [

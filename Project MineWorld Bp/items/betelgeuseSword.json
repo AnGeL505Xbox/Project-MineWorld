@@ -2,7 +2,7 @@
     "format_version": "1.16.100",
     "minecraft:item": {
         "description": {
-            "identifier": "mineworld:bronzeSword",
+            "identifier": "mineworld:betelgeuseSword",
             "category": "equipment"
         },
         "components": {

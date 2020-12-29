@@ -1,128 +1,104 @@
 {
-    "resource_pack_name": "mineworld",
     "texture_name": "atlas.items",
+    "resource_pack_name": "mineworld",
     "texture_data": {
-      /*Crystals*/
-        "argentite": {
-            "textures": "textures/items/argentite"
-        },
-        "calaverite": {
-            "textures": "textures/items/calaverite"
-        },
-        "cassiterite": {
-            "textures": "textures/items/cassiterite"
-        },
-        "limonite": {
-            "textures": "textures/items/limonite"
-        },
-        "malachite": {
-            "textures": "textures/items/malachite"
-        },
-        "magnetite": {
-            "textures": "textures/items/magnetite"
-        },
-        "shungite": {
-            "textures": "textures/items/shungite"
-        },
-        "siderite": {
-            "textures": "textures/items/siderite"
-        },
-        "sylvaniteAG": {
-            "textures": "textures/items/sylvaniteAG"
-        },
-        "sylvaniteAU": {
-            "textures": "textures/items/sylvaniteAU"
-        },
-      /*Minerals*/
         "aquamarine": {
             "textures": "textures/items/aquamarine"
         },
-        "copper": {
-            "textures": "textures/items/copper"
+        "aquamarineDust": {
+            "textures": "textures/items/aquamarineDust"
+        },
+        "argentite": {
+            "textures": "textures/items/argentite"
+        },
+        "bacon": {
+            "textures": "textures/items/bacon"
+        },
+        "bag": {
+            "textures": "textures/items/bag"
+        },
+        "bagPlus": {
+            "textures": "textures/items/bag+"
+        },
+        "bagSuperPlus": {
+            "textures": "textures/items/bag++"
+        },
+        "beefJerky": {
+            "textures": "textures/items/beefJerky"
+        },
+        "berryWine": {
+            "textures": "textures/items/berryWine"
+        },
+        "betelFlake": {
+            "textures": "textures/items/betelgeuseFlake"
+        },
+        "betelgeuseHeart": {
+            "textures": "textures/items/betelgeuseHeart"
+        },
+        "betelgeuseKnife": {
+            "textures": "textures/items/betelgeuseKnife"
+        },
+        "betelgeuseSword": {
+            "textures": "textures/items/betelgeuseSword"
+        },
+        "betelSplinter": {
+            "textures": "textures/items/betelgeuseSplinter"
+        },
+        "bleach": {
+            "textures": "textures/items/bleach"
+        },
+        "blubber": {
+            "textures": "textures/items/blubber"
+        },
+        "bronzeArmor": {
+            "textures": [
+                "textures/items/bronzeHelmet",
+                "textures/items/bronzeChestplate",
+                "textures/items/bronzeLeggins",
+                "textures/items/bronzeBoots"
+            ]
         },
         "bronzeIngot": {
             "textures": "textures/items/bronzeIngot"
         },
-        "iridiumIngot": {
-            "textures": "textures/items/iridiumIngot"
+        "bronzeTools": {
+            "textures": [
+                "textures/items/bronzeAxe",
+                "textures/items/bronzeDoubleSword",
+                "textures/items/bronzeHoe",
+                "textures/items/bronzeKnife",
+                "textures/items/bronzePickaxe",
+                "textures/items/bronzeShovel",
+                "textures/items/bronzeSword"
+            ]
         },
-        "onyx": {
-            "textures": "textures/items/onyx"
+        "calaverite": {
+            "textures": "textures/items/calaverite"
         },
-        "opal": {
-            "textures": "textures/items/opal"
+        "carbonNanotube": {
+            "textures": "textures/items/carbonNanotube"
         },
-        "opalFire": {
-            "textures": "textures/items/opalFire"
+        "cassiterite": {
+            "textures": "textures/items/cassiterite"
         },
-        "opalWater": {
-            "textures": "textures/items/opalWater"
+        "circuit": {
+            "textures": "textures/items/circuit"
         },
-        "peridot": {
-            "textures": "textures/items/peridot"
+        "copper": {
+            "textures": "textures/items/copper"
         },
-        "ruby": {
-            "textures": "textures/items/ruby"
+        "darkrystal": {
+            "textures": "textures/items/darkrystal"
         },
-        "sapphire": {
-            "textures": "textures/items/sapphire"
-        },
-        "silverIngot": {
-            "textures": "textures/items/silverIngot"
-        },
-        "sombriteIngot": {
-            "textures": "textures/items/sombriteIngot"
-        },
-        "tinIngot": {
-            "textures": "textures/items/tinIngot"
-        },
-        "silverNugget": {
-            "textures": "textures/items/silverNugget"
-        },
-      /*Dusts*/
-        "aquamarineDust": {
-            "textures": "textures/items/aquamarineDust"
+        "diamondDoubleSword": {
+            "textures": "textures/items/diamondDoubleSword"
         },
         "diamondDust": {
             "textures": "textures/items/diamondDust"
         },
-        "goldDust": {
-            "textures": "textures/items/goldDust"
+        "diamondKnife": {
+            "textures": "textures/items/diamondKnife"
         },
-        "ironDust": {
-            "textures": "textures/items/ironDust"
-        },
-        "iridiumDust": {
-            "textures": "textures/items/iridiumDust"
-        },
-        "netheriteDust": {
-            "textures": "textures/items/netheriteDust"
-        },
-        "emeraldDust": {
-            "textures": "textures/items/emeraldDust"
-        },
-        "onyxDust": {
-            "textures": "textures/items/onyxDust"
-        },
-        "peridotDust": {
-            "textures": "textures/items/peridotDust"
-        },
-        "sapphireDust": {
-            "textures": "textures/items/sapphireDust"
-        },
-        "rubyDust": {
-            "textures": "textures/items/rubyDust"
-        },
-        "silverDust": {
-            "textures": "textures/items/silverDust"
-        },
-        "sombriteDust": {
-            "textures": "textures/items/sombriteDust"
-        },
-        "stellarDust": {
-            "textures": "textures/items/stellarDust"
-        },
-      /*Elixirs*/
         "elixir": {
             "textures": "textures/items/elixir"
         },
@@ -141,28 +117,37 @@
         "elixirUndead": {
             "textures": "textures/items/elixirUnd"
         },
-      /*Tools*/
-        "silverTools": {
+        "emeraldDust": {
+            "textures": "textures/items/emeraldDust"
+        },
+        "featherPhoenix": {
+            "textures": "textures/items/featherPhoenix"
+        },
+        "glacierSword": {
+            "textures": "textures/items/glacierSword"
+        },
+        "goldDoubleSword": {
+            "textures": "textures/items/goldDoubleSword"
+        },
+        "goldDust": {
+            "textures": "textures/items/goldDust"
+        },
+        "goldKnife": {
+            "textures": "textures/items/goldKnife"
+        },
+        "iridiumArmor": {
             "textures": [
-                "textures/items/silverAxe",
-                "textures/items/silverDoubleSword",
-                "textures/items/silverHoe",
-                "textures/items/silverKnife",
-                "textures/items/silverPickaxe",
-                "textures/items/silverShovel",
-                "textures/items/silverSword"
+                "textures/items/iridiumHelmet",
+                "textures/items/iridiumChestplate",
+                "textures/items/iridiumLeggins",
+                "textures/items/iridiumBoots"
             ]
         },
-        "bronzeTools": {
-            "textures": [
-                "textures/items/bronzeAxe",
-                "textures/items/bronzeDoubleSword",
-                "textures/items/bronzeHoe",
-                "textures/items/bronzeKnife",
-                "textures/items/bronzePickaxe",
-                "textures/items/bronzeShovel",
-                "textures/items/bronzeSword"
-            ]
+        "iridiumDust": {
+            "textures": "textures/items/iridiumDust"
+        },
+        "iridiumIngot": {
+            "textures": "textures/items/iridiumIngot"
         },
         "iridiumTools": {
             "textures": [
@@ -175,6 +160,144 @@
                 "textures/items/iridiumSword"
             ]
         },
+        "ironDoubleSword": {
+            "textures": "textures/items/ironDoubleSword"
+        },
+        "ironDust": {
+            "textures": "textures/items/ironDust"
+        },
+        "ironKnife": {
+            "textures": "textures/items/ironKnife"
+        },
+        "jellyfishPoison": {
+            "textures": "textures/items/jellyfishPoison"
+        },
+        "limonite": {
+            "textures": "textures/items/limonite"
+        },
+        "machineCore": {
+            "textures": "textures/items/machineCore"
+        },
+        "magnetite": {
+            "textures": "textures/items/magnetite"
+        },
+        "malachite": {
+            "textures": "textures/items/malachite"
+        },
+        "mandrake": {
+            "textures": "textures/items/mandrake"
+        },
+        "mysticalStone": {
+            "textures": "textures/items/mysticalStone"
+        },
+        "mysticalStoneFragment": {
+            "textures": "textures/items/mysticalStoneFragment"
+        },
+        "netheriteDoubleSword": {
+            "textures": "textures/items/netheriteDoubleSword"
+        },
+        "netheriteDust": {
+            "textures": "textures/items/netheriteDust"
+        },
+        "netheriteKnife": {
+            "textures": "textures/items/netheriteKnife"
+        },
+        "onydotStick": {
+            "textures": "textures/items/onydotStick"
+        },
+        "onyx": {
+            "textures": "textures/items/onyx"
+        },
+        "onyxDust": {
+            "textures": "textures/items/onyxDust"
+        },
+        "opal": {
+            "textures": "textures/items/opal"
+        },
+        "opalFire": {
+            "textures": "textures/items/opalFire"
+        },
+        "opalWater": {
+            "textures": "textures/items/opalWater"
+        },
+        "peridot": {
+            "textures": "textures/items/peridot"
+        },
+        "peridotDust": {
+            "textures": "textures/items/peridotDust"
+        },
+        "quantumShard": {
+            "textures": "textures/items/quantumShard"
+        },
+        "ruby": {
+            "textures": "textures/items/ruby"
+        },
+        "rubyDust": {
+            "textures": "textures/items/rubyDust"
+        },
+        "sapphire": {
+            "textures": "textures/items/sapphire"
+        },
+        "sapphireDust": {
+            "textures": "textures/items/sapphireDust"
+        },
+        "shadowCookie": {
+            "textures": "textures/items/shadowCookie"
+        },
+        "shadowPotion": {
+            "textures": "textures/items/shadowPotion"
+        },
+        "shungite": {
+            "textures": "textures/items/shungite"
+        },
+        "siderite": {
+            "textures": "textures/items/siderite"
+        },
+        "silverArmor": {
+            "textures": [
+                "textures/items/silverHelmet",
+                "textures/items/silverChestplate",
+                "textures/items/silverLeggins",
+                "textures/items/silverBoots"
+            ]
+        },
+        "silverDust": {
+            "textures": "textures/items/silverDust"
+        },
+        "silverIngot": {
+            "textures": "textures/items/silverIngot"
+        },
+        "silverNugget": {
+            "textures": "textures/items/silverNugget"
+        },
+        "silverTools": {
+            "textures": [
+                "textures/items/silverAxe",
+                "textures/items/silverDoubleSword",
+                "textures/items/silverHoe",
+                "textures/items/silverKnife",
+                "textures/items/silverPickaxe",
+                "textures/items/silverShovel",
+                "textures/items/silverSword"
+            ]
+        },
+        "sMeat": {
+            "textures": "textures/items/strangeMeat"
+        },
+        "sombriteArmor": {
+            "textures": [
+                "textures/items/sombriteHelmet",
+                "textures/items/sombriteChestplate",
+                "textures/items/sombriteLeggins",
+                "textures/items/sombriteBoots"
+            ]
+        },
+        "sombriteDust": {
+            "textures": "textures/items/sombriteDust"
+        },
+        "sombriteIngot": {
+            "textures": "textures/items/sombriteIngot"
+        },
         "sombriteTools": {
             "textures": [
                 "textures/items/sombriteAxe",
@@ -186,163 +309,42 @@
                 "textures/items/sombriteSword"
             ]
         },
-        "twilightSword": {
-            "textures": "textures/items/twilightSword"
-        },
-        "glacierSword": {
-            "textures": "textures/items/glacierSword"
-        },
-        "tecnoSword": {
-            "textures": "textures/items/tecnoSword"
-        },
-        "betelgeuseSword": {
-            "textures": "textures/items/betelgeuseSword"
-        },
-        "betelgeuseKnife": {
-            "textures": "textures/items/betelgeuseKnife"
-        },
-        "netheriteKnife": {
-            "textures": "textures/items/netheriteKnife"
-        },
-        "diamondKnife": {
-            "textures": "textures/items/diamondKnife"
-        },
-        "goldKnife": {
-            "textures": "textures/items/goldKnife"
-        },
-        "ironKnife": {
-            "textures": "textures/items/ironKnife"
-        },
-        "netheriteDoubleSword": {
-            "textures": "textures/items/netheriteDoubleSword"
-        },
-        "diamondDoubleSword": {
-            "textures": "textures/items/diamondDoubleSword"
-        },
-        "goldDoubleSword": {
-            "textures": "textures/items/goldDoubleSword"
-        },
-        "ironDoubleSword": {
-            "textures": "textures/items/ironDoubleSword"
-        },
-      /*Armor*/
-        "bronzeArmor": {
-            "textures": [
-                "textures/items/bronzeHelmet",
-                "textures/items/bronzeChestplate",
-                "textures/items/bronzeLeggins",
-                "textures/items/bronzeBoots"
-            ]
-        },
-        "iridiumArmor": {
-            "textures": [
-                "textures/items/iridiumHelmet",
-                "textures/items/iridiumChestplate",
-                "textures/items/iridiumLeggins",
-                "textures/items/iridiumBoots"
-            ]
-        },
-        "silverArmor": {
-            "textures": [
-                "textures/items/silverHelmet",
-                "textures/items/silverChestplate",
-                "textures/items/silverLeggins",
-                "textures/items/silverBoots"
-            ]
-        },
-        "sombriteArmor": {
-            "textures": [
-                "textures/items/sombriteHelmet",
-                "textures/items/sombriteChestplate",
-                "textures/items/sombriteLeggins",
-                "textures/items/sombriteBoots"
-            ]
-        },
-      /*Food*/
-        "bacon": {
-            "textures": "textures/items/bacon"
-        },
-        "beefJerky": {
-            "textures": "textures/items/beefJerky"
-        },
-        "berryWine": {
-            "textures": "textures/items/berryWine"
-        },
-        "betelgeuseHeart": {
-            "textures": "textures/items/betelgeuseHeart"
-        },
-        "blubber": {
-            "textures": "textures/items/blubber"
-        },
-        "darkrystal": {
-            "textures": "textures/items/darkrystal"
-        },
-        "mandrake": {
-            "textures": "textures/items/mandrake"
-        },
-        "shadowCookie": {
-            "textures": "textures/items/shadowCookie"
-        },
-        "shadowPotion": {
-            "textures": "textures/items/shadowPotion"
-        },
-        "sMeat": {
-            "textures": "textures/items/strangeMeat"
-        },
-        "jellyfishPoison": {
-            "textures": "textures/items/jellyfishPoison"
+        "stellarDust": {
+            "textures": "textures/items/stellarDust"
         },
         "stellarPotion": {
             "textures": "textures/items/stellarPotion"
         },
-      /*Others*/
-        "xeroSeeds": {
-            "textures": "textures/items/xeroSeeds"
+        "sylvaniteAG": {
+            "textures": "textures/items/sylvaniteAG"
         },
-        "xeroFruit": {
-            "textures": "textures/items/xeroFruit"
+        "sylvaniteAU": {
+            "textures": "textures/items/sylvaniteAU"
         },
-        "onydotStick": {
-            "textures": "textures/items/onydotStick"
+        "tecnoSword": {
+            "textures": "textures/items/tecnoSword"
         },
-        "bag": {
-            "textures": "textures/items/bag"
+        "tinIngot": {
+            "textures": "textures/items/tinIngot"
         },
-        "bagPlus": {
-            "textures": "textures/items/bag+"
+        "twilightSword": {
+            "textures": "textures/items/twilightSword"
         },
-        "bagSuperPlus": {
-            "textures": "textures/items/bag++"
+        "xeroPotion": {
+            "textures": "textures/items/xeroPotion"
         },
-        "betelFlake": {
-            "textures": "textures/items/betelgeuseFlake"
+        "xeroFlower": {
+            "textures": "textures/items/xeroFlower"
         },
-        "betelSplinter": {
-            "textures": "textures/items/betelgeuseSplinter"
-        },
-        "bleach": {
-            "textures": "textures/items/bleach"
-        },
-        "carbonNanotube": {
-            "textures": "textures/items/carbonNanotube"
-        },
-        "circuit": {
-            "textures": "textures/items/circuit"
-        },
-        "featherPhoenix": {
-            "textures": "textures/items/featherPhoenix"
-        },
-        "machineCore": {
-            "textures": "textures/items/machineCore"
-        },
-        "mysticalStone": {
-            "textures": "textures/items/mysticalStone"
-        },
-        "mysticalStoneFragment": {
-            "textures": "textures/items/mysticalStoneFragment"
-        },
-        "quantumShard": {
-            "textures": "textures/items/quantumShard"
+        "mineworld_spawn": {
+            "textures": [
+               "textures/items/machineSmall",
+               "textures/items/machine",
+               "textures/items/machineBig",
+               "textures/items/machineMerchant",
+               "textures/items/machineGhast",
+               "textures/items/machineEnderman"
+            ]
         }
     }
 }

@@ -3,9 +3,7 @@
    "render_controllers": {
       "controller.render.coyote": {
          "arrays": {
-            "textures": {
-               "Array.skin": [ "Texture.mexican", "Texture.belize" ]
-            }
+            "textures": { "Array.skin": [ "Texture.mexican", "Texture.belize" ] }
          },
          "geometry": "Geometry.default",
          "materials": [ { "*": "Material.default" } ],

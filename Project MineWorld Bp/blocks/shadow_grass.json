@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 0.4,
             "minecraft:block_light_absorption": 1,
             "minecraft:map_color": "#2d352b",
-            "minecraft:display_name": "block.mineworld:shadowGrass.name"
+            "minecraft:display_name": "mineworld:shadowGrass"
         }
     }
 }

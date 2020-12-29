@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:ironKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"b",
+			"s"
+		],
+		"key": {
+			"b": {
+				"item": "minecraft:iron_ingot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:ironKnife",
+				"count": 1
+			}
+		]
+	}
+}

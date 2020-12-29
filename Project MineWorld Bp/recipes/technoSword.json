@@ -10,7 +10,7 @@
 		],
 		"key": {
 		   "*": { "item": "mineworld:machineCore" },
-		   "s": { "item": "minecraft:stick" },
+		   "s": { "item": "mineworld:carbonNanotube"},
 		   "t": { "item": "mineworld:tinIngot" }
 		},
 		"result": {

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:goldSwordD"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"  b",
+			" o ",
+			"b  "
+		],
+		"key": {
+			"b": {
+				"item": "minecraft:gold_ingot"
+			},
+			"o": {
+				"item": "mineworld:onydotStick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:goldDoubleSword",
+				"count": 1
+			}
+		]
+	}
+}

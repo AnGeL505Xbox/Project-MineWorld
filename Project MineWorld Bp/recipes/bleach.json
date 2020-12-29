@@ -1,0 +1,11 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_brewing_mix": {
+		"description": { "identifier": "mineworld:bleach" },
+		"tags": [ "brewing_stand" ],
+
+		"input": "minecraft:potion_type:water",
+		"reagent": "minecraft:bone",
+		"output": "mineworld:bleach"	 
+	}
+}

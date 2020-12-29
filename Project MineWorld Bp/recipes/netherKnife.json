@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:netherKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"b",
+			"s"
+		],
+		"key": {
+			"b": {
+				"item": "minecraft:netherite_ingot"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:netheriteKnife",
+				"count": 1
+			}
+		]
+	}
+}

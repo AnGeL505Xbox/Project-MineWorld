@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mineworld:diamondKnife"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"b",
+			"s"
+		],
+		"key": {
+			"b": {
+				"item": "minecraft:diamond"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "mineworld:diamondKnife",
+				"count": 1
+			}
+		]
+	}
+}

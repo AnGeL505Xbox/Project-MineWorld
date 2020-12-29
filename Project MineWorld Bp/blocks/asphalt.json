@@ -10,7 +10,7 @@
             "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 45,
             "minecraft:block_light_absorption": 1,
-            "minecraft:display_name": "block.mineworld:asphalt.name"
+            "minecraft:display_name": "mineworld:asphalt"
         }
     }
 }

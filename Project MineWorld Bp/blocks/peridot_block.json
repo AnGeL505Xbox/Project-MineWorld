@@ -9,7 +9,7 @@
             "minecraft:destroy_time": 1.7,
             "minecraft:explosion_resistance": 25,
             "minecraft:map_color": "#65ae84",
-            "minecraft:display_name": "block.mineworld:peridotBlock.name"
+            "minecraft:display_name": "mineworld:peridotBlock"
         }
     }
 }

@@ -10,7 +10,7 @@
             "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 15,
             "minecraft:block_light_emission": 0.125,
-            "minecraft:display_name": "block.mineworld:quantumLog.name"
+            "minecraft:display_name": "mineworld:quantumLog"
         }
     }
 }

@@ -10,7 +10,7 @@
             "minecraft:explosion_resistance": 1.5,
             "minecraft:block_light_emission": 0.8125,
             "minecraft:map_color": "#ffff93",
-            "minecraft:display_name": "block.mineworld:stellarBlock.name"
+            "minecraft:display_name": "mineworld:stellarBlock"
         }
     }
 }

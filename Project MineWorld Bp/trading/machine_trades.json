@@ -74,13 +74,13 @@
 							"wants": [
 								{
 									"item": "mineworld:ruby",
-									"quantity": 1
+									"quantity": 2
 								}
 							],
 							"gives": [
 								{
-									"item": "mineworld:sapphireDust",
-									"quantity": 2
+									"item": "mineworld:opalNormal",
+									"quantity": 1
 								}
 							],
 							"max_uses": 2,
@@ -165,8 +165,8 @@
 							],
 							"gives": [
 								{
-									"item": "mineworld:onyxDust",
-									"quantity": 3
+									"item": "mineworld:onyx",
+									"quantity": 1
 								}
 							],
 							"max_uses": 5,

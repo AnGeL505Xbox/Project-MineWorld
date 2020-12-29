@@ -1,0 +1,28 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": {
+         "identifier": "mineworld:mysticalStone"
+      },
+      "tags": [
+         "crafting_table"
+      ],
+      "pattern": [
+         " m ",
+         "mom",
+         " m "
+      ],
+      "key": {
+         "m": {
+            "item": "mineworld:mysticalStoneFragment"
+         },
+         "o": {
+            "item": "mineworld:opalNormal"
+         }
+      },
+      "result": {
+         "item": "mineworld:mysticalStone",
+         "count": 1
+      }
+   }
+}

@@ -1,59 +1,39 @@
 {
- "format_version": "1.8.0",
- "render_controllers": {
-  "controller.render.red_panda_skins": {
-   "arrays": {
-    "textures": {
-     "Array.skins": [
-      "Texture.default",
-      "Texture.albine"
-     ]
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.red_panda_skins": {
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.default",
+                        "Texture.albine"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                { "chest*": "query.is_chested" },
+                { "tamed*": "query.is_tamed" }
+            ],
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Array.skins[query.skin_id]" ]
+        },
+        "controller.render.red_panda_eyes": {
+            "arrays": {
+                "textures": {
+                    "Array.eyes": [
+                        "Texture.wake",
+                        "Texture.sleep"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "part_visibility": [
+                { "chest*": "query.is_chested" },
+                { "tamed*": "query.is_tamed" }
+            ],
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Array.eyes[query.is_sleeping]" ]
+        }
     }
-   },
-   "geometry": "Geometry.default",
-   "part_visibility": [
-    {
-     "chest*": "query.is_chested"
-    },
-    {
-     "tamed*": "query.is_tamed"
-    }
-   ],
-   "materials": [
-    {
-     "*": "Material.default"
-    }
-   ],
-   "textures": [
-    "Array.skins[query.skin_id]"
-   ]
-  },
-  "controller.render.red_panda_eyes": {
-   "arrays": {
-    "textures": {
-     "Array.eyes": [
-      "Texture.wake",
-      "Texture.sleep"
-     ]
-    }
-   },
-   "geometry": "Geometry.default",
-   "part_visibility": [
-    {
-     "chest*": "query.is_chested"
-    },
-    {
-     "tamed*": "query.is_tamed"
-    }
-   ],
-   "materials": [
-    {
-     "*": "Material.default"
-    }
-   ],
-   "textures": [
-    "Array.eyes[query.is_sleeping]"
-   ]
-  }
- }
 }

@@ -56,7 +56,7 @@
                         "weight": 10,
                         "add_mob_effect": {
                             "effect": "slowness",
-                            "target": "holder",
+                            "target": "target",
                             "duration": 20,
                             "amplifier": 3
                         }

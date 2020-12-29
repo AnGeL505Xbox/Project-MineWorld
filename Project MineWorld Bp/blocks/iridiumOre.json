@@ -9,7 +9,7 @@
             "minecraft:explosion_resistance": 3,
             "minecraft:map_color": "#e6a648",
             "minecraft:loot": "loot_tables/blocks/iridiumOre.json",
-            "minecraft:display_name": "block.mineworld:iridiumOre.name"
+            "minecraft:display_name": "mineworld:iridiumOre"
         }
     }
 }

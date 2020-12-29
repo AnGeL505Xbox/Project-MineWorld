@@ -5,9 +5,7 @@
             "geometry": "Geometry.default",
             "materials": [ { "*": "Material.default" } ],
             "textures": [ "Texture.default" ],
-            "part_visibility": [
-                { "shield*": "variable.shield" }
-            ]
+            "part_visibility": [ { "shield*": "variable.shield" } ]
         }
     }
 }
