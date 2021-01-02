@@ -1,0 +1,22 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:anthracite",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:fuel": { "duration":  500 },
+            "minecraft:icon": {
+                "texture": "anthracite"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.mineral"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:anthracite.name"
+            }
+        }
+    }
+}

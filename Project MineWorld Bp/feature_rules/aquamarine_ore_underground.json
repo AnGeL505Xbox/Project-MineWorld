@@ -1,10 +1,9 @@
-//Betelgen 1.1
 {
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
       "description": {
          "identifier": "aquamarine_ore_underground",
-         "places_feature": "mineworld:aquamarineUnder"
+         "places_feature": "mineworld:aquamarine_cave"
       },
       "conditions": {
          "placement_pass": "underground_pass",
@@ -34,11 +33,14 @@
          },
          "y": {
             "distribution": "gaussian",
-            "extent": [ 0, 24 ]
+            "extent": [ 0, 45 ]
          },
          "z": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          }
       }
    }

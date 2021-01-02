@@ -6,7 +6,7 @@
             "category": "nature"
         },
         "components": {
-            "minecraft:use_duration": 3.2,
+            "minecraft:use_duration": 1.61,
             "minecraft:food": {
                 "nutrition": 5,
                 "saturation_modifier": "low",

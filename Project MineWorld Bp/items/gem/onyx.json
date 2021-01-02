@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:onyx",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "onyx"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.gem"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:onyx.name"
+            }
+        }
+    }
+}

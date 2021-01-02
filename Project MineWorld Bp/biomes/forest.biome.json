@@ -23,7 +23,7 @@
       },
       "minecraft:overworld_generation_rules": {
         "hills_transformation": "forest_hills",
-        "mutate_transformation": [ "flower_forest", "shadow_forest" ]
+        "mutate_transformation": [ "flower_forest", "shadow_forest" ],
         "generate_for_climates": [
           [ "medium", 1 ],
           [ "cold", 1 ]

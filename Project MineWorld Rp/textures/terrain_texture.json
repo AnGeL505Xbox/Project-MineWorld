@@ -49,8 +49,14 @@
         "onyx_ore": {
             "textures": "textures/blocks/onyxOre"
         },
-        "opal_ore": {
+        "opal": {
             "textures": "textures/blocks/opalOre"
+        },
+        "opalWater": {
+            "textures": "textures/blocks/opalWaterOre"
+        },
+        "opalFire": {
+            "textures": "textures/blocks/opalFireOre"
         },
         "peridot_block": {
             "textures": "textures/blocks/peridotBlock"

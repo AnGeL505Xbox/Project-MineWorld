@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.16.200",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:shadow_dirt"
@@ -10,7 +10,19 @@
             "minecraft:destroy_time": 0.75,
             "minecraft:explosion_resistance": 2.5,
             "minecraft:block_light_absorption": 1,
-            "minecraft:display_name": "mineworld:shadowDirt"
+            "minecraft:display_name": "mineworld:shadowDirt",
+            "minecraft:random_ticking": {
+                "on_tick":{
+                    "event": "transform",
+                    "target": "self",
+                    "condition": "q.time_of_day != 0.5 && q.time_of_day != 0.25"
+                }
+            }
+        },
+        "events":{
+            "transform":{
+                "set_block": "mineworld:shadow_grass"
+            }
         }
     }
 }

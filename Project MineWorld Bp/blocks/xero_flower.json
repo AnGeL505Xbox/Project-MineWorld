@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.16.200",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:xero_flower"
@@ -18,6 +18,17 @@
                     "texture": "xeroFlower",
                     "render_method": "blend"
                 }
+            },
+            "minecraft:placement_filter":{
+                "comditions": [
+                    {
+                        "block_filter": [
+                            "minecraft:grass",
+                            "minecraft:dirt",
+                            "mineworld:red_dirt"
+                        ]
+                    }
+                ]
             },
             "minecraft:display_name": "mineworld:xeroFlower"
         }

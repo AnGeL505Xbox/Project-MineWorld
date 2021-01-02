@@ -1,10 +1,9 @@
-//Betelgen 1.1
 {
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
       "description": {
          "identifier": "silver_ore_underground",
-         "places_feature": "mineworld:silverUnder"
+         "places_feature": "mineworld:silver_cave"
       },
       "conditions": {
          "placement_pass": "underground_pass",
@@ -30,15 +29,24 @@
          "coordinate_eval_order": "zyx",
          "x": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          },
          "y": {
             "distribution": "inverse_gaussian",
-            "extent": [ 0, 40 ]
+            "extent": [
+               0,
+               40
+            ]
          },
          "z": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          }
       }
    }

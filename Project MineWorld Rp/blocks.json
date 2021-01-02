@@ -115,8 +115,7 @@
         "textures": "marble"
     },
     "mineworld:opal_ore": {
-        "sound": "stone",
-        "textures": "opal_ore"
+        "sound": "stone"
     },
     "mineworld:shadow_dirt": {
         "sound": "dirt",

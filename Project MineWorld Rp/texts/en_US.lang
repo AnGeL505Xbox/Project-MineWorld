@@ -3,6 +3,7 @@
 		mineworld.bag=Bag
 		mineworld.convert=Convert
 		mineworld.trade=Trade
+		act.tecTable=Technology table
 	/*Grupos de Items*/
 		itemGroup.name.special=Special
 		itemGroup.name.silver=Silver
@@ -19,9 +20,10 @@
 		/*Minerales*/
 			item.mineworld:bronzeIngot.name=Bronze ingot
 			item.mineworld:silverIngot.name=Silver ingot
+			item.mineworld:silverNugget.name=Silver nugget
 			item.mineworld:sombriteIngot.name=Sombrite ingot
 			item.mineworld:tinIngot.name=Tin ingot
-			item.mineworld:iridiumIngot.name=Iridiu, ingot
+			item.mineworld:iridiumIngot.name=Iridium ingot
 			item.mineworld:aquamarine.name=Aquamarine
 			item.mineworld:onyx.name=Onyx
 			item.mineworld:opal.name=Opal
@@ -202,7 +204,7 @@
 			tile.mineworld:copperBlock.name=Copper block
 			tile.mineworld:bronzeBlock.name=Bronze block
 			tile.mineworld:tinBlock.name=Tin block
-			tile.mineworld:shadowBlock.name=Sombrite block
+			tile.mineworld:sombriteBlock.name=Sombrite block
 		/*Bloques de piedra*/
 			tile.mineworld:slate.name=Slate
 			tile.mineworld:slateBricks.name=Slate bricks
@@ -220,7 +222,7 @@
 			tile.mineworld:shadowGrass.name=Shadow grass
 			tile.mineworld:shadowLog.name=Shadow log
 			tile.mineworld:shadowLeaves.name=Shadow leaves
-			tile.mineworld:shadowPlank.name=Shadow planks
+			tile.mineworld:shadowPlanks.name=Shadow planks
 			tile.mineworld:shadyOre.name=Shady ore
 		/*Bloques cuanticos*/
 			tile.mineworld:quantumLog.name=Quantum log

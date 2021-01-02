@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.16.200",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:aquamarine_ore"
@@ -9,7 +9,9 @@
             "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 15,
             "minecraft:map_color": "#00f000",
-            "minecraft:display_name": "mineworld:aquamarineOre"
+            "minecraft:display_name": "mineworld:aquamarineOre",
+            "tag:minecraft:metal": {},
+            "tag:minecraft:stone": {}
         }
     }
 }

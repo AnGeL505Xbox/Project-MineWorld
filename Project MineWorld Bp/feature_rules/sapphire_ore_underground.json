@@ -1,10 +1,9 @@
-//Betelgen 1.1
 {
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
       "description": {
          "identifier": "sapphire_ore_underground",
-         "places_feature": "mineworld:sapphireUnder"
+         "places_feature": "mineworld:sapphire_cave"
       },
       "conditions": {
          "placement_pass": "underground_pass",
@@ -30,15 +29,24 @@
          "coordinate_eval_order": "zyx",
          "x": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          },
          "y": {
             "distribution": "gaussian",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          },
          "z": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          }
       }
    }

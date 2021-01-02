@@ -1,15 +1,55 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.16.200",
     "minecraft:block": {
         "description": {
-            "identifier": "mineworld:opal_ore"
+            "identifier": "mineworld:opal_ore",
+            "properties": {
+                "mineworld:opal": [ "fire", "water", "normal" ]
+            }
         },
         "components": {
-            "minecraft:loot": "loot_tables/blocks/opalOre.json",
             "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 15,
             "minecraft:map_color": "#00f000",
             "minecraft:display_name": "mineworld:opalOre"
-        }
+        },
+        "permutations": [
+            {
+                "condition": "query.biome_has_any_tag('savanna', 'desert', 'mesa') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/opalFireOre.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "opalFire",
+                            "render_method": "blend"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.biome_has_any_tag('river', 'ocean', 'beach', 'jungle', 'ice') == true",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/opalWaterOre.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "opalWater",
+                            "render_method": "blend"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.biome_has_any_tag('savanna', 'desert', 'mesa', 'river', 'ocean', 'beach', 'jungle', 'ice') == false",
+                "components": {
+                    "minecraft:loot": "loot_tables/blocks/opalOre.json",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "opal",
+                            "render_method": "blend"
+                        }
+                    }
+                }
+            }
+        ]
     }
 }

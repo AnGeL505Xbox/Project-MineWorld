@@ -3,6 +3,7 @@
 		mineworld.bag=Bolsa
 		mineworld.convert=Convertir
 		mineworld.trade=Intercambiar
+		act.tecTable=Mesa tecnologica
 	/*Grupos de Items*/
 		itemGroup.name.special=Especial
 		itemGroup.name.silver=Plata
@@ -19,6 +20,7 @@
 		/*Minerales*/
 			item.mineworld:bronzeIngot.name=Lingote de bronce
 			item.mineworld:silverIngot.name=Lingote de plata
+			item.mineworld:silverNugget.name=Pepita de plata
 			item.mineworld:sombriteIngot.name=Lingote de sombrita
 			item.mineworld:tinIngot.name=Lingote de estaño
 			item.mineworld:iridiumIngot.name=Lingote de iridio
@@ -217,7 +219,7 @@
 			tile.mineworld:copperBlock.name=Bloque de cobre
 			tile.mineworld:bronzeBlock.name=Bloque de bronce
 			tile.mineworld:tinBlock.name=Bloque de estaño
-			tile.mineworld:shadowBlock.name=Bloque de sombrita
+			tile.mineworld:sombriteBlock.name=Bloque de sombrita
 		/*Bloques de piedra*/
 			tile.mineworld:slate.name=Pizarra
 			tile.mineworld:slateBricks.name=Ladrillos de pizarra
@@ -235,7 +237,7 @@
 			tile.mineworld:shadowGrass.name=Pasto sombrio
 			tile.mineworld:shadowLog.name=Tronco sombrio
 			tile.mineworld:shadowLeaves.name=Hojas sombrias
-			tile.mineworld:shadowPlank.name=Tablones sombrios
+			tile.mineworld:shadowPlanks.name=Tablones sombrios
 			tile.mineworld:shadyOre.name=Mineral sombrio
 		/*Bloques cuanticos*/
 			tile.mineworld:quantumLog.name=Tronco cuantico

@@ -11,7 +11,7 @@
                 "texture": "silverNugget"
             },
             "minecraft:creative_category": {
-                "parent": "itemGroup.name.silver"
+                "parent": "itemGroup.name.silverNugget"
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:silverNugget.name"

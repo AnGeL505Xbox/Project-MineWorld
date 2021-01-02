@@ -1,10 +1,9 @@
-//Betelgen 1.1
 {
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
       "description": {
          "identifier": "stellar_underground",
-         "places_feature": "mineworld:stellarUnder"
+         "places_feature": "mineworld:stellar_cave"
       },
       "conditions": {
          "placement_pass": "underground_pass",
@@ -30,15 +29,24 @@
          "coordinate_eval_order": "zyx",
          "x": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          },
          "y": {
             "distribution": "jittered_grid",
-            "extent": [ 0, 24 ]
+            "extent": [
+               0,
+               24
+            ]
          },
          "z": {
             "distribution": "uniform",
-            "extent": [ 0, 16 ]
+            "extent": [
+               0,
+               16
+            ]
          }
       }
    }

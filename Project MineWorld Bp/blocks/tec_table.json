@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.100",
+    "format_version": "1.16.200",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:tec_table"
@@ -17,6 +17,7 @@
                 }
             },
             "minecraft:crafting_table": {
+                "custom_description": "act.tecTable",
                 "grid_size": 3,
                 "crafting_tags": [
                     "techno_table"

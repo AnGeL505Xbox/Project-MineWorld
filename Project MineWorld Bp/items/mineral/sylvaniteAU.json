@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:sylvaniteAU",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "sylvaniteAU"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.mineral"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:sylvaniteAU.name"
+            }
+        }
+    }
+}
