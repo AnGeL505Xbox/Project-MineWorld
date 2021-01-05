@@ -1,5 +1,9 @@
 {
     "format_version": [ 1, 1, 0 ],
+    "mineworld:anthracite_ore": {
+        "textures":"anthraciteOre",
+        "sound": "stone"
+    },
     "mineworld:xero_flower": {
         "sound": "grass"
     },
@@ -86,10 +90,6 @@
         "sound": "stone",
         "textures": "sapphire_ore"
     },
-    "mineworld:bassalt_paver": {
-        "sound": "stone",
-        "textures": "bassalt_paver"
-    },
     "mineworld:peridotite": {
         "sound": "stone",
         "textures": "peridotite"
@@ -115,7 +115,8 @@
         "textures": "marble"
     },
     "mineworld:opal_ore": {
-        "sound": "stone"
+        "sound": "stone",
+        "textures": "opalOre"
     },
     "mineworld:shadow_dirt": {
         "sound": "dirt",

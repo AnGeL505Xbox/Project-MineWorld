@@ -1,0 +1,104 @@
+{
+    "format_version": "1.16.200",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:sacred_statue",
+            "properties": {
+                "mineworld:typeStatue": [ "normal", "light", "shadow", "fire", "water", "earth", "wind" ]
+            }
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/sacredStatue.json",
+            "minecraft:destroy_time": 1.7,
+            "minecraft:explosion_resistance": 25,
+            "minecraft:map_color": "#515861",
+            "minecraft:geometry": "geometry.mwsacredStatue",
+            "minecraft:on_placed": {
+                "event": "normal",
+                "target": "self"
+            },
+            "minecraft:display_name": "mineworld:sacredStatue"
+        },
+        "events": {
+            "normal": { "set_block_property": { "mineworld:typeStatue": "normal" } },
+            "light": {
+                "sequence":[
+                    { "set_block_property": { "mineworld:typeStatue": "light" } },
+                    { "spawn_loot": { "table": "loot_tables/sacredStatue/lightRewards.json" } }
+                ]
+            },
+            "shadow": {
+                "sequence":[
+                    { 
+                        "set_block_at_pos": {
+                            "block_type": "minecraft:stone",
+                            "block_offset": [ 8, -1, 8 ]
+                        }
+                    },
+                    { "set_block_property": { "mineworld:typeStatue": "shadow" } },
+                    { "spawn_loot": { "table": "loot_tables/sacredStatue/shadowRewards.json" } }
+                ]
+            },
+            "fire": {
+                "sequence":[
+                    { "set_block_property": { "mineworld:typeStatue": "fire" } },
+                    { "spawn_loot": { "table": "loot_tables/sacredStatue/fireRewards.json" } }
+                ]
+            },
+            "water": {
+                "sequence":[
+                    { "set_block_property": { "mineworld:typeStatue": "water" } },
+                    { "spawn_loot": { "table": "loot_tables/sacredStatue/waterRewards.json" } }
+                ]
+            },
+            "earth": {
+                "sequence":[
+                    { 
+                        "set_block_at_pos": {
+                            "block_type": "minecraft:stone",
+                            "block_offset": [ 8, -1, 8 ]
+                        }
+                    },
+                    { "set_block_property": { "mineworld:typeStatue": "earth" } },
+                    { "spawn_loot": { "table": "loot_tables/sacredStatue/earthRewards.json" } }
+                ]
+            },
+            "wind": {
+                "sequence":[
+                    { "set_block_property": { "mineworld:typeStatue": "wind" } },
+                    { "spawn_loot": { "table": "loot_tables/sacredStatue/windRewards.json" } }
+                ]
+            }
+        },
+        "permutations":[
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'normal'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueNormal", "render_method": "opaque" } } }
+            },
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'light'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueLight", "render_method": "opaque" } } }
+            },
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'shadow'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueShadow", "render_method": "opaque" } } }
+            },
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'fire'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueFire", "render_method": "opaque" } } }
+            },
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'water'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueWater", "render_method": "opaque" } } }
+            },
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'earth'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueEarth", "render_method": "opaque" } } }
+            },
+            {
+                "condition": "query.block_property('mineworld:typeStatue') == 'wind'",
+                "components": { "minecraft:material_instances": { "*": { "texture": "statueWind", "render_method": "opaque" } } }
+            }
+        ]
+    }
+}

@@ -20,7 +20,7 @@
                 }
             },
             "minecraft:placement_filter":{
-                "comditions": [
+                "conditions": [
                     {
                         "block_filter": [
                             "minecraft:grass",

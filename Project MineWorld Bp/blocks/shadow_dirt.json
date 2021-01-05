@@ -21,7 +21,7 @@
         },
         "events":{
             "transform":{
-                "set_block": "mineworld:shadow_grass"
+                "set_block": { "block_type": "mineworld:shadow_grass" }
             }
         }
     }

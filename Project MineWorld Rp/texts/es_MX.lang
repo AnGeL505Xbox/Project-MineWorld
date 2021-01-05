@@ -139,13 +139,21 @@
 			item.mineworld:betelgeuseSplinter.name=Esquirlia de betelgeuse
 			item.mineworld:betelgeuseSword.name=Espada de betelgeuse
 			item.mineworld:betelgeuseKnife.name=Cuchillo de betelgeuse
+		/*Fragmentos*/
+			item.mineworld:quantumShard.name=Fragmento cuantico
+			item.mineworld:lightShard.name=Fragmento de luz
+			item.mineworld:shadowShard.name=Fragmento de oscuridad
+			item.mineworld:fireShard.name=Fragmento de fuego
+			item.mineworld:watertShard.name=Fragmento de agua
+			item.mineworld:earthShard.name=Fragmento de tierra
+			item.mineworld:windShard.name=Fragmento de viento
 		/*Otros*/
 			item.mineworld:strangeMeat.name=Carne extraña
 			item.mineworld:blubber.name=Grasa de ballena
 			item.mineworld:berryWine.name=Vino de baya
 			item.mineworld:bag.name=Bolsa
 			item.mineworld:bag+.name=Bolsa mejorada
-			item.mineworld:bag++.name=Bolsa Mejorada II
+			item.mineworld:bag++.name=Bolsa mejorada II
 			item.mineworld:bacon.name=Tocino
 			item.mineworld:beefJerky.name=Carne seca
 			item.mineworld:bleach.name=Blanqueador
@@ -159,7 +167,6 @@
 			item.mineworld:shadowCookie.name=Galleta sombria
 			item.mineworld:machineCore.name=Nucleo de maquina
 			item.mineworld:circuit.name=Circuito
-			item.mineworld:quantumShard.name=Fragmento cuantico
 			item.mineworld:mandrake.name=Mandragora
 			item.mineworld:onydotStick.name=Vara de Onyx-Peridot
 			item.mineworld:carbonNanotube.name=Nanotubos de carbono
@@ -248,6 +255,7 @@
 			tile.mineworld:asphalt.name=Bloque de asfalto
 			tile.mineworld:stellarBlock.name=Bloque estelar
 			tile.mineworld:tecTable.name=Mesa tecnologica
+			tile.mineworld:sacredStatue.name=Estatua sagrada
 	/*Mobs*/
 		entity.mineworld:pleyone.name=Pleione
         entity.mineworld:red_panda.name=Panda rojo

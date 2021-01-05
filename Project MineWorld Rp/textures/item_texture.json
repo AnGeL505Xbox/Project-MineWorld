@@ -8,6 +8,9 @@
         "aquamarineDust": {
             "textures": "textures/items/aquamarineDust"
         },
+        "anthracite": {
+            "textures": "textures/items/anthracite"
+        },
         "argentite": {
             "textures": "textures/items/argentite"
         },
@@ -98,6 +101,16 @@
         },
         "diamondKnife": {
             "textures": "textures/items/diamondKnife"
+        },
+        "shards": {
+            "textures": [
+                "textures/items/shardLight",
+                "textures/items/shardShadow",
+                "textures/items/shardFire",
+                "textures/items/shardWater",
+                "textures/items/shardEarth",
+                "textures/items/shardWind"
+            ]
         },
         "elixir": {
             "textures": "textures/items/elixir"

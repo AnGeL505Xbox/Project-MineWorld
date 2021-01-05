@@ -2,11 +2,11 @@
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
       "description": {
-         "identifier": "stellar_underground",
-         "places_feature": "mineworld:stellar_cave"
+         "identifier": "stellar_overworld",
+         "places_feature": "mineworld:stellar_super"
       },
       "conditions": {
-         "placement_pass": "underground_pass",
+         "placement_pass": "surface_pass",
          "minecraft:biome_filter": [
             {
                "any_of": [
@@ -26,27 +26,18 @@
       },
       "distribution": {
          "iterations": 5,
-         "coordinate_eval_order": "zyx",
+         "coordinate_eval_order": "xzy",
          "x": {
             "distribution": "uniform",
-            "extent": [
-               0,
-               16
-            ]
+            "extent": [ 0, 16 ]
          },
          "y": {
             "distribution": "uniform",
-            "extent": [
-               0,
-               24
-            ]
+            "extent": [ 0, "query.heightmap(variable.worldx, variable.worldz)" ]
          },
          "z": {
             "distribution": "uniform",
-            "extent": [
-               0,
-               16
-            ]
+            "extent": [ 0, 16 ]
          }
       }
    }
