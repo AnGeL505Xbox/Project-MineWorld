@@ -1,0 +1,28 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:machine_allie",
+         "materials": { "default": "spider" },
+         "textures": { "default": "textures/entity/machine/allie" },
+         "geometry": { "default": "geometry.allie_machine" },
+         "scripts": {
+            "pre_animation":[
+               "v.shield = ( query.variant == 1 ) ? 1 : 0;",
+               "v.turret = ( query.variant == 2 ) ? 1 : 0;",
+               "v.shieldTurret = ( query.variant == 3 ) ? 1 : 0;"
+            ],
+            "animate": [ "look_at_target" ]
+         },
+         "animations": {
+            "look_at_target": "animation.machine.look_at_target",
+            "walk": "animation.machine_small.walk"
+         },
+         "render_controllers": [ "controller.render.machine_allie" ],
+         "spawn_egg": {
+            "texture": "mineworld_spawn",
+            "texture_index": 0
+         }
+      }
+   }
+}

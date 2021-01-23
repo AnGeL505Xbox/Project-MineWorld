@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:machineShield",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "machineShield"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.machineShield"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:machineShield.name"
+            }
+        }
+    }
+}

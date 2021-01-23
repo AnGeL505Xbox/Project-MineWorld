@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:machineTurret",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "machineTurret"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.machineTurret"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:machineTurret.name"
+            }
+        }
+    }
+}

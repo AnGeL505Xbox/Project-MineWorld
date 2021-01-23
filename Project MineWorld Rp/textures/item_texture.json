@@ -105,11 +105,11 @@
         "shards": {
             "textures": [
                 "textures/items/shardLight",
-                "textures/items/shardShadow",
-                "textures/items/shardFire",
-                "textures/items/shardWater",
-                "textures/items/shardEarth",
-                "textures/items/shardWind"
+                "textures/items/shardLight",
+                "textures/items/shardLight",
+                "textures/items/shardLight",
+                "textures/items/shardLight",
+                "textures/items/shardLight"
             ]
         },
         "elixir": {
@@ -190,6 +190,12 @@
         },
         "machineCore": {
             "textures": "textures/items/machineCore"
+        },
+        "machineShield": {
+            "textures": "textures/items/test"
+        },
+        "machineTurret": {
+            "textures": "textures/items/test"
         },
         "magnetite": {
             "textures": "textures/items/magnetite"

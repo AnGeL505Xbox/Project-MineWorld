@@ -5,16 +5,16 @@
 			"loop": true,
 			"bones": {
 				"whR2": {
-					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+					"rotation": ["query.modified_distance_moved * -30", 0, 0]
 				},
 				"whL2": {
-					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+					"rotation": ["query.modified_distance_moved * -30", 0, 0]
 				},
 				"whR1": {
-					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+					"rotation": ["query.modified_distance_moved * -30", 0, 0]
 				},
 				"whL1": {
-					"rotation": ["Math.sin(Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed)", 0, 0]
+					"rotation": ["query.modified_distance_moved * -30", 0, 0]
 				}
 			}
 		},

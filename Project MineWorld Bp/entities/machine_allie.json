@@ -1,0 +1,320 @@
+//Mineworld_entity v1
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mineworld:machine_allie",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+
+            "machine:unWeapon": {
+                "minecraft:variant": { "value": 0 },
+				"minecraft:health": {
+                    "value": 6, "max": 6
+                },
+                "minecraft:attack": { "damage": 1 },
+                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true },
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"interact_text": "mineworld.shield",
+							"on_interact": {
+								"event": "machine:shield",
+								"filters": {
+									"all_of": [
+										{
+											"domain": "hand",
+											"subject": "other",
+											"test": "has_equipment",
+											"value": "mineworld:machineShield"
+										},
+										{
+											"subject": "other",
+											"test": "is_family",
+											"value": "player"
+										}
+									]
+								},
+								"target": "self"
+							},
+							"play_sounds": "armor.equip_generic",
+							"use_item": true
+						},
+						{
+							"interact_text": "mineworld.turret",
+							"on_interact": {
+								"event": "machine:turret",
+								"filters": {
+									"all_of": [
+										{
+											"domain": "hand",
+											"subject": "other",
+											"test": "has_equipment",
+											"value": "mineworld:machineTurrret"
+										},
+										{
+											"subject": "other",
+											"test": "is_family",
+											"value": "player"
+										}
+									]
+								},
+								"target": "self"
+							},
+							"play_sounds": "armor.equip_generic",
+							"use_item": true
+                        },
+                        {
+							"interact_text": "mineworld.superMachine",
+							"on_interact": {
+								"event": "machine:shieldTurret",
+								"filters": {
+									"all_of": [
+                                        {
+                                            "any_of": [
+                                                {
+                                                    "subject": "self",
+    											    "test": "is_variant",
+	    										    "value": "1"
+                                                },
+                                                {
+                                                    "subject": "self",
+    											    "test": "is_variant",
+	    										    "value": "2"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "any_of": [
+                                                {
+                                                    "all_of":[
+                                                        {
+                                                            "domain": "hand",
+                                                            "subject": "other",
+                                                            "test": "has_equipment",
+                                                            "value": "mineworld:machineShield"
+                                                        },
+                                                        {
+                                                            "subject": "other",
+                                                            "test": "is_family",
+                                                            "value": "player"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "all_of":[
+                                                        {
+                                                            "domain": "hand",
+                                                            "subject": "other",
+                                                            "test": "has_equipment",
+                                                            "value": "mineworld:machineTurret"
+                                                        },
+                                                        {
+                                                            "subject": "other",
+                                                            "test": "is_family",
+                                                            "value": "player"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+									]
+								},
+								"target": "self"
+							},
+							"play_sounds": "armor.equip_generic",
+							"use_item": true
+						}
+					]
+				}
+            },
+			
+            "machine:shield": {
+                "minecraft:variant": { "value": 1 },
+				"minecraft:health": {
+                    "value": 10, "max": 10
+                },
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true }
+            },
+			"machine:turret": {
+                "minecraft:variant": { "value": 2 },
+				"minecraft:health": {
+                    "value": 10, "max": 10
+                },
+				"minecraft:shooter": {
+					"type": "mineworld:machineBullet",
+					"def": "mineworld:machineBullet"
+				},
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 4,
+                    "burst_shots": 1,
+                    "burst_interval": 0.3,
+                    "charge_charged_trigger": 0,
+                    "charge_shoot_trigger": 4,
+                    "attack_interval_min": 2,
+                    "attack_interval_max": 3,
+                    "attack_radius": 8
+                }
+            },
+            "machine:shieldTurret": {
+                "minecraft:variant": { "value": 3 },
+                "minecraft:attack": { "damage": 3 },
+                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true },
+				"minecraft:health": {
+                    "value": 10, "max": 10
+                },
+				"minecraft:shooter": {
+					"type": "mineworld:machineBullet",
+					"def": "mineworld:machineBullet"
+				},
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 4,
+                    "burst_shots": 1,
+                    "burst_interval": 0.3,
+                    "charge_charged_trigger": 0,
+                    "charge_shoot_trigger": 4,
+                    "attack_interval_min": 2,
+                    "attack_interval_max": 3,
+                    "attack_radius": 8
+                }
+            }
+        },
+        "components": {
+
+			//Machine pre-assets
+			
+            "minecraft:type_family": { "family": [ "machine" ] },
+            "minecraft:loot": { "table": "loot_tables/entities/machine.json" },
+            "minecraft:experience_reward": { "on_death": "query.last_hit_by_player ? Math.Random(1,3) : Math.Random(0,0.5)" },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:navigation.walk": {
+                "avoid_portals": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true
+            },
+            "minecraft:behavior.random_stroll": { "priority": 5 },
+            "minecraft:can_climb": {},
+            "minecraft:behavior.mount_pathing": {
+                "priority": 1,
+                "target_dist": 0,
+                "track_target": true
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "cause": "lava",
+                        "damage_per_tick": 4,
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "value": true
+                        }
+                    }
+                ]
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 4,
+                "look_time": [ 2, 6 ]
+            },
+            "minecraft:nameable": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:physics": {},
+            "minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"all_of": [
+								{
+									"test": "is_persistent",
+									"value": false
+								},
+								{
+									"test": "distance_to_nearest_player",
+									"operator": ">",
+									"value": 54
+								}
+							]
+						},
+						{
+							"all_of": [
+								{
+									"test": "is_persistent",
+									"value": false
+								},
+								{
+									"test": "inactivity_timer",
+									"subject": "self",
+									"value": 30
+								},
+								{
+									"test": "random_chance",
+									"value": 800
+								},
+								{
+									"test": "distance_to_nearest_player",
+									"operator": ">",
+									"value": 32
+								}
+							]
+						}
+					]
+				}
+			},
+            
+            //Machine allie
+            
+            "minecraft:is_tamed": {},
+            "minecraft:collision_box": {
+                "width": 0.5,
+                "height": 0.5
+            },
+            "minecraft:behavior.follow_owner": {
+                "priority": 3,
+                "stop_distance": 3,
+                "start_distance": 10
+            },
+            "minecraft:behavior.owner_hurt_by_target": { "priority": 2 },
+            "minecraft:behavior.owner_hurt_target": { "priority": 1 },
+            "minecraft:movement": { "value": 0.35 }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [ "machine:unWeapon" ]
+                }
+            },
+            "machine:shield": {
+                "add": {
+                    "component_groups": [ "machine:shield" ]
+                },
+                "remove": {
+                    "component_groups": [ "machine:unWeapon" ]
+                }
+            },
+            "machine:turret": {
+                "add": {
+                    "component_groups": [ "machine:turret" ]
+                },
+                "remove": {
+                    "component_groups": [ "machine:unWeapon" ]
+                }
+            },
+            "machine:shieldTurret": {
+                "add": {
+                    "component_groups": [ "machine:shieldTurret" ]
+                },
+                "remove": {
+                    "component_groups": [ "machine:unWeapon", "machine:turret", "machine:shield" ]
+                }
+            }
+        }
+    }
+}

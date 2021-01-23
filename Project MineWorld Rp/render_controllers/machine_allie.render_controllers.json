@@ -1,0 +1,14 @@
+ {
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.machine_allie": {
+            "geometry": "Geometry.default",
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Texture.default" ],
+            "part_visibility": [
+                { "shield*": "v.shield || v.shieldTurret" },
+                { "turret*": "v.turret || v.shieldTurret" }
+            ]
+        }
+    }
+}

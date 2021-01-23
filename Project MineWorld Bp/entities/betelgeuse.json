@@ -9,6 +9,7 @@
             "is_summonable": true
         },
         "component_groups": {
+
             "mineworld:betel_roar": {
                 "minecraft:behavior.knockback_roar": {
                     "priority": 1,
@@ -18,10 +19,7 @@
                     "knockback_damage": 2,
                     "knockback_range": 5,
                     "knockback_strength": 4,
-                    "on_roar_end": {
-                        "event": "minecraft:un_roar",
-                        "target": "self"
-                    }
+                    "on_roar_end": { "event": "betel:unRoar", "target": "self" }
                 }
             },
             "mineworld:betel_hunter": {
@@ -46,121 +44,61 @@
                     "reselect_targets": true
                 }
             },
+
             "mineworld:betel_primal": {
-                "minecraft:variant": {
-                    "value": 0
-                },
-                "minecraft:attack": {
-                    "damage": [
-                        14,
-                        18
-                    ]
-                },
-                "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? Math.Random(10,22) : Math.Random(0,1.5)"
-                },
-                "minecraft:loot": {
-                    "table": "loot_tables/entities/primal_betelgeuse.json"
-                },
-                "minecraft:health": {
-                    "max": 110,
-                    "value": 110
-                },
-                "minecraft:type_family": {
-                    "family": [
-                        "betelgeuse",
-                        "primal_betelgeuse"
-                    ]
-                },
-                "minecraft:scale": {
-                    "value": 3.1
-                }
+                "minecraft:variant": { "value": 0 },
+                "minecraft:attack": { "damage": [ 14, 18 ] },
+                "minecraft:experience_reward": { "on_death": "query.last_hit_by_player ? Math.Random(10,22) : Math.Random(0,1.5)" },
+                "minecraft:loot": { "table": "loot_tables/entities/primal_betelgeuse.json" },
+                "minecraft:health": { "max": 110, "value": 110 },
+                "minecraft:type_family": { "family": [ "betelgeuse", "primal_betelgeuse" ] },
+                "minecraft:scale": { "value": 3.1 }
             },
             "mineworld:betel_betelgeuse": {
-                "minecraft:variant": {
-                    "value": 1
-                },
-                "minecraft:attack": {
-                    "damage": [
-                        10,
-                        14
-                    ]
-                },
-                "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? Math.Random(9,15) : Math.Random(0,1.5)"
-                },
-                "minecraft:loot": {
-                    "table": "loot_tables/entities/betelgeuse.json"
-                },
-                "minecraft:health": {
-                    "max": 80,
-                    "value": 80
-                },
-                "minecraft:type_family": {
-                    "family": [
-                        "betelgeuse"
-                    ]
-                },
-                "minecraft:scale": {
-                    "value": 2.5
-                }
+                "minecraft:variant": { "value": 1 },
+                "minecraft:attack": { "damage": [ 10, 14 ] },
+                "minecraft:experience_reward": { "on_death": "query.last_hit_by_player ? Math.Random(9,15) : Math.Random(0,1.5)" },
+                "minecraft:loot": { "table": "loot_tables/entities/betelgeuse.json" },
+                "minecraft:health": { "max": 80, "value": 80 },
+                "minecraft:type_family": { "family": [ "betelgeuse" ] },
+                "minecraft:scale": { "value": 2.5 }
             }
         },
+
         "components": {
-            "minecraft:behavior.charge_attack": {
-                "priority": 1
-            },
+
+            //Biped monster
+
+            "minecraft:behavior.float": { "priority": 0 },
+            "minecraft:behavior.charge_attack": { "priority": 1 },
+            "minecraft:behavior.look_at_entity": { "look_distance": 6, "priority": 4, "probability": 0.1 },
+            "minecraft:behavior.random_stroll": { "priority": 4, "speed_multiplier": 1 },
+            "minecraft:behavior.hurt_by_target": { "priority": 5 },
+            "minecraft:behavior.random_look_around": { "priority": 6 },
+
             "minecraft:behavior.melee_attack": {
-                "random_stop_interval": 0,
-                "reach_multiplier": 2,
-                "speed_multiplier": 1.5,
-                "track_target": true
-            },
-            "minecraft:behavior.hurt_by_target": {
-                "priority": 5
-            },
-            "minecraft:behavior.float": {
-                "priority": 0
-            },
-            "minecraft:behavior.look_at_entity": {
-                "look_distance": 6,
-                "priority": 4,
-                "probability": 0.1
-            },
-            "minecraft:behavior.random_look_around": {
-                "priority": 6
-            },
-            "minecraft:behavior.random_stroll": {
-                "priority": 4,
-                "speed_multiplier": 1
+                "random_stop_interval": 0, "reach_multiplier": 2,
+                "speed_multiplier": 1.5, "track_target": true
             },
             "minecraft:can_climb": {},
-            "minecraft:collision_box": {
-                "height": 1,
-                "width": 2
-            },
-            "minecraft:fire_immune": true,
             "minecraft:jump.static": {},
-            "minecraft:movement": {
-                "value": 0.3
-            },
+            "minecraft:movement": { "value": 0.3 },
             "minecraft:movement.basic": {},
-            "minecraft:navigation.walk": {
-                "avoid_damage_blocks": true,
-                "avoid_water": true,
-                "can_float": true
-            },
-            "minecraft:pushable": {
-                "is_pushable": true,
-                "is_pushable_by_piston": true
-            },
+            "minecraft:navigation.walk": { "avoid_damage_blocks": true, "avoid_water": true, "can_float": true },
+            "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+            "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+            "minecraft:physics": {},
+            
+            //Betelgeuse
+
+            "minecraft:collision_box": { "height": 1, "width": 2 },
+            "minecraft:fire_immune": true,            
             "minecraft:scheduler": {
-                "max_delay_secs": 10,
-                "min_delay_secs": 0,
+                "max_delay_secs": 10, "min_delay_secs": 0,
                 "scheduled_events": [
                     {
                         "scheduled_event": {
-                            "event": "minecraft:hunter",
+                            "event": "betel:hunter",
                             "filters": {
                                 "all_of": [
                                     {
@@ -180,7 +118,7 @@
                     },
                     {
                         "scheduled_event": {
-                            "event": "minecraft:not_hunter",
+                            "event": "betel:unHunter",
                             "filters": {
                                 "all_of": [
                                     {
@@ -203,71 +141,28 @@
             "minecraft:timer": {
                 "looping": true,
                 "randomInterval": true,
-                "time": [
-                    60,
-                    120
-                ],
-                "time_down_event": {
-                    "event": "minecraft:roar"
-                }
-            },
-            "minecraft:despawn": {
-                "despawn_from_distance": {
-                    "max_distance": 128,
-                    "min_distance": 32
-                }
-            },
-            "minecraft:physics": {}
+                "time": [ 60, 120 ],
+                "time_down_event": { "event": "betel:roar" }
+            }
         },
+
         "events": {
             "minecraft:entity_spawned": {
                 "randomize": [
                     {
-                        "add": {
-                            "component_groups": [
-                                "mineworld:betel_betelgeuse"
-                            ]
-                        },
-                        "weight": 9
+                        "add": { "component_groups": [ "mineworld:betel_betelgeuse" ] },
+                        "weight": 90
                     },
                     {
-                        "add": {
-                            "component_groups": [
-                                "mineworld:betel_primal"
-                            ]
-                        },
-                        "weight": 1
+                        "add": { "component_groups": [ "mineworld:betel_primal" ] },
+                        "weight": 15
                     }
                 ]
             },
-            "minecraft:hunter": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:betel_hunter"
-                    ]
-                }
-            },
-            "minecraft:not_hunter": {
-                "remove": {
-                    "component_groups": [
-                        "mineworld:betel_hunter"
-                    ]
-                }
-            },
-            "minecraft:roar": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:betel_roar"
-                    ]
-                }
-            },
-            "minecraft:un_roar": {
-                "remove": {
-                    "component_groups": [
-                        "mineworld:betel_roar"
-                    ]
-                }
-            }
+            "betel:hunter": { "add": { "component_groups": [ "mineworld:betel_hunter" ] } },
+            "betel:unHunter": { "remove": { "component_groups": [ "mineworld:betel_hunter" ] } },
+            "betel:roar": { "add": { "component_groups": [ "mineworld:betel_roar" ] } },
+            "betel:unRoar": { "remove": { "component_groups": [ "mineworld:betel_roar" ] } }
         }
     }
 }

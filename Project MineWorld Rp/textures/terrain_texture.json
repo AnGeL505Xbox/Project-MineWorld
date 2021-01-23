@@ -10,7 +10,7 @@
         "aquamarine_ore": {
             "textures": "textures/blocks/aquamarineOre"
         },
-        "anthracite_ore": {
+        "anthraciteOre": {
             "textures": "textures/blocks/anthraciteOre"
         },
         "argentite_ore": {
