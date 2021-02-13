@@ -5,18 +5,14 @@
       "arrays": {
         "textures": {
           "Array.variants": [
-            "Texture.chironex",
-            "Texture.chrysaora",
-            "Texture.rhizostoma",
-            "Texture.cotylorhiza"
+            "Texture.chironex", "Texture.chrysaora",
+            "Texture.rhizostoma", "Texture.cotylorhiza"
           ]
         },
         "geometries": {
           "Array.variants": [
-            "Geometry.chironex",
-            "Geometry.chrysaora",
-            "Geometry.rhizostoma",
-            "Geometry.cotylorhiza"
+            "Geometry.chironex", "Geometry.chrysaora",
+            "Geometry.rhizostoma", "Geometry.cotylorhiza"
           ]
         }
       },

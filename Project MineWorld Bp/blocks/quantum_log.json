@@ -1,16 +1,55 @@
 {
-    "format_version": "1.16.200",
-    "minecraft:block": {
-        "description": {
-            "identifier": "mineworld:quantum_log"
-        },
-        "components": {
-            "minecraft:map_color": "#dae2eb",
-            "minecraft:loot": "loot_tables/blocks/quantumLog.json",
-            "minecraft:destroy_time": 1.5,
-            "minecraft:explosion_resistance": 15,
-            "minecraft:block_light_emission": 0.125,
-            "minecraft:display_name": "mineworld:quantumLog"
-        }
-    }
+   "format_version":"1.16.200",
+   "minecraft:block":{
+      "description":{
+         "identifier":"mineworld:quantum_log",
+         "properties": {
+            "mineworld:facing": [ 0, 1, 2 ]
+         }
+      },
+      "components":{
+         "minecraft:map_color":"#dae2eb",
+         "minecraft:loot":"loot_tables/blocks/quantumLog.json",
+         "minecraft:destroy_time":1.5,
+         "minecraft:explosion_resistance":15,
+         "minecraft:block_light_emission":0.125,
+         "minecraft:material_instances":{
+            "*":{ "texture":"quantum_log_side", "render_method":"blend" },
+            "top":{ "texture":"quantum_log_top", "render_method":"blend" },
+            "up": "top",
+            "down": "top"
+         },
+         "minecraft:display_name":"mineworld:quantumLog",
+         "minecraft:on_player_placing":{
+            "event":"rotation_placement"
+         }
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('mineworld:facing') == 0",
+            "components":{
+               "minecraft:rotation":[ 0, 0, 0 ]
+            }
+         },
+         {
+            "condition":"query.block_property('mineworld:facing') == 1",
+            "components":{
+               "minecraft:rotation":[ 90, 0, 0 ]
+            }
+         },
+         {
+            "condition":"query.block_property('mineworld:facing') == 2",
+            "components":{
+               "minecraft:rotation":[ 0, 0, 90 ]
+            }
+         }
+      ],
+      "events":{
+         "rotation_placement":{
+            "set_block_property":{
+               "mineworld:facing":"math.floor(query.block_face/2.0)"
+            }
+         }
+      }
+   }
 }

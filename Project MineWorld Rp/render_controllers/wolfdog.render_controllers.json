@@ -7,15 +7,7 @@
             "textures": [ "Texture.base" ]
         },
         "controller.render.wolfdog_eyes": {
-            "arrays": {
-                "textures": {
-                    "Array.eye": [
-                        "Texture.blue",
-                        "Texture.blue_light",
-                        "Texture.black"
-                    ]
-                }
-            },
+            "arrays": { "textures": { "Array.eye": [ "Texture.blue", "Texture.blue_light", "Texture.black" ] } },
             "geometry": "Geometry.default",
             "materials": [ { "*": "Material.uncolor" } ],
             "textures": [ "Array.eye[query.variant]" ]

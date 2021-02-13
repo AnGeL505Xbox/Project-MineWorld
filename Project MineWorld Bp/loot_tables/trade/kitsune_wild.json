@@ -6,31 +6,46 @@
             {
                "type": "item",
                "name": "mineworld:strangeMeat",
-               "weight": 10
+               "weight": 100
             },
             {
                "type": "item",
                "name": "minecraft:iron_ingot",
-               "weight": 9
+               "weight": 91
             },
             {
                "type": "item",
                "name": "minecraft:gold_nugget",
-               "weight": 9
+               "weight": 90
             },
             {
                "type": "item",
                "name": "mineworld:bacon",
-               "weight": 7
+               "weight": 75
             },
             {
                "type": "item",
-               "name": "mineworld:xeroFruit",
-               "weight": 6
+               "name": "mineworld:xeroFlower",
+               "weight": 65
+            },
+            {
+               "type": "item",
+               "name": "mineworld:silverIngot",
+               "weight": 60
+            },
+            {
+               "type": "item",
+               "name": "mineworld:iridiumIngot",
+               "weight": 40
             },
             {
                "type": "item",
                "name": "mineworld:stellarDust",
+               "weight": 10
+            },
+            {
+               "type": "item",
+               "name": "mineworld:betelgeuseKnife",
                "weight": 1
             }
          ]

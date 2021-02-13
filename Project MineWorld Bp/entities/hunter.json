@@ -1,6 +1,6 @@
-//Mineworld_entity_v2
+//Project MineWorld Hunter v1
 {
-   "format_version": "1.14.0",
+   "format_version": "1.16.0",
    "minecraft:entity": {
       "description": {
          "identifier": "mineworld:hunter",
@@ -9,33 +9,18 @@
          "is_summonable": true
       },
       "components": {
-         "minecraft:attack": {
-            "damage": 3
-         },
+         //#region Hunter
+         "minecraft:type_family": { "family": [ "hunter", "monster", "illager" ] },
+         "minecraft:attack": { "damage": 3 },
          "minecraft:behavior.circle_around_anchor": {
-            "goal_radius": 1,
-            "height_above_target_range": [
-               5,
-               15
-            ],
-            "height_change_chance": 150,
-            "height_offset_range": [
-               -4,
-               5
-            ],
             "priority": 3,
-            "radius_change_chance": 250,
-            "radius_range": [
-               5,
-               15
-            ]
+            "goal_radius": 1,
+            "height_above_target_range": [ 5, 15 ],
+            "height_offset_range": [ -4, 5 ],
+            "radius_range": [ 5, 15 ]
          },
          "minecraft:behavior.look_at_entity": {
-            "filters": {
-               "subject": "other",
-               "test": "is_family",
-               "value": "mob"
-            },
+            "filters": { "subject": "other", "test": "is_family", "value": "mob" },
             "look_distance": 6,
             "priority": 9,
             "probability": 0.02
@@ -74,25 +59,13 @@
             "priority": 2
          },
          "minecraft:behavior.swoop_attack": {
-            "delay_range": [
-               10,
-               20
-            ],
+            "delay_range": [ 10, 20 ],
             "priority": 2
          },
          "minecraft:burns_in_daylight": {},
-         "minecraft:collision_box": {
-            "height": 2,
-            "width": 1
-         },
-         "minecraft:follow_range": {
-            "max": 32,
-            "value": 32
-         },
-         "minecraft:health": {
-            "max": 15,
-            "value": 15
-         },
+         "minecraft:collision_box": { "height": 2, "width": 1 },
+         "minecraft:follow_range": { "max": 32, "value": 32 },
+         "minecraft:health": { "max": 15, "value": 15 },
          "minecraft:hurt_on_condition": {
             "damage_conditions": [
                {
@@ -107,30 +80,11 @@
                }
             ]
          },
-         "minecraft:loot": {
-            "table": "loot_tables/entities/hunter.json"
-         },
-         "minecraft:movement": {
-            "value": 1
-         },
-         "minecraft:movement.glide": {
-            "speed_when_turning": 0.2,
-            "start_speed": 0.1
-         },
-         "minecraft:physics": {
-            "has_gravity": false
-         },
-         "minecraft:pushable": {
-            "is_pushable": true,
-            "is_pushable_by_piston": true
-         },
-         "minecraft:type_family": {
-            "family": [
-               "hunter",
-               "monster",
-               "illager"
-            ]
-         }
+         "minecraft:loot": { "table": "loot_tables/entities/hunter.json" },
+         "minecraft:movement": { "value": 1 },
+         "minecraft:movement.glide": { "speed_when_turning": 0.2, "start_speed": 0.1 },
+         "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+         "minecraft:physics": { "has_gravity": false }
       }
    }
 }

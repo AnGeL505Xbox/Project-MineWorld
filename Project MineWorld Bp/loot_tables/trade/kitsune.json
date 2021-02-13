@@ -6,47 +6,52 @@
             {
                "type": "item",
                "name": "minecraft:gold_ingot",
-               "weight": 10
+               "weight": 100
             },
             {
                "type": "item",
                "name": "minecraft:redstone",
-               "weight": 10
+               "weight": 100
             },
             {
                "type": "item",
                "name": "minecraft:golden_carrot",
-               "weight": 9
+               "weight": 90
             },
             {
                "type": "item",
                "name": "mineworld:silverIngot",
-               "weight": 9
+               "weight": 91
             },
             {
                "type": "item",
                "name": "mineworld:onyx",
-               "weight": 6
+               "weight": 60
             },
             {
                "type": "item",
                "name": "mineworld:peridot",
-               "weight": 6
+               "weight": 60
             },
             {
                "type": "item",
                "name": "mineworld:sapphire",
-               "weight": 6
+               "weight": 60
             },
             {
                "type": "item",
                "name": "mineworld:stellarDust",
-               "weight": 3
+               "weight": 31
+            },
+            {
+               "type": "item",
+               "name": "mineworld:betelgeuseKnife",
+               "weight": 30
             },
             {
                "type": "item",
                "name": "mineworld:betelgeuseSword",
-               "weight": 1
+               "weight": 10
             }
          ]
       }

@@ -1,4 +1,4 @@
-//Mineworld_entity_v2
+//Project MineWorld Coyote v1
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
@@ -100,8 +100,7 @@
         },
 
         "components": {
-
-            //Cuadruped preassets
+            //#region Cuadruped preassets
 
             "minecraft:navigation.walk": { "can_path_over_water": true, "avoid_damage_blocks": true },
             "minecraft:movement.basic": {},
@@ -137,6 +136,7 @@
                 "is_pushable": true,
                 "is_pushable_by_piston": true
             },
+            //#endregion
 
             //Coyote
 
@@ -148,78 +148,24 @@
             },
             "minecraft:healable": {
                 "items": [
-                    {
-                        "item": "porkchop",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_porkchop",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "fish",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "salmon",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "clownfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "pufferfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "cooked_fish",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "cooked_salmon",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "beef",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_beef",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "chicken",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "cooked_chicken",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "muttonRaw",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "muttonCooked",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "rotten_flesh",
-                        "heal_amount": 4
-                    },
-                    {
-                        "item": "rabbit",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_rabbit",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "rabbit_stew",
-                        "heal_amount": 10
-                    }
+                    { "item": "porkchop", "heal_amount": 3 },
+                    { "item": "cooked_porkchop", "heal_amount": 8 },
+                    { "item": "fish", "heal_amount": 2 },
+                    { "item": "salmon", "heal_amount": 2 },
+                    { "item": "clownfish", "heal_amount": 1 },
+                    { "item": "pufferfish", "heal_amount": 1 },
+                    { "item": "cooked_fish", "heal_amount": 5 },
+                    { "item": "cooked_salmon", "heal_amount": 6 },
+                    { "item": "beef", "heal_amount": 3 },
+                    { "item": "cooked_beef", "heal_amount": 8 },
+                    { "item": "chicken", "heal_amount": 2 },
+                    { "item": "cooked_chicken", "heal_amount": 6 },
+                    { "item": "muttonRaw", "heal_amount": 2 },
+                    { "item": "muttonCooked", "heal_amount": 6 },
+                    { "item": "rotten_flesh", "heal_amount": 4 },
+                    { "item": "rabbit", "heal_amount": 3 },
+                    { "item": "cooked_rabbit", "heal_amount": 5 },
+                    { "item": "rabbit_stew", "heal_amount": 10 }
                 ]
             },
             "minecraft:behavior.stay_while_sitting": { "priority": 3 },
@@ -229,7 +175,6 @@
             },
             "minecraft:behavior.melee_attack": {
                 "priority": 5,
-                "target_dist": 1.2,
                 "track_target": true,
                 "reach_multiplier": 1
             },

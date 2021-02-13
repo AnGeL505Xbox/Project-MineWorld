@@ -1,0 +1,13 @@
+{
+   "format_version": "1.10.0",
+   "minecraft:client_entity": {
+      "description": {
+         "identifier": "mineworld:machine_bullet",
+         "min_engine_version": "1.8.0",
+         "materials": { "default": "skeleton" },
+         "textures": { "default": "textures/items/machine_bullet" },
+         "geometry": { "default": "geometry.fenix_fireball" },
+         "render_controllers": [ "controller.render.base" ]
+      }
+   }
+}

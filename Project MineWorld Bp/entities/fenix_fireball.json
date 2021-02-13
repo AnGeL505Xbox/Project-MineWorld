@@ -1,4 +1,4 @@
-//Mineworld_entity_v1
+//Project MineWorld Shoot Projectile v1
 {
    "format_version": "1.14.0",
    "minecraft:entity": {
@@ -21,9 +21,7 @@
                   "catch_fire": true,
                   "semi_random_diff_damage": false
                },
-               "catch_fire": {
-                  "fire_affected_by_griefing": true
-               },
+               "catch_fire": { "fire_affected_by_griefing": true },
                "remove_on_hit": {}
             },
             "power": 0.4,
@@ -31,23 +29,14 @@
             "inertia": 1,
             "liquid_inertia": 1,
             "anchor": 2,
-            "offset": [
-               0,
-               0.5,
-               0
-            ],
+            "offset": [ 0, 0.5, 0 ],
             "semi_random_diff_damage": true,
             "uncertainty_base": 10,
             "reflect_on_hurt": true
          },
          "minecraft:physics": {},
-         "minecraft:pushable": {
-            "is_pushable": true,
-            "is_pushable_by_piston": true
-         },
-         "minecraft:scale": {
-            "value": 1.5
-         }
+         "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+         "minecraft:scale": { "value": 1.5 }
       }
    }
 }

@@ -1,0 +1,22 @@
+{
+    "format_version": "1.16.200",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:quantum_block"
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/quantumBlock.json",
+            "minecraft:destroy_time": 1.5,
+            "minecraft:explosion_resistance": 15,
+            "minecraft:block_light_emission": 0.5,
+            "minecraft:map_color": "#dae2eb",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "quantum_block",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:display_name": "mineworld:quantumBlock"
+        }
+    }
+}

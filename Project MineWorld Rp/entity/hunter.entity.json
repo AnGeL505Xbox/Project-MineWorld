@@ -4,29 +4,13 @@
       "description": {
          "identifier": "mineworld:hunter",
          "min_engine_version": "1.8.0",
-         "materials": {
-            "default": "vex"
-         },
-         "textures": {
-            "default": "textures/entity/hunter"
-         },
-         "geometry": {
-            "default": "geometry.hunter"
-         },
-         "animations": {
-            "move": "animation.hunter.move"
-         },
-         "particle_effects": {
-            "shulker_bullet": "minecraft:shulker_bullet"
-         },
-         "scripts": {
-            "animate": [
-               "move"
-            ]
-         },
-         "render_controllers": [
-            "controller.render.hunter"
-         ],
+         "materials": { "default": "vex" },
+         "textures": { "default": "textures/entity/hunter" },
+         "geometry": { "default": "geometry.hunter" },
+         "animations": { "move": "animation.hunter.move" },
+         "particle_effects": { "shulker_bullet": "minecraft:shulker_bullet" },
+         "scripts": { "animate": [ "move" ] },
+         "render_controllers": [ "controller.render.base" ],
          "spawn_egg": {
             "base_color": "#493e1b",
             "overlay_color": "#789f80"

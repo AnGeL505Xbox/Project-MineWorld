@@ -139,14 +139,6 @@
 			item.mineworld:betelgeuseSplinter.name=Esquirlia de betelgeuse
 			item.mineworld:betelgeuseSword.name=Espada de betelgeuse
 			item.mineworld:betelgeuseKnife.name=Cuchillo de betelgeuse
-		/*Fragmentos*/
-			item.mineworld:quantumShard.name=Fragmento cuantico
-			item.mineworld:lightShard.name=Fragmento de luz
-			item.mineworld:shadowShard.name=Fragmento de oscuridad
-			item.mineworld:fireShard.name=Fragmento de fuego
-			item.mineworld:watertShard.name=Fragmento de agua
-			item.mineworld:earthShard.name=Fragmento de tierra
-			item.mineworld:windShard.name=Fragmento de viento
 		/*Otros*/
 			item.mineworld:strangeMeat.name=Carne extraña
 			item.mineworld:blubber.name=Grasa de ballena
@@ -281,4 +273,3 @@
         entity.mineworld:machine_merchant.name=Maquina mercante
         entity.mineworld:machine_mimic_ghast.name=Maquina mimetica tipo-Gh4st
         entity.mineworld:machine_mimic_enderman.name=Maquina mimetica tipo-3nd3rm4n
-        entity.mineworld:baboon.name=Babuino

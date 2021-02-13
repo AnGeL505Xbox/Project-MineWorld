@@ -44,7 +44,6 @@
 	give @a mineworld:ruby_ore 10
 	give @a mineworld:aquamarine_block 10
 	give @a mineworld:bronze_block 10
-	give @a mineworld:copper_block 10
 	give @a mineworld:ruby_block 10
 	give @a mineworld:sombrite_block 10
 	give @a mineworld:tin_block 10

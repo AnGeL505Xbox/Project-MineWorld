@@ -3,31 +3,19 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:tanuki",
-         "materials": {
-            "default": "skeleton"
-         },
-         "textures": {
-            "default": "textures/entity/canis/lupus_familiaris/blacky/blacky"
-         },
-         "geometry": {
-            "default": "geometry.tanuki"
-         },
+         "materials": { "default": "skeleton" },
+         "textures": { "default": "textures/entity/canis/nyctereutes/tanuki" },
+         "geometry": { "default": "geometry.tanuki" },
          "animations": {
             "walk": "animation.mineworld.walk",
             "sit": "animation.mineworld.sit",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [
-            {
-               "general": "controller.animation.tanuki.move"
-            }
-         ],
-         "render_controllers": [
-            "controller.render.tanuki"
-         ],
+         "animation_controllers": [ { "general": "controller.animation.tanuki.move" } ],
+         "render_controllers": [ "controller.render.base" ],
          "spawn_egg": {
-            "base_color": "#814E3B",
-            "overlay_color": "#926654"
+            "base_color": "#f2b465",
+            "overlay_color": "#4a3432"
          }
       }
    }

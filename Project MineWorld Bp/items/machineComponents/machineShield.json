@@ -11,7 +11,7 @@
                 "texture": "machineShield"
             },
             "minecraft:creative_category": {
-                "parent": "itemGroup.name.machineShield"
+                "parent": "itemGroup.name.machineComponents"
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:machineShield.name"

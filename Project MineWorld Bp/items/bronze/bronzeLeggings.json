@@ -35,7 +35,6 @@
         "texture": "bronzeArmor",
         "frame": 2
       },
-      "minecraft:render_offsets": "leggings",
       "minecraft:display_name": {
         "value": "item.mineworld:bronzeLeggings.name"
       }

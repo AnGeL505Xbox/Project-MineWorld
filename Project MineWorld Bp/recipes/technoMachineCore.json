@@ -1,24 +1,16 @@
 {
-	"format_version": "1.13.0",
+	"format_version": "1.12.0",
 	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "mineworld:machineCore"
-		},
-		"tags": [
-			"techno_table"
-		],
+		"description": { "identifier": "mineworld:machineCore" },
+		"tags": [ "techno_table" ],
 		"pattern": [
 			"sss",
 			"sds",
 			"sss"
 		],
 		"key": {
-			"s": {
-				"item": "mineworld:sombriteIngot"
-			},
-			"d": {
-				"item": "mineworld:darkrystal"
-			}
+			"s": { "item": "mineworld:sombriteIngot" },
+			"d": { "item": "mineworld:darkrystal" }
 		},
 		"result": [
 			{

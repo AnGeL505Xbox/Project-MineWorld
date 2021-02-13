@@ -1,4 +1,4 @@
-//Mineworld entity v3
+//Project MineWorld Dog v1
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
@@ -9,41 +9,25 @@
             "is_experimental": false
         },
         "component_groups": {
+
             "mineworld:chihuahua_baby": {
                 "minecraft:is_baby": {},
-                "minecraft:behavior.follow_parent": {
-                    "priority": 2,
-                    "speed_multiplier": 1
-                },
-                "minecraft:attack": {
-                    "damage": 1
-                },
-                "minecraft:scale": {
-                    "value": 0.3
-                },
+                "minecraft:behavior.follow_parent": { "priority": 2, "speed_multiplier": 1 },
+                "minecraft:attack": { "damage": 1 },
+                "minecraft:scale": { "value": 0.3 },
                 "minecraft:ageable": {
                     "duration": 1200,
                     "feed_items": [
-                        "chicken",
-                        "cooked_chicken",
-                        "beef",
-                        "cooked_beef",
-                        "muttonRaw",
-                        "muttonCooked",
-                        "porkchop",
-                        "cooked_porkchop",
-                        "rabbit",
-                        "cooked_rabbit",
+                        "chicken", "cooked_chicken",
+                        "beef", "cooked_beef",
+                        "muttonRaw", "muttonCooked",
+                        "porkchop", "cooked_porkchop",
+                        "rabbit", "cooked_rabbit",
                         "rotten_flesh"
                     ],
-                    "grow_up": {
-                        "event": "mineworld:chihuahua_age",
-                        "target": "self"
-                    }
+                    "grow_up": { "event": "mineworld:chihuahua_age", "target": "self" }
                 },
-                "minecraft:health": {
-                    "value": 6
-                }
+                "minecraft:health": { "value": 6 }
             },
             "mineworld:chihuahua_adult": {
                 "minecraft:breedable": {
@@ -52,37 +36,24 @@
                     "breeds_with": {
                         "mate_type": "mineworld:chihuahua",
                         "baby_type": "mineworld:chihuahua",
-                        "breed_event": {
-                            "event": "minecraft:entity_born",
-                            "target": "baby"
-                        }
+                        "breed_event": { "event": "minecraft:entity_born", "target": "baby" }
                     },
                     "breed_items": [
-                        "chicken",
-                        "cooked_chicken",
-                        "beef",
-                        "cooked_beef",
-                        "muttonRaw",
-                        "muttonCooked",
-                        "porkchop",
-                        "cooked_porkchop",
-                        "rabbit",
-                        "cooked_rabbit",
+                        "chicken", "cooked_chicken",
+                        "beef", "cooked_beef",
+                        "muttonRaw", "muttonCooked",
+                        "porkchop", "cooked_porkchop",
+                        "rabbit", "cooked_rabbit",
                         "rotten_flesh"
                     ],
                     "extra_baby_chance": 0.55,
-                    "mutation_factor": {
-                        "variant": 0.05,
-                        "extra_variant": 0.1
-                    }
+                    "mutation_factor": { "variant": 0.05, "extra_variant": 0.1 }
                 },
                 "minecraft:experience_reward": {
                     "on_bred": "Math.Random(1,4)",
                     "on_death": "query.last_hit_by_player ? 2 + (query.equipment_count * Math.Random(1,2)) : 0"
                 },
-                "minecraft:scale": {
-                    "value": 0.6
-                }
+                "minecraft:scale": { "value": 0.6 }
             },
             "mineworld:chihuahua_wild": {
                 "minecraft:tameable": {
@@ -128,9 +99,7 @@
                     ],
                     "must_see": true
                 },
-                "minecraft:health": {
-                    "value": 9
-                }
+                "minecraft:health": { "value": 9 }
             },
             "mineworld:chihuahua_tame": {
                 "minecraft:is_tamed": {},
@@ -140,36 +109,22 @@
                     "start_distance": 10,
                     "stop_distance": 2
                 },
-                "minecraft:attack": {
-                    "damage": 4
-                },
-                "minecraft:behavior.breed": {
-                    "priority": 2
-                },
-                "minecraft:behavior.owner_hurt_by_target": {
-                    "priority": 1
-                },
-                "minecraft:behavior.owner_hurt_target": {
-                    "priority": 2
-                },
+                "minecraft:attack": { "damage": 4 },
+                "minecraft:behavior.breed": { "priority": 2 },
+                "minecraft:behavior.owner_hurt_by_target": { "priority": 1 },
+                "minecraft:behavior.owner_hurt_target": { "priority": 2 },
                 "minecraft:behavior.nearest_attackable_target": {
                     "priority": 5,
                     "attack_interval": 10,
                     "entity_types": [
                         {
-                            "filters": {
-                                "test": "is_family",
-                                "subject": "other",
-                                "value": "skeleton"
-                            },
+                            "filters": { "test": "is_family", "subject": "other", "value": "skeleton" },
                             "max_dist": 16
                         }
                     ],
                     "must_see": true
                 },
-                "minecraft:health": {
-                    "value": 16
-                },
+                "minecraft:health": { "value": 16 },
                 "minecraft:sittable": {},
                 "minecraft:leashable": {
                     "soft_distance": 4,
@@ -185,107 +140,56 @@
                     }
                 }
             },
-            "mineworld:chihuahua_behavior.aggresive": {
+
+            "mineworld:chihuahua_skin.black": { "minecraft:variant": { "value": 0 } },
+            "mineworld:chihuahua_skin.white": { "minecraft:variant": { "value": 1 } },
+            "mineworld:chihuahua_skin.canel": { "minecraft:variant": { "value": 2 } },
+
+            "mineworld:chihuahua_eye.brown": { "minecraft:mark_variant": { "value": 0 } },
+            "mineworld:chihuahua_eye.green": { "minecraft:mark_variant": { "value": 1 } },
+
+            "mineworld.dog:behavior.happy": {
+                "minecraft:behavior.drop_item_for": {
+                    "drop_item_chance": 0.05,
+                    "loot_table": "loot_tables/entities/dogGift.json",
+                    "entity_types": {
+                        "filters": {
+                            "all_of": [
+                                { "test": "is_family", "subject": "other", "value": "player" },
+                                { "test": "has_component", "subject": "self", "value": "minecraft:is_tamed" }
+                            ]
+                        }
+                    },
+                    "time_of_day_range": [ 0.8, 0.801 ]
+                }
+            },
+            "mineworld.dog:behavior.aggresive": {
                 "minecraft:behavior.nearest_attackable_target": {
                     "attack_interval": 15,
                     "scan_interval": 40,
+                    "within_radius": 5,
                     "entity_types": {
                         "filters": {
                             "all_of": [
-                                {
-                                    "test": "is_family",
-                                    "subject": "other",
-                                    "value": "dog"
-                                },
-                                {
-                                    "test": "has_tag",
-                                    "subject": "other",
-                                    "value": "blacky:behavior.aggresive"
-                                }
+                                { "test": "is_family", "subject": "other", "value": "dog" },
+                                { "test": "has_component", "subject": "other", "operator": "!=", "value": "minecraft:is_baby" }
                             ]
                         }
-                    },
-                    "within_radius": 5
+                    }
                 }
             },
-            "mineworld:chihuahua_behavior.happy": {
-                "minecraft:behavior.drop_item_for": {
-                    "drop_item_chance": 0.05,
-                    "loot_table": "loot_tables/entities/dog_gift.json",
-                    "entity_types": {
-                        "filters": {
-                            "all_of": [
-                                {
-                                    "test": "is_family",
-                                    "subject": "other",
-                                    "value": "player"
-                                },
-                                {
-                                    "test": "has_component",
-                                    "subject": "self",
-                                    "value": "minecraft:is_tamed"
-                                }
-                            ]
-                        }
-                    },
-                    "time_of_day_range": [
-                        0.8,
-                        0.805
-                    ]
-                }
-            },
-            "mineworld:chihuahua_behavior.weak": {
-                "minecraft:health": {
-                    "value": 5
-                },
-                "minecraft:movement": {
-                    "value": 0.15
-                }
-            },
-            "mineworld:chihuahua_skin.black": {
-                "minecraft:variant": {
-                    "value": 0
-                }
-            },
-            "mineworld:chihuahua_skin.white": {
-                "minecraft:variant": {
-                    "value": 1
-                }
-            },
-            "mineworld:chihuahua_skin.canel": {
-                "minecraft:variant": {
-                    "value": 2
-                }
-            },
-            "mineworld:chihuahua_eye.brown": {
-                "minecraft:mark_variant": {
-                    "value": 0
-                }
-            },
-            "mineworld:chihuahua_eye.green": {
-                "minecraft:mark_variant": {
-                    "value": 1
-                }
+            "mineworld.dog:behavior.weak": {
+                "minecraft:health": { "value": 5 },
+                "minecraft:movement": { "value": 0.2 }
             }
         },
         "components": {
+            //#region Dog pre-assets
+
             "minecraft:nameable": {},
-            "minecraft:type_family": {
-                "family": [
-                    "dog",
-                    "chihuahua"
-                ]
-            },
-            "minecraft:movement": {
-                "value": 0.3
-            },
             "minecraft:breathable": {
                 "total_supply": 15,
                 "suffocate_time": 0
-            },
-            "minecraft:collision_box": {
-                "width": 0.6,
-                "height": 0.8
             },
             "minecraft:hurt_on_condition": {
                 "damage_conditions": [
@@ -310,101 +214,34 @@
             "minecraft:can_climb": {},
             "minecraft:healable": {
                 "items": [
-                    {
-                        "item": "porkchop",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_porkchop",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "fish",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "salmon",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "clownfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "pufferfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "cooked_fish",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "cooked_salmon",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "beef",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_beef",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "chicken",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "cooked_chicken",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "muttonRaw",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "muttonCooked",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "rotten_flesh",
-                        "heal_amount": 4
-                    },
-                    {
-                        "item": "rabbit",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_rabbit",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "rabbit_stew",
-                        "heal_amount": 10
-                    }
+                    { "item": "porkchop", "heal_amount": 3 },
+                    { "item": "cooked_porkchop", "heal_amount": 8 },
+                    { "item": "fish", "heal_amount": 2 },
+                    { "item": "salmon", "heal_amount": 2 },
+                    { "item": "clownfish", "heal_amount": 1 },
+                    { "item": "pufferfish", "heal_amount": 1 },
+                    { "item": "cooked_fish", "heal_amount": 5 },
+                    { "item": "cooked_salmon", "heal_amount": 6 },
+                    { "item": "beef", "heal_amount": 3 },
+                    { "item": "cooked_beef", "heal_amount": 8 },
+                    { "item": "chicken", "heal_amount": 2 },
+                    { "item": "cooked_chicken", "heal_amount": 6 },
+                    { "item": "muttonRaw", "heal_amount": 2 },
+                    { "item": "muttonCooked", "heal_amount": 6 },
+                    { "item": "rotten_flesh", "heal_amount": 4 },
+                    { "item": "rabbit", "heal_amount": 3 },
+                    { "item": "cooked_rabbit", "heal_amount": 5 },
+                    { "item": "rabbit_stew", "heal_amount": 10 }
                 ]
             },
-            "minecraft:behavior.float": {
-                "priority": 0
-            },
+            "minecraft:behavior.float": { "priority": 0 },
             "minecraft:behavior.mount_pathing": {
                 "priority": 1,
                 "speed_multiplier": 1.25,
                 "target_dist": 0,
                 "track_target": true
             },
-            "minecraft:behavior.stay_while_sitting": {
-                "priority": 3
-            },
-            "minecraft:behavior.leap_at_target": {
-                "priority": 4,
-                "target_dist": 0.4
-            },
-            "minecraft:behavior.melee_attack": {
-                "priority": 5,
-                "track_target": true,
-                "reach_multiplier": 1
-            },
+            "minecraft:behavior.stay_while_sitting": { "priority": 3 },
             "minecraft:behavior.follow_caravan": {
                 "priority": 3,
                 "entity_count": 8,
@@ -420,6 +257,15 @@
                 ],
                 "speed_multiplier": 2
             },
+            "minecraft:behavior.leap_at_target": {
+                "priority": 4,
+                "target_dist": 0.4
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 5,
+                "track_target": true,
+                "reach_multiplier": 1
+            },
             "minecraft:behavior.random_stroll": {
                 "priority": 8,
                 "speed_multiplier": 1
@@ -432,28 +278,26 @@
             "minecraft:behavior.beg": {
                 "priority": 9,
                 "look_distance": 8,
-                "look_time": [
-                    2,
-                    4
-                ],
+                "look_time": [ 2, 4 ],
                 "items": [
                     "bone",
-                    "porkchop",
-                    "cooked_porkchop",
-                    "chicken",
-                    "cooked_chicken",
-                    "beef",
-                    "cooked_beef",
+                    "porkchop", "cooked_porkchop",
+                    "chicken", "cooked_chicken",
+                    "beef", "cooked_beef",
                     "rotten_flesh",
-                    "muttonraw",
-                    "muttoncooked",
-                    "rabbit",
-                    "cooked_rabbit"
+                    "muttonraw", "muttoncooked",
+                    "rabbit", "cooked_rabbit"
                 ]
             },
-            "minecraft:behavior.hurt_by_target": {
-                "priority": 3
-            },
+            "minecraft:behavior.hurt_by_target": { "priority": 3 },
+            "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+            "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+            "minecraft:physics": {},
+            //#endregion
+            //#region Chihuahua
+            "minecraft:type_family": { "family": [ "dog", "chihuahua" ] },
+            "minecraft:movement": { "value": 0.3 },
+            "minecraft:collision_box": { "width": 0.6, "height": 0.8 },
             "minecraft:genetics": {
                 "genes": [
                     {
@@ -556,18 +400,8 @@
                     }
                 ],
                 "mutation_rate": 0.03125
-            },
-            "minecraft:despawn": {
-                "despawn_from_distance": {
-                    "max_distance": 128,
-                    "min_distance": 32
-                }
-            },
-            "minecraft:physics": {},
-            "minecraft:pushable": {
-                "is_pushable": true,
-                "is_pushable_by_piston": true
             }
+            //#endregion
         },
         "events": {
             "minecraft:entity_spawned": {
@@ -598,27 +432,15 @@
                         "randomize": [
                             {
                                 "weight": 5,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_behavior.happy"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld.dog:behavior.happy" ] }
                             },
                             {
                                 "weight": 5,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_behavior.weak"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld.dog:behavior.weak" ] }
                             },
                             {
                                 "weight": 5,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_behavior.aggresive"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld.dog:behavior.aggresive" ] }
                             }
                         ]
                     },
@@ -626,19 +448,11 @@
                         "randomize": [
                             {
                                 "weight": 15,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_eye.brown"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld:chihuahua_eye.brown" ] }
                             },
                             {
                                 "weight": 11,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_eye.green"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld:chihuahua_eye.green" ] }
                             }
                         ]
                     },
@@ -646,32 +460,21 @@
                         "randomize": [
                             {
                                 "weight": 15,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_skin.black"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld:chihuahua_skin.black" ] }
                             },
                             {
                                 "weight": 12,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_skin.white"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld:chihuahua_skin.white" ] }
                             },
                             {
                                 "weight": 10,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:chihuahua_skin.canel"
-                                    ]
-                                }
+                                "add": { "component_groups": [ "mineworld:chihuahua_skin.canel" ] }
                             }
                         ]
                     }
                 ]
             },
+
             "minecraft:entity_born": {
                 "add": {
                     "component_groups": [
@@ -681,85 +484,24 @@
                 }
             },
             "mineworld:chihuahua_age": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_adult"
-                    ]
-                },
-                "remove": {
-                    "component_groups": [
-                        "mineworld:chihuahua_baby"
-                    ]
-                }
+                "add": { "component_groups": [ "mineworld:chihuahua_adult" ] },
+                "remove": { "component_groups": [ "mineworld:chihuahua_baby" ] }
             },
             "mineworld:chihuahua_tame": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_tame"
-                    ]
-                },
-                "remove": {
-                    "component_groups": [
-                        "mineworld:chihuahua_wild"
-                    ]
-                }
+                "add": { "component_groups": [ "mineworld:chihuahua_tame" ] },
+                "remove": { "component_groups": [ "mineworld:chihuahua_wild" ] }
             },
-            "mineworld:chihuahua_happy": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_behavior.happy"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_weak": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_behavior.weak"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_aggresive": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_behavior.aggresive"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_s_black": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_skin.black"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_s_white": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_skin.white"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_s_canel": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_skin.canel"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_green": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_eye.green"
-                    ]
-                }
-            },
-            "mineworld:chihuahua_brown": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:chihuahua_eye.brown"
-                    ]
-                }
-            }
+
+            "mineworld:chihuahua_happy": { "add": { "component_groups": [ "mineworld.dog:behavior.happy" ] } },
+            "mineworld:chihuahua_weak": { "add": { "component_groups": [ "mineworld.dog:behavior.weak" ] } },
+            "mineworld:chihuahua_aggresive": { "add": { "component_groups": [ "mineworld.dog:behavior.aggresive" ] } },
+
+            "mineworld:chihuahua_s_black": { "add": { "component_groups": [ "mineworld:chihuahua_skin.black" ] } },
+            "mineworld:chihuahua_s_white": { "add": { "component_groups": [ "mineworld:chihuahua_skin.white" ] } },
+            "mineworld:chihuahua_s_canel": { "add": { "component_groups": [ "mineworld:chihuahua_skin.canel" ] } },
+
+            "mineworld:chihuahua_green": { "add": { "component_groups": [ "mineworld:chihuahua_eye.green" ] } },
+            "mineworld:chihuahua_brown": { "add": { "component_groups": [ "mineworld:chihuahua_eye.brown" ] } }
         }
     }
 }

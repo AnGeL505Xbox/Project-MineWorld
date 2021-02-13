@@ -1,21 +1,15 @@
 {
 	"format_version": "1.13.0",
 	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "mineworld:asphalt_B"
-		},
-		"tags": [
-			"crafting_table"
-		],
+		"description": { "identifier": "mineworld:asphalt_B" },
+		"tags": [ "crafting_table" ],
 		"pattern": [
 			"ggg",
 			"gdg",
 			"ggg"
 		],
 		"key": {
-			"g": {
-				"item": "minecraft:gravel"
-			},
+			"g": { "item": "minecraft:gravel" },
 			"d": {
 				"item": "minecraft:dye",
 				"data": 0

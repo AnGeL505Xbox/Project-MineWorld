@@ -1,9 +1,7 @@
 {
     "format_version": "1.16.200",
     "minecraft:block": {
-        "description": {
-            "identifier": "mineworld:shadow_dirt"
-        },
+        "description": { "identifier": "mineworld:shadow_dirt" },
         "components": {
             "minecraft:map_color": "#242d43",
             "minecraft:loot": "loot_tables/blocks/shadowDirt.json",
@@ -15,7 +13,7 @@
                 "on_tick":{
                     "event": "transform",
                     "target": "self",
-                    "condition": "q.time_of_day != 0.5 && q.time_of_day != 0.25"
+                    "condition": "q.time_of_day > 0.5 && q.time_of_day < 0.25"
                 }
             }
         },

@@ -54,11 +54,11 @@
                     },
                     {
                         "weight": 10,
-                        "add_mob_effect": {
-                            "effect": "slowness",
-                            "target": "target",
-                            "duration": 20,
-                            "amplifier": 3
+                        "run_command": {
+                            "command": [
+                                "effect @e slowness 20 3",
+                                "effect @a clean"
+                            ]
                         }
                     }
                 ]

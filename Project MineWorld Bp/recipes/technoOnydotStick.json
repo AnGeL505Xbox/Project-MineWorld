@@ -1,24 +1,16 @@
 {
 	"format_version": "1.13.0",
 	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "mineworld:onydotStick"
-		},
-		"tags": [
-			"techno_table"
-		],
+		"description": { "identifier": "mineworld:onydotStick" },
+		"tags": [ "techno_table" ],
 		"pattern": [
 			"  o",
 			" p ",
 			"o  "
 		],
 		"key": {
-			"p": {
-				"item": "mineworld:peridot"
-			},
-			"o": {
-				"item": "mineworld:onyx"
-			}
+			"p": { "item": "mineworld:peridot" },
+			"o": { "item": "mineworld:onyx" }
 		},
 		"result": [
 			{

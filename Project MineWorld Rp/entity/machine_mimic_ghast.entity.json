@@ -4,28 +4,15 @@
       "description": {
          "identifier": "mineworld:machine_mimic_ghast",
          "min_engine_version": "1.8.0",
-         "materials": {
-            "default": "spider"
-         },
-         "textures": {
-            "default": "textures/entity/machine/ghast.tga"
-         },
-         "geometry": {
-            "default": "geometry.ghast_mimic"
-         },
-         "scripts": {
-            "animate": [
-               "look_at_target",
-               "fly"
-            ]
-         },
+         "materials": { "default": "spider" },
+         "textures": { "default": "textures/entity/machine/ghast.tga" },
+         "geometry": { "default": "geometry.ghast_mimic" },
+         "scripts": { "animate": [ "look_at_target", "fly" ] },
          "animations": {
             "look_at_target": "animation.common.look_at_target",
             "fly": "animation.machine_mimic.fly"
          },
-         "render_controllers": [
-            "controller.render.machine_mimic"
-         ],
+         "render_controllers": [ "controller.render.base" ],
          "spawn_egg": {
             "texture": "mineworld_spawn",
             "texture_index": 4

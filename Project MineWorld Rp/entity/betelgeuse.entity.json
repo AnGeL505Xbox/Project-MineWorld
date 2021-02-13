@@ -3,9 +3,7 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:betelgeuse",
-         "materials": {
-            "default": "skeleton"
-         },
+         "materials": { "default": "skeleton" },
          "textures": {
             "betelgeuse": "textures/entity/betelgeuse/normal",
             "primal_betelgeuse": "textures/entity/betelgeuse/primal"
@@ -15,22 +13,12 @@
             "primal_betelgeuse": "geometry.primal_betelgeuse"
          },
          "scripts": {
-            "pre_animation": [
-               "variable.tail = Math.cos(query.modified_distance_moved * 38.27) * 50.0 * query.modified_move_speed;"
-            ],
+            "pre_animation": [ "variable.tail = Math.cos(query.modified_distance_moved * 38.27) * 50.0 * query.modified_move_speed;" ],
             "animate": [
-               {
-                  "look_at_target": "!query.is_roaring"
-               },
-               {
-                  "tail_move": "!query.is_roaring"
-               },
-               {
-                  "walk": "!query.is_roaring"
-               },
-               {
-                  "roar": "query.is_roaring"
-               }
+               { "look_at_target": "!query.is_roaring" },
+               { "tail_move": "!query.is_roaring" },
+               { "walk": "!query.is_roaring" },
+               { "roar": "query.is_roaring" }
             ]
          },
          "animations": {
@@ -39,9 +27,7 @@
             "tail_move": "animation.betelgeuse.tail_move",
             "walk": "animation.betelgeuse.walk"
          },
-         "render_controllers": [
-            "controller.render.betelgeuse"
-         ],
+         "render_controllers": [ "controller.render.betelgeuse" ],
          "spawn_egg": {
             "base_color": "#342222",
             "overlay_color": "#242424"

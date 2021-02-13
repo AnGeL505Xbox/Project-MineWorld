@@ -22,14 +22,14 @@
     },
     "fancy_canopy": {
       "height": 2,
-      "radius": 2,
+      "radius": 3,
       "leaf_block": "mineworld:quantum_leaves"
     },
     "base_block": [
-      "minecraft:stone"
+      "minecraft:grass"
     ],
     "may_grow_on": [
-      "minecraft:stone"
+      "minecraft:grass"
     ],
     "may_replace": [
       "minecraft:air",
@@ -71,7 +71,7 @@
       }
     ],
     "may_grow_through": [
-      "minecraft:stone"
+      "minecraft:grass"
     ]
   }
 }

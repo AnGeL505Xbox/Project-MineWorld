@@ -3,9 +3,7 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:cocker_spaniel",
-         "materials": {
-            "default": "skeleton"
-         },
+         "materials": { "default": "skeleton" },
          "textures": {
             "black": "textures/entity/canis/lupus_familiaris/cocker_spaniel/black",
             "white": "textures/entity/canis/lupus_familiaris/cocker_spaniel/white",
@@ -13,19 +11,13 @@
             "brown_eye": "textures/entity/canis/lupus_familiaris/cocker_spaniel/eyes/brown",
             "black_eye": "textures/entity/canis/lupus_familiaris/cocker_spaniel/eyes/black"
          },
-         "geometry": {
-            "default": "geometry.cocker_spaniel"
-         },
+         "geometry": { "default": "geometry.cocker_spaniel" },
          "animations": {
             "walk": "animation.mineworld.walk",
             "sit": "animation.mineworld.smallSit",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [
-            {
-               "general": "controller.animation.cocker_spaniel.move"
-            }
-         ],
+         "animation_controllers": [ { "general": "controller.animation.cocker_spaniel.move" } ],
          "render_controllers": [
             "controller.render.cocker",
             "controller.render.cocker_eye"
@@ -36,6 +28,4 @@
          }
       }
    }
-}      }
-    }
 }

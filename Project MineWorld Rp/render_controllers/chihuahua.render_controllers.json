@@ -3,19 +3,8 @@
     "render_controllers": {
         "controller.render.chihuahua_skin": {
             "arrays": {
-                "textures": {
-                    "Array.skin": [
-                        "Texture.black",
-                        "Texture.white",
-                        "Texture.canel"
-                    ]
-                },
-                "geometries": {
-                    "Array.head": [
-                        "Geometry.apple_head",
-                        "Geometry.normal_head"
-                    ]
-                }
+                "textures": { "Array.skin": [ "Texture.black", "Texture.white", "Texture.canel" ] },
+                "geometries": { "Array.head": [ "Geometry.apple_head", "Geometry.normal_head" ] }
             },
             "geometry": "Array.head[query.variant]",
             "materials": [ { "*": "Material.default" } ],
@@ -23,18 +12,8 @@
         },
         "controller.render.chihuahua_eye": {
             "arrays": {
-                "textures": {
-                    "Array.eye": [
-                        "Texture.brown",
-                        "Texture.green"
-                    ]
-                },
-                "geometries": {
-                    "Array.head": [
-                        "Geometry.apple_head",
-                        "Geometry.normal_head"
-                    ]
-                }
+                "textures": { "Array.eye": [ "Texture.brown", "Texture.green" ] },
+                "geometries": { "Array.head": [ "Geometry.apple_head", "Geometry.normal_head" ] }
             },
             "geometry": "Array.head[query.variant]",
             "materials": [ { "*": "Material.default" } ],

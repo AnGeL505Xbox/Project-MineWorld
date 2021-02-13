@@ -1,24 +1,16 @@
 {
-	"format_version": "1.13.0",
+	"format_version": "1.12.0",
 	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "mineworld:circuit"
-		},
-		"tags": [
-			"techno_table"
-		],
+		"description": { "identifier": "mineworld:circuit" },
+		"tags": [ "techno_table" ],
 		"pattern": [
 			" c ",
 			"cmc",
 			" c "
 		],
 		"key": {
-			"c": {
-				"item": "mineworld:copper"
-			},
-			"m": {
-				"item": "mineworld:malachite"
-			}
+			"c": { "item": "minecraft:copper_ingot" },
+			"m": { "item": "mineworld:malachite" }
 		},
 		"result": [
 			{

@@ -4,6 +4,10 @@
         "textures":"anthraciteOre",
         "sound": "stone"
     },
+    "mineworld:quantum_ore": {
+        "textures":"quantumOre",
+        "sound": "stone"
+    },
     "mineworld:xero_flower": {
         "sound": "grass"
     },
@@ -132,8 +136,7 @@
     },
     "mineworld:shadow_leaves": {
         "isotropic": true,
-        "sound": "grass",
-        "textures": "shadow_leaves"
+        "sound": "grass"
     },
     "mineworld:shadow_log": {
         "sound": "wood",

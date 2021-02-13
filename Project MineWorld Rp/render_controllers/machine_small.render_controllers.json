@@ -5,7 +5,10 @@
             "geometry": "Geometry.default",
             "materials": [ { "*": "Material.default" } ],
             "textures": [ "Texture.default" ],
-            "part_visibility": [ { "shield*": "variable.shield" } ]
+            "part_visibility": [ { "shield*": "variable.shield" } ],
+            "is_hurt_color": {
+                "r": 124, "g": 175, "b": 235
+            }
         }
     }
 }

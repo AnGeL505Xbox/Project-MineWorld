@@ -3,9 +3,7 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:chihuahua",
-         "materials": {
-            "default": "skeleton"
-         },
+         "materials": { "default": "skeleton" },
          "textures": {
             "brown": "textures/entity/canis/lupus_familiaris/chihuahua/eyes/brown",
             "green": "textures/entity/canis/lupus_familiaris/chihuahua/eyes/green",
@@ -22,11 +20,7 @@
             "sit": "animation.mineworld.smallSit",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [
-            {
-               "general": "controller.animation.chihuahua.move"
-            }
-         ],
+         "animation_controllers": [ { "general": "controller.animation.chihuahua.move" } ],
          "render_controllers": [
             "controller.render.chihuahua_skin",
             "controller.render.chihuahua_eye"
@@ -38,5 +32,3 @@
       }
    }
 } 
-
-}

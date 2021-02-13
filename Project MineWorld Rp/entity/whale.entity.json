@@ -4,28 +4,12 @@
       "description": {
          "identifier": "mineworld:whale",
          "min_engine_version": "1.8.0",
-         "materials": {
-            "default": "dolphin"
-         },
-         "textures": {
-            "default": "textures/entity/balaenidae/blue"
-         },
-         "geometry": {
-            "default": "geometry.whale"
-         },
-         "animations": {
-            "swim": "animation.whale.swim"
-         },
-         "scripts": {
-            "animate": [
-               {
-                  "swim": "query.is_in_water"
-               }
-            ]
-         },
-         "render_controllers": [
-            "controller.render.whale"
-         ],
+         "materials": { "default": "dolphin" },
+         "textures": { "default": "textures/entity/balaenidae/blue" },
+         "geometry": { "default": "geometry.whale" },
+         "animations": { "swim": "animation.whale.swim" },
+         "scripts": { "animate": [ { "swim": "query.is_in_water" } ] },
+         "render_controllers": [ "controller.render.base" ],
          "spawn_egg": {
             "base_color": "#5862ff",
             "overlay_color": "#757eff"

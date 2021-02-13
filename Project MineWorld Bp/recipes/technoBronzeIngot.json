@@ -1,19 +1,11 @@
 {
-	"format_version": "1.13.0",
+	"format_version": "1.12.0",
 	"minecraft:recipe_shapeless": {
-		"description": {
-			"identifier": "mineworld:bronzeIngot"
-		},
-		"tags": [
-			"techno_table"
-		],
+		"description": { "identifier": "mineworld:bronzeIngot" },
+		"tags": [ "techno_table" ],
 		"ingredients": [
-			{
-				"item": "mineworld:copper"
-			},
-			{
-				"item": "mineworld:tinIngot"
-			}
+			{ "item": "minecraft:copper_ingot" },
+			{ "item": "mineworld:tinIngot" }
 		],
 		"result": [
 			{

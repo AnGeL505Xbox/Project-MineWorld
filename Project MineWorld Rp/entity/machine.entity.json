@@ -23,9 +23,7 @@
             "walk": "animation.machine.walk",
             "attack": "animation.machine.attack"
          },
-         "render_controllers": [
-            "controller.render.machine"
-         ],
+         "render_controllers": [ "controller.render.machine" ],
          "spawn_egg": {
             "texture": "mineworld_spawn",
             "texture_index": 1

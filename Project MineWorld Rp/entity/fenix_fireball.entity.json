@@ -4,18 +4,10 @@
       "description": {
          "identifier": "mineworld:fenix_fireball",
          "min_engine_version": "1.8.0",
-         "materials": {
-            "default": "skeleton"
-         },
-         "textures": {
-            "default": "textures/entity/legend/fenix/fenix_fireball"
-         },
-         "geometry": {
-            "default": "geometry.fenix_fireball"
-         },
-         "render_controllers": [
-            "controller.render.fenix_fireball"
-         ]
+         "materials": { "default": "skeleton" },
+         "textures": { "default": "textures/items/fenix_fireball" },
+         "geometry": { "default": "geometry.fenix_fireball" },
+         "render_controllers": [ "controller.render.base" ]
       }
    }
 }

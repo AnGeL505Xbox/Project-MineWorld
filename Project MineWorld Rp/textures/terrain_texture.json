@@ -7,6 +7,9 @@
         "aquamarine_block": {
             "textures": "textures/blocks/aquamarineBlock"
         },
+        "quantumOre": {
+            "textures": "textures/blocks/quantumOre"
+        },
         "aquamarine_ore": {
             "textures": "textures/blocks/aquamarineOre"
         },
@@ -76,11 +79,14 @@
         "quantum_log_side": {
             "textures": "textures/blocks/quantumLogSide"
         },
-        "quantum_log_up": {
-            "textures": "textures/blocks/quantumLogUp"
+        "quantum_log_top": {
+            "textures": "textures/blocks/quantumLogTop"
         },
         "quantum_planks": {
             "textures": "textures/blocks/quantumPlanks"
+        },
+        "quantum_block": {
+            "textures": "textures/blocks/quantumBlock"
         },
         "quarzite": {
             "textures": "textures/blocks/stoneQuarzite"
@@ -123,6 +129,15 @@
         },
         "shadow_leaves": {
             "textures": "textures/blocks/shadowLeaves"
+        },
+        "shadow_leaves_dead_flowers": {
+            "textures": "textures/blocks/shadowLeavesDeadFlowers"
+        },
+        "shadow_leaves_flowers": {
+            "textures": "textures/blocks/shadowLeavesFlowers"
+        },
+        "shadow_leaves_rise_flowers": {
+            "textures": "textures/blocks/shadowLeavesRiseFlowers"
         },
         "shadow_log_side": {
             "textures": "textures/blocks/shadowLogSide"

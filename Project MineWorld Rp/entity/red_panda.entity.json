@@ -3,29 +3,21 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:red_panda",
-         "materials": {
-            "default": "skeleton"
-         },
+         "materials": { "default": "skeleton" },
          "textures": {
             "default": "textures/entity/aluridae/default",
             "albine": "textures/entity/aluridae/albine",
             "sleep": "textures/entity/aluridae/eye_sleep",
             "wake": "textures/entity/aluridae/eye_wake"
          },
-         "geometry": {
-            "default": "geometry.red_panda"
-         },
+         "geometry": { "default": "geometry.red_panda" },
          "animations": {
             "walk": "animation.mineworld.walk",
             "sit": "animation.red_panda.sit",
             "sleep": "animation.red_panda.sleep",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [
-            {
-               "general": "controller.animation.red_panda.move"
-            }
-         ],
+         "animation_controllers": [ { "general": "controller.animation.red_panda.move" } ],
          "render_controllers": [
             "controller.render.red_panda_skins",
             "controller.render.red_panda_eyes"

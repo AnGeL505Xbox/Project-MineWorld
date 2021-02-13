@@ -10,6 +10,12 @@
             "minecraft:explosion_resistance": 15,
             "minecraft:block_light_emission": 0.5,
             "minecraft:map_color": "#dae2eb",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "quantum_planks",
+                    "render_method": "blend"
+                }
+            },
             "minecraft:display_name": "mineworld:quantumPlanks"
         }
     }

@@ -35,7 +35,6 @@
         "texture": "silverArmor",
         "frame": 0
       },
-      "minecraft:render_offsets": "helmets",
       "minecraft:display_name": {
         "value": "item.mineworld:silverHelmet.name"
       }

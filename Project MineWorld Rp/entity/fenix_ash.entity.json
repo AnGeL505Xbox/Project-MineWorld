@@ -4,18 +4,10 @@
       "description": {
          "identifier": "mineworld:fenix_ash",
          "min_engine_version": "1.8.0",
-         "materials": {
-            "default": "skeleton"
-         },
-         "textures": {
-            "default": "textures/entity/legend/fenix/fenix_ash"
-         },
-         "geometry": {
-            "default": "geometry.fenix_ash"
-         },
-         "render_controllers": [
-            "controller.render.fenix_ash"
-         ]
+         "materials": { "default": "skeleton" },
+         "textures": { "default": "textures/entity/legend/fenix/fenix_ash" },
+         "geometry": { "default": "geometry.fenix_ash" },
+         "render_controllers": [ "controller.render.base" ]
       }
    }
 }

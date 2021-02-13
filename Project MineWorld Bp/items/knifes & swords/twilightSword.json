@@ -36,22 +36,14 @@
                     "target": "self"
                 }
             },
-            "minecraft:icon": {
-                "texture": "twilightSword"
-            },
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.special"
-            },
-            "minecraft:display_name": {
-                "value": "item.mineworld:twilightSword.name"
-            }
+            "minecraft:icon": { "texture": "twilightSword" },
+            "minecraft:creative_category": { "parent": "itemGroup.name.special" },
+            "minecraft:display_name": { "value": "item.mineworld:twilightSword.name" }
         },
         "events": {
             "mineworld:shadow": {
                 "randomize": [
-                    {
-                        "weight": 90
-                    },
+                    { "weight": 90 },
                     {
                         "weight": 10,
                         "add_mob_effect": {

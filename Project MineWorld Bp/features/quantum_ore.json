@@ -1,0 +1,13 @@
+{
+   "format_version": "1.13.0",
+   "minecraft:ore_feature": {
+      "description": {
+         "identifier": "mineworld:quantum_ore"
+      },
+      "count": 7,
+      "places_block": "mineworld:quantum_ore",
+      "may_replace": [
+         "minecraft:end_stone"
+      ]
+   }
+}

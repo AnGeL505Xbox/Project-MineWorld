@@ -11,7 +11,7 @@
                 "texture": "machineTurret"
             },
             "minecraft:creative_category": {
-                "parent": "itemGroup.name.machineTurret"
+                "parent": "itemGroup.name.machineComponents"
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:machineTurret.name"

@@ -3,28 +3,20 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:blacky",
-         "materials": {
-            "default": "skeleton"
-         },
+         "materials": { "default": "skeleton" },
          "textures": {
             "default": "textures/entity/canis/lupus_familiaris/blacky/blacky",
             "brown": "textures/entity/canis/lupus_familiaris/blacky/eyes/brown",
             "brown_1": "textures/entity/canis/lupus_familiaris/blacky/eyes/brown_1",
             "brown_2": "textures/entity/canis/lupus_familiaris/blacky/eyes/brown_2"
          },
-         "geometry": {
-            "default": "geometry.blacky"
-         },
+         "geometry": { "default": "geometry.blacky" },
          "animations": {
             "walk": "animation.mineworld.walk",
             "sit": "animation.mineworld.sit",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [
-            {
-               "general": "controller.animation.blacky.move"
-            }
-         ],
+         "animation_controllers": [ { "general": "controller.animation.blacky.move" } ],
          "render_controllers": [
             "controller.render.blacky",
             "controller.render.blacky_eyes"

@@ -1,4 +1,4 @@
-//Mineworld_entity v2
+//Project MineWorld Machine v1
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
@@ -41,10 +41,7 @@
                     "max": 16,
                     "value": 16
                 },
-                "minecraft:shooter": {
-					"type": "mineworld:machineBullet",
-					"def": "mineworld:machineBullet"
-				},
+                "minecraft:shooter": { "def": "mineworld:machineBullet" },
                 "minecraft:behavior.ranged_attack": {
                     "priority": 4,
                     "burst_shots": 4,
@@ -68,10 +65,7 @@
                     "priority": 4,
                     "track_target": true
                 },
-                "minecraft:shooter": {
-					"type": "mineworld:machineBullet",
-					"def": "mineworld:machineBullet"
-				},
+                "minecraft:shooter": { "def": "mineworld:machineBullet" },
                 "minecraft:behavior.ranged_attack": {
                     "priority": 4,
                     "burst_shots": 3,

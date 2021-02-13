@@ -11,15 +11,9 @@
             "arrays": {
                 "textures": {
                     "Array.eyes": [
-                        "Texture.black",
-                        "Texture.black_r",
-                        "Texture.black_l",
-                        "Texture.blue",
-                        "Texture.blue_r",
-                        "Texture.blue_l",
-                        "Texture.brown",
-                        "Texture.brown_r",
-                        "Texture.brown_l"
+                        "Texture.black", "Texture.black_r", "Texture.black_l",
+                        "Texture.blue", "Texture.blue_r", "Texture.blue_l",
+                        "Texture.brown", "Texture.brown_r", "Texture.brown_l"
                     ]
                 }
             },

@@ -1,4 +1,4 @@
-//Mineworld entity v4
+//Project MineWorld Dog v1
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
@@ -185,107 +185,58 @@
                     }
                 }
             },
-            "mineworld:cocker_spaniel_behavior.aggresive": {
+            
+            
+
+            "mineworld:cocker_spaniel_skin.black": { "minecraft:variant": { "value": 0 } },
+            "mineworld:cocker_spaniel_skin.white": { "minecraft:variant": { "value": 1 } },
+            "mineworld:cocker_spaniel_skin.gold": { "minecraft:variant": { "value": 2 } },
+
+            "mineworld:cocker_spaniel_eye.brown": { "minecraft:mark_variant": { "value": 0 } },
+            "mineworld:cocker_spaniel_eye.black": { "minecraft:mark_variant": { "value": 1 } },
+
+            "mineworld.dog:behavior.happy": {
+                "minecraft:behavior.drop_item_for": {
+                    "drop_item_chance": 0.05,
+                    "loot_table": "loot_tables/entities/dogGift.json",
+                    "entity_types": {
+                        "filters": {
+                            "all_of": [
+                                { "test": "is_family", "subject": "other", "value": "player" },
+                                { "test": "has_component", "subject": "self", "value": "minecraft:is_tamed" }
+                            ]
+                        }
+                    },
+                    "time_of_day_range": [ 0.8, 0.801 ]
+                }
+            },
+            "mineworld.dog:behavior.aggresive": {
                 "minecraft:behavior.nearest_attackable_target": {
                     "attack_interval": 15,
                     "scan_interval": 40,
+                    "within_radius": 5,
                     "entity_types": {
                         "filters": {
                             "all_of": [
-                                {
-                                    "test": "is_family",
-                                    "subject": "other",
-                                    "value": "dog"
-                                },
-                                {
-                                    "test": "has_tag",
-                                    "subject": "other",
-                                    "value": "blacky:behavior.aggresive"
-                                }
+                                { "test": "is_family", "subject": "other", "value": "dog" },
+                                { "test": "has_component", "subject": "other", "operator": "!=", "value": "minecraft:is_baby" }
                             ]
                         }
-                    },
-                    "within_radius": 5
+                    }
                 }
             },
-            "mineworld:cocker_spaniel_behavior.happy": {
-                "minecraft:behavior.drop_item_for": {
-                    "drop_item_chance": 0.05,
-                    "loot_table": "loot_tables/entities/dog_gift.json",
-                    "entity_types": {
-                        "filters": {
-                            "all_of": [
-                                {
-                                    "test": "is_family",
-                                    "subject": "other",
-                                    "value": "player"
-                                },
-                                {
-                                    "test": "has_component",
-                                    "subject": "self",
-                                    "value": "minecraft:is_tamed"
-                                }
-                            ]
-                        }
-                    },
-                    "time_of_day_range": [
-                        0.8,
-                        0.85
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_behavior.weak": {
-                "minecraft:health": {
-                    "value": 5
-                },
-                "minecraft:movement": {
-                    "value": 0.15
-                }
-            },
-            "mineworld:cocker_spaniel_skin.black": {
-                "minecraft:variant": {
-                    "value": 0
-                }
-            },
-            "mineworld:cocker_spaniel_skin.white": {
-                "minecraft:variant": {
-                    "value": 1
-                }
-            },
-            "mineworld:cocker_spaniel_skin.gold": {
-                "minecraft:variant": {
-                    "value": 2
-                }
-            },
-            "mineworld:cocker_spaniel_eye.brown": {
-                "minecraft:mark_variant": {
-                    "value": 0
-                }
-            },
-            "mineworld:cocker_spaniel_eye.black": {
-                "minecraft:mark_variant": {
-                    "value": 1
-                }
+            "mineworld.dog:behavior.weak": {
+                "minecraft:health": { "value": 5 },
+                "minecraft:movement": { "value": 0.2 }
             }
         },
         "components": {
+            //#region Dog pre-assets
+
             "minecraft:nameable": {},
-            "minecraft:type_family": {
-                "family": [
-                    "dog",
-                    "cocker_spaniel"
-                ]
-            },
-            "minecraft:movement": {
-                "value": 0.3
-            },
             "minecraft:breathable": {
                 "total_supply": 15,
                 "suffocate_time": 0
-            },
-            "minecraft:collision_box": {
-                "width": 0.6,
-                "height": 0.8
             },
             "minecraft:hurt_on_condition": {
                 "damage_conditions": [
@@ -310,101 +261,34 @@
             "minecraft:can_climb": {},
             "minecraft:healable": {
                 "items": [
-                    {
-                        "item": "porkchop",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_porkchop",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "fish",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "salmon",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "clownfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "pufferfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "cooked_fish",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "cooked_salmon",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "beef",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_beef",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "chicken",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "cooked_chicken",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "muttonRaw",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "muttonCooked",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "rotten_flesh",
-                        "heal_amount": 4
-                    },
-                    {
-                        "item": "rabbit",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_rabbit",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "rabbit_stew",
-                        "heal_amount": 10
-                    }
+                    { "item": "porkchop", "heal_amount": 3 },
+                    { "item": "cooked_porkchop", "heal_amount": 8 },
+                    { "item": "fish", "heal_amount": 2 },
+                    { "item": "salmon", "heal_amount": 2 },
+                    { "item": "clownfish", "heal_amount": 1 },
+                    { "item": "pufferfish", "heal_amount": 1 },
+                    { "item": "cooked_fish", "heal_amount": 5 },
+                    { "item": "cooked_salmon", "heal_amount": 6 },
+                    { "item": "beef", "heal_amount": 3 },
+                    { "item": "cooked_beef", "heal_amount": 8 },
+                    { "item": "chicken", "heal_amount": 2 },
+                    { "item": "cooked_chicken", "heal_amount": 6 },
+                    { "item": "muttonRaw", "heal_amount": 2 },
+                    { "item": "muttonCooked", "heal_amount": 6 },
+                    { "item": "rotten_flesh", "heal_amount": 4 },
+                    { "item": "rabbit", "heal_amount": 3 },
+                    { "item": "cooked_rabbit", "heal_amount": 5 },
+                    { "item": "rabbit_stew", "heal_amount": 10 }
                 ]
             },
-            "minecraft:behavior.float": {
-                "priority": 0
-            },
+            "minecraft:behavior.float": { "priority": 0 },
             "minecraft:behavior.mount_pathing": {
                 "priority": 1,
                 "speed_multiplier": 1.25,
                 "target_dist": 0,
                 "track_target": true
             },
-            "minecraft:behavior.stay_while_sitting": {
-                "priority": 3
-            },
-            "minecraft:behavior.leap_at_target": {
-                "priority": 4,
-                "target_dist": 0.4
-            },
-            "minecraft:behavior.melee_attack": {
-                "priority": 5,
-                "track_target": true,
-                "reach_multiplier": 1
-            },
+            "minecraft:behavior.stay_while_sitting": { "priority": 3 },
             "minecraft:behavior.follow_caravan": {
                 "priority": 3,
                 "entity_count": 8,
@@ -420,6 +304,15 @@
                 ],
                 "speed_multiplier": 2
             },
+            "minecraft:behavior.leap_at_target": {
+                "priority": 4,
+                "target_dist": 0.4
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 5,
+                "track_target": true,
+                "reach_multiplier": 1
+            },
             "minecraft:behavior.random_stroll": {
                 "priority": 8,
                 "speed_multiplier": 1
@@ -432,28 +325,26 @@
             "minecraft:behavior.beg": {
                 "priority": 9,
                 "look_distance": 8,
-                "look_time": [
-                    2,
-                    4
-                ],
+                "look_time": [ 2, 4 ],
                 "items": [
                     "bone",
-                    "porkchop",
-                    "cooked_porkchop",
-                    "chicken",
-                    "cooked_chicken",
-                    "beef",
-                    "cooked_beef",
+                    "porkchop", "cooked_porkchop",
+                    "chicken", "cooked_chicken",
+                    "beef", "cooked_beef",
                     "rotten_flesh",
-                    "muttonraw",
-                    "muttoncooked",
-                    "rabbit",
-                    "cooked_rabbit"
+                    "muttonraw", "muttoncooked",
+                    "rabbit", "cooked_rabbit"
                 ]
             },
-            "minecraft:behavior.hurt_by_target": {
-                "priority": 3
-            },
+            "minecraft:behavior.hurt_by_target": { "priority": 3 },
+            "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+            "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+            "minecraft:physics": {},
+            //#endregion
+            //#region Cocker Spaniel
+            "minecraft:type_family": { "family": [ "dog", "cocker_spaniel" ] },
+            "minecraft:movement": { "value": 0.3 },
+            "minecraft:collision_box": { "width": 0.6, "height": 0.8 },
             "minecraft:genetics": {
                 "genes": [
                     {
@@ -556,18 +447,8 @@
                     }
                 ],
                 "mutation_rate": 0.03125
-            },
-            "minecraft:despawn": {
-                "despawn_from_distance": {
-                    "max_distance": 128,
-                    "min_distance": 32
-                }
-            },
-            "minecraft:physics": {},
-            "minecraft:pushable": {
-                "is_pushable": true,
-                "is_pushable_by_piston": true
             }
+            //#endregion
         },
         "events": {
             "minecraft:entity_spawned": {
@@ -600,7 +481,7 @@
                                 "weight": 5,
                                 "add": {
                                     "component_groups": [
-                                        "mineworld:cocker_spaniel_behavior.happy"
+                                        "mineworld.dog:behavior.happy"
                                     ]
                                 }
                             },
@@ -608,7 +489,7 @@
                                 "weight": 5,
                                 "add": {
                                     "component_groups": [
-                                        "mineworld:cocker_spaniel_behavior.weak"
+                                        "mineworld.dog:behavior.weak"
                                     ]
                                 }
                             },
@@ -616,7 +497,7 @@
                                 "weight": 5,
                                 "add": {
                                     "component_groups": [
-                                        "mineworld:cocker_spaniel_behavior.aggresive"
+                                        "mineworld.dog:behavior.aggresive"
                                     ]
                                 }
                             }
@@ -704,62 +585,17 @@
                     ]
                 }
             },
-            "mineworld:cocker_spaniel_happy": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_behavior.happy"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_weak": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_behavior.weak"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_aggresive": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_behavior.aggresive"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_s_black": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_skin.black"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_s_white": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_skin.white"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_s_gold": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_skin.gold"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_black": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_eye.black"
-                    ]
-                }
-            },
-            "mineworld:cocker_spaniel_brown": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:cocker_spaniel_eye.brown"
-                    ]
-                }
-            }
+
+            "mineworld:cocker_spaniel_happy": { "add": { "component_groups": [ "mineworld.dog:behavior.happy" ] } },
+            "mineworld:cocker_spaniel_weak": { "add": { "component_groups": [ "mineworld.dog:behavior.weak" ] } },
+            "mineworld:cocker_spaniel_aggresive": { "add": { "component_groups": [ "mineworld.dog:behavior.aggresive" ] } },
+
+            "mineworld:cocker_spaniel_s_black": { "add": { "component_groups": [ "mineworld:cocker_spaniel_skin.black"] } },
+            "mineworld:cocker_spaniel_s_white": { "add": { "component_groups": [ "mineworld:cocker_spaniel_skin.white" ] } },
+            "mineworld:cocker_spaniel_s_gold": { "add": { "component_groups": [ "mineworld:cocker_spaniel_skin.gold" ] } },
+
+            "mineworld:cocker_spaniel_black": { "add": { "component_groups": [ "mineworld:cocker_spaniel_eye.black" ] } },
+            "mineworld:cocker_spaniel_brown": { "add": { "component_groups": [ "mineworld:cocker_spaniel_eye.brown" ] } }
         }
     }
 }

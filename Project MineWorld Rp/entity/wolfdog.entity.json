@@ -13,19 +13,13 @@
             "blue_light": "textures/entity/canis/hybrid/eyes/blue_light",
             "black": "textures/entity/canis/hybrid/eyes/black"
          },
-         "geometry": {
-            "default": "geometry.wolfdog"
-         },
+         "geometry": { "default": "geometry.wolfdog" },
          "animations": {
             "walk": "animation.mineworld.walk",
             "sit": "animation.wolfdog.sit",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [
-            {
-               "general": "controller.animation.wolfdog.move"
-            }
-         ],
+         "animation_controllers": [ { "general": "controller.animation.wolfdog.move" } ],
          "render_controllers": [
             "controller.render.wolfdog",
             "controller.render.wolfdog_eyes"

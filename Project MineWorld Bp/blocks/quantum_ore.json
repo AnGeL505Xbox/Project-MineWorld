@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.200",
+    "minecraft:block": {
+        "description": {
+            "identifier": "mineworld:quantum_ore"
+        },
+        "components": {
+            "minecraft:destroy_time": 3,
+            "minecraft:explosion_resistance": 3,
+            "minecraft:map_color": "#e6a648",
+            "minecraft:loot": "loot_tables/blocks/quantumOre.json",
+            "minecraft:display_name": "mineworld:quantumOre"
+        }
+    }
+}

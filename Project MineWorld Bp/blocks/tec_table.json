@@ -19,9 +19,7 @@
             "minecraft:crafting_table": {
                 "custom_description": "act.tecTable",
                 "grid_size": 3,
-                "crafting_tags": [
-                    "techno_table"
-                ]
+                "crafting_tags": [ "techno_table" ]
             },
             "minecraft:display_name": "mineworld:tecTable"
         }

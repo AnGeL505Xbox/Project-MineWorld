@@ -8,11 +8,7 @@
          "textures": [ "Texture.default" ]
       },
       "controller.render.blacky_eyes": {
-         "arrays": {
-            "textures": {
-               "Array.eye": [ "Texture.brown", "Texture.brown_1", "Texture.brown_2" ]
-            }
-         },
+         "arrays": { "textures": { "Array.eye": [ "Texture.brown", "Texture.brown_1", "Texture.brown_2" ] } },
          "geometry": "Geometry.default",
          "materials": [ { "*": "Material.default" } ],
          "part_visibility": [ { "tamed*": "query.is_tamed" } ],

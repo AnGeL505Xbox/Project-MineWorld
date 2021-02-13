@@ -1,0 +1,24 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+      "identifier": "mineworld:stellar_super_scatter"
+    },
+    "places_feature": "mineworld:stellar_super",
+    "project_input_to_floor": true,
+    "iterations": 1,
+    "coordinate_eval_order": "zyx",
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -32, 32 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -4, 0 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -32, 32 ]
+    }
+  }
+}

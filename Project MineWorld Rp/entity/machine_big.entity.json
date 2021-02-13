@@ -3,15 +3,9 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:machine_big",
-         "materials": {
-            "default": "spider"
-         },
-         "textures": {
-            "default": "textures/entity/machine/big"
-         },
-         "geometry": {
-            "default": "geometry.machine_big"
-         },
+         "materials": { "default": "spider" },
+         "textures": { "default": "textures/entity/machine/big" },
+         "geometry": { "default": "geometry.machine_big" },
          "scripts": {
             "pre_animation":[
                "variable.shield = ( query.variant == 1 ) ? 1 : 0;",
@@ -29,9 +23,7 @@
             "walk": "animation.machine.walk",
             "attack": "animation.machine.attack"
          },
-         "render_controllers": [
-            "controller.render.machine_big"
-         ],
+         "render_controllers": [ "controller.render.machine_big" ],
          "spawn_egg": {
             "texture": "mineworld_spawn",
             "texture_index": 2

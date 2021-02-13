@@ -1,15 +1,14 @@
 {
     "format_version": "1.16.200",
     "minecraft:block": {
-        "description": {
-            "identifier": "mineworld:shadow_leaves"
-        },
+        "description": { "identifier": "mineworld:shadow_leaves" },
         "components": {
             "minecraft:map_color": "#344f3a",
-            "minecraft:loot": "loot_tables/blocks/shadowLeaves.json",
             "minecraft:destroy_time": 0.5,
             "minecraft:explosion_resistance": 0,
             "minecraft:block_light_absorption": 1,
+            "minecraft:material_instances": { "*": { "texture": "shadow_leaves", "render_method": "blend" } },
+            "minecraft:loot": "loot_tables/blocks/shadowLeaves.json",
             "minecraft:display_name": "mineworld:shadowLeaves"
         }
     }

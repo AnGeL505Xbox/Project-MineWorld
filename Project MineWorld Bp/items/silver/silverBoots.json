@@ -35,7 +35,6 @@
         "texture": "silverArmor",
         "frame": 3
       },
-      "minecraft:render_offsets": "boots",
       "minecraft:display_name": {
         "value": "item.mineworld:silverBoots.name"
       }

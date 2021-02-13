@@ -8,7 +8,10 @@
             "part_visibility": [
                 { "shield*": "v.shield || v.shieldTurret" },
                 { "turret*": "v.turret || v.shieldTurret" }
-            ]
+            ],
+            "is_hurt_color": {
+                "r": 124, "g": 175, "b": 235
+            }
         }
     }
 }

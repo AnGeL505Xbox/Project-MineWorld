@@ -3,15 +3,9 @@
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:shadow_bird",
-         "materials": {
-            "default": "skeleton"
-         },
-         "textures": {
-            "default": "textures/entity/skull_bird"
-         },
-         "geometry": {
-            "default": "geometry.skull_bird"
-         },
+         "materials": { "default": "skeleton" },
+         "textures": { "default": "textures/entity/skull_bird" },
+         "geometry": { "default": "geometry.skull_bird" },
          "animations": {
             "look_at_target": "animation.common.look_at_target",
             "fly": "animation.skull_bird.fly",
@@ -20,18 +14,12 @@
          },
          "scripts": {
             "animate": [
-               {
-                  "walk": "query.is_on_ground"
-               },
-               {
-                  "fly": "!query.is_on_ground"
-               },
+               { "walk": "query.is_on_ground" },
+               { "fly": "!query.is_on_ground" },
                "look_at_target"
             ]
          },
-         "render_controllers": [
-            "controller.render.skull_bird"
-         ],
+         "render_controllers": [ "controller.render.base" ],
          "spawn_egg": {
             "base_color": "#242424",
             "overlay_color": "#aaaaaa"

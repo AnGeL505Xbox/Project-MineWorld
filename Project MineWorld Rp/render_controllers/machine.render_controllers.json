@@ -9,7 +9,10 @@
                 { "shieldB*": "variable.shield || variable.shield_turret" },
                 { "shieldH*": "variable.shield || variable.shield_turret" },
                 { "turret*": "variable.turret || variable.shield_turret" }
-            ]
+            ],
+            "is_hurt_color": {
+                "r": 124, "g": 175, "b": 235
+            }
         }
     }
 }
