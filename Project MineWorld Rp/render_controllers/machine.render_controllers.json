@@ -6,9 +6,9 @@
             "materials": [ { "*": "Material.default" } ],
             "textures": [ "Texture.default" ],
             "part_visibility": [
-                { "shieldB*": "variable.shield || variable.shield_turret" },
-                { "shieldH*": "variable.shield || variable.shield_turret" },
-                { "turret*": "variable.turret || variable.shield_turret" }
+                { "shieldB*": "v.shield || v.shieldTurret" },
+                { "shieldH*": "v.shield || v.shieldTurret" },
+                { "turret*": "v.turret || v.shieldTurret" }
             ],
             "is_hurt_color": {
                 "r": 124, "g": 175, "b": 235

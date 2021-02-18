@@ -6,9 +6,8 @@
             "category": "items"
         },
         "components": {
-            "minecraft:hand_equipped": true,
-            "minecraft:entity_placer": { "entity": "mineworld:machine_allie" },
-            "minecraft:icon": { "texture": "bag" },
+            "minecraft:entity_placer": { "entity": "mineworld:machine_small" },
+            "minecraft:icon": { "texture": "machineGen" },
             "minecraft:creative_category": { "parent": "itemGroup.name.machineComponents" },
             "minecraft:display_name": { "value": "item.mineworld:machine.name" }
         }

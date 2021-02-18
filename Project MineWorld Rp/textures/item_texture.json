@@ -188,14 +188,29 @@
         "limonite": {
             "textures": "textures/items/limonite"
         },
+        "machineBullet": {
+            "textures": "textures/items/machineBullet"
+        },
+        "machineChipAllie": {
+            "textures": "textures/items/machineChipAllie"
+        },
+        "machineChipNeutral": {
+            "textures": "textures/items/machineChipNeutral"
+        },
         "machineCore": {
             "textures": "textures/items/machineCore"
         },
+        "machineGen": {
+            "textures": "textures/items/machineGen"
+        },
+        "machineEnhanceKit": {
+            "textures": "textures/items/machineEnhanceKit"
+        },
         "machineShield": {
-            "textures": "textures/items/test"
+            "textures": "textures/items/machineShield"
         },
         "machineTurret": {
-            "textures": "textures/items/test"
+            "textures": "textures/items/machineTurret"
         },
         "magnetite": {
             "textures": "textures/items/magnetite"

@@ -14,7 +14,7 @@
     },
     "y": {
       "distribution": "gaussian",
-      "extent": [ -4, 0 ]
+      "extent": 0
     },
     "z": {
       "distribution": "gaussian",

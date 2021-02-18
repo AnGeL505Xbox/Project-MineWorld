@@ -7,52 +7,16 @@
         },
         "conditions": [
             {
-                "minecraft:weight": {
-                    "default": 5
-                },
-                "minecraft:herd": {
-                    "min_size": 1,
-                    "max_size": 2
-                },
-                "minecraft:biome_filter": {
-                    "test": "has_biome_tag",
-                    "operator": "==",
-                    "value": "monster"
-                },
                 "minecraft:spawns_on_surface": {},
-                "minecraft:brightness_filter": {
-                    "min": 0,
-                    "max": 15,
-                    "adjust_for_weather": false
-                },
-                "minecraft:difficulty_filter": {
-                    "min": "easy",
-                    "max": "hard"
-                }
-            },
-            {
-                "minecraft:spawns_underground": {},
-                "minecraft:brightness_filter": {
-                    "min": 0,
-                    "max": 7,
-                    "adjust_for_weather": false
-                },
-                "minecraft:difficulty_filter": {
-                    "min": "easy",
-                    "max": "hard"
-                },
-                "minecraft:weight": {
-                    "default": 8
-                },
-                "minecraft:herd": {
-                    "min_size": 1,
-                    "max_size": 3
-                },
-                "minecraft:biome_filter": {
-                    "test": "has_biome_tag",
-                    "operator": "==",
-                    "value": "monster"
-                }
+                "minecraft:difficulty_filter": { "min": "easy", "max": "hard" },
+                "minecraft:weight": { "default": 6 },
+                "minecraft:herd": { "min_size": 1, "max_size": 1 },
+                "minecraft:brightness_filter": { "min": 4, "max": 15, "adjust_for_weather": false },
+                "minecraft:permute_type": [
+                    { "weight": 95 },
+                    { "weight": 5, "entity_type": "mineworld:machine_small" }
+                ],
+                "minecraft:biome_filter": { "test": "has_biome_tag", "operator": "==", "value": "monster" }
             }
         ]
     }

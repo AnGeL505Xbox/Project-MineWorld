@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": { "identifier": "mineworld:quantumBlock" },
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"aa",
+			"aa"
+		],
+		"key": { "a": { "item": "mineworld:quantumShard" } },
+		"result": [
+			{
+				"item": "mineworld:quantum_block",
+				"count": 1
+			}
+		]
+	}
+}

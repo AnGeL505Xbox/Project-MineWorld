@@ -7,28 +7,16 @@
         },
         "conditions": [
             {
-                "minecraft:weight": {
-                    "default": 5
-                },
-                "minecraft:herd": {
-                    "min_size": 1,
-                    "max_size": 1
-                },
-                "minecraft:biome_filter": {
-                    "test": "has_biome_tag",
-                    "operator": "==",
-                    "value": "monster"
-                },
                 "minecraft:spawns_on_surface": {},
-                "minecraft:brightness_filter": {
-                    "min": 0,
-                    "max": 15,
-                    "adjust_for_weather": false
-                },
-                "minecraft:difficulty_filter": {
-                    "min": "easy",
-                    "max": "hard"
-                }
+                "minecraft:difficulty_filter": { "min": "easy", "max": "hard" },
+                "minecraft:weight": { "default": 4 },
+                "minecraft:herd": { "min_size": 1, "max_size": 1 },
+                "minecraft:brightness_filter": { "min": 4, "max": 15, "adjust_for_weather": false },
+                "minecraft:permute_type": [
+                    { "weight": 95 },
+                    { "weight": 5, "entity_type": "mineworld:machine" }
+                ],
+                "minecraft:biome_filter": { "test": "has_biome_tag", "operator": "==", "value": "monster" }
             }
         ]
     }

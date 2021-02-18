@@ -1,0 +1,20 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:axe_with_quantum_planks" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "mm",
+         "ms",
+         " s"
+      ],
+      "key": {
+         "m": { "item": "mineworld:quantum_planks" },
+         "s": { "item": "stick" }
+      },
+      "result": {
+         "item": "wooden_axe",
+         "count": 1
+      }
+   }
+}

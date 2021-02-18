@@ -8,7 +8,7 @@
         "components": {
             "minecraft:hand_equipped": true,
             "minecraft:icon": {
-                "texture": "machineCore"
+                "texture": "machineChipAllie"
             },
             "minecraft:creative_category": {
                 "parent": "itemGroup.name.machineComponents"

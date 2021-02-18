@@ -139,6 +139,19 @@
 			item.mineworld:betelgeuseSplinter.name=Esquirlia de betelgeuse
 			item.mineworld:betelgeuseSword.name=Espada de betelgeuse
 			item.mineworld:betelgeuseKnife.name=Cuchillo de betelgeuse
+		/*Componentes de maquina*/
+			item.mineworld:machineChipAllie.name=Chip aliado
+			item.mineworld:machineChipNeutral.name=Chip neutral
+			item.mineworld:machineEnhanceKit.name=Kit de mejora I
+			item.mineworld:machineCore.name=Nucleo de maquina
+			item.mineworld:machineTurret.name=Torreta
+			item.mineworld:machineShield.name=Escudo
+			item.mineworld:machineBullet.name=Bala de estaño
+			item.mineworld:machine.name=Maquina pequeña
+			item.mineworld:circuit.name=Circuito
+		/*Tecnologia*/
+			item.mineworld:onydotStick.name=Vara de Onyx-Peridot
+			item.mineworld:carbonNanotube.name=Nanotubos de carbono
 		/*Otros*/
 			item.mineworld:strangeMeat.name=Carne extraña
 			item.mineworld:blubber.name=Grasa de ballena
@@ -157,11 +170,7 @@
 			item.mineworld:shadowPotion.name=Pocion sombria
 			item.mineworld:darkrystal.name=Darkrystal
 			item.mineworld:shadowCookie.name=Galleta sombria
-			item.mineworld:machineCore.name=Nucleo de maquina
-			item.mineworld:circuit.name=Circuito
 			item.mineworld:mandrake.name=Mandragora
-			item.mineworld:onydotStick.name=Vara de Onyx-Peridot
-			item.mineworld:carbonNanotube.name=Nanotubos de carbono
 			item.mineworld:xeroFlower.name=Flor Xero
 			item.mineworld:xeroPotion.name=Pocion Xero
 		/*Huevos de spawn*/
@@ -273,3 +282,41 @@
         entity.mineworld:machine_merchant.name=Maquina mercante
         entity.mineworld:machine_mimic_ghast.name=Maquina mimetica tipo-Gh4st
         entity.mineworld:machine_mimic_enderman.name=Maquina mimetica tipo-3nd3rm4n
+	/*Mineworld other texts*/
+		/*Bloques*/
+			howtoplay.mineworldBlocks.header.ores=Minerales
+			howtoplay.mineworldBlocks.intro=Los minerales de mineworld se dividen en varios grupos: elementos, minerales, gemas y aleaciones. Cada grupo se genera en capas especificas, las cuales se detallaran a continuacion
+			howtoplay.mineworldBlocks.header.gems=Gemas
+			howtoplay.mineworldBlocks.gems=Las gemas son minerales muy raros que son usados para comerciar con las maquinas mercantes, transformar a los zorros(esto sucede con los opalos) y para algunos objetos, como los chips.En este grupo lo conforman: el peridoto, el onix, la aquamarina, la malaquita, los opalos, el rubi y el zafiro, estos se encuentran a partir de la capa 24 
+			howtoplay.mineworldBlocks.gems.opal=Los opalos destacan de las gemas porque son usados para transformar a los zorros en una deidad japonesa llamada kitsune. El opalo de fuego y el opalo de agua son usados para la transformacion y el opalo normal es usado para crear la piedra mistica.
+			howtoplay.mineworldBlocks.header.elements=Elementos
+			howtoplay.mineworldBlocks.elements=Los elementos son minerales que pueden ser usados para muchas cosas, armaduras, herramientas y otras cosas mas. En este grupo solo esta la plata, el iridio y el estaño los cuales se encuentran a partir de la capa 40 y 14 respectivamente.
+			howtoplay.mineworldBlocks.elements.tin=El estaño es un metal importante, ya que es usado principalmente para crear a las maquinas, comerciar con la maquina mercante y tambien es usado para crear la espada tecnologica.
+			howtoplay.mineworldBlocks.header.alloy=Aleaciones
+			howtoplay.mineworldBlocks.alloy=Las aleaciones son metales que solo se pueden obtener creandolos apartir de otros minerales, en estos se encuentra el bronce y la sombrita. El bronce es usado para crear armaduras y herramientas de mayor durabilidad que el oro, pero sin tanta proteccion o daño a animales.
+			howtoplay.mineworldBlocks.header.mineral=Minerales
+			howtoplay.mineworldBlocks.mineral=Los minerales en Mineworld sirven para obtener elementos, entre los que destacan el estaño, la plata, el oro y el hierro. En este grupo estan: la argentita, calaverita, casiterita, limonita, shungita, siderita y silvanita.
+			howtoplay.mineworldBlocks.mineral.shungite=La shungita, a diferencia de los demas minerales, es usado para crear el lingote de sombrita.
+			howtoplay.mineworldBlocks.header.oreOthers=Otros minerales
+			howtoplay.mineworldBlocks.anthracite=La antracita no entra en ninguno de los grupos anteriores, este mineral es considerado como un carbon mas potente, ya que es capaz de quemarse mas lentamente que el carbon vegetal y el carbon normal. Solo puede ser minado en el nether.
+			
+			howtoplay.mineworldBlocks.header.shadow=Bloques sombrios
+			howtoplay.mineworldBlocks.shadow= Los bloques sombrios son bloques naturales que aparecen en el mundo. Solo son usados como decoracion y algunos como los tablones sombrios pueden ser usados para crear materiales de madera comun. Estos bloques tienen la caracteristica de absorber la luz que hay alrededor.
+			howtoplay.mineworldBlocks.header.quantum=Bloques cuanticos
+			howtoplay.mineworldBlocks.quantum= Los bloques cuanticos son bloques especiales, ya que tienen una semitransparencia y ademas producen luz. Algunos de estos bloques se encuentran de forma natural en el overworld, otros como el mineral cuantico solo aparece en el End.
+			howtoplay.mineworldBlocks.quantumOre=El mineral cuantico es un mineral que solo existe en el fin. Este mineral suelta fragmentos cuanticos que pueden ser usados para crear perlas de ender o para crear el bloque cuantico.
+			
+			howtoplay.mineworldBlocks.header.others=Otros bloques
+			howtoplay.mineworldBlocks.others.intro=Algunos bloques no entran en la categoria de minerales, bloques sombrios o bloques cuanticos, por lo que todos esos bloques sobrantes se encuentran aqui
+			howtoplay.mineworldBlocks.header.natural=Bloques naturales
+			howtoplay.mineworldBlocks.natural=Los bloques naturales son todos aquellos que pueden aparecer en el mundo, ya sea en cuevas o en la superficie. Algunos de estos bloques son: tierra roja, flor xero y el bloque estelar.
+			howtoplay.mineworldBlocks.natural.redDirt=La tierra roja es un bloque decorativo el cual nunca se convierte en pasto. Se puede encontrar en cualquier profundidad y se puede crear con tierra normal y arena roja.
+			howtoplay.mineworldBlocks.natural.xeroFlower=La flor Xero es una flor rara que se usa para crear la pocion Xero. Esta flor es azul
+			howtoplay.mineworldBlocks.natural.stellarBlock=El bloque estelar es un bloque infrecuente de encontrar, se usa como fuente de iluminacion, bloque decorativo y para obtener el polvo estelar, que es usado para crear los elixires y para intercambios con el kitsune.
+			howtoplay.mineworldBlocks.header.stones=Piedras
+			howtoplay.mineworldBlocks.stones=Existen 4 tipos de piedras en Mineworld, el marmol, la peridotita, la quarzita y la pizarra. Cada uno de estos bloques son usados como decoracion, con excepcion de la quarzita, este bloque puede aparecer con estaño incrustado.
+			howtoplay.mineworldBlocks.header.techTable=Mesa tecnologica
+			howtoplay.mineworldBlocks.techTable=La mesa tecnologica es usado para crear muchos materiales que son usados para crear maquinaria o armamento. En esta mesa se pueden crear desde circuitos hasta la maquina pequeña.
+		/*Items*/
+			howtoplay.mineworldItems.header.Swords=
+		/*Entidades*/

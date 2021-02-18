@@ -1,16 +1,39 @@
-//Project MineWorld Machine v1
+//Project MineWorld Machine v2
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
         "description": {
             "identifier": "mineworld:machine_merchant",
-            "is_summonable": true,
-            "is_spawnable": true,
-            "is_experimental": false
+            "is_summonable": true, "is_spawnable": true, "is_experimental": false
+        },
+        "component_groups": {
+            "machine:normalMarket": {
+                "minecraft:economy_trade_table": {
+                    "display_name": "entity.mineworld:machine_merchant.name",
+                    "table": "trading/machineMarket.json",
+                    "new_screen": true,
+                    "persist_trades": false
+                }
+            },
+            "machine:blackMarket": {
+                "minecraft:economy_trade_table": {
+                    "display_name": "entity.mineworld:machine_merchant.name",
+                    "table": "trading/machineBlackMarket.json",
+                    "new_screen": true,
+                    "persist_trades": false
+                }
+            },
+            "machine:specialMarket": {
+                "minecraft:economy_trade_table": {
+                    "display_name": "entity.mineworld:machine_merchant.name",
+                    "table": "trading/machineSpecialMarket.json",
+                    "new_screen": true,
+                    "persist_trades": false
+                }
+            }
         },
         "components": {
-            		
-			//Machine pre-assets
+			//#region Machine pre-assets
 			
             "minecraft:type_family": { "family": [ "machine" ] },
             "minecraft:loot": { "table": "loot_tables/entities/machine.json" },
@@ -93,22 +116,47 @@
 					]
 				}
 			},
-            
-            //Machine merchant
-
-            "minecraft:collision_box": {
-                "width": 0.5,
-                "height": 0.5
-            },
+            //#endregion
+            //#region Machine merchant
+            "minecraft:collision_box": { "width": 0.5, "height": 0.5 },
             "minecraft:scale": { "value": 1.25 },
             "minecraft:behavior.trade_with_player": { "priority": 1 },
-            "minecraft:economy_trade_table": {
-                "display_name": "entity.mineworld:machine_merchant.name",
-                "table": "trading/machine_trades.json",
-                "new_screen": true,
-                "persist_trades": false
-            },
             "minecraft:movement": { "value": 0.3 }
+            //#endregion
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "weight": 75,
+                        "add": { "component_groups": [ "machine:normalMarket" ] }
+                    },
+                    {
+                        "weight": 50,
+                        "add": { "component_groups": [ "machine:blackMarket" ] }
+                    },
+                    {
+                        "weight": 25,
+                        "add": { "component_groups": [ "machine:specialMarket" ] }
+                    }
+                ]
+            },
+            "mineworld:as_merchant":{
+                "randomize": [
+                    {
+                        "weight": 65,
+                        "add": { "component_groups": [ "machine:normalMarket" ] }
+                    },
+                    {
+                        "weight": 45,
+                        "add": { "component_groups": [ "machine:blackMarket" ] }
+                    },
+                    {
+                        "weight": 30,
+                        "add": { "component_groups": [ "machine:specialMarket" ] }
+                    }
+                ]
+            }
         }
     }
 }

@@ -7,9 +7,42 @@
             "minecraft:destroy_time": 0.5,
             "minecraft:explosion_resistance": 0,
             "minecraft:block_light_absorption": 1,
-            "minecraft:material_instances": { "*": { "texture": "shadow_leaves", "render_method": "blend" } },
-            "minecraft:loot": "loot_tables/blocks/shadowLeaves.json",
             "minecraft:display_name": "mineworld:shadowLeaves"
+        },
+        "permutations": [
+            {
+                "condition":"q.moon_phase == 0",
+                "components": {
+                    "minecraft:material_instances": { "*": { "texture": "shadow_leaves_dead_flowers", "render_method": "blend" } },
+                    "minecraft:loot": "loot_tables/blocks/shadowLeaves.json"
+                }
+            },
+            {
+                "condition":"q.moon_phase == 1 || q.moon_phase == 2 || q.moon_phase == 3",
+                "components": {
+                    "minecraft:material_instances": { "*": { "texture": "shadow_leaves", "render_method": "blend" } },
+                    "minecraft:loot": "loot_tables/blocks/shadowLeaves.json"
+                }
+            },
+            {
+                "condition":"q.moon_phase == 4",
+                "components": {
+                    "minecraft:material_instances": { "*": { "texture": "shadow_leaves_rise_flowers", "render_method": "blend" } },
+                    "minecraft:loot": "loot_tables/blocks/shadowLeavesFlowers.json"
+                }
+            },
+            {
+                "condition":"q.moon_phase == 5 || q.moon_phase == 6 || q.moon_phase == 7",
+                "components": {
+                    "minecraft:material_instances": { "*": { "texture": "shadow_leaves_flowers", "render_method": "blend" } },
+                    "minecraft:loot": "loot_tables/blocks/shadowLeavesFlowers.json"
+                }
+            }
+        ],
+        "events":{
+            "transform":{
+                "set_block": { "block_type": "mineworld:shadow_grass" }
+            }
         }
     }
 }

@@ -7,20 +7,11 @@
         },
         "components": {
             "minecraft:hand_equipped": true,
-            "minecraft:projectile": {
-                "projectile_entity": "mineworld:machine_bullet",
-                "minimum_critical_power": 0.5
-            },
-            "minecraft:throwable": { },
-            "minecraft:icon": {
-                "texture": "bag"
-            },
-            "minecraft:creative_category": {
-                "parent": "itemGroup.name.machineComponents"
-            },
-            "minecraft:display_name": {
-                "value": "item.mineworld:machineBullet.name"
-            }
+            "minecraft:projectile": { "projectile_entity": "mineworld:machine_bullet" },
+            "minecraft:throwable": { "do_swing_animation": true },
+            "minecraft:icon": { "texture": "machineBullet" },
+            "minecraft:creative_category": { "parent": "itemGroup.name.machineComponents" },
+            "minecraft:display_name": { "value": "item.mineworld:machineBullet.name" }
         }
     }
 }

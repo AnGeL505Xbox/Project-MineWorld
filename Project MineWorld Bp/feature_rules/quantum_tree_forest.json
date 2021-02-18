@@ -7,10 +7,16 @@
     },
     "conditions": {
       "placement_pass": "surface_pass",
-      "minecraft:biome_filter": [ { "test": "has_biome_tag", "operator": "==", "value": "overworld" } ]
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "birch"
+        }
+      ]
     },
     "distribution": {
-      "iterations": 75,
+      "iterations": 5,
       "x": {
         "distribution": "uniform",
         "extent": [ 0, 8 ]

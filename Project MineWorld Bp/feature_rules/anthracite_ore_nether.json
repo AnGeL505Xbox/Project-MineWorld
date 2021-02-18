@@ -6,7 +6,7 @@
          "places_feature": "mineworld:anthracite_cave"
       },
       "conditions": {
-         "placement_pass": "surface_pass",
+         "placement_pass": "underground_pass",
          "minecraft:biome_filter": [
             {
                "any_of": [

@@ -5,29 +5,13 @@
       "identifier": "mineworld:machine_mimic_ghast",
       "population_control": "monster"
     },
-
     "conditions": [
       {
-        "minecraft:spawns_underground": {
-        },
-
-        "minecraft:difficulty_filter": {
-          "min": "easy",
-          "max": "hard"
-        },
-
-        "minecraft:weight": {
-          "default": 40
-        },
-        
-        "minecraft:density_limit": {
-          "surface": 0,
-          "underground": 2
-        },
-    
-        "minecraft:biome_filter": { 
-          "test": "has_biome_tag", "operator":"==", "value": "nether"
-        }
+        "minecraft:spawns_underground": {},
+        "minecraft:difficulty_filter": { "min": "easy", "max": "hard" },
+        "minecraft:weight": { "default": 35 },        
+        "minecraft:density_limit": { "surface": 0, "underground": 2 },
+        "minecraft:biome_filter": {  "test": "has_biome_tag", "operator":"==", "value": "nether" }
       }
     ]
   }

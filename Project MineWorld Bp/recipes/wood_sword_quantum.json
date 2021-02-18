@@ -1,0 +1,20 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:sword_with_quantum_planks" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "m",
+         "m",
+         "s"
+      ],
+      "key": {
+         "m": { "item": "mineworld:quantum_planks" },
+         "s": { "item": "stick" }
+      },
+      "result": {
+         "item": "wooden_sword",
+         "count": 1
+      }
+   }
+}

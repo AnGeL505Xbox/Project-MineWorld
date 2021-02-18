@@ -240,7 +240,7 @@
          "mineworld.red_panda:behavior.day": {
             "minecraft:behavior.find_cover": {
                "cooldown_time": 5,
-               "priority": 6,
+               "priority": 3,
                "speed_multiplier": 1
             },
             "minecraft:behavior.nap": {
@@ -276,7 +276,7 @@
                "cooldown_min": 2,
                "mob_detect_dist": 12,
                "mob_detect_height": 6,
-               "priority": 5
+               "priority": 3
             }
          },
 

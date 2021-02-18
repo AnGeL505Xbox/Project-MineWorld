@@ -11,7 +11,7 @@
          "animations": { "dead_fenix": "controller.animation.dead_fenix" }
       },
       "components": {
-         //#region Fly entity pere-assets
+         //#region Fly entity pre-assets
          "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
          "minecraft:nameable": {},
          "minecraft:movement": { "value": 0.01 },

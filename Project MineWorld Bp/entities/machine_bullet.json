@@ -5,7 +5,7 @@
       "description": {
          "identifier": "mineworld:machineBullet",
          "is_spawnable": false,
-         "is_summonable": false,
+         "is_summonable": true,
          "is_experimental": false
       },
       "components": {
@@ -16,23 +16,21 @@
          "minecraft:projectile": {
             "on_hit": {
                "impact_damage": {
-                  "damage": 4,
+                  "damage": 5,
                   "knockback": false,
-                  "catch_fire": false,
                   "semi_random_diff_damage": true
                },
-               "catch_fire": { "fire_affected_by_griefing": false },
                "remove_on_hit": {}
             },
-            "power": 0.9,
-            "gravity": 0.01,
-            "inertia": 1,
+            "power": 1.05,
+            "gravity": 0.08,
+            "inertia": 0.9,
             "liquid_inertia": 1,
             "anchor": 2,
             "offset": [ 0, 0.5, 0 ],
             "semi_random_diff_damage": true,
             "uncertainty_base": 10,
-            "reflect_on_hurt": true
+            "reflect_on_hurt": false
          },
          "minecraft:physics": {},
          "minecraft:pushable": {

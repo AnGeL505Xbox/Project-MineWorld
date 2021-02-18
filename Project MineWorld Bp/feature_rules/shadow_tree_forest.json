@@ -11,12 +11,12 @@
         {
           "test": "has_biome_tag",
           "operator": "==",
-          "value": "shadow_forest"
+          "value": "roofed"
         }
       ]
     },
     "distribution": {
-      "iterations": 100,
+      "iterations": 5,
       "x": {
         "distribution": "uniform",
         "extent": [ 0, 8 ]

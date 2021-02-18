@@ -5,10 +5,12 @@
 		"tags": [ "techno_table" ],
 		"pattern": [
 			"t t",
-			"ttt"
+			"tit",
+			" t "
 		],
 		"key": {
-			"t": { "item": "mineworld:tinIngot" }
+			"t": { "item": "mineworld:tinIngot" },
+			"i": { "item": "minecraft:iron_ingot" }
 		},
 		"result": [
 			{

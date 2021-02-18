@@ -1,0 +1,20 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:hoe_with_quantum_planks" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "mm",
+         " s",
+         " s"
+      ],
+      "key": {
+         "m": { "item": "mineworld:quantum_planks" },
+         "s": { "item": "stick" }
+      },
+      "result": {
+         "item": "wooden_hoe",
+         "count": 1
+      }
+   }
+}

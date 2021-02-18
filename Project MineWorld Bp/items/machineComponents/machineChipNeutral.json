@@ -1,0 +1,21 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:machineChipNeutral",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": {
+                "texture": "machineChipNeutral"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.machineComponents"
+            },
+            "minecraft:display_name": {
+                "value": "item.mineworld:machineChipNeutral.name"
+            }
+        }
+    }
+}

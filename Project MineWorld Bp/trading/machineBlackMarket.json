@@ -1,0 +1,157 @@
+{
+    "tiers": [
+        {
+            "groups": [
+                //#region Swords
+                {
+                    "num_to_select": 1,
+					"trades": [
+						{
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 58, "max":64 } } ],
+							"gives": [ { "item": "mineworld:twilightSword", "quantity": 1 } ],
+							"max_uses": 1,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 58, "max":64 } } ],
+							"gives": [ { "item": "mineworld:glacierSword", "quantity": 1 } ],
+							"max_uses": 1,
+							"reward_exp": true
+						}
+					]
+                },
+                //#endregion
+                //#region Materials
+                    //#region Ruby
+                {
+                    "num_to_select": 2,
+					"trades": [
+						{
+							"wants": [ { "item": "mineworld:ruby", "quantity": 1 } ],
+							"gives": [ { "item": "mineworld:bronzeDoubleSword", "quantity": { "min": 1, "max": 2 } } ],
+							"max_uses": 32,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:ruby", "quantity": 1 } ],
+							"gives": [ { "item": "minecraft:ender_pearl", "quantity": { "min": 1, "max": 4 } } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:ruby", "quantity": { "min": 1, "max": 3 } } ],
+							"gives": [ { "item": "minecraft:emerald", "quantity": 1 } ],
+							"max_uses": 64,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:ruby", "quantity": 1 } ],
+							"gives": [ { "item": "mineworld:sapphire", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        }
+					]
+                },
+                    //#endregion
+                    //#region Sapphire
+                {
+                    "num_to_select": 2,
+					"trades": [
+						{
+							"wants": [ { "item": "mineworld:sapphire", "quantity": { "min": 1, "max": 2 } } ],
+							"gives": [ { "item": "mineworld:circuit", "quantity": 15 } ],
+							"max_uses": 64,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:sapphire", "quantity": 1 } ],
+							"gives": [ { "item": "mineworld:quantum_planks", "quantity": { "min": 1, "max": 6 } } ],
+							"max_uses": 8,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:sapphire", "quantity": 1 } ],
+							"gives": [ { "item": "mineworld:sombriteIngot", "quantity": { "min": 1, "max": 3 } } ],
+							"max_uses": 64,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:sapphire", "quantity": 1 } ],
+							"gives": [ { "item": "mineworld:ruby", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        }
+					]
+                },
+                    //#endregion
+                    //#region Tin
+                {
+                    "num_to_select": 2,
+					"trades": [
+						{
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": 4 } ],
+							"gives": [ { "item": "mineworld:machineShield", "quantity": 1 } ],
+							"max_uses": 128,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": 4 } ],
+							"gives": [ { "item": "mineworld:machineTurret", "quantity": 1 } ],
+							"max_uses": 64,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": 2 } ],
+							"gives": [ { "item": "mineworld:malachite", "quantity": { "min": 1, "max": 3 } } ],
+							"max_uses": 32,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": 6 } ],
+							"gives": [ { "item": "mineworld:onyx", "quantity": { "min": 1, "max": 3 } } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 5, "max": 8 } } ],
+							"gives": [ { "item": "mineworld:machineChipAllie", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 5, "max": 8 } } ],
+							"gives": [ { "item": "mineworld:machineChipNeutral", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        }
+					]
+                },
+                {
+                    "num_to_select": 1,
+					"trades": [
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 1, "max": 4 } } ],
+							"gives": [ { "item": "mineworld:opalNormal", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 2, "max": 3 } } ],
+							"gives": [ { "item": "mineworld:ruby", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+                        },
+                        {
+							"wants": [ { "item": "mineworld:tinIngot", "quantity": { "min": 2, "max": 5 } } ],
+							"gives": [ { "item": "mineworld:sapphire", "quantity": 1 } ],
+							"max_uses": 16,
+							"reward_exp": true
+						}
+                    ]
+                }
+                    //#endregion
+                //#endregion
+            ]
+        }
+    ]
+}

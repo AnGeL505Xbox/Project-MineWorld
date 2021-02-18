@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": { "identifier": "mineworld:machineChipNeutral" },
+		"tags": [ "techno_table" ],
+		"pattern": [
+			"tot",
+			"ccc",
+			"ttt"
+		],
+		"key": {
+			"t": { "item": "mineworld:tinIngot" },
+			"c": { "item": "mineworld:circuit" },
+			"o": { "item": "mineworld:onyx" }
+		},
+		"result": [
+			{
+				"item": "mineworld:machineChipNeutral",
+				"count": 2
+			}
+		]
+	}
+}

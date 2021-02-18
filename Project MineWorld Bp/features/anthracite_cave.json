@@ -1,13 +1,9 @@
 {
    "format_version": "1.13.0",
    "minecraft:ore_feature": {
-      "description": {
-         "identifier": "mineworld:anthracite_cave"
-      },
+      "description": { "identifier": "mineworld:anthracite_cave" },
       "count": 7,
       "places_block": "mineworld:anthracite_ore",
-      "may_replace": [
-         "minecraft:netherrack"
-      ]
+      "may_replace": [ "minecraft:netherrack" ]
    }
 }

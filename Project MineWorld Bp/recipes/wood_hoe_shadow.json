@@ -1,0 +1,20 @@
+{
+   "format_version": "1.12",
+   "minecraft:recipe_shaped": {
+      "description": { "identifier": "mineworld:hoe_with_shadow_plank" },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+         "mm",
+         " s",
+         " s"
+      ],
+      "key": {
+         "m": { "item": "mineworld:shadow_plank" },
+         "s": { "item": "stick" }
+      },
+      "result": {
+         "item": "wooden_hoe",
+         "count": 1
+      }
+   }
+}

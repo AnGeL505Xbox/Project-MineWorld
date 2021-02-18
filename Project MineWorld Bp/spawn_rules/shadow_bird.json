@@ -8,19 +8,13 @@
 		"conditions": [
 			{
 				"minecraft:spawns_on_surface": {},
-				"minecraft:brightness_filter": {
-					"min": 7,
-					"max": 15,
-					"adjust_for_weather": false
-				},
+				"minecraft:brightness_filter": { "min": 0, "max": 7, "adjust_for_weather": true },
 				"minecraft:weight": { "default": 8 },
-				"minecraft:herd": {
-					"min_size": 1,
-					"max_size": 3
-				},
-				"minecraft:biome_filter": {
-					"test": "has_biome_tag", "operator": "==", "value": "shadow_forest"
-				}
+				"minecraft:herd": { "min_size": 1, "max_size": 2 },
+				"minecraft:biome_filter": [ 
+					{ "test": "has_biome_tag", "operator": "==", "value": "forest" },
+					{ "test": "has_biome_tag", "operator": "==", "value": "roofed" }
+				]
 			}
 		]
 	}
