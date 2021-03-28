@@ -1,3 +1,4 @@
+//Betelgen 1.1.1
 {
    "format_version": "1.13.0",
    "minecraft:feature_rules": {
@@ -6,7 +7,7 @@
          "places_feature": "mineworld:anthracite_cave"
       },
       "conditions": {
-         "placement_pass": "underground_pass",
+         "placement_pass": "surface_pass",
          "minecraft:biome_filter": [
             {
                "any_of": [
@@ -20,7 +21,7 @@
          ]
       },
       "distribution": {
-         "iterations": 15,
+         "iterations": 30,
          "coordinate_eval_order": "zyx",
          "x": {
             "distribution": "uniform",

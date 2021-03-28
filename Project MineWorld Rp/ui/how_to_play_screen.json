@@ -28,7 +28,12 @@
     "type": "panel",
     "size": [ "100%", "26px" ],
     "controls": [
-      { "subHeader@how_to_play.header_background": {} }
+      {
+        "subHeader@how_to_play.header_background": {
+          "texture": "textures/ui/newBanners",
+          "size": [ "100%", "30px" ]
+        } 
+      }
     ]
   },
 

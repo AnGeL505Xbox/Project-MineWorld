@@ -44,8 +44,7 @@
             },
             "minecraft:display_name": {
                 "value": [ 
-                    "item.mineworld:twilightSword.name",
-                    "item.mineworld:twilightSword2.name"
+                    "item.mineworld:twilightSword.name"
                 ]
             }
         },

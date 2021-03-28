@@ -87,7 +87,7 @@
         "circuit": {
             "textures": "textures/items/circuit"
         },
-        "copper": {
+        "mineworldCopper": {
             "textures": "textures/items/copper"
         },
         "darkrystal": {

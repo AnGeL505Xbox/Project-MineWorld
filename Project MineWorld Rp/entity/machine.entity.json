@@ -10,13 +10,12 @@
             "pre_animation":[
                "v.unWeapon = ( q.mark_variant == 0 ) ? 1 : 0;",
                "v.shield = ( q.mark_variant == 1 ) ? 1 : 0;",
-               "v.turret = ( q.mark_variant == 2 ) ? 1 : 0;",
-               "v.shieldTurret = ( q.mark_variant == 3 ) ? 1 : 0;"
+               "v.turret = ( q.mark_variant == 2 ) ? 1 : 0;"
             ],
             "animate": [
                "look_at_target",
                "walk",
-               {"attack": "query.has_target"}
+               { "attack": "query.has_target" }
             ]
          },
          "animations": {

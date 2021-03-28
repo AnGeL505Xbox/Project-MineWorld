@@ -1,12 +1,12 @@
 {
-    "format_version": "1.16.200",
+    "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:quarzite_paver"
         },
         "components": {
             "minecraft:loot": "loot_tables/blocks/quarzitePaver.json",
-            "minecraft:destroy_time": 1.25,
+            "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 30,
             "minecraft:map_color": "#fbf7f5",
             "minecraft:display_name": "mineworld:quarzitePaver"

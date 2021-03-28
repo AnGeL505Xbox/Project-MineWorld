@@ -8,8 +8,8 @@
         },
 
         "component_groups": {
-
-            "baby":{
+            //#region States
+            "tanuki:baby":{
                 "minecraft:is_baby": {},
                 "minecraft:health": { "value": 8 },
                 "minecraft:scale": { "value": 0.5 },
@@ -23,15 +23,12 @@
                         "rabbit", "cooked_rabbit",
                         "rotten_flesh"
                     ],
-                    "grow_up": {
-                        "event": "minecraft:ageable",
-                        "target": "self"
-                    }
+                    "grow_up": { "event": "minecraft:ageable", "target": "self" }
                 },
 
                 "minecraft:behavior.follow_parent": { "priority": 2, "speed_multiplier": 1 }
             },
-            "adult":{
+            "tanuki:adult":{
                 "minecraft:health": { "value": 12 },
                 "minecraft:breedable": {
                     "require_tame": true, "inherit_tamed": true,
@@ -54,15 +51,16 @@
                     "on_death": "query.last_hit_by_player ? 2 + (query.equipment_count * Math.Random(1,2)) : 0"
                 }
             },
-
-            "wild":{
+            //#endregion
+            //#region Wild-Tame
+            "tanuki:wild":{
                 "minecraft:tameable": {
                     "probability": 0.15,
                     "tame_items": "bone",
                     "tame_event": { "event": "minecraft:tameable", "target": "self" }
                 }
             },
-            "tame":{
+            "tanuki:tamed":{
                 "minecraft:is_tamed": {},
                 "minecraft:attack": { "damage": 4 },
                 "minecraft:sittable": {},
@@ -75,12 +73,11 @@
                 "minecraft:behavior.owner_hurt_by_target": { "priority": 1 },
                 "minecraft:behavior.breed": { "priority": 2 },
                 "minecraft:behavior.owner_hurt_target": { "priority": 2 },
-                "minecraft:behavior.follow_owner": { "priority": 6, "speed_multiplier": 1, "start_distance": 10, "stop_distance": 2 }
+                "minecraft:behavior.follow_owner": { "priority": 3, "speed_multiplier": 1, "start_distance": 10, "stop_distance": 2 }
             }
+            //#endregion
         },
-
         "components": {
-
             //Cuadruped preassets
 
             "minecraft:behavior.float": { "priority": 0 },
@@ -144,103 +141,48 @@
             "minecraft:collision_box": { "width": 0.375, "height": 0.8125 },
             "minecraft:healable": {
                 "items": [
-                    {
-                        "item": "porkchop",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_porkchop",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "fish",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "salmon",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "clownfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "pufferfish",
-                        "heal_amount": 1
-                    },
-                    {
-                        "item": "cooked_fish",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "cooked_salmon",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "beef",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_beef",
-                        "heal_amount": 8
-                    },
-                    {
-                        "item": "chicken",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "cooked_chicken",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "muttonRaw",
-                        "heal_amount": 2
-                    },
-                    {
-                        "item": "muttonCooked",
-                        "heal_amount": 6
-                    },
-                    {
-                        "item": "rotten_flesh",
-                        "heal_amount": 4
-                    },
-                    {
-                        "item": "rabbit",
-                        "heal_amount": 3
-                    },
-                    {
-                        "item": "cooked_rabbit",
-                        "heal_amount": 5
-                    },
-                    {
-                        "item": "rabbit_stew",
-                        "heal_amount": 10
-                    }
+                    { "item": "porkchop", "heal_amount": 3 },
+                    { "item": "cooked_porkchop", "heal_amount": 8 },
+                    { "item": "fish", "heal_amount": 2 },
+                    { "item": "salmon", "heal_amount": 2 },
+                    { "item": "clownfish", "heal_amount": 1 },
+                    { "item": "pufferfish", "heal_amount": 1 },
+                    { "item": "cooked_fish", "heal_amount": 5 },
+                    { "item": "cooked_salmon", "heal_amount": 6 },
+                    { "item": "beef", "heal_amount": 3 },
+                    { "item": "cooked_beef", "heal_amount": 8 },
+                    { "item": "chicken", "heal_amount": 2 },
+                    { "item": "cooked_chicken", "heal_amount": 6 },
+                    { "item": "muttonRaw", "heal_amount": 2 },
+                    { "item": "muttonCooked", "heal_amount": 6 },
+                    { "item": "rotten_flesh", "heal_amount": 4 },
+                    { "item": "rabbit", "heal_amount": 3 },
+                    { "item": "cooked_rabbit", "heal_amount": 5 },
+                    { "item": "rabbit_stew", "heal_amount": 10 }
                 ]
             }
         },
-
         "events": {
             "minecraft:entity_spawned": {
                 "randomize": [
                     {
-                        "weight": 60,
-                        "add": { "component_groups": [ "adult", "wild" ] }
+                        "weight": 75,
+                        "add": { "component_groups": [ "tanuki:adult", "tanuki:wild" ] }
                     },
                     {
                         "weight": 25,
-                        "add": { "component_groups": [ "baby", "wild" ] }
+                        "add": { "component_groups": [ "tanuki:baby", "tanuki:wild" ] }
                     }
                 ]
             },
-            "minecraft:entity_born": { "add": { "component_groups": [ "baby", "tame" ] } },
+            "minecraft:entity_born": { "add": { "component_groups": [ "tanuki:baby", "tanuki:tamed" ] } },
             "minecraft:ageable": {
-                "add": { "component_groups": [ "adult" ] },
-                "remove": { "component_groups": [ "baby" ] }
+                "add": { "component_groups": [ "tanuki:adult" ] },
+                "remove": { "component_groups": [ "tanuki:baby" ] }
             },
             "minecraft:tameable": {
-                "add": { "component_groups": [ "minecraft:tame" ] },
-                "remove": { "component_groups": [ "wild" ] }
+                "add": { "component_groups": [ "tanuki:tamed" ] },
+                "remove": { "component_groups": [ "tanuki:wild" ] }
             }            
         }
     }

@@ -11,7 +11,7 @@
                 "texture": "bronzeIngot"
             },
             "minecraft:creative_category": {
-                "parent": "itemGroup.name.alloyl"
+                "parent": "itemGroup.name.alloy"
             },
             "minecraft:display_name": {
                 "value": "item.mineworld:bronzeIngot.name"

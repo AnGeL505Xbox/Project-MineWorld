@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "mineworld:furnaceSideriteOre"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "mineworld:siderite_ore",
+		"output": "mineworld:siderite"
+	}
+}

@@ -32,7 +32,7 @@
 			item.mineworld:peridot.name=Peridot
 			item.mineworld:sapphire.name=Sapphire
 			item.mineworld:ruby.name=Ruby
-			item.mineworld:copper.name=Copper
+			item.mineworld:anthracite.name=Anthracite
 			item.mineworld:stellarDust.name=Stellar dust
 		/*Cristales*/
 			item.mineworld:argentite.name=Argentite
@@ -124,6 +124,19 @@
 			item.mineworld:betelgeuseSplinter.name=Betelgeuse splinter
 			item.mineworld:betelgeuseSword.name=Betelgeuse sword
 			item.mineworld:betelgeuseKnife.name=Betelgeuse knife
+		/*Componentes de maquina*/
+			item.mineworld:machineChipAllie.name=Allie chip
+			item.mineworld:machineChipNeutral.name=Neutral chip
+			item.mineworld:machineEnhanceKit.name=Enhance Kit
+			item.mineworld:machineTurret.name=Turret
+			item.mineworld:machineShield.name=Shield
+			item.mineworld:machineBullet.name=Negative charge
+			item.mineworld:machine.name=Small machine
+			item.mineworld:machineCore.name=Machine core
+			item.mineworld:circuit.name=Circuit
+		/*Tecnologia*/
+			item.mineworld:onydotStick.name=Onyx-Peridot stick
+			item.mineworld:carbonNanotube.name=Carbon nanotube
 		/*Otros*/
 			item.mineworld:strangeMeat.name=Strange meat
 			item.mineworld:blubber.name=Blubber
@@ -142,12 +155,8 @@
 			item.mineworld:shadowPotion.name=Shadow potion
 			item.mineworld:darkrystal.name=Darkrystal
 			item.mineworld:shadowCookie.name=Shadow cookie
-			item.mineworld:machineCore.name=Machine core
-			item.mineworld:circuit.name=Circuit
 			item.mineworld:quantumShard.name=Quantum shard
 			item.mineworld:mandrake.name=Mandrake
-			item.mineworld:onydotStick.name=Onyx-Peridot stick
-			item.mineworld:carbonNanotube.name=Carbon nanotube
 			item.mineworld:xeroFlower.name=Xero flower
 			item.mineworld:xeroPotion.name=Xero potion
 		/*Huevos de spawn*/
@@ -174,6 +183,7 @@
 			item.spawn_egg.entity.mineworld:machine_merchant.name=Spawn merchant machine
 			item.spawn_egg.entity.mineworld:machine_mimic_ghast.name=Spawn Gh4st-type mimicry machine
 			item.spawn_egg.entity.mineworld:machine_mimic_enderman.name=Spawn 3nd3rm4n-type mimicry machine
+			item.spawn_egg.entity.mineworld:tanuki.name=Spawn tanuki
 	/*Bloques*/
 		/*Minerals*/
 			tile.mineworld:argentiteOre.name=Argentite ore
@@ -205,14 +215,22 @@
 			tile.mineworld:bronzeBlock.name=Bronze block
 			tile.mineworld:tinBlock.name=Tin block
 			tile.mineworld:sombriteBlock.name=Sombrite block
+
+			tile.mineworld:anthraciteOre.name=Anthracite ore
+
+			tile.mineworld:quantumOre.name=Quantum ore
+			tile.mineworld:quantumBlock.name=Quantum block
 		/*Bloques de piedra*/
 			tile.mineworld:slate.name=Slate
 			tile.mineworld:slateBricks.name=Slate bricks
 			tile.mineworld:slatePebbles.name=Slate pebbles
+
 			tile.mineworld:peridotite.name=Peridotite
 			tile.mineworld:peridotiteSmooth.name=Smooth Peridotite
 			tile.mineworld:peridotitePaver.name=Peridotite paver
+
 			tile.mineworld:marble.name=Marble
+
 			tile.mineworld:quarzite.name=Quarzite
 			tile.mineworld:quarziteTin.name=Quarzite with tin
 			tile.mineworld:quarziteSmooth.name=Smooth quarzite
@@ -257,3 +275,42 @@
 		entity.mineworld:machine_merchant.name=Merchant Machine
 		entity.mineworld:machine_mimic_ghast.name=Gh4st-type mimicry machine
 		entity.mineworld:machine_mimic_enderman.name=3nd3rm4n-type mimicry machine
+		entity.mineworld:tanuki.name=Tanuki
+	/*Mineworld other texts*/
+	  howtoplay.category.mineworld=Mineworld
+	  howtoplay.blocksMineworld=Bloques
+	  howtoplay.blocksMineworld.title=Bloques de mineworld
+		/*Bloques*/
+			howtoplay.mineworldBlocks.header.ores=Ores
+			howtoplay.mineworldBlocks.intro=Mineworld minerals are divided into several groups: elements, minerals, gems and alloys. Each group is generated in specific layers, which will be detailed below
+			howtoplay.mineworldBlocks.header.gems=Gems
+			howtoplay.mineworldBlocks.gems=Gems are very rare minerals that are used to trade merchant machines, transform foxes (this happens with opals) and for some objects, such as chips. In this group they make up it: the peridot, the onyx, the aquamarine, the malachite, the opals, the rubi and the sapphire, these are found from layer 24 
+			howtoplay.mineworldBlocks.gems.opal=Opals stand out from gems because they are used to transform foxes into a Japanese deity called kitsune. The fire opal and water opal are used for transformation and the normal opal is used to create the mystical stone.
+			howtoplay.mineworldBlocks.header.elements=Elements
+			howtoplay.mineworldBlocks.elements=Elements are minerals that can be used for many things, armor, tools and more. In this group there is only silver, iridium and tin which are found from layer 40 and 14 respectively.
+			howtoplay.mineworldBlocks.elements.tin=Tin is an important metal, as it is mainly used to create machines, trade with the merchant machine and is also used to create the tech sword.
+			howtoplay.mineworldBlocks.header.alloy=Alloy
+			howtoplay.mineworldBlocks.alloy=Alloys are metals that can only be obtained by creating them away from other minerals, in these are bronze and sombria. Bronze is used to create armor and tools that are more durability than gold, but without as much protection or damage to animals.
+			howtoplay.mineworldBlocks.header.mineral=Minerals
+			howtoplay.mineworldBlocks.mineral=Minerals in Mineworld are used to obtain elements, including tin, silver, gold and iron. In this group are: argentite, calaverite, cassiterite, limonite, shungite, siderite and sylvanite.
+			howtoplay.mineworldBlocks.mineral.shungite=Shungite, unlike other minerals, is used to create the sombrite ingot.
+			howtoplay.mineworldBlocks.header.oreOthers=Other minerals
+			howtoplay.mineworldBlocks.anthracite=Anthracite does not enter any of the above groups, this mineral is considered a more potent carbon, as it is able to burn more slowly than vegetable carbon and normal coal. It can only be mined on the nether.
+			
+			howtoplay.mineworldBlocks.header.shadow=Shadow blocks
+			howtoplay.mineworldBlocks.shadow=Shadow blocks are natural blocks that appear in the world. They are only used as decoration and some as shadow planks can be used to create common wood materials. These blocks have the characteristic of absorbing the light around them.
+			howtoplay.mineworldBlocks.header.quantum=Quantum blocks
+			howtoplay.mineworldBlocks.quantum=Quantum blocks are special blocks, as they have a semi-transparence and also produce light. Some of these blocks are found naturally in the overworld, others as the quantic mineral only appears in the End.
+			howtoplay.mineworldBlocks.quantumOre=Quantum ore is a mineral that exists only in The End. This mineral releases quantum shards that can be used to create ender pearls or to create the quantum block.
+			
+			howtoplay.mineworldBlocks.header.others=Other blocks
+			howtoplay.mineworldBlocks.others.intro=Some blocks do not fall into the category of minerals, shaded blocks or quantical blocks, so all those leftover blocks are located here
+			howtoplay.mineworldBlocks.header.natural=Natural blocks
+			howtoplay.mineworldBlocks.natural=Natural blocks are all those that can appear in the world, either in caves or on the surface. Some of these blocks are: red dirt, xero flower and the stellar block.
+			howtoplay.mineworldBlocks.natural.redDirt=Red earth is a decorative block that never becomes grass. It can be found at any depth and can be created with normal dirt and red sand.
+			howtoplay.mineworldBlocks.natural.xeroFlower=The Xero flower is a rare flower used to create the Xero potion. This flower is blue
+			howtoplay.mineworldBlocks.natural.stellarBlock=The star block is an uncommon block to find, used as a source of illumination, decorative block and to obtain stellar dust, which is used to create elixirs and for exchanges with kitsune.
+			howtoplay.mineworldBlocks.header.stones=Stones
+			howtoplay.mineworldBlocks.stones=There are 4 types of stones in Mineworld, marble, peridotite, quarzite and slate. Each of these blocks are used as decoration, with the exception of the quarzite, this block can appear with embedded tin.
+			howtoplay.mineworldBlocks.header.techTable=Technology table
+			howtoplay.mineworldBlocks.techTable=The technology table is used to create many materials that are used to create machinery or weaponry. On this table you can create from circuits to the small machine.

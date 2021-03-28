@@ -1,9 +1,12 @@
-/*Mineworld 1.5*/
+/*Project MineWorld 1.1*/
 	/*Acciones*/
 		mineworld.bag=Bolsa
 		mineworld.convert=Convertir
 		mineworld.trade=Intercambiar
 		act.tecTable=Mesa tecnologica
+		mineworld.machine:shield=Equipar escudo
+		mineworld.machine:turret=Equipar torreta
+		mineworld.machine:evolution=Mejorar
 	/*Grupos de Items*/
 		itemGroup.name.special=Especial
 		itemGroup.name.silver=Plata
@@ -32,22 +35,7 @@
 			item.mineworld:peridot.name=Peridoto
 			item.mineworld:sapphire.name=Zafiro
 			item.mineworld:ruby.name=Rubi
-			item.mineworld:copper.name=Cobre
-		/*Polvos*/
-			item.mineworld:bronzeDust.name=Polvo de bronce
-			item.mineworld:silverDust.name=Polvo de plata
-			item.mineworld:sombriteDust.name=Polvo de sombrita
-			item.mineworld:iridiumDust.name=Polvo de iridio
-			item.mineworld:aquamarineDust.name=Polvo de aguamarina
-			item.mineworld:onyxDust.name=Polvo de onyx
-			item.mineworld:peridotDust.name=Polvo de peridoto
-			item.mineworld:sapphireDust.name=Polvo de zafiro
-			item.mineworld:rubyDust.name=Polvo de rubi
-			item.mineworld:ironDust.name=Polvo de hierro
-			item.mineworld:goldDust.name=Polvo de oro
-			item.mineworld:diamondDust.name=Polvo de diamante
-			item.mineworld:netheriteDust.name=Polvo de netherita
-			item.mineworld:emeraldDust.name=Polvo de esmeralda
+			item.mineworld:anthracite.name=Antracita
 			item.mineworld:stellarDust.name=Polvo estelar
 		/*Cristales*/
 			item.mineworld:argentite.name=Cristal de argentita
@@ -142,11 +130,11 @@
 		/*Componentes de maquina*/
 			item.mineworld:machineChipAllie.name=Chip aliado
 			item.mineworld:machineChipNeutral.name=Chip neutral
-			item.mineworld:machineEnhanceKit.name=Kit de mejora I
+			item.mineworld:machineEnhanceKit.name=Kit de mejora
 			item.mineworld:machineCore.name=Nucleo de maquina
 			item.mineworld:machineTurret.name=Torreta
 			item.mineworld:machineShield.name=Escudo
-			item.mineworld:machineBullet.name=Bala de estaño
+			item.mineworld:machineBullet.name=Carga negativa
 			item.mineworld:machine.name=Maquina pequeña
 			item.mineworld:circuit.name=Circuito
 		/*Tecnologia*/
@@ -224,18 +212,25 @@
 			tile.mineworld:silverBlock.name=Bloque de plata
 			tile.mineworld:iridiumOre.name=Mineral de iridio
 			tile.mineworld:iridiumBlock.name=Bloque de iridio
-			tile.mineworld:copperBlock.name=Bloque de cobre
 			tile.mineworld:bronzeBlock.name=Bloque de bronce
 			tile.mineworld:tinBlock.name=Bloque de estaño
 			tile.mineworld:sombriteBlock.name=Bloque de sombrita
+
+			tile.mineworld:anthraciteOre.name=Mineral de antracita
+
+			tile.mineworld:quantumOre.name=Mineral cuantico
+			tile.mineworld:quantumBlock.name=Bloque cuantico
 		/*Bloques de piedra*/
 			tile.mineworld:slate.name=Pizarra
 			tile.mineworld:slateBricks.name=Ladrillos de pizarra
 			tile.mineworld:slatePebbles.name=Guijarros de pizarra
+
 			tile.mineworld:peridotite.name=Peridotita
 			tile.mineworld:peridotiteSmooth.name=Peridotita pulida
 			tile.mineworld:peridotitePaver.name=Adoquin de peridotita
+
 			tile.mineworld:marble.name=Marmol
+
 			tile.mineworld:quarzite.name=Quarzita
 			tile.mineworld:quarziteTin.name=Quarzita con estaño
 			tile.mineworld:quarziteSmooth.name=Quarzita pulida
@@ -258,7 +253,7 @@
 			tile.mineworld:tecTable.name=Mesa tecnologica
 			tile.mineworld:sacredStatue.name=Estatua sagrada
 	/*Mobs*/
-		entity.mineworld:pleyone.name=Pleione
+		entity.mineworld:pleyone.name=Pleione #Sin uso
         entity.mineworld:red_panda.name=Panda rojo
         entity.mineworld:husky.name=Husky
         entity.mineworld:jellyfish.name=Medusa
@@ -283,9 +278,12 @@
         entity.mineworld:machine_mimic_ghast.name=Maquina mimetica tipo-Gh4st
         entity.mineworld:machine_mimic_enderman.name=Maquina mimetica tipo-3nd3rm4n
 	/*Mineworld other texts*/
+	  howtoplay.category.mineworld=Mineworld
+	  howtoplay.blocksMineworld=Bloques
+	  howtoplay.blocksMineworld.title=Bloques de mineworld
 		/*Bloques*/
 			howtoplay.mineworldBlocks.header.ores=Minerales
-			howtoplay.mineworldBlocks.intro=Los minerales de mineworld se dividen en varios grupos: elementos, minerales, gemas y aleaciones. Cada grupo se genera en capas especificas, las cuales se detallaran a continuacion
+			howtoplay.mineworldBlocks.ores.intro=Los minerales de mineworld se dividen en varios grupos: elementos, minerales, gemas y aleaciones. Cada grupo se genera en capas especificas, las cuales se detallaran a continuacion
 			howtoplay.mineworldBlocks.header.gems=Gemas
 			howtoplay.mineworldBlocks.gems=Las gemas son minerales muy raros que son usados para comerciar con las maquinas mercantes, transformar a los zorros(esto sucede con los opalos) y para algunos objetos, como los chips.En este grupo lo conforman: el peridoto, el onix, la aquamarina, la malaquita, los opalos, el rubi y el zafiro, estos se encuentran a partir de la capa 24 
 			howtoplay.mineworldBlocks.gems.opal=Los opalos destacan de las gemas porque son usados para transformar a los zorros en una deidad japonesa llamada kitsune. El opalo de fuego y el opalo de agua son usados para la transformacion y el opalo normal es usado para crear la piedra mistica.

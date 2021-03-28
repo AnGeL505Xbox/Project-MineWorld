@@ -1,14 +1,18 @@
 {
-    "format_version": "1.16.200",
+    "format_version": "1.16.100",
     "minecraft:block": {
-        "description": {
-            "identifier": "mineworld:quantum_ore"
-        },
+        "description": { "identifier": "mineworld:quantum_ore" },
         "components": {
-            "minecraft:destroy_time": 3,
+            "minecraft:destroy_time": 2.25,
             "minecraft:explosion_resistance": 3,
             "minecraft:map_color": "#e6a648",
             "minecraft:loot": "loot_tables/blocks/quantumOre.json",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "quantum_ore",
+                    "render_method": "blend"
+                }
+            },
             "minecraft:display_name": "mineworld:quantumOre"
         }
     }

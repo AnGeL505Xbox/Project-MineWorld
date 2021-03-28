@@ -1,0 +1,15 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "mineworld:copper",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:hand_equipped": true,
+            "minecraft:icon": { "texture": "mineworldCopper" },
+            "minecraft:creative_category": { "parent": "itemGroup.name.element" },
+            "minecraft:display_name": { "value": "item.mineworld:copper.name" }
+        }
+    }
+}

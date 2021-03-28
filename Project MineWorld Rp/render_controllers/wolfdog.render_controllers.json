@@ -3,14 +3,14 @@
     "render_controllers": {
         "controller.render.wolfdog": {
             "geometry": "Geometry.default",
-            "materials": [ { "*": "Material.uncolor" } ],
-            "textures": [ "Texture.base" ]
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Texture.default" ]
         },
         "controller.render.wolfdog_eyes": {
-            "arrays": { "textures": { "Array.eye": [ "Texture.blue", "Texture.blue_light", "Texture.black" ] } },
+            "arrays": { "textures": { "Array.eyes": [ "Texture.brown", "Texture.blue_light", "Texture.black" ] } },
             "geometry": "Geometry.default",
-            "materials": [ { "*": "Material.uncolor" } ],
-            "textures": [ "Array.eye[query.variant]" ]
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Array.eyes[query.variant]" ]
         }
     }
 }

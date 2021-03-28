@@ -7,13 +7,10 @@
         "aquamarine_block": {
             "textures": "textures/blocks/aquamarineBlock"
         },
-        "quantumOre": {
-            "textures": "textures/blocks/quantumOre"
-        },
         "aquamarine_ore": {
             "textures": "textures/blocks/aquamarineOre"
         },
-        "anthraciteOre": {
+        "anthracite_ore": {
             "textures": "textures/blocks/anthraciteOre"
         },
         "argentite_ore": {
@@ -31,10 +28,10 @@
         "cassiterite_ore": {
             "textures": "textures/blocks/cassiteriteOre"
         },
-        "copper_block": {
+        "copperBlock": {
             "textures": "textures/blocks/copperBlock"
         },
-        "iridiumOre": {
+        "iridium_ore": {
             "textures": "textures/blocks/iridiumOre"
         },
         "limonite_ore": {
@@ -55,7 +52,7 @@
         "onyx_ore": {
             "textures": "textures/blocks/onyxOre"
         },
-        "opalOre": {
+        "opal_ore": {
             "textures": "textures/blocks/opalOre"
         },
         "peridot_block": {
@@ -87,6 +84,9 @@
         },
         "quantum_block": {
             "textures": "textures/blocks/quantumBlock"
+        },
+        "quantum_ore": {
+            "textures": "textures/blocks/quantumOre"
         },
         "quarzite": {
             "textures": "textures/blocks/stoneQuarzite"
@@ -168,27 +168,6 @@
         },
         "slate_pebbles": {
             "textures": "textures/blocks/stoneSlatePebbles"
-        },
-        "statueNormal": {
-            "textures": "textures/blocks/statueNormal"
-        },
-        "statueLight": {
-            "textures": "textures/blocks/statueLight"
-        },
-        "statueShadow": {
-            "textures": "textures/blocks/statueShadow"
-        },
-        "statueFire": {
-            "textures": "textures/blocks/statueFire"
-        },
-        "statueWater": {
-            "textures": "textures/blocks/statueWater"
-        },
-        "statueEarth": {
-            "textures": "textures/blocks/statueEarth"
-        },
-        "statueWind": {
-            "textures": "textures/blocks/statueWind"
         },
         "stellar_block": {
             "textures": "textures/blocks/stellarBlock"

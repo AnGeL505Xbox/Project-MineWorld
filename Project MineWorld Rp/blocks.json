@@ -1,11 +1,19 @@
 {
     "format_version": [ 1, 1, 0 ],
     "mineworld:anthracite_ore": {
-        "textures":"anthraciteOre",
+        "textures":"anthracite_ore",
         "sound": "stone"
     },
     "mineworld:quantum_ore": {
-        "textures":"quantumOre",
+        "textures":"quantum_ore",
+        "sound": "stone"
+    },
+    "mineworld:quantum_block": {
+        "textures":"quantum_block",
+        "sound": "stone"
+    },
+    "mineworld:iridium_block": {
+        "textures":"quantum_ore",
         "sound": "stone"
     },
     "mineworld:xero_flower": {
@@ -15,7 +23,7 @@
         "sound": "stone"
     },
     "mineworld:iridium_ore": {
-        "textures":"iridiumOre",
+        "textures":"iridium_ore",
         "sound": "stone"
     },
     "mineworld:onyx_block": {
@@ -168,7 +176,7 @@
     },
     "mineworld:copper_block": {
         "sound": "stone",
-        "textures": "copper_block"
+        "textures": "copperBlock"
     },
     "mineworld:bronze_block": {
         "sound": "stone",

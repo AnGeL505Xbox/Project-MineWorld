@@ -7,13 +7,6 @@
             "materials": [ { "*": "Material.default" } ],
             "part_visibility": [ { "tame*": "query.is_tamed" } ],
             "textures": [ "Array.skin[query.variant]" ]
-        },
-        "controller.render.cocker_eye": {
-            "arrays": { "textures": { "Array.eyes": [ "Texture.brown_eye", "Texture.black_eye" ] } },
-            "geometry": "Geometry.default",
-            "materials": [ { "*": "Material.default" } ],
-            "part_visibility": [ { "tame*": "query.is_tamed" } ],
-            "textures": [ "Array.eyes[query.mark_variant]" ]
         }
     }
 }

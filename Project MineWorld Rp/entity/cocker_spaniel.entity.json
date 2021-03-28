@@ -1,5 +1,5 @@
 {
-   "format_version": "1.8.0",
+   "format_version": "1.10.0",
    "minecraft:client_entity": {
       "description": {
          "identifier": "mineworld:cocker_spaniel",
@@ -7,21 +7,24 @@
          "textures": {
             "black": "textures/entity/canis/lupus_familiaris/cocker_spaniel/black",
             "white": "textures/entity/canis/lupus_familiaris/cocker_spaniel/white",
-            "gold": "textures/entity/canis/lupus_familiaris/cocker_spaniel/gold",
-            "brown_eye": "textures/entity/canis/lupus_familiaris/cocker_spaniel/eyes/brown",
-            "black_eye": "textures/entity/canis/lupus_familiaris/cocker_spaniel/eyes/black"
+            "gold": "textures/entity/canis/lupus_familiaris/cocker_spaniel/gold"
          },
-         "geometry": { "default": "geometry.cocker_spaniel" },
+         "geometry": { "default": "geometry.dog.cockerSpaniel" },
+         "scripts": {
+            "animate": [
+               "look_at_target",
+               { "walk": "!q.is_sitting" },
+               { "sit": "q.is_sitting" },
+               { "baby": "q.is_baby" }
+            ]
+         },
          "animations": {
             "walk": "animation.mineworld.walk",
             "sit": "animation.mineworld.smallSit",
-            "look_at_target": "animation.common.look_at_target"
+            "look_at_target": "animation.common.look_at_target",
+            "baby": "animation.mineworld.baby"
          },
-         "animation_controllers": [ { "general": "controller.animation.cocker_spaniel.move" } ],
-         "render_controllers": [
-            "controller.render.cocker",
-            "controller.render.cocker_eye"
-         ],
+         "render_controllers": [ "controller.render.cocker" ],
          "spawn_egg": {
             "base_color": "#e6d6cf",
             "overlay_color": "#924b2e"

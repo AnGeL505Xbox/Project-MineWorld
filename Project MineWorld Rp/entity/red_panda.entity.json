@@ -17,7 +17,7 @@
             "sleep": "animation.red_panda.sleep",
             "look_at_target": "animation.common.look_at_target"
          },
-         "animation_controllers": [ { "general": "controller.animation.red_panda.move" } ],
+         "animation_controllers": [ { "general": "controller.animation.red_panda.default" } ],
          "render_controllers": [
             "controller.render.red_panda_skins",
             "controller.render.red_panda_eyes"
@@ -28,4 +28,4 @@
          }
       }
    }
-}}
+}

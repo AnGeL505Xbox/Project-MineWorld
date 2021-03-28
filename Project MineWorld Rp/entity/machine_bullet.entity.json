@@ -5,7 +5,7 @@
          "identifier": "mineworld:machine_bullet",
          "min_engine_version": "1.8.0",
          "materials": { "default": "skeleton" },
-         "textures": { "default": "textures/items/machine_bullet" },
+         "textures": { "default": "textures/items/machineBullet" },
          "geometry": { "default": "geometry.fenix_fireball" },
          "render_controllers": [ "controller.render.base" ]
       }

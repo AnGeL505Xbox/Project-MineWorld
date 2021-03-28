@@ -1,0 +1,38 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.common_cuadruped.default": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "sitAdult": "q.is_sitting && !q.is_baby" },
+                        { "moveAdult": "!q.is_sitting  && !q.is_baby" },
+                        { "sitBaby": "q.is_sitting && q.is_baby" },
+                        { "moveBaby": "!q.is_sitting  && q.is_baby" }
+                    ]
+                },
+                "moveAdult": {
+                    "animations": [ "walk", "look_at_target" ],
+                    "transitions": [ { "default": "query.is_sitting" } ],
+                    "blend_transition": 0.125
+                },
+                "sitAdult": {
+                    "animations": [ "sit", "look_at_target" ],
+                    "transitions": [ { "default": "!query.is_sitting" } ],
+                    "blend_transition": 0.125
+                },
+                "moveBaby": {
+                    "animations": [ "walk", "look_at_target", "baby" ],
+                    "transitions": [ { "default": "query.is_sitting" } ],
+                    "blend_transition": 0.125
+                },
+                "sitBaby": {
+                    "animations": [ "sit", "look_at_target", "baby" ],
+                    "transitions": [ { "default": "!query.is_sitting" } ],
+                    "blend_transition": 0.125
+                }
+            }
+        }
+    }
+}

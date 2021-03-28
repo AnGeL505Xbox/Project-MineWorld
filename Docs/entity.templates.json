@@ -1,0 +1,385 @@
+{
+    "Mineworld:templates": [
+        {
+            "version": 1,
+            "identifier": "mineworld:amphibia",
+            "components": {
+                //#region Base
+                "minecraft:nameable": {},
+                "minecraft:breathable": {
+                    "total_supply": 15,
+                    "suffocate_time": 0,
+                    "breathes_water": true,
+                    "breathes_air": true,
+                    "generates_bubbles": false
+                },
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:physics": {},
+                //#endregion
+                //#region Damage
+                "minecraft:damage_sensor": {
+                    "triggers": {
+                        "cause": "lightning",
+                        "deals_damage": true,
+                        "damage_multiplier": 2000
+                    }
+                },
+                "minecraft:hurt_on_condition": {
+                    "damage_conditions": [
+                        {
+                            "filters": {
+                                "test": "in_lava",
+                                "subject": "self",
+                                "operator": "==",
+                                "value": true
+                            },
+                            "cause": "lava",
+                            "damage_per_tick": 4
+                        }
+                    ]
+                },
+                //#endregion
+                //#region Movement
+                "minecraft:movement": { "value": 0.15 },
+                "minecraft:underwater_movement": { "value": 0.15 },
+                "minecraft:navigation.generic": {
+                    "is_amphibious": true,
+                    "can_path_over_water": false,
+                    "can_swim": true,
+                    "can_walk": true,
+                    "can_sink": false,
+                    "avoid_damage_blocks": true
+                },
+                "minecraft:movement.amphibious": { "max_turn": 10 },
+                "minecraft:jump.static": {},
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.move_to_water": {
+                    "priority": 3,
+                    "search_range": 16, "search_height": 5,
+                    "search_count": 1, "goal_radius": 0.1
+                }, 
+                "minecraft:behavior.random_swim": {
+                    "priority": 5,
+                    "interval": 0,
+                    "speed_multiplier": 1,
+                    "xz_dist": 30, "y_dist": 15
+                },
+                "minecraft:behavior.swim_idle": { "priority": 5 },
+                "minecraft:behavior.random_look_around": {
+                    "priority": 5,
+                    "look_time": [ 3, 5 ]
+                },
+                "minecraft:behavior.move_to_land": {
+                    "priority": 6,
+                    "search_range": 16, "search_height": 5, "goal_radius": 0.5
+                }
+                //#endregion
+            }
+        },
+        {
+            "version": 1,
+            "identifier": "mineworld:biped_monster",
+            "components": {
+                //#region Base
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:physics": {},
+                //#endregion
+                //#region Movement
+                "minecraft:can_climb": {},
+                "minecraft:jump.static": {},
+                "minecraft:movement": { "value": 0.3 },
+                "minecraft:movement.basic": {},
+                "minecraft:navigation.walk": { "avoid_damage_blocks": true, "avoid_water": true, "can_float": true },
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.float": { "priority": 0 },
+                "minecraft:behavior.charge_attack": { "priority": 1 },
+                "minecraft:behavior.look_at_entity": { "priority": 4, "look_distance": 6, "probability": 0.1 },
+                "minecraft:behavior.random_stroll": { "priority": 4, "speed_multiplier": 1 },
+                "minecraft:behavior.melee_attack": {
+                    "priority": 5,
+                    "random_stop_interval": 0, "reach_multiplier": 2,
+                    "speed_multiplier": 1.5, "track_target": true
+                },
+                "minecraft:behavior.hurt_by_target": { "priority": 5 },
+                "minecraft:behavior.random_look_around": { "priority": 6 }
+                //#endregion
+            }
+        },
+        {
+            "version": 1,
+            "identifier": "mineworld:cuadruped",
+            "components": {
+                //#region Base
+                "minecraft:nameable": {},
+                "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:physics": {},
+                //#endregion
+                //#region Damage
+                "minecraft:hurt_on_condition": {
+                    "damage_conditions": [
+                        {
+                            "filters": {
+                                "test": "in_lava", "subject": "self",
+                                "operator": "==", "value": true
+                            },
+                            "cause": "lava", "damage_per_tick": 4
+                        }
+                    ]
+                },
+                //#endregion
+                //#region Movement
+                "minecraft:navigation.walk": { "can_path_over_water": true, "avoid_damage_blocks": true },
+                "minecraft:movement.basic": {},
+                "minecraft:jump.static": {},
+                "minecraft:can_climb": {},
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.float": { "priority": 0 },
+                "minecraft:behavior.mount_pathing": {
+                    "priority": 1, "speed_multiplier": 1.25,
+                    "target_dist": 0, "track_target": true
+                },
+                "minecraft:behavior.look_at_player": {
+                    "priority": 6,
+                    "target_distance": 6,
+                    "probability": 0.02
+                },
+                "minecraft:behavior.random_stroll": { "priority": 8, "speed_multiplier": 1 }
+                //#endregion
+            }
+        },
+        {
+            "version": 1,
+            "identifier": "mineworld:dog",
+            "components": {
+                //#region Base
+                "minecraft:nameable": {},
+                "minecraft:type_family": { "family": [ "dog", "typedog" ] },
+                "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+                "minecraft:healable": {
+                    "items": [
+                        { "item": "porkchop", "heal_amount": 3 },
+                        { "item": "cooked_porkchop", "heal_amount": 8 },
+                        { "item": "fish", "heal_amount": 2 },
+                        { "item": "salmon", "heal_amount": 2 },
+                        { "item": "clownfish", "heal_amount": 1 },
+                        { "item": "pufferfish", "heal_amount": 1 },
+                        { "item": "cooked_fish", "heal_amount": 5 },
+                        { "item": "cooked_salmon", "heal_amount": 6 },
+                        { "item": "beef", "heal_amount": 3 },
+                        { "item": "cooked_beef", "heal_amount": 8 },
+                        { "item": "chicken", "heal_amount": 2 },
+                        { "item": "cooked_chicken", "heal_amount": 6 },
+                        { "item": "muttonRaw", "heal_amount": 2 },
+                        { "item": "muttonCooked", "heal_amount": 6 },
+                        { "item": "rotten_flesh", "heal_amount": 4 },
+                        { "item": "rabbit", "heal_amount": 3 },
+                        { "item": "cooked_rabbit", "heal_amount": 5 },
+                        { "item": "rabbit_stew", "heal_amount": 10 }
+                    ]
+                },
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:conditional_bandwidth_optimization": {},
+                "minecraft:physics": {},
+                //#endregion
+                //#region Damage
+                "minecraft:hurt_on_condition": {
+                    "damage_conditions": [
+                        {
+                            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+                            "cause": "lava",
+                            "damage_per_tick": 4
+                        }
+                    ]
+                },
+                //#endregion
+                //#region Movement
+                "minecraft:movement": { "value": 0.25 },
+                "minecraft:navigation.walk": { "can_path_over_water": true, "avoid_damage_blocks": true },
+                "minecraft:movement.basic": {},
+                "minecraft:jump.static": {},
+                "minecraft:can_climb": {},
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.float": { "priority": 0 },
+                "minecraft:behavior.mount_pathing": {
+                    "priority": 1,
+                    "speed_multiplier": 1.25,
+                    "target_dist": 0,
+                    "track_target": true
+                },
+                "minecraft:behavior.hurt_by_target": { "priority": 1 },
+                "minecraft:behavior.stay_while_sitting": { "priority": 3 },
+                "minecraft:behavior.follow_caravan": {
+                    "priority": 3,
+                    "entity_count": 8,
+                    "entity_types": [
+                        {
+                            "filters": { "test": "is_family", "subject": "other", "value": "dog" },
+                            "max_dist": 16
+                        }
+                    ],
+                    "speed_multiplier": 2
+                },
+                "minecraft:behavior.leap_at_target": { "priority": 4, "target_dist": 0.4 },
+                "minecraft:behavior.random_stroll": { "priority": 4, "speed_multiplier": 1 },
+                "minecraft:behavior.melee_attack": {
+                    "priority": 5,
+                    "track_target": false,
+                    "reach_multiplier": 1
+                },
+                "minecraft:behavior.look_at_player": {
+                    "priority": 6,
+                    "target_distance": 6,
+                    "probability": 0.02
+                },
+                "minecraft:behavior.beg": {
+                    "priority": 9,
+                    "look_distance": 8,
+                    "look_time": [ 2, 4 ],
+                    "items": [
+                        "bone",
+                        "porkchop", "cooked_porkchop",
+                        "chicken", "cooked_chicken",
+                        "beef", "cooked_beef",
+                        "rotten_flesh",
+                        "muttonraw", "muttoncooked",
+                        "rabbit", "cooked_rabbit"
+                    ]
+                }
+                //#endregion
+            }
+        },
+        {
+            "version": 1,
+            "identifier": "mineworld:fly_entity",
+            "components": {
+                //#region Base
+                "minecraft:nameable": {},
+                "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:physics": {},
+                //#endregion
+                //#region Damage
+                "minecraft:damage_sensor": { "triggers": { "cause": "fall", "deals_damage": false } },
+                //#endregion
+                //#region Movement
+                "minecraft:movement": { "value": 0.01 },
+                "minecraft:navigation.float": { "can_path_over_water": true },
+                "minecraft:can_fly": {},
+                "minecraft:jump.static": {},
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.float": { "priority": 0 },       
+                "minecraft:behavior.float_wander": { "priority": 1, "must_reach": true }
+                //#endregion
+            }
+        },
+        {
+            "version": 1,
+            "identifier": "mineworld:machine",
+            "components": {
+                //#region Base
+                "minecraft:type_family": { "family": [ "machine" ] },
+                "minecraft:nameable": {},
+                "minecraft:loot": { "table": "loot_tables/entities/machine.json" },
+                "minecraft:experience_reward": { "on_death": "query.last_hit_by_player ? Math.Random(1,3.5) : Math.Random(0,0.5)" },
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:physics": {},
+                //#endregion
+                //#region Damage
+                "minecraft:hurt_on_condition": {
+                    "damage_conditions": [
+                        {
+                            "cause": "lava", "damage_per_tick": 4,
+                            "filters": { "test": "in_lava", "subject": "self", "value": true }
+                        }
+                    ]
+                },
+                //#endregion
+                //#region Movement
+                "minecraft:movement.basic": {},
+                "minecraft:jump.static": {},
+                "minecraft:navigation.walk": {
+                    "avoid_portals": true,
+                    "avoid_water": true,
+                    "avoid_damage_blocks": true
+                },
+                "minecraft:can_climb": {},
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.mount_pathing": {
+                    "priority": 1,
+                    "target_dist": 0, "track_target": true
+                },    
+                "minecraft:behavior.random_look_around": {
+                    "priority": 4,
+                    "look_time": [ 2, 6 ]
+                },
+                "minecraft:behavior.random_stroll": { "priority": 5 }
+                //#endregion
+            }
+        },
+        {
+            "version": 1,
+            "identifier": "mineworld:sea_animal",
+            "components": {
+                //#region Base
+                "minecraft:nameable": {},
+                "minecraft:breathable": {
+                    "breathes_air": false,
+                    "breathes_water": true,
+                    "suffocate_time": 0,
+                    "total_supply": 15
+                },
+                "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
+                "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+                "minecraft:physics": {},
+                //#endregion
+                //#region Damage
+                "minecraft:hurt_on_condition": {
+                    "damage_conditions": [
+                        {
+                            "cause": "lava", "damage_per_tick": 4,
+                            "filters": { "operator": "==", "subject": "self", "test": "in_lava", "value": true }
+                        }
+                    ]
+                },
+                //#endregion
+                //#region Movement
+                "minecraft:movement": { "value": 0.1 },
+                "minecraft:underwater_movement": { "value": 0.15 },
+                "minecraft:movement.sway": { "max_turn": 0, "sway_amplitude": 0 },
+                "minecraft:navigation.generic": {
+                    "can_breach": true, "can_path_over_water": false,
+                    "can_swim": true, "can_walk": false,
+                    "is_amphibious": false
+                },
+                //#endregion
+                //#region Behavior
+                "minecraft:behavior.random_swim": {
+                    "priority": 3,
+                    "interval": 0,
+                    "speed_multiplier": 1,
+                    "xz_dist": 16, "y_dist": 4
+                },
+                "minecraft:behavior.swim_wander": {
+                    "priority": 4,
+                    "interval": 10,
+                    "look_ahead": 2, "speed_multiplier": 1
+                },
+                "minecraft:behavior.swim_idle": { "priority": 5 }
+                //#endregion
+            }
+        }
+    ]
+}

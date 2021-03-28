@@ -11,9 +11,10 @@
             "geometry": { "default": "geometry.coyote" },
             "animations": {
                "walk": "animation.mineworld.walk",
+               "baby": "animation.mineworld.baby",
                "look_at_target": "animation.common.look_at_target"
             },
-            "scripts": { "animate": [ "walk", "look_at_target" ] },
+            "scripts": { "animate": [ "walk", "look_at_target", { "baby": "q.is_baby" } ] },
             "render_controllers": [ "controller.render.coyote" ],
             "spawn_egg": {
                 "base_color": "#fcb781",

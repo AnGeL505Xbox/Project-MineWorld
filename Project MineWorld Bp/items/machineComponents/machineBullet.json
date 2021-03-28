@@ -7,7 +7,7 @@
         },
         "components": {
             "minecraft:hand_equipped": true,
-            "minecraft:projectile": { "projectile_entity": "mineworld:machine_bullet" },
+            "minecraft:projectile": { "projectile_entity": "mineworld:machineBullet" },
             "minecraft:throwable": { "do_swing_animation": true },
             "minecraft:icon": { "texture": "machineBullet" },
             "minecraft:creative_category": { "parent": "itemGroup.name.machineComponents" },

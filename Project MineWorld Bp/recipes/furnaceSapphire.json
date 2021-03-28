@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "mineworld:furnaceSapphire"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "mineworld:sapphire_ore",
+		"output": "mineworld:sapphire"
+	}
+}

@@ -1,12 +1,12 @@
 {
-    "format_version": "1.16.200",
+    "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:peridotite_paver"
         },
         "components": {
             "minecraft:loot": "loot_tables/blocks/peridotitePaver.json",
-            "minecraft:destroy_time": 1.8,
+            "minecraft:destroy_time": 1.5,
             "minecraft:explosion_resistance": 30,
             "minecraft:map_color": "#3a4c43",
             "minecraft:display_name": "mineworld:peridotitePaver"

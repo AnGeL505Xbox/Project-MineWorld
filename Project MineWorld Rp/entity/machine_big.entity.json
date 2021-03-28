@@ -9,13 +9,12 @@
          "scripts": {
             "pre_animation":[
                "variable.shield = ( query.variant == 1 ) ? 1 : 0;",
-               "variable.turret = ( query.variant == 2 ) ? 1 : 0;",
-               "variable.shield_turret = ( query.variant == 3) ? 1 : 0;"
+               "variable.turret = ( query.variant == 2 ) ? 1 : 0;"
             ],
             "animate": [
                "look_at_target",
                "walk",
-               {"attack": "query.has_target"}
+               { "attack": "query.has_target" }
             ]
          },
          "animations": {

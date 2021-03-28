@@ -1,5 +1,5 @@
 {
-    "format_version": "1.16.200",
+    "format_version": "1.16.100",
     "minecraft:block": {
         "description": {
             "identifier": "mineworld:sylvanite_ore"

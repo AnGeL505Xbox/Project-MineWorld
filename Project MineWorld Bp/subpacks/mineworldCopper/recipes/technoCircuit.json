@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": { "identifier": "mineworld:circuit" },
+		"tags": [ "techno_table" ],
+		"pattern": [
+			" c ",
+			"cmc",
+			" c "
+		],
+		"key": {
+			"c": { "item": "mineworld:copper" },
+			"m": { "item": "mineworld:malachite" }
+		},
+		"result": [
+			{
+				"item": "mineworld:circuit",
+				"count": 2
+			}
+		]
+	}
+}

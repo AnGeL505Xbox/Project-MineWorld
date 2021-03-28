@@ -1,12 +1,12 @@
 {
-    "format_version": "1.16.200",
+    "format_version": "1.16.100",
     "minecraft:block": {
         "description": { "identifier": "mineworld:limonite_ore" },
         "components": {
             "minecraft:explosion_resistance": 6,
             "minecraft:map_color": "#00f000",
             "minecraft:loot": "loot_tables/blocks/limoniteOre.json",
-            "minecraft:destroy_time": 0.6,
+            "minecraft:destroy_time": 2.25,
             "minecraft:display_name": "mineworld:limoniteOre"
         }
     }

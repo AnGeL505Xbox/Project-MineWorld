@@ -1,9 +1,7 @@
 {
-    "format_version": "1.16.200",
+    "format_version": "1.16.100",
     "minecraft:block": {
-        "description": {
-            "identifier": "mineworld:xero_flower"
-        },
+        "description": { "identifier": "mineworld:xero_flower" },
         "components": {
             "minecraft:loot": "loot_tables/blocks/xeroFlower.json",
             "minecraft:entity_collision": false,
@@ -16,7 +14,7 @@
             "minecraft:material_instances": {
                 "*": {
                     "texture": "xeroFlower",
-                    "render_method": "blend"
+                    "render_method": "alpha_test"
                 }
             },
             "minecraft:placement_filter":{
@@ -26,7 +24,8 @@
                             "minecraft:grass",
                             "minecraft:dirt",
                             "mineworld:red_dirt"
-                        ]
+                        ],
+                        "allowed_faces": [ "up" ]
                     }
                 ]
             },

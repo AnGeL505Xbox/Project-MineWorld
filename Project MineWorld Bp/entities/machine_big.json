@@ -65,36 +65,20 @@
             //#region Armamento
             "machine:unWeapon": {
                 "minecraft:mark_variant": { "value": 0 },
-                "minecraft:health": { "max": 40, "value": 40 }
-            },
-            "machine:shield": {
-                "minecraft:variant": { "value": 1 },
-                "minecraft:health": { "max": 50, "value": 50 }
-            },
-            "machine:turret": {
-                "minecraft:mark_variant": { "value": 2 },
-                "minecraft:health": { "max": 45, "value": 45 }
-            },
-            "machine:shieldTurret": {
-                "minecraft:mark_variant": { "value": 3 },
-                "minecraft:health": { "value": 55, "max": 55 },
-                "minecraft:target_nearby_sensor": {
-                    "inside_range": 0,
-                    "outside_range": 4.0,
-                    "must_see": true,
-                    "on_inside_range": { "event": "mineworld:meele_atack", "target": "self" },
-                    "on_outside_range": { "event": "mineworld:shoot_atack", "target": "self" },
-                    "on_vision_lost_inside_range": { "event": "mineworld:shoot_atack", "target": "self" }
-                }
-            },
-            //#endregion
-            //#region Tipo de ataque
-            "machine:attack": {
+                "minecraft:health": { "max": 40, "value": 40 },
                 "minecraft:attack": { "damage": 10 },
                 "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true }
             },
-            "machine:shoot": {
-                "minecraft:shooter": {  "def": "mineworld:machineBullet" },
+            "machine:shield": {
+                "minecraft:variant": { "value": 1 },
+                "minecraft:health": { "max": 50, "value": 50 },
+                "minecraft:attack": { "damage": 14 },
+                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true }
+            },
+            "machine:turret": {
+                "minecraft:mark_variant": { "value": 2 },
+                "minecraft:health": { "max": 45, "value": 45 },
+                "minecraft:shooter": {  "def": "mineworld:machine_bullet" },
                 "minecraft:behavior.ranged_attack": {
                     "priority": 4,
                     "burst_shots": 2,
@@ -199,7 +183,7 @@
             "minecraft:collision_box": { "width": 0.5, "height": 1.5 },
             "minecraft:movement": { "value": 0.2 },
             "minecraft:scale": { "value": 2.5 },
-            "minecraft:behavior.hurt_by_target": { "priority": 4 }
+            "minecraft:behavior.hurt_by_target": { "priority": 3 }
         },
 
         "events": {
@@ -231,19 +215,15 @@
                         "randomize": [
                             {
                                 "weight": 60,
-                                "add": { "component_groups": [ "machine:unWeapon", "machine:attack" ] }
+                                "add": { "component_groups": [ "machine:unWeapon" ] }
                             },
                             {
                                 "weight": 40,
-                                "add": { "component_groups": [ "machine:shield", "machine:attack" ] }
+                                "add": { "component_groups": [ "machine:shield" ] }
                             },
                             {
                                 "weight": 40,
-                                "add": { "component_groups": [ "machine:turret", "machine:shoot" ] }
-                            },
-                            {
-                                "weight": 20,
-                                "add": { "component_groups": [ "machine:shieldTurret" ] }
+                                "add": { "component_groups": [ "machine:turret" ] }
                             }
                         ]
                     }

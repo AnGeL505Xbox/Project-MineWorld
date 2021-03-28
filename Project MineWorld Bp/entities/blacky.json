@@ -1,18 +1,16 @@
-//Project MineWorld Dog v1
+//Project MineWorld Dog v2
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
         "description": {
             "identifier": "mineworld:blacky",
-            "is_spawnable": true,
-            "is_summonable": true,
-            "is_experimental": false
+            "is_spawnable": true, "is_summonable": true, "is_experimental": false
         },
         "component_groups": {
-
-            "mineworld:blacky_baby": {
+            //#region States
+            "dog:baby": {
                 "minecraft:is_baby": {},
-                "minecraft:behavior.follow_parent": { "priority": 2, "speed_multiplier": 1 },
+                "minecraft:health": { "value": 8 },
                 "minecraft:attack": { "damage": 1 },
                 "minecraft:scale": { "value": 0.5 },
                 "minecraft:ageable": {
@@ -25,20 +23,17 @@
                         "rabbit", "cooked_rabbit",
                         "rotten_flesh"
                     ],
-                    "grow_up": {
-                        "event": "mineworld:blacky_age",
-                        "target": "self"
-                    }
+                    "grow_up": { "event": "minecraft:ageable", "target": "self" }
                 },
-                "minecraft:health": { "value": 8 }
+
+                "minecraft:behavior.follow_parent": { "priority": 2, "speed_multiplier": 1 }
             },
-            "mineworld:blacky_adult": {
+            "dog:adult": {
                 "minecraft:breedable": {
                     "require_tame": true,
                     "inherit_tamed": true,
                     "breeds_with": {
-                        "mate_type": "mineworld:blacky",
-                        "baby_type": "mineworld:blacky",
+                        "mate_type": "mineworld:blacky", "baby_type": "mineworld:blacky",
                         "breed_event": { "event": "minecraft:entity_born", "target": "baby" }
                     },
                     "breed_items": [
@@ -49,8 +44,7 @@
                         "rabbit", "cooked_rabbit",
                         "rotten_flesh"
                     ],
-                    "extra_baby_chance": 0.55,
-                    "mutation_factor": { "variant": 0.25 },
+                    "extra_baby_chance": 0.375, // 3/8
                     "breed_cooldown": 3
                 },
                 "minecraft:experience_reward": {
@@ -58,107 +52,91 @@
                     "on_death": "query.last_hit_by_player ? 2 + (query.equipment_count * Math.Random(1,2)) : 0"
                 }
             },
-
-            "mineworld:blacky_wild": {
+            //#endregion
+            //#region Wild-Tame
+            "dog:wild": {
                 "minecraft:tameable": {
-                    "probability": 0.3,
+                    "probability": 0.2, // 1/5
                     "tame_items": "bone",
-                    "tame_event": { "event": "mineworld:blacky_tame", "target": "self" }
+                    "tame_event": { "event": "minecraft:tameable", "target": "self" }
                 },
+                "minecraft:health": { "value": 14 },
+
                 "minecraft:behavior.nearest_attackable_target": {
                     "priority": 4,
                     "attack_interval": 10,
                     "reselect_targets": true,
+                    "must_see": true,
                     "entity_types": [
                         {
                             "filters": {
                                 "any_of": [
-                                    {
-                                        "test": "is_family",
-                                        "subject": "other",
-                                        "value": "skeleton"
-                                    },
-                                    {
-                                        "test": "is_family",
-                                        "subject": "other",
-                                        "value": "rabbit"
-                                    }
+                                    { "test": "is_family", "subject": "other", "value": "skeleton" },
+                                    { "test": "is_family", "subject": "other", "value": "rabbit" }
                                 ]
                             },
+                            "max_dist": 16
+                        }
+                    ]
+                }
+            },
+            "dog:tamed": {
+                "minecraft:is_tamed": {},
+                "minecraft:sittable": {},
+                "minecraft:health": { "value": 16 },
+                "minecraft:attack": { "damage": 4 },
+
+                "minecraft:behavior.owner_hurt_by_target": { "priority": 1 },
+                "minecraft:behavior.owner_hurt_target": { "priority": 2 },
+                "minecraft:behavior.breed": { "priority": 2 },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 4,
+                    "attack_interval": 10,
+                    "entity_types": [
+                        {
+                            "filters": { "test": "is_family", "subject": "other", "value": "skeleton" },
                             "max_dist": 16
                         }
                     ],
                     "must_see": true
                 },
-                "minecraft:health": {
-                    "value": 14
-                }
-            },
-            "mineworld:blacky_tame": {
-                "minecraft:is_tamed": {},
                 "minecraft:behavior.follow_owner": {
                     "priority": 6,
                     "speed_multiplier": 1,
                     "start_distance": 10,
                     "stop_distance": 2
                 },
-                "minecraft:attack": { "damage": 4 },
-                "minecraft:behavior.breed": { "priority": 2 },
-                "minecraft:behavior.owner_hurt_by_target": { "priority": 1 },
-                "minecraft:behavior.owner_hurt_target": { "priority": 2 },
-                "minecraft:behavior.nearest_attackable_target": {
-                    "priority": 5,
-                    "attack_interval": 10,
-                    "entity_types": [
-                        {
-                            "filters": {
-                                "test": "is_family",
-                                "subject": "other",
-                                "value": "skeleton"
-                            },
-                            "max_dist": 16
-                        }
-                    ],
-                    "must_see": true
-                },
-                "minecraft:health": { "value": 16 },
-                "minecraft:sittable": {},
+
                 "minecraft:leashable": {
                     "soft_distance": 4,
                     "hard_distance": 6,
                     "max_distance": 10,
-                    "on_leash": {
-                        "event": "minecraft:on_leash",
-                        "target": "self"
-                    },
-                    "on_unleash": {
-                        "event": "minecraft:on_unleash",
-                        "target": "self"
+                    "on_leash": { "event": "minecraft:on_leash", "target": "self" },
+                    "on_unleash": { "event": "minecraft:on_unleash", "target": "self" }
+                }
+            },
+            //#endregion
+            //#region Behaviors
+            "dog.timer:behavior_changer": {
+                "minecraft:timer": {
+                    "looping": true,
+                    "randomInterval": true,
+                    "time": [ 60, 180 ],
+                    "time_down_event": { "event": "mineworld:behavior_change" }
+                }
+            },
+            "dog.behavior:neutral": {},
+            "dog.behavior:happy": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": { "test": "clock_time", "operator": "==", "value": 0.8 },
+                        "event": "mineworld:gift"
                     }
                 }
             },
-
-            "mineworld:blacky_eye.brown": { "minecraft:variant": { "value": 0 } },
-            "mineworld:blacky_eye.brown_1": { "minecraft:variant": { "value": 1 } },
-            "mineworld:blacky_eye.brown_2": { "minecraft:variant": { "value": 2 } },
-
-            "mineworld.dog:behavior.happy": {
-                "minecraft:behavior.drop_item_for": {
-                    "drop_item_chance": 0.05,
-                    "loot_table": "loot_tables/entities/dogGift.json",
-                    "entity_types": {
-                        "filters": {
-                            "all_of": [
-                                { "test": "is_family", "subject": "other", "value": "player" },
-                                { "test": "has_component", "subject": "self", "value": "minecraft:is_tamed" }
-                            ]
-                        }
-                    },
-                    "time_of_day_range": [ 0.8, 0.801 ]
-                }
-            },
-            "mineworld.dog:behavior.aggresive": {
+            "dog.behavior:aggresive": {
                 "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 4,
                     "attack_interval": 15,
                     "scan_interval": 40,
                     "within_radius": 5,
@@ -172,28 +150,39 @@
                     }
                 }
             },
-            "mineworld.dog:behavior.weak": {
+            "dog.behavior:weak": {
                 "minecraft:health": { "value": 5 },
                 "minecraft:movement": { "value": 0.2 }
+            },
+            
+            "dog:gift": {
+                "minecraft:behavior.drop_item_for": {
+                    "drop_item_chance": 0.05,
+                    "loot_table": "loot_tables/entities/dogGift.json",
+                    "entity_types": {
+                        "filters": {
+                            "all_of": [
+                                { "test": "is_family", "subject": "other", "value": "player" },
+                                { "test": "has_component", "subject": "self", "value": "minecraft:is_tamed" }
+                            ]
+                        }
+                    },
+                    "time_of_day_range": [ 0.8, 0.85 ],
+                    "on_drop_attemp": "mineworld:unGift"
+                }
             }
+            //#endregion
         },
         "components": {
-            //#region Dog pre-assets
-
             "minecraft:nameable": {},
-            "minecraft:breathable": {
-                "total_supply": 15,
-                "suffocate_time": 0
-            },
+            "minecraft:type_family": { "family": [ "dog", "black_mouth_cur" ] },
+            "minecraft:movement": { "value": 0.25 },
+            "minecraft:collision_box": { "width": 0.6, "height": 0.8 },
+            "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
             "minecraft:hurt_on_condition": {
                 "damage_conditions": [
                     {
-                        "filters": {
-                            "test": "in_lava",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": true
-                        },
+                        "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
                         "cause": "lava",
                         "damage_per_tick": 4
                     }
@@ -228,6 +217,7 @@
                     { "item": "rabbit_stew", "heal_amount": 10 }
                 ]
             },
+            //#region Behaviors
             "minecraft:behavior.float": { "priority": 0 },
             "minecraft:behavior.mount_pathing": {
                 "priority": 1,
@@ -235,276 +225,97 @@
                 "target_dist": 0,
                 "track_target": true
             },
+            "minecraft:behavior.hurt_by_target": { "priority": 3 },
             "minecraft:behavior.stay_while_sitting": { "priority": 3 },
-            "minecraft:behavior.follow_caravan": {
-                "priority": 3,
-                "entity_count": 8,
-                "entity_types": [
-                    {
-                        "filters": {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "dog"
-                        },
-                        "max_dist": 16
-                    }
-                ],
-                "speed_multiplier": 2
-            },
             "minecraft:behavior.leap_at_target": {
                 "priority": 4,
                 "target_dist": 0.4
             },
             "minecraft:behavior.melee_attack": {
                 "priority": 5,
+                "target_dist": 1.2,
                 "track_target": true,
                 "reach_multiplier": 1
-            },
-            "minecraft:behavior.random_stroll": {
-                "priority": 8,
-                "speed_multiplier": 1
             },
             "minecraft:behavior.look_at_player": {
                 "priority": 6,
                 "target_distance": 6,
                 "probability": 0.02
             },
+            "minecraft:behavior.random_stroll": {
+                "priority": 8,
+                "speed_multiplier": 1
+            },
             "minecraft:behavior.beg": {
                 "priority": 9,
                 "look_distance": 8,
                 "look_time": [ 2, 4 ],
                 "items": [
-                    "bone",
-                    "porkchop", "cooked_porkchop",
-                    "chicken", "cooked_chicken",
-                    "beef", "cooked_beef",
-                    "rotten_flesh",
-                    "muttonraw", "muttoncooked",
-                    "rabbit", "cooked_rabbit"
+                   "bone", "rotten_flesh",
+                   "porkchop", "cooked_porkchop",
+                   "chicken", "cooked_chicken",
+                   "beef", "cooked_beef",
+                   "muttonraw", "muttoncooked",
+                   "rabbit", "cooked_rabbit"
                 ]
             },
-            "minecraft:behavior.hurt_by_target": { "priority": 3 },
+            //#endregion
             "minecraft:despawn": { "despawn_from_distance": { "max_distance": 128, "min_distance": 32 } },
             "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
-            "minecraft:physics": {},
-            //#endregion
-            //#region Blacky
-
-            "minecraft:type_family": { "family": [ "dog", "black_mouth_cur" ] },
-            "minecraft:movement": { "value": 0.3 },
-            "minecraft:collision_box": {
-                "width": 0.6,
-                "height": 0.8
-            },
-            "minecraft:genetics": {
-                "genes": [
-                    {
-                        "allele_range": {
-                            "range_min": 0,
-                            "range_max": 15
-                        },
-                        "genetic_variants": [
-                            {
-                                "birth_event": {
-                                    "event": "mineworld:blacky_happy",
-                                    "target": "self"
-                                },
-                                "main_allele": {
-                                    "range_min": 0,
-                                    "range_max": 4
-                                }
-                            },
-                            {
-                                "birth_event": {
-                                    "event": "mineworld:blacky_weak",
-                                    "target": "self"
-                                },
-                                "hidden_allele": {
-                                    "range_min": 5,
-                                    "range_max": 7
-                                }
-                            },
-                            {
-                                "birth_event": {
-                                    "event": "mineworld:blacky_aggresive",
-                                    "target": "self"
-                                },
-                                "main_allele": {
-                                    "range_min": 8,
-                                    "range_max": 14
-                                }
-                            }
-                        ],
-                        "name": "behavoir"
-                    },
-                    {
-                        "name": "eye_color",
-                        "allele_range": {
-                            "range_min": 0,
-                            "range_max": 10
-                        },
-                        "genetic_variants": [
-                            {
-                                "birth_event": {
-                                    "event": "mineworld:blacky_brown",
-                                    "target": "self"
-                                },
-                                "main_allele": {
-                                    "range_min": 0,
-                                    "range_max": 3
-                                }
-                            },
-                            {
-                                "birth_event": {
-                                    "event": "mineworld:blacky_brown_1",
-                                    "target": "self"
-                                },
-                                "hidden_allele": {
-                                    "range_min": 4,
-                                    "range_max": 7
-                                }
-                            },
-                            {
-                                "birth_event": {
-                                    "event": "mineworld:blacky_brown_2",
-                                    "target": "self"
-                                },
-                                "hidden_allele": {
-                                    "range_min": 7,
-                                    "range_max": 10
-                                }
-                            }
-                        ]
-                    }
-                ],
-                "mutation_rate": 0.03125
-            }
-            //#endregion
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:physics": {}
         },
-
         "events": {
             "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "weight": 85,
+                        "add": { "component_groups": [ "dog:wild", "dog:adult", "dog.behavior:neutral", "dog.timer:behavior_changer" ] }
+                    },
+                    {
+                        "weight": 15,
+                        "add": { "component_groups": [ "dog:wild", "dog:baby", "dog.behavior:neutral", "dog.timer:behavior_changer" ] }
+                    }
+                ]
+            },
+            "minecraft:entity_born": { "add": { "component_groups": [ "dog:baby", "dog:tamed", "dog.behavior:happy" ] } },
+            "minecraft:ageable": {
+                "add": { "component_groups": [ "dog:adult" ] },
+                "remove": { "component_groups": [ "dog:baby" ] }
+            },
+            "minecraft:tameable": {
+                "add": { "component_groups": [ "dog:tamed" ] },
+                "remove": { "component_groups": [ "dog:wild" ] }
+            },
+
+            "mineworld:gift": { "add": { "component_groups": [ "dog:gift" ] } },
+            "mineworld:unGift": { "remove": { "component_groups": [ "dog:gift" ] } },
+
+            "mineworld:behavior_change": {
                 "sequence": [
+                    { "remove": { "component_groups": [ "dog.behavior:neutral", "dog.behavior:happy", "dog.behavior:aggresive", "dog.behavior:weak" ] } },
                     {
                         "randomize": [
                             {
-                                "weight": 3,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:blacky_adult",
-                                        "mineworld:blacky_wild"
-                                    ]
-                                }
+                                "weight": 50,
+                                "add": { "component_groups": [ "dog.behavior:neutral" ] }
                             },
                             {
-                                "weight": 1,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:blacky_baby",
-                                        "mineworld:blacky_wild"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "randomize": [
-                            {
-                                "weight": 5,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld.dog:behavior.happy"
-                                    ]
-                                }
+                                "weight": 30,
+                                "add": { "component_groups": [ "dog.behavior:happy" ] }
                             },
                             {
-                                "weight": 5,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld.dog:behavior.weak"
-                                    ]
-                                }
+                                "weight": 22,
+                                "add": { "component_groups": [ "dog.behavior:aggresive" ] }
                             },
                             {
-                                "weight": 5,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld.dog:behavior.aggresive"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "randomize": [
-                            {
-                                "weight": 13,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:blacky_eye.brown"
-                                    ]
-                                }
-                            },
-                            {
-                                "weight": 12,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:blacky_eye.brown_1"
-                                    ]
-                                }
-                            },
-                            {
-                                "weight": 13,
-                                "add": {
-                                    "component_groups": [
-                                        "mineworld:blacky_eye.brown_2"
-                                    ]
-                                }
+                                "weight": 10,
+                                "add": { "component_groups": [ "dog.behavior:weak" ] }
                             }
                         ]
                     }
                 ]
-            },
-            "minecraft:entity_born": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:blacky_baby",
-                        "mineworld:blacky_tame"
-                    ]
-                }
-            },
-            "mineworld:blacky_age": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:blacky_adult"
-                    ]
-                },
-                "remove": {
-                    "component_groups": [
-                        "mineworld:blacky_baby"
-                    ]
-                }
-            },
-            "mineworld:blacky_tame": {
-                "add": {
-                    "component_groups": [
-                        "mineworld:blacky_tame"
-                    ]
-                },
-                "remove": {
-                    "component_groups": [
-                        "mineworld:blacky_wild"
-                    ]
-                }
-            },
-            
-            "mineworld:blacky_happy": { "add": { "component_groups": [ "mineworld.dog:behavior.happy" ] } },
-            "mineworld:blacky_weak": { "add": { "component_groups": [ "mineworld.dog:behavior.weak" ] } },
-            "mineworld:blacky_aggresive": { "add": { "component_groups": [ "mineworld.dog:behavior.aggresive" ] } },
-
-            "mineworld:blacky_brown": { "add": { "component_groups": [ "mineworld:blacky_eye.brown" ] } },
-            "mineworld:blacky_brown_1": { "add": { "component_groups": [ "mineworld:blacky_eye.brown_1" ] } },
-            "mineworld:blacky_brown_2": { "add": { "component_groups": [ "mineworld:blacky_eye.brown_2" ] } }
+            }
         }
     }
 }

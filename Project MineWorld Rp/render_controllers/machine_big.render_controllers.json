@@ -6,14 +6,12 @@
             "materials": [ { "*": "Material.default" } ],
             "textures": [ "Texture.default" ],
             "part_visibility": [
-                { "shieldB*": "variable.shield || variable.shield_turret" },
-                { "shieldH*": "variable.shield || variable.shield_turret" },
-                { "turretBase*": "variable.turret || variable.shield_turret" },
-                { "turret*": "variable.turret || variable.shield_turret" }
+                { "shieldB*": "v.shield" },
+                { "shieldH*": "v.shield" },
+                { "turretBase*": "v.turret" },
+                { "turret*": "v.turret" }
             ],
-            "is_hurt_color": {
-                "r": 124, "g": 175, "b": 235
-            }
+            "is_hurt_color": { "r": 124, "g": 175, "b": 235, "a": 255 }
         }
     }
 }

@@ -4,10 +4,10 @@
 		"animation.mineworld.walk": {
 			"loop": true,
 			"bones": {
-				"backLegL": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0] },
-				"backLegR": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180.0) * 57.3 * query.modified_move_speed", 0, 0] },
-				"frontLegL": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17 + 180.0) * 57.3 * query.modified_move_speed", 0, 0] },
-				"frontLegR": { "rotation": ["Math.cos(query.modified_distance_moved * 38.17) * 57.3 * query.modified_move_speed", 0, 0] }
+				"backLegL": { "rotation": ["Math.cos(q.modified_distance_moved * 38.17) * 57.3 * q.modified_move_speed", 0, 0] },
+				"backLegR": { "rotation": ["Math.cos(q.modified_distance_moved * 38.17 + 180.0) * 57.3 * q.modified_move_speed", 0, 0] },
+				"frontLegL": { "rotation": ["Math.cos(q.modified_distance_moved * 38.17 + 180.0) * 57.3 * q.modified_move_speed", 0, 0] },
+				"frontLegR": { "rotation": ["Math.cos(q.modified_distance_moved * 38.17) * 57.3 * q.modified_move_speed", 0, 0] }
 			}
 		},
 		"animation.mineworld.smallSit": {
@@ -56,6 +56,9 @@
 				"frontLegR": { "position": [0, 0, -1] },
 				"tame": { "position": [0, 0, -1] }
 			}
+		},
+		"animation.mineworld.baby": {
+			"head": { "scale": 2.0 }
 		}
 	}
 }

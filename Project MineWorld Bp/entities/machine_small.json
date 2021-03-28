@@ -127,6 +127,7 @@
                 }
             },
             "machine:allie": {
+                "minecraft:health": { "value": 7, "max": 7 },
                 "minecraft:variant": { "value": 2 },
                 "minecraft:interact": {
 					"interactions": [
@@ -183,122 +184,22 @@
             },
 			//#endregion
             //#region Armamento
+            "machine:unWeapon": {
+                "minecraft:mark_variant": { "value": 0 },
+				"minecraft:health": { "value": 6, "max": 6 },
+                "minecraft:attack": { "damage": 2 },
+                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true }
+            },
             "machine:shield": {
                 "minecraft:mark_variant": { "value": 1 },
 				"minecraft:health": { "value": 10, "max": 10 },
-                "minecraft:interact": {
-                    "interactions": [
-                        {
-							"interact_text": "mineworld.machine:super",
-							"on_interact": {
-								"event": "mineworld:shieldAndTurret",
-								"filters": {
-									"all_of": [
-                                        
-                                        {
-                                            "any_of": [
-                                                {
-                                                    "all_of":[
-                                                        {
-                                                            "domain": "hand",
-                                                            "subject": "other",
-                                                            "test": "has_equipment",
-                                                            "value": "mineworld:machineTurret"
-                                                        },
-                                                        { "subject": "other", "test": "is_family", "value": "player" }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-									]
-								},
-								"target": "self"
-							},
-							"play_sounds": "armor.equip_generic",
-							"use_item": true
-						}
-                    ]
-                }
+                "minecraft:attack": { "damage": 4 },
+                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true }
             },
 			"machine:turret": {
                 "minecraft:mark_variant": { "value": 2 },
 				"minecraft:health": { "value": 7, "max": 7 },
-                "minecraft:interact": {
-                    "interactions": [
-                        {
-							"interact_text": "mineworld.machine:super",
-							"on_interact": {
-								"event": "mineworld:shieldAndTurret",
-								"filters": {
-									"all_of": [
-                                        
-                                        {
-                                            "any_of": [
-                                                {
-                                                    "all_of":[
-                                                        {
-                                                            "domain": "hand",
-                                                            "subject": "other",
-                                                            "test": "has_equipment",
-                                                            "value": "mineworld:machineShield"
-                                                        },
-                                                        { "subject": "other", "test": "is_family", "value": "player" }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-									]
-								},
-								"target": "self"
-							},
-							"play_sounds": "armor.equip_generic",
-							"use_item": true
-						}
-                    ]
-                }
-            },
-            "machine:shieldTurret": {
-                "minecraft:mark_variant": { "value": 3 },            
-				"minecraft:health": { "value": 10, "max": 10 },
-                "minecraft:target_nearby_sensor": {
-                    "inside_range": 0,
-                    "outside_range": 4.0,
-                    "must_see": true,
-                    "on_inside_range": { "event": "mineworld:meele_atack", "target": "self" },
-                    "on_outside_range": { "event": "mineworld:shoot_atack", "target": "self" },
-                    "on_vision_lost_inside_range": { "event": "mineworld:shoot_atack", "target": "self" }
-                }
-            },
-            //#endregion
-            //#region Armamento enemigo
-            "machine:enemyShield": {
-                "minecraft:mark_variant": { "value": 1 },
-				"minecraft:health": { "value": 10, "max": 10 }
-            },
-			"machine:enemyTurret": {
-                "minecraft:mark_variant": { "value": 2 },
-				"minecraft:health": { "value": 7, "max": 7 }
-            },
-            "machine:enemyShieldTurret": {
-                "minecraft:mark_variant": { "value": 3 },            
-				"minecraft:health": { "value": 10, "max": 10 },
-                "minecraft:target_nearby_sensor": {
-                    "inside_range": 0,
-                    "outside_range": 4.0,
-                    "must_see": true,
-                    "on_inside_range": { "event": "mineworld:meele_atack", "target": "self" },
-                    "on_outside_range": { "event": "mineworld:shoot_atack", "target": "self" },
-                    "on_vision_lost_inside_range": { "event": "mineworld:shoot_atack", "target": "self" }
-                }
-            },
-            //#endregion
-            //#region Tipos de ataque
-            "machine:attack": {
-                "minecraft:attack": { "damage": 3 },
-                "minecraft:behavior.melee_attack": { "priority": 2, "track_target": true }
-            },
-            "machine:shoot": {
-                "minecraft:shooter": { "def": "mineworld:machineBullet" },
+                "minecraft:shooter": { "def": "mineworld:machine_bullet" },
                 "minecraft:behavior.ranged_attack": {
                     "priority": 4,
                     "burst_shots": 1,
@@ -424,7 +325,7 @@
             
             "minecraft:collision_box": { "width": 0.5, "height": 0.5 },
             "minecraft:movement": { "value": 0.35 },
-            "minecraft:behavior.hurt_by_target": { "priority": 4 }
+            "minecraft:behavior.hurt_by_target": { "priority": 3 }
 
             //#endregion
         },
@@ -432,10 +333,11 @@
             "minecraft:entity_spawned": {
                 "sequence": [
                     {
-                        "add": { "component_groups": [ "machine:unWeapon" ] }
-                    },
-                    {
                         "randomize": [
+                            {
+                                "weight": 90,
+                                "add": { "component_groups": [ "machine:neutral", "machine:unWeapon" ] }
+                            },
                             {
                                 "weight": 25,
                                 "add": { "component_groups": [ "machine:enemy" ] }
@@ -443,10 +345,28 @@
                             {
                                 "weight": 5,
                                 "add": { "component_groups": [ "machine:enemy.unstable" ] }
+                            }
+                        ]
+                    },
+                    {
+                        "filters":  {
+                            "any_of": [
+                                { "test": "has_tag", "subject": "self", "value": "machine:enemy" },
+                                { "test": "has_tag", "subject": "self", "value": "machine:enemy.unstable" }
+                            ]
+                        },
+                        "randomize": [
+                            {
+                                "weight": 75,
+                                "add": { "component_groups": [ "machine:unWeapon" ] }
                             },
                             {
-                                "weight": 90,
-                                "add": { "component_groups": [ "machine:neutral" ] }
+                                "weight": 45,
+                                "add": { "component_groups": [ "machine:shield" ] }
+                            },
+                            {
+                                "weight": 45,
+                                "add": { "component_groups": [ "machine:turret" ] }
                             }
                         ]
                     }
@@ -454,31 +374,19 @@
             },
             "mineworld:neutral":{
                 "add": { "component_groups": [ "machine:neutral" ] },
-                "remove": { "component_groups": [ "machine:enemy", "machine:enemyShield", "machine:enemyTurret", "machine:enemyShieldTurret" ] }
+                "remove": { "component_groups": [ "machine:enemy", "machine:shield", "machine:turret" ] }
             },
             "mineworld:allie":{
                 "add": { "component_groups": [ "machine:allie" ] },
                 "remove": { "component_groups": [ "machine:neutral" ] }
             },
             "mineworld:shield": {
-                "add": { "component_groups": [ "machine:shield", "machine:attack" ] },
+                "add": { "component_groups": [ "machine:shield" ] },
                 "remove": { "component_groups": [ "machine:unWeapon" ] }
             },
             "mineworld:turret": {
-                "add": { "component_groups": [ "machine:turret", "machine:shoot" ] },
+                "add": { "component_groups": [ "machine:turret" ] },
                 "remove": { "component_groups": [ "machine:unWeapon" ] }
-            },
-            "mineworld:shieldAndTurret": {
-                "add": { "component_groups": [ "machine:shieldTurret" ] },
-                "remove": { "component_groups": [ "machine:turret", "machine:shield" ] }
-            },
-            "mineworld:meele_atack": {
-                "add": { "component_groups": [ "machine:attack" ] },
-                "remove": { "component_groups": [ "machine:shoot" ] }
-            },
-            "mineworld:shoot_atack": {
-                "add": { "component_groups": [ "machine:shoot" ] },
-                "remove": { "component_groups": [ "machine:attack" ] }
             },
 
             "mineworld:evolutionEnemy": {
@@ -492,17 +400,12 @@
                         "randomize": [
                             {
                                 "weight": 50,
-                                "add": { "component_groups": [ "machine:enemyTurret", "machine:shoot" ] },
+                                "add": { "component_groups": [ "machine:turret" ] },
                                 "remove": { "component_groups": [ "machine:unWeapon" ] }
                             },
                             {
                                 "weight": 50,
-                                "add": { "component_groups": [ "machine:enemyShield", "machine:attack" ] },
-                                "remove": { "component_groups": [ "machine:unWeapon" ] }
-                            },
-                            {
-                                "weight": 15,
-                                "add": { "component_groups": [ "machine:enemyShieldTurret" ] },
+                                "add": { "component_groups": [ "machine:shield" ] },
                                 "remove": { "component_groups": [ "machine:unWeapon" ] }
                             }
                         ]
@@ -518,17 +421,12 @@
                                 "randomize": [
                                     {
                                         "weight": 50,
-                                        "add": { "component_groups": [ "machine:enemyTurret", "machine:shoot" ] },
+                                        "add": { "component_groups": [ "machine:turret" ] },
                                         "remove": { "component_groups": [ "machine:unWeapon" ] }
                                     },
                                     {
                                         "weight": 50,
-                                        "add": { "component_groups": [ "machine:enemyShield", "machine:attack" ] },
-                                        "remove": { "component_groups": [ "machine:unWeapon" ] }
-                                    },
-                                    {
-                                        "weight": 15,
-                                        "add": { "component_groups": [ "machine:enemyShieldTurret" ] },
+                                        "add": { "component_groups": [ "machine:shield" ] },
                                         "remove": { "component_groups": [ "machine:unWeapon" ] }
                                     }
                                 ]                                

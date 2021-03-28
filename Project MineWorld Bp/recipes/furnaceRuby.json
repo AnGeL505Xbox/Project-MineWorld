@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "mineworld:furnaceRuby"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "mineworld:ruby_ore",
+		"output": "mineworld:ruby"
+	}
+}
